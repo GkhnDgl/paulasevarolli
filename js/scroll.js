@@ -71,4 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Make cursor pointer
     card.style.cursor = 'pointer';
   });
+
+  document.querySelectorAll('.dropdown-menu a[data-service]').forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const service = link.getAttribute('data-service');
+      showSubpage(service);
+    });
+  });
 });
