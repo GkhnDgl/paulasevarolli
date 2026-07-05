@@ -192,3 +192,90 @@ footer {
 .hero-btn:hover {
   background: rgba(255,255,255,0.25);
 }
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 20;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background: rgba(14, 16, 20, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-left a,
+.nav-right .lang {
+  text-decoration: none;
+  color: #f6ebdc;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-right .lang:hover {
+  color: #fff8ef;
+  background: rgba(255,255,255,0.16);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid rgba(242, 200, 141, 0.35);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.18);
+}
+
+/* Sprachbuttons */
+.lang {
+  opacity: 0.9;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.lang.active {
+  opacity: 1;
+  font-weight: 600;
+  color: #fff8ef;
+  background: linear-gradient(135deg, rgba(242, 200, 141, 0.24), rgba(199, 152, 92, 0.34));
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 8px 20px rgba(199, 152, 92, 0.24);
+}
+
+/* kleiner Button */
+.btn-small {
+  border: 1px solid #c5a880;
+  padding: 8px 14px;
+  border-radius: 20px;
+  color: #c5a880;
+}
+
+.btn-small:hover {
+  background: #c5a880;
+  color: white;
+}

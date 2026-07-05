@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>PaulaSevarolli Atelier</title>
+  <title data-i18n="meta.title"></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&family=Alex+Brush&display=swap" rel="stylesheet">
   
@@ -12,157 +12,214 @@
 
 <body>
 
-<header class="hero">
+  <nav class="navbar">
+  
+  <div class="nav-left">
+    <a href="#home" data-i18n="nav.home"></a>
+    <a href="#about" data-i18n="nav.about"></a>
+    <a href="#leistungen" data-i18n="nav.services"></a>
+    <a href="#kontakt" data-i18n="nav.contact"></a>
+  </div>
+
+  <div class="nav-right">
+    <div class="lang-switch" role="group" aria-label="Language switcher">
+      <button type="button" class="lang active" data-lang="de">DE</button>
+      <button type="button" class="lang" data-lang="pt">PT</button>
+    </div>
+  </div>
+
+<!--   <div class="lang-switch">
+    <button onclick="setLanguage('de')">DE</button>
+    <button onclick="setLanguage('pt')">PT</button>
+  </div> -->
+
+  </nav>
+
+<header class="hero" id="home">
   <div class="hero-content">
-    <h1>Paula Sevarolli Atelier</h1>
-    <p>Stilberatung für echte Lebensphasen – damit du dich in deiner Kleidung wirklich wiederfindest.</p>
-    
-    <a href="#kontakt" class="btn hero-btn">
-      Kontakt aufnehmen
-    </a>
+    <h1 data-i18n="hero.title"></h1>
+    <p data-i18n="hero.description"></p>
+    <a href="#kontakt" class="btn hero-btn" data-i18n="hero.contact"></a>
   </div>
 </header>
 
-<section class="about">
-  <h2>Über mich</h2>
-    <p>
-      Ich bin Paula Sevarolli, Stylistin und Modedesignerin, mit einer großen Leidenschaft für Kreativität, Mode und Ästhetik. Als Brasilianerin mit italienischen Wurzeln habe ich in Brasilien, Italien, Deutschland und Tschechien gelebt. Diese Erfahrungen haben meinen Blick auf Stil, Kultur und Individualität nachhaltig geprägt.
+<section class="about" id="about">
+  <h2 data-i18n="about.title"></h2>
+    <p data-i18n="about.paragraph1">
     </p>    
-    <p>
-      Ich habe meinen Master in Modedesign am IED in Florenz, Italien abgeschlossen und mich zusätzlich zur Stilberaterin weitergebildet. Über die Jahre hinweg konnte ich Erfahrungen in verschiedenen Bereichen der Modeindustrie sammeln. Diese Verbindung aus Studium, Praxis und persönlicher Entwicklung prägt heute meine Arbeit.
+    <p data-i18n="about.paragraph2">
     </p>    
-    <p>
-      Als Mutter und Frau, die selbst unterschiedliche Lebensphasen, Körperveränderungen und kulturelle Übergänge erlebt hat, weiß ich, wie eng Stil mit dem eigenen Lebensgefühl verbunden ist – und wie herausfordernd es sein kann, sich in bestimmten Momenten neu zu definieren.
+    <p data-i18n="about.paragraph3">
     </p>    
-    <p>
-      Ich arbeite mit Menschen, die sich in genau solchen Übergängen befinden: nach einer Schwangerschaft, beim Einstieg in eine neue berufliche Rolle oder beim Ankommen in einer neuen Kultur. Mein Ansatz ist dabei bewusst persönlich und alltagsnah – fern von starren Regeln oder kurzfristigen Trends.
+    <p data-i18n="about.paragraph4">
     </p>    
-    <p>
-      Mode verstehe ich als leises, aber kraftvolles Ausdrucksmittel. Ein stimmiger Stil entsteht nicht durch Perfektion, sondern durch Klarheit, Selbstkenntnis und das gute Gefühl, ganz bei sich zu sein. Mit meinem geschulten Blick für Farben, Schnitte, Formen und Proportionen unterstütze ich dich dabei, einen authentischen Stil zu entwickeln, der wirklich zu deinem Alltag passt. Es geht nicht darum, Trends zu folgen, sondern dich selbst besser kennenzulernen und diesen Ausdruck nach außen zu tragen.
+    <p data-i18n="about.paragraph5">
     </p>    
-    <p>
-      Ob Kleiderschrank-Reset, Personal Shopping, Farbberatung oder individuelle Stilberatung – ich begleite dich auf deinem Weg zu mehr Klarheit, Selbstsicherheit und Wohlbefinden in deinem Stil.
+    <p data-i18n="about.paragraph6">
+    </p>
     </p>    
-    <p>
-      Denn Stil beginnt dort, wo du dich selbst erkennst.
+    <p data-i18n="about.paragraph7">
     </p>
 </section>
 
-<section class="services">
-  <h2>Leistungen</h2>
+<section class="services" id="leistungen">
+  <h2 data-i18n="services.heading"></h2>
 
   <div class="card" data-service="wardrobe-reset">
-    <h3>Kleiderschrank-Reset</h3>
-    <p>Text 1</p>
+    <h3 data-i18n="services.wardrobeReset.title"></h3>
+    <p data-i18n="services.wardrobeReset.text"></p>
   </div>
 
   <div class="card" data-service="color-consultation">
-    <h3>Farbberatung</h3>
-    <p>Text 2</p>
+    <h3 data-i18n="services.colorConsultation.title"></h3>
+    <p data-i18n="services.colorConsultation.text"></p>
   </div>
 
   <div class="card" data-service="personal-shopping">
-    <h3>Personal Shopping & Styling</h3>
-    <p>Text 3</p>
+    <h3 data-i18n="services.personalShopping.title"></h3>
+    <p data-i18n="services.personalShopping.text"></p>
   </div>
 
   <div class="card" data-service="individual-consultation">
-    <h3>Individuelle Stilberatung</h3>
-    <p>Text 4</p>
+    <h3 data-i18n="services.individualConsultation.title"></h3>
+    <p data-i18n="services.individualConsultation.text"></p>
   </div>
-
 </section>
 
 <!-- Subpages -->
 <section id="wardrobe-reset" class="subpage" style="display: none;">
-  <button class="back-btn" onclick="showMain()">&larr; Zurück</button>
-  <h2>Kleiderschrank-Reset</h2>
-  <p>
-    Wir sortieren gemeinsam deinen Kleiderschrank und schaffen Klarheit. Du behältst nur, was wirklich zu deinem heutigen Leben, deinem Stil und deinem Körper passt – alles andere darf gehen. Für mehr Leichtigkeit und Überblick im Alltag.
-  </p>
-  <p>
-    Ca. 3 Stunden / 250€
-  </p>
-  <p>
-    Meine Dienstleistungen umfassen:
-  </p>
+  <button class="back-btn" onclick="showMain()" data-i18n="subpages.back"></button>
+
+  <h2 data-i18n="subpages.wardrobeReset.heading"></h2>
+
+  <p data-i18n="subpages.wardrobeReset.intro"></p>
+
+  <p data-i18n="subpages.wardrobeReset.duration"></p>
+
+  <p data-i18n="subpages.wardrobeReset.listLabel"></p>
+
   <ul>
-    <li>Text 1</li>
-    <li>Text 2</li>
+    <li data-i18n="subpages.wardrobeReset.listItem1"></li>
+    <li data-i18n="subpages.wardrobeReset.listItem2"></li>
   </ul>
 </section>
 
 <section id="color-consultation" class="subpage" style="display: none;">
-  <button class="back-btn" onclick="showMain()">&larr; Zurück</button>
-  <h2>Farbberatung</h2>
-  <p>
-    Wir finden deine individuellen Farben, die dich frisch, lebendig und authentisch wirken lassen. Du lernst, welche Nuancen deine natürliche Ausstrahlung unterstreichen – für mehr Sicherheit beim Einkaufen und Kombinieren.
-  </p>
-  <p>
-    Ca. 1,5 Stunden / 150€
-  </p>
-  <p>
-    Was ich anbiete:
-  </p>
+  <button class="back-btn" onclick="showMain()" data-i18n="subpages.back"></button>
+
+  <h2 data-i18n="subpages.colorConsultation.heading"></h2>
+
+  <p data-i18n="subpages.colorConsultation.intro"></p>
+
+  <p data-i18n="subpages.colorConsultation.duration"></p>
+
+  <p data-i18n="subpages.colorConsultation.listLabel"></p>
+
   <ul>
-    <li>Text 1</li>
-    <li>Text 2</li>
+    <li data-i18n="subpages.colorConsultation.listItem1"></li>
+    <li data-i18n="subpages.colorConsultation.listItem2"></li>
   </ul>
 </section>
 
 <section id="personal-shopping" class="subpage" style="display: none;">
-  <button class="back-btn" onclick="showMain()">&larr; Zurück</button>
-  <h2>Personal Shopping & Styling</h2>
-  <p>
-    Gemeinsam finden wir gezielt Kleidung, die wirklich zu dir passt – statt Fehlkäufen und Frust. Du bekommst eine ehrliche, stilvolle Begleitung beim Einkaufen, abgestimmt auf deinen Alltag, deine Figur und deinen Stil.
-  </p>
-  <p>
-    Zwischen 2 und 4 Stunden / 180€ für die erste 2 Stunden + 80 pro weitere Stunde
-  </p>
-  <p>
-    Mein Angebot umfasst:
-  </p>
+  <button class="back-btn" onclick="showMain()" data-i18n="subpages.back"></button>
+
+  <h2 data-i18n="subpages.personalShopping.heading"></h2>
+
+  <p data-i18n="subpages.personalShopping.intro"></p>
+
+  <p data-i18n="subpages.personalShopping.duration"></p>
+
+  <p data-i18n="subpages.personalShopping.listLabel"></p>
+
   <ul>
-    <li>Text 1</li>
-    <li>Text 2</li>
+    <li data-i18n="subpages.personalShopping.listItem1"></li>
+    <li data-i18n="subpages.personalShopping.listItem2"></li>
   </ul>
 </section>
 
 <section id="individual-consultation" class="subpage" style="display: none;">
-  <button class="back-btn" onclick="showMain()">&larr; Zurück</button>
-  <h2> Individuelle Stilberatung</h2>
-  <p>
-    Wir entwickeln deinen persönlichen Stil auf Basis deiner Persönlichkeit, deines Lebensstils und deiner Körperform. Du verstehst, was dich wirklich ausmacht – und wie du das durch Kleidung sichtbar machst.
-  </p>
-  <p>
-    Mein Angebot umfasst:
-  </p>
+  <button class="back-btn" onclick="showMain()" data-i18n="subpages.back"></button>
+
+  <h2 data-i18n="subpages.individualConsultation.heading"></h2>
+
+  <p data-i18n="subpages.individualConsultation.intro"></p>
+
+  <p data-i18n="subpages.individualConsultation.listLabel"></p>
+
   <ul>
-    <li>Text 1</li>
-    <li>Text 2</li>
+    <li data-i18n="subpages.individualConsultation.listItem1"></li>
+    <li data-i18n="subpages.individualConsultation.listItem2"></li>
   </ul>
 </section>
 
 <section class="contact" id="kontakt">
-  <h2>Kontakt</h2>
+  <h2 data-i18n="contact.heading"></h2>
 
-  <a class="btn" href="mailto:paulasevarolli@hotmail.com">
-    E-Mail schreiben
+  <a class="btn"
+     href="mailto:paulasevarolli@hotmail.com"
+     data-i18n="contact.email">
   </a>
 
-  <a class="btn" href="https://instagram.com/paulasevarolli" target="_blank">
-    Instagram
+  <a class="btn"
+     href="https://instagram.com/paulasevarolli"
+     target="_blank"
+     data-i18n="contact.instagram">
   </a>
 
-  <a class="btn" href="https://wa.me/491234567890" target="_blank">
-    WhatsApp
+  <a class="btn"
+     href="https://wa.me/491234567890"
+     target="_blank"
+     data-i18n="contact.whatsapp">
   </a>
-
 </section>
 
-<footer>
-  © 2026 PaulaSevarolli Atelier
-</footer>
+<footer data-i18n="footer"></footer>
+
+<script>
+let currentLang = 'de';
+
+function updateLanguageButtons() {
+  document.querySelectorAll('.lang').forEach(button => {
+    const isActive = button.getAttribute('data-lang') === currentLang;
+    button.classList.toggle('active', isActive);
+    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+}
+
+async function loadLanguage(lang) {
+  const response = await fetch(`lang/${lang}.json`);
+  const translations = await response.json();
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const value = key.split('.').reduce((o, i) => o?.[i], translations);
+
+    if (value) {
+      el.innerText = value;
+    }
+  });
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  loadLanguage(lang);
+  localStorage.setItem('lang', lang);
+  updateLanguageButtons();
+}
+
+// Auto-load saved language
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.lang').forEach(button => {
+    button.addEventListener('click', () => {
+      setLanguage(button.getAttribute('data-lang'));
+    });
+  });
+
+  const savedLang = localStorage.getItem('lang') || 'de';
+  setLanguage(savedLang);
+});
+</script>
 
 </body>
 </html>

@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "PaulaSevarolli Atelier"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Leistungen",
+    "about": "About",
+    "contact": "Kontakt aufnehmen"
+  },
+  "hero": {
+    "title": "Paula Sevarolli Atelier",
+    "subtitle": "Stilberatung für echte Lebensphasen – damit du dich in deiner Kleidung wirklich wiederfindest.",
+    "contact": "Kontakt aufnehmen"
+  },
+  "about": {
+    "heading": "Über mich",
+    "paragraph1": "Ich bin Paula Sevarolli, Stylistin und Modedesignerin, mit einer großen Leidenschaft für Kreativität, Mode und Ästhetik. Als Brasilianerin mit italienischen Wurzeln habe ich in Brasilien, Italien, Deutschland und Tschechien gelebt. Diese Erfahrungen haben meinen Blick auf Stil, Kultur und Individualität nachhaltig geprägt.",
+    "paragraph2": "Ich habe meinen Master in Modedesign am IED in Florenz, Italien abgeschlossen und mich zusätzlich zur Stilberaterin weitergebildet. Über die Jahre hinweg konnte ich Erfahrungen in verschiedenen Bereichen der Modeindustrie sammeln. Diese Verbindung aus Studium, Praxis und persönlicher Entwicklung prägt heute meine Arbeit.",
+    "paragraph3": "Als Mutter und Frau, die selbst unterschiedliche Lebensphasen, Körperveränderungen und kulturelle Übergänge erlebt hat, weiß ich, wie eng Stil mit dem eigenen Lebensgefühl verbunden ist – und wie herausfordernd es sein kann, sich in bestimmten Momenten neu zu definieren.",
+    "paragraph4": "Ich arbeite mit Menschen, die sich in genau solchen Übergängen befinden: nach einer Schwangerschaft, beim Einstieg in eine neue berufliche Rolle oder beim Ankommen in einer neuen Kultur. Mein Ansatz ist dabei bewusst persönlich und alltagsnah – fern von starren Regeln oder kurzfristigen Trends.",
+    "paragraph5": "Mode verstehe ich als leises, aber kraftvolles Ausdrucksmittel. Ein stimmiger Stil entsteht nicht durch Perfektion, sondern durch Klarheit, Selbstkenntnis und das gute Gefühl, ganz bei sich zu sein. Mit meinem geschulten Blick für Farben, Schnitte, Formen und Proportionen unterstütze ich dich dabei, einen authentischen Stil zu entwickeln, der wirklich zu deinem Alltag passt. Es geht nicht darum, Trends zu folgen, sondern dich selbst besser kennenzulernen und diesen Ausdruck nach außen zu tragen.",
+    "paragraph6": "Ob Kleiderschrank-Reset, Personal Shopping, Farbberatung oder individuelle Stilberatung – ich begleite dich auf deinem Weg zu mehr Klarheit, Selbstsicherheit und Wohlbefinden in deinem Stil.",
+    "paragraph7": "Denn Stil beginnt dort, wo du dich selbst erkennst."
+  },
+  "services": {
+    "heading": "Leistungen",
+    "wardrobeReset": {
+      "title": "Kleiderschrank-Reset",
+      "text": "Text 1"
+    },
+    "colorConsultation": {
+      "title": "Farbberatung",
+      "text": "Text 2"
+    },
+    "personalShopping": {
+      "title": "Personal Shopping & Styling",
+      "text": "Text 3"
+    },
+    "individualConsultation": {
+      "title": "Individuelle Stilberatung",
+      "text": "Text 4"
+    }
+  },
+  "subpages": {
+    "back": "Zurück",
+    "wardrobeReset": {
+      "heading": "Kleiderschrank-Reset",
+      "intro": "Wir sortieren gemeinsam deinen Kleiderschrank und schaffen Klarheit. Du behältst nur, was wirklich zu deinem heutigen Leben, deinem Stil und deinem Körper passt – alles andere darf gehen. Für mehr Leichtigkeit und Überblick im Alltag.",
+      "duration": "Ca. 3 Stunden / 250€",
+      "listLabel": "Meine Dienstleistungen umfassen:",
+      "listItem1": "Text 1",
+      "listItem2": "Text 2"
+    },
+    "colorConsultation": {
+      "heading": "Farbberatung",
+      "intro": "Wir finden deine individuellen Farben, die dich frisch, lebendig und authentisch wirken lassen. Du lernst, welche Nuancen deine natürliche Ausstrahlung unterstreichen – für mehr Sicherheit beim Einkaufen und Kombinieren.",
+      "duration": "Ca. 1,5 Stunden / 150€",
+      "listLabel": "Was ich anbiete:",
+      "listItem1": "Text 1",
+      "listItem2": "Text 2"
+    },
+    "personalShopping": {
+      "heading": "Personal Shopping & Styling",
+      "intro": "Gemeinsam finden wir gezielt Kleidung, die wirklich zu dir passt – statt Fehlkäufen und Frust. Du bekommst eine ehrliche, stilvolle Begleitung beim Einkaufen, abgestimmt auf deinen Alltag, deine Figur und deinen Stil.",
+      "duration": "Zwischen 2 und 4 Stunden / 180€ für die erste 2 Stunden + 80€ pro weitere Stunde",
+      "listLabel": "Mein Angebot umfasst:",
+      "listItem1": "Text 1",
+      "listItem2": "Text 2"
+    },
+    "individualConsultation": {
+      "heading": "Individuelle Stilberatung",
+      "intro": "Wir entwickeln deinen persönlichen Stil auf Basis deiner Persönlichkeit, deines Lebensstils und deiner Körperform. Du verstehst, was dich wirklich ausmacht – und wie du das durch Kleidung sichtbar machst.",
+      "listLabel": "Mein Angebot umfasst:",
+      "listItem1": "Text 1",
+      "listItem2": "Text 2"
+    }
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "email": "E-Mail schreiben",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp"
+  },
+  "footer": "© 2026 PaulaSevarolli Atelier"
+}
