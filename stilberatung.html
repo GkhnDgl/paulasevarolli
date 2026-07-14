@@ -5,20 +5,17 @@
   <title data-i18n="meta.title"></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&family=Alex+Brush&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scroll.js"></script>
 </head>
-
 <body>
   <nav class="navbar">
     <div class="nav-left">
       <a href="index.html" data-i18n="nav.home"></a>
-      <!-- <a href="#about" data-i18n="nav.about"></a> -->
-      <!-- <a href="#selection" data-i18n="nav.services"></a> -->
+      <a href="#about" data-i18n="nav.about"></a>
+      <a href="#leistungen" data-i18n="nav.services"></a>
       <a href="#kontakt" data-i18n="nav.contact"></a>
     </div>
-
     <div class="nav-right">
       <div class="lang-switch" role="group" aria-label="Language switcher">
         <button type="button" class="lang active" data-lang="de">DE</button>
@@ -29,9 +26,8 @@
 
   <header class="hero" id="home">
     <div class="hero-content">
-      <h1 data-i18n="landing.title"></h1>
-      <!-- <p data-i18n="landing.description"></p> -->
-
+      <h1 data-i18n="hero.title"></h1>
+      <p data-i18n="hero.description"></p>
       <div class="hero-actions">
         <a href="mailto:paulasevarolli@hotmail.com" class="hero-icon-btn" aria-label="E-Mail" title="E-Mail">
           <img src="images/email.png" alt="E-Mail" />
@@ -43,26 +39,90 @@
           <img src="images/whatsapp.png" alt="WhatsApp" />
         </a>
       </div>
-
-      <div class="choice-grid" id="selection">
-        <a class="choice-card" href="stilberatung.html">
-          <h3 data-i18n="landing.stilberatungTitle"></h3>
-          <p data-i18n="landing.stilberatungText"></p>
-          <span class="btn-small" data-i18n="landing.stilberatungCta"></span>
-        </a>
-        <a class="choice-card" href="atelier.html">
-          <h3 data-i18n="landing.atelierTitle"></h3>
-          <p data-i18n="landing.atelierText"></p>
-          <span class="btn-small" data-i18n="landing.atelierCta"></span>
-        </a>
-      </div>
     </div>
   </header>
 
-<!--   <section class="about" id="about">
-    <h2 data-i18n="landing.aboutTitle"></h2>
-    <p data-i18n="landing.aboutText"></p>
-  </section> -->
+  <section class="about" id="about">
+    <h2 data-i18n="about.title"></h2>
+    <p data-i18n="about.paragraph1"></p>
+    <p data-i18n="about.paragraph2"></p>
+    <p data-i18n="about.paragraph3"></p>
+    <p data-i18n="about.paragraph4"></p>
+    <p data-i18n="about.paragraph5"></p>
+    <p data-i18n="about.paragraph6"></p>
+    <p data-i18n="about.paragraph7"></p>
+  </section>
+
+  <section class="services" id="leistungen">
+    <h2 data-i18n="services.heading"></h2>
+
+    <div class="card" data-service="wardrobe-reset">
+      <h3 data-i18n="services.wardrobeReset.title"></h3>
+      <p data-i18n="services.wardrobeReset.text"></p>
+    </div>
+
+    <div class="card" data-service="color-consultation">
+      <h3 data-i18n="services.colorConsultation.title"></h3>
+      <p data-i18n="services.colorConsultation.text"></p>
+    </div>
+
+    <div class="card" data-service="personal-shopping">
+      <h3 data-i18n="services.personalShopping.title"></h3>
+      <p data-i18n="services.personalShopping.text"></p>
+    </div>
+
+    <div class="card" data-service="individual-consultation">
+      <h3 data-i18n="services.individualConsultation.title"></h3>
+      <p data-i18n="services.individualConsultation.text"></p>
+    </div>
+  </section>
+
+  <section id="wardrobe-reset" class="subpage" style="display: none;">
+    <button class="back-btn" onclick="showMain()" data-i18n="subpages.back"></button>
+    <h2 data-i18n="subpages.wardrobeReset.heading"></h2>
+    <p data-i18n="subpages.wardrobeReset.intro"></p>
+    <p data-i18n="subpages.wardrobeReset.duration"></p>
+    <p data-i18n="subpages.wardrobeReset.listLabel"></p>
+    <ul>
+      <li data-i18n="subpages.wardrobeReset.listItem1"></li>
+      <li data-i18n="subpages.wardrobeReset.listItem2"></li>
+    </ul>
+  </section>
+
+  <section id="color-consultation" class="subpage" style="display: none;">
+    <button class="back-btn" onclick="showMain()" data-i18n="subpages.back"></button>
+    <h2 data-i18n="subpages.colorConsultation.heading"></h2>
+    <p data-i18n="subpages.colorConsultation.intro"></p>
+    <p data-i18n="subpages.colorConsultation.duration"></p>
+    <p data-i18n="subpages.colorConsultation.listLabel"></p>
+    <ul>
+      <li data-i18n="subpages.colorConsultation.listItem1"></li>
+      <li data-i18n="subpages.colorConsultation.listItem2"></li>
+    </ul>
+  </section>
+
+  <section id="personal-shopping" class="subpage" style="display: none;">
+    <button class="back-btn" onclick="showMain()" data-i18n="subpages.back"></button>
+    <h2 data-i18n="subpages.personalShopping.heading"></h2>
+    <p data-i18n="subpages.personalShopping.intro"></p>
+    <p data-i18n="subpages.personalShopping.duration"></p>
+    <p data-i18n="subpages.personalShopping.listLabel"></p>
+    <ul>
+      <li data-i18n="subpages.personalShopping.listItem1"></li>
+      <li data-i18n="subpages.personalShopping.listItem2"></li>
+    </ul>
+  </section>
+
+  <section id="individual-consultation" class="subpage" style="display: none;">
+    <button class="back-btn" onclick="showMain()" data-i18n="subpages.back"></button>
+    <h2 data-i18n="subpages.individualConsultation.heading"></h2>
+    <p data-i18n="subpages.individualConsultation.intro"></p>
+    <p data-i18n="subpages.individualConsultation.listLabel"></p>
+    <ul>
+      <li data-i18n="subpages.individualConsultation.listItem1"></li>
+      <li data-i18n="subpages.individualConsultation.listItem2"></li>
+    </ul>
+  </section>
 
   <section class="contact" id="kontakt">
     <h2 data-i18n="contact.heading"></h2>

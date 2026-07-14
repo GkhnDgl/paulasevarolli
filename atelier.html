@@ -5,20 +5,17 @@
   <title data-i18n="meta.title"></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&family=Alex+Brush&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scroll.js"></script>
 </head>
-
 <body>
   <nav class="navbar">
     <div class="nav-left">
       <a href="index.html" data-i18n="nav.home"></a>
-      <!-- <a href="#about" data-i18n="nav.about"></a> -->
-      <!-- <a href="#selection" data-i18n="nav.services"></a> -->
+      <a href="#about" data-i18n="nav.about"></a>
+      <a href="#leistungen" data-i18n="nav.services"></a>
       <a href="#kontakt" data-i18n="nav.contact"></a>
     </div>
-
     <div class="nav-right">
       <div class="lang-switch" role="group" aria-label="Language switcher">
         <button type="button" class="lang active" data-lang="de">DE</button>
@@ -29,9 +26,8 @@
 
   <header class="hero" id="home">
     <div class="hero-content">
-      <h1 data-i18n="landing.title"></h1>
-      <!-- <p data-i18n="landing.description"></p> -->
-
+      <h1>Paula Sevarolli Atelier</h1>
+      <p>Gestaltung, Beratung und kreative Begleitung rund um Stil und Ausdruck.</p>
       <div class="hero-actions">
         <a href="mailto:paulasevarolli@hotmail.com" class="hero-icon-btn" aria-label="E-Mail" title="E-Mail">
           <img src="images/email.png" alt="E-Mail" />
@@ -43,35 +39,60 @@
           <img src="images/whatsapp.png" alt="WhatsApp" />
         </a>
       </div>
-
-      <div class="choice-grid" id="selection">
-        <a class="choice-card" href="stilberatung.html">
-          <h3 data-i18n="landing.stilberatungTitle"></h3>
-          <p data-i18n="landing.stilberatungText"></p>
-          <span class="btn-small" data-i18n="landing.stilberatungCta"></span>
-        </a>
-        <a class="choice-card" href="atelier.html">
-          <h3 data-i18n="landing.atelierTitle"></h3>
-          <p data-i18n="landing.atelierText"></p>
-          <span class="btn-small" data-i18n="landing.atelierCta"></span>
-        </a>
-      </div>
     </div>
   </header>
 
-<!--   <section class="about" id="about">
-    <h2 data-i18n="landing.aboutTitle"></h2>
-    <p data-i18n="landing.aboutText"></p>
-  </section> -->
-
-  <section class="contact" id="kontakt">
-    <h2 data-i18n="contact.heading"></h2>
-    <a class="btn" href="mailto:paulasevarolli@hotmail.com" data-i18n="contact.email"></a>
-    <a class="btn" href="https://instagram.com/paulasevarolli" target="_blank" data-i18n="contact.instagram"></a>
-    <a class="btn" href="https://wa.me/491234567890" target="_blank" data-i18n="contact.whatsapp"></a>
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>Das Atelier steht für kreative Stilberatung, individuelle Begleitung und einen sensiblen Blick für Form, Farbe und Ausdruck.</p>
+    <p>Hier entstehen persönliche Lösungen für Menschen, die sich bewusst und eigenständig präsentieren möchten.</p>
   </section>
 
-  <footer data-i18n="footer"></footer>
+  <section class="services" id="leistungen">
+    <h2>Leistungen</h2>
+
+    <div class="card" data-service="atelier-service-1">
+      <h3>Individuelle Stilberatung</h3>
+      <p>Dummy-Leistung für die spätere Befüllung.</p>
+    </div>
+
+    <div class="card" data-service="atelier-service-2">
+      <h3>Atelier-Begleitung</h3>
+      <p>Dummy-Leistung für die spätere Befüllung.</p>
+    </div>
+
+    <div class="card" data-service="atelier-service-3">
+      <h3>Konzept & kreative Entwicklung</h3>
+      <p>Dummy-Leistung für die spätere Befüllung.</p>
+    </div>
+  </section>
+
+  <section id="atelier-service-1" class="subpage" style="display: none;">
+    <button class="back-btn" onclick="showMain()">Zurück</button>
+    <h2>Individuelle Stilberatung</h2>
+    <p>Diese Leistung wird später mit dem passenden Inhalt befüllt.</p>
+  </section>
+
+  <section id="atelier-service-2" class="subpage" style="display: none;">
+    <button class="back-btn" onclick="showMain()">Zurück</button>
+    <h2>Atelier-Begleitung</h2>
+    <p>Diese Leistung wird später mit dem passenden Inhalt befüllt.</p>
+  </section>
+
+  <section id="atelier-service-3" class="subpage" style="display: none;">
+    <button class="back-btn" onclick="showMain()">Zurück</button>
+    <h2>Konzept & kreative Entwicklung</h2>
+    <p>Diese Leistung wird später mit dem passenden Inhalt befüllt.</p>
+  </section>
+
+  <section class="contact" id="kontakt">
+    <h2>Kontakt</h2>
+    <a class="btn" href="mailto:paulasevarolli@hotmail.com">E-Mail schreiben</a>
+    <a class="btn" href="https://instagram.com/paulasevarolli" target="_blank">Instagram</a>
+    <a class="btn" href="https://wa.me/491234567890" target="_blank">WhatsApp</a>
+  </section>
+
+  <footer>© 2026 Paula Sevarolli Atelier</footer>
 
   <script>
     let currentLang = 'de';

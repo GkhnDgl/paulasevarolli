@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "PaulaSevarolli Atelier"
+    "title": "Paula Sevarolli"
   },
   "nav": {
     "home": "Home",
@@ -9,9 +9,21 @@
     "contact": "Kontakt aufnehmen"
   },
   "hero": {
-    "title": "Paula Sevarolli Atelier",
+    "title": "Paula Sevarolli Stilberatung",
     "subtitle": "Stilberatung für echte Lebensphasen – damit du dich in deiner Kleidung wirklich wiederfindest.",
     "contact": "Kontakt aufnehmen"
+  },
+  "landing": {
+    "title": "Paula Sevarolli",
+    "description": "Wähle das passende Angebot für dich und entdecke Stilberatung oder Atelier.",
+    "stilberatungTitle": "Stilberatung",
+    "stilberatungText": "Persönliche Begleitung zu mehr Klarheit, Selbstvertrauen und einem Stil, der wirklich zu dir passt.",
+    "stilberatungCta": "Zur Stilberatung",
+    "atelierTitle": "Atelier",
+    "atelierText": "Kreative Begleitung rund um Ausdruck, Form, Farbe und die Entwicklung eines individuellen Stils.",
+    "atelierCta": "Zum Atelier",
+    "aboutTitle": "Über die Angebote",
+    "aboutText": "Die Stilberatung begleitet dich in persönlichen Übergängen, während das Atelier einen kreativen Rahmen für individuelle Gestaltung und Ausdruck bietet."
   },
   "about": {
     "heading": "Über mich",
@@ -82,5 +94,5 @@
     "instagram": "Instagram",
     "whatsapp": "WhatsApp"
   },
-  "footer": "© 2026 PaulaSevarolli Atelier"
+  "footer": "© 2026 Paula Sevarolli"
 }
