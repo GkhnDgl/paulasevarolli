@@ -12,9 +12,8 @@
   <nav class="navbar">
     <div class="nav-left">
       <a href="index.html" data-i18n="nav.home"></a>
-      <a href="#about" data-i18n="nav.about"></a>
       <div class="nav-dropdown">
-        <a href="#leistungen" class="nav-link-dropdown" data-i18n="nav.services"></a>
+        <a href="stilberatung.html" class="nav-link-dropdown" data-i18n="nav.stilberatung"></a>
         <div class="dropdown-menu">
           <a href="kleiderschrankreset.html" data-i18n="services.wardrobeReset.title"></a>
           <a href="farbberatung.html" data-i18n="services.colorConsultation.title"></a>
@@ -22,8 +21,9 @@
           <a href="individuellestilberatung.html" data-i18n="services.individualConsultation.title"></a>
         </div>
       </div>
-      <a href="#rezensionen" data-i18n="nav.reviews"></a>
-      <!-- <a href="#kontakt" data-i18n="nav.contact"></a> -->
+      <a href="atelier.html" data-i18n="nav.atelier"></a>
+      <a href="shop.html" data-i18n="nav.shop"></a>
+      <a href="#kontakt" data-i18n="nav.contact"></a>
     </div>
     <div class="nav-right">
       <div class="nav-icon-group">
@@ -44,52 +44,28 @@
     </div>
   </nav>
 
-  <header class="page-hero" id="home">
+  <header class="page-hero">
     <div class="page-hero-content">
-      <p class="eyebrow" data-i18n="stilberatungPage.eyebrow"></p>
-      <h1 data-i18n="stilberatungPage.title"></h1>
-      <p data-i18n="stilberatungPage.description"></p>
+      <p class="eyebrow" data-i18n="servicePages.individualConsultation.eyebrow"></p>
+      <h1 data-i18n="servicePages.individualConsultation.title"></h1>
+      <p data-i18n="servicePages.individualConsultation.intro"></p>
     </div>
   </header>
 
-  <section class="page-section" id="about">
-    <h2 data-i18n="stilberatungPage.aboutTitle"></h2>
-    <p data-i18n="stilberatungPage.aboutText"></p>
-  </section>
-
-  <section class="page-section" id="leistungen">
-    <h2 data-i18n="stilberatungPage.servicesTitle"></h2>
-    <div class="service-list">
-      <a class="service-card" href="kleiderschrankreset.html">
-        <h3 data-i18n="services.wardrobeReset.title"></h3>
-        <p data-i18n="services.wardrobeReset.text"></p>
-      </a>
-      <a class="service-card" href="farbberatung.html">
-        <h3 data-i18n="services.colorConsultation.title"></h3>
-        <p data-i18n="services.colorConsultation.text"></p>
-      </a>
-      <a class="service-card" href="personalshoppingstyling.html">
-        <h3 data-i18n="services.personalShopping.title"></h3>
-        <p data-i18n="services.personalShopping.text"></p>
-      </a>
-      <a class="service-card" href="individuellestilberatung.html">
-        <h3 data-i18n="services.individualConsultation.title"></h3>
-        <p data-i18n="services.individualConsultation.text"></p>
-      </a>
-    </div>
-  </section>
-
-  <section class="page-section" id="rezensionen">
-    <h2 data-i18n="stilberatungPage.reviewsTitle"></h2>
-    <div class="review-grid">
-      <div class="review-card">
-        <p data-i18n="stilberatungPage.review1"></p>
+  <section class="page-section">
+    <div class="service-layout">
+      <div class="service-media">
+        <img src="images/individuellestilberatung.jpg" alt="Individuelle Stilberatung">
       </div>
-      <div class="review-card">
-        <p data-i18n="stilberatungPage.review2"></p>
-      </div>
-      <div class="review-card">
-        <p data-i18n="stilberatungPage.review3"></p>
+      <div class="service-content">
+        <p class="service-meta" data-i18n="servicePages.individualConsultation.meta"></p>
+        <p data-i18n="servicePages.individualConsultation.listLabel"></p>
+        <ul>
+          <li data-i18n="servicePages.individualConsultation.listItem1"></li>
+          <li data-i18n="servicePages.individualConsultation.listItem2"></li>
+        </ul>
+        <a class="btn" href="mailto:paulasevarolli@hotmail.com" data-i18n="servicePages.cta"></a>
+        <a class="btn" href="stilberatung.html" data-i18n="servicePages.back"></a>
       </div>
     </div>
   </section>

@@ -4,8 +4,12 @@
   },
   "nav": {
     "home": "Home",
+    "stilberatung": "Stilberatung",
+    "atelier": "Atelier",
+    "shop": "Shop",
     "services": "Leistungen",
-    "about": "About",
+    "about": "Was ist Stilberatung?",
+    "reviews": "Rezensionen",
     "contact": "Kontakt aufnehmen"
   },
   "hero": {
@@ -14,6 +18,7 @@
     "contact": "Kontakt aufnehmen"
   },
   "landing": {
+    "eyebrow": "Modedesign & Stilberatung",
     "title": "Paula Sevarolli",
     "description": "Wähle das passende Angebot für dich und entdecke Stilberatung oder Atelier.",
     "stilberatungTitle": "Stilberatung",
@@ -39,53 +44,87 @@
     "heading": "Leistungen",
     "wardrobeReset": {
       "title": "Kleiderschrank-Reset",
-      "text": "Text 1"
+      "text": "Mehr Ordnung, mehr Leichtigkeit und ein Stilgefühl, das zu deinem Alltag passt."
     },
     "colorConsultation": {
       "title": "Farbberatung",
-      "text": "Text 2"
+      "text": "Entdecke deine individuellen Farben und lasse deine Ausstrahlung bewusst wirken."
     },
     "personalShopping": {
       "title": "Personal Shopping & Styling",
-      "text": "Text 3"
+      "text": "Gemeinsam finden wir Stücke, die dich wirklich begleiten – ohne Fehlkäufe und Zweifel."
     },
     "individualConsultation": {
       "title": "Individuelle Stilberatung",
-      "text": "Text 4"
+      "text": "Eine persönliche Begleitung für einen Stil, der deine Persönlichkeit sichtbar macht."
     }
   },
-  "subpages": {
-    "back": "Zurück",
+  "stilberatungPage": {
+    "eyebrow": "Stilberatung",
+    "title": "Paula Sevarolli Stilberatung",
+    "description": "Klarheit, Selbstvertrauen und ein Stilgefühl, das wirklich zu dir passt.",
+    "aboutTitle": "Was ist Stilberatung?",
+    "aboutText": "Stilberatung ist ein persönlicher, sensibler Prozess, bei dem wir gemeinsam deinen Weg zu einem authentischen Ausdruck finden. Wir schauen auf deine Persönlichkeit, deine Lebensphase, deine Farben und deine gewohnte Umgebung – und entwickeln daraus etwas, das ganz zu dir gehört.",
+    "servicesTitle": "Leistungen",
+    "reviewsTitle": "Rezensionen",
+    "review1": "„Paula hat mich dabei begleitet, mich in meinem eigenen Stil wiederzufinden – mit Ruhe und viel Feingefühl.“",
+    "review2": "„Die Beratung war präzise, inspirierend und hat meinen Kleiderschrank sofort leichter gemacht.“",
+    "review3": "„Ich habe endlich verstanden, welche Farben und Schnitte wirklich zu mir passen.“"
+  },
+  "atelier": {
+    "eyebrow": "Atelier",
+    "title": "Paula Sevarolli Atelier",
+    "description": "Gestaltung, Beratung und kreative Begleitung rund um Stil und Ausdruck.",
+    "aboutTitle": "About",
+    "aboutText1": "Das Atelier steht für kreative Stilberatung, individuelle Begleitung und einen sensiblen Blick für Form, Farbe und Ausdruck.",
+    "aboutText2": "Hier entstehen persönliche Lösungen für Menschen, die sich bewusst und eigenständig präsentieren möchten.",
+    "servicesTitle": "Leistungen",
+    "service1Title": "Individuelle Stilberatung",
+    "service1Text": "Ein auf deine Persönlichkeit abgestimmter Weg zu mehr Klarheit und Selbstvertrauen."
+  },
+  "shop": {
+    "title": "Shop",
+    "headline": "Der Shop ist gerade im Entstehen",
+    "message": "Hier entsteht bald etwas Besonderes – ein Ort für bewusste Stücke, kreative Inspiration und einen Stil, der mit dir wächst. Für den Moment ist noch nicht alles sichtbar, aber der erste Funke ist schon da."
+  },
+  "servicePages": {
+    "cta": "Termin vereinbaren",
+    "back": "Zurück zur Stilberatung",
     "wardrobeReset": {
-      "heading": "Kleiderschrank-Reset",
-      "intro": "Wir sortieren gemeinsam deinen Kleiderschrank und schaffen Klarheit. Du behältst nur, was wirklich zu deinem heutigen Leben, deinem Stil und deinem Körper passt – alles andere darf gehen. Für mehr Leichtigkeit und Überblick im Alltag.",
-      "duration": "Ca. 3 Stunden / 250€",
-      "listLabel": "Meine Dienstleistungen umfassen:",
-      "listItem1": "Text 1",
-      "listItem2": "Text 2"
+      "eyebrow": "Kleiderschrank-Reset",
+      "title": "Kleiderschrank-Reset",
+      "intro": "Gemeinsam schaffen wir Klarheit im Kleiderschrank und geben deinem Alltag mehr Leichtigkeit.",
+      "meta": "Ca. 3 Stunden / 250€",
+      "listLabel": "Ich begleite dich dabei bei:",
+      "listItem1": "der Sortierung nach Farbe, Form und Funktion",
+      "listItem2": "der Entwicklung eines praktischen, persönlichen Looks"
     },
     "colorConsultation": {
-      "heading": "Farbberatung",
-      "intro": "Wir finden deine individuellen Farben, die dich frisch, lebendig und authentisch wirken lassen. Du lernst, welche Nuancen deine natürliche Ausstrahlung unterstreichen – für mehr Sicherheit beim Einkaufen und Kombinieren.",
-      "duration": "Ca. 1,5 Stunden / 150€",
-      "listLabel": "Was ich anbiete:",
-      "listItem1": "Text 1",
-      "listItem2": "Text 2"
+      "eyebrow": "Farbberatung",
+      "title": "Farbberatung",
+      "intro": "Wir finden die Farben, die dich frisch, lebendig und authentisch wirken lassen.",
+      "meta": "Ca. 1,5 Stunden / 150€",
+      "listLabel": "Das Ergebnis ist:",
+      "listItem1": "mehr Sicherheit beim Einkaufen und Kombinieren",
+      "listItem2": "ein klarerer Blick auf deine persönliche Farbwelt"
     },
     "personalShopping": {
-      "heading": "Personal Shopping & Styling",
-      "intro": "Gemeinsam finden wir gezielt Kleidung, die wirklich zu dir passt – statt Fehlkäufen und Frust. Du bekommst eine ehrliche, stilvolle Begleitung beim Einkaufen, abgestimmt auf deinen Alltag, deine Figur und deinen Stil.",
-      "duration": "Zwischen 2 und 4 Stunden / 180€ für die erste 2 Stunden + 80€ pro weitere Stunde",
-      "listLabel": "Mein Angebot umfasst:",
-      "listItem1": "Text 1",
-      "listItem2": "Text 2"
+      "eyebrow": "Personal Shopping & Styling",
+      "title": "Personal Shopping & Styling",
+      "intro": "Gemeinsam finden wir gezielt Kleidung, die wirklich zu dir passt – ohne Frust und Fehlkäufe.",
+      "meta": "2–4 Stunden / 180€ + 80€ pro weitere Stunde",
+      "listLabel": "Meine Begleitung umfasst:",
+      "listItem1": "eine gezielte Auswahl passend zu deinem Alltag",
+      "listItem2": "stilvolle Tipps für Kombinationen und Einkaufssicherheit"
     },
     "individualConsultation": {
-      "heading": "Individuelle Stilberatung",
-      "intro": "Wir entwickeln deinen persönlichen Stil auf Basis deiner Persönlichkeit, deines Lebensstils und deiner Körperform. Du verstehst, was dich wirklich ausmacht – und wie du das durch Kleidung sichtbar machst.",
-      "listLabel": "Mein Angebot umfasst:",
-      "listItem1": "Text 1",
-      "listItem2": "Text 2"
+      "eyebrow": "Individuelle Stilberatung",
+      "title": "Individuelle Stilberatung",
+      "intro": "Wir entwickeln deinen persönlichen Stil auf Basis deiner Persönlichkeit, deiner Lebensphase und deiner Figur.",
+      "meta": "Individuell abgestimmt",
+      "listLabel": "Im Fokus stehen:",
+      "listItem1": "dein Ausdruck, deine Haltung und dein Wohlgefühl",
+      "listItem2": "eine klare Strategie für deinen Alltag und deine Garderobe"
     }
   },
   "contact": {

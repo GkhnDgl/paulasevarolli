@@ -4,8 +4,12 @@
   },
   "nav": {
     "home": "Início",
+    "stilberatung": "Consultoria de estilo",
+    "atelier": "Atelier",
+    "shop": "Shop",
     "services": "Serviços",
-    "about": "Sobre",
+    "about": "O que é consultoria de estilo?",
+    "reviews": "Depoimentos",
     "contact": "Entrar em contato"
   },
   "hero": {
@@ -14,6 +18,7 @@
     "contact": "Entrar em contato"
   },
   "landing": {
+    "eyebrow": "Design de moda & consultoria de estilo",
     "title": "Paula Sevarolli",
     "description": "Escolha a oferta certa para você e descubra a consultoria de estilo ou o atelier.",
     "stilberatungTitle": "Consultoria de estilo",
@@ -39,53 +44,87 @@
     "heading": "Serviços",
     "wardrobeReset": {
       "title": "Reset de guarda-roupa",
-      "text": "Texto 1"
+      "text": "Mais organização, mais leveza e um estilo que faz sentido para o seu dia a dia."
     },
     "colorConsultation": {
       "title": "Consultoria de cores",
-      "text": "Texto 2"
+      "text": "Descubra suas cores e deixe sua presença parecer mais viva e autêntica."
     },
     "personalShopping": {
       "title": "Compras pessoais & styling",
-      "text": "Texto 3"
+      "text": "Juntos, encontramos peças que realmente te acompanham – sem frustração nem erro de compra."
     },
     "individualConsultation": {
       "title": "Consultoria de estilo individual",
-      "text": "Texto 4"
+      "text": "Um acompanhamento pessoal para um estilo que reforça sua personalidade."
     }
   },
-  "subpages": {
-    "back": "Voltar",
+  "stilberatungPage": {
+    "eyebrow": "Consultoria de estilo",
+    "title": "Paula Sevarolli Consultoria de estilo",
+    "description": "Clareza, segurança e um estilo que realmente combina com você.",
+    "aboutTitle": "O que é consultoria de estilo?",
+    "aboutText": "A consultoria de estilo é um processo pessoal e sensível, em que buscamos juntos um caminho para uma expressão autêntica. Olhamos para a sua personalidade, fase da vida, cores e contexto do seu cotidiano para criar algo que realmente seja seu.",
+    "servicesTitle": "Serviços",
+    "reviewsTitle": "Depoimentos",
+    "review1": "„Paula me acompanhou para eu me encontrar de novo no meu próprio estilo – com calma e muita sensibilidade.“",
+    "review2": "„A consultoria foi precisa, inspiradora e deixou meu guarda-roupa muito mais leve.“",
+    "review3": "„Finalmente entendi quais cores e cortes realmente combinam comigo.“"
+  },
+  "atelier": {
+    "eyebrow": "Atelier",
+    "title": "Paula Sevarolli Atelier",
+    "description": "Design, consultoria e acompanhamento criativo em torno de estilo e expressão.",
+    "aboutTitle": "Sobre",
+    "aboutText1": "O atelier representa uma abordagem criativa de consultoria de estilo, acompanhamento individual e um olhar sensível para forma, cor e expressão.",
+    "aboutText2": "Aqui surgem soluções pessoais para quem quer se apresentar de forma consciente e autônoma.",
+    "servicesTitle": "Serviços",
+    "service1Title": "Consultoria de estilo individual",
+    "service1Text": "Um caminho alinhado à sua personalidade para mais clareza e confiança."
+  },
+  "shop": {
+    "title": "Shop",
+    "headline": "O shop está sendo criado",
+    "message": "Em breve, algo especial vai surgir aqui – um espaço para peças conscientes, inspiração criativa e um estilo que cresce com você. Por ora, ainda está em construção, mas já há um primeiro impulso em formação."
+  },
+  "servicePages": {
+    "cta": "Marcar um horário",
+    "back": "Voltar para a consultoria de estilo",
     "wardrobeReset": {
-      "heading": "Reset de guarda-roupa",
-      "intro": "Vamos organizar seu guarda-roupa juntos e trazer clareza. Você mantém apenas o que realmente faz sentido para a sua vida atual, o seu estilo e o seu corpo – tudo o que não faz parte disso pode ir embora. Para mais leveza e organização no dia a dia.",
-      "duration": "Cerca de 3 horas / 250€",
-      "listLabel": "Meus serviços incluem:",
-      "listItem1": "Texto 1",
-      "listItem2": "Texto 2"
+      "eyebrow": "Reset de guarda-roupa",
+      "title": "Reset de guarda-roupa",
+      "intro": "Juntos, criamos mais clareza no guarda-roupa e mais leveza no seu dia a dia.",
+      "meta": "Cerca de 3 horas / 250€",
+      "listLabel": "Eu te acompanho em:",
+      "listItem1": "a organização por cor, forma e função",
+      "listItem2": "o desenvolvimento de um visual prático e pessoal"
     },
     "colorConsultation": {
-      "heading": "Consultoria de cores",
-      "intro": "Encontramos suas cores individuais, que fazem você parecer mais fresca, viva e autêntica. Você aprende quais nuances destacam sua presença natural – para mais segurança ao comprar e combinar roupas.",
-      "duration": "Cerca de 1,5 horas / 150€",
-      "listLabel": "O que ofereço:",
-      "listItem1": "Texto 1",
-      "listItem2": "Texto 2"
+      "eyebrow": "Consultoria de cores",
+      "title": "Consultoria de cores",
+      "intro": "Encontramos as cores que fazem você parecer mais fresca, viva e autêntica.",
+      "meta": "Cerca de 1,5 horas / 150€",
+      "listLabel": "O resultado é:",
+      "listItem1": "mais segurança ao comprar e combinar peças",
+      "listItem2": "uma visão mais clara do seu universo de cores"
     },
     "personalShopping": {
-      "heading": "Compras pessoais & styling",
-      "intro": "Juntos, encontramos peças de roupa que realmente combinam com você – em vez de compras impulsivas e frustração. Você recebe acompanhamento honesto e elegante para comprar, alinhado com seu cotidiano, sua silhueta e seu estilo.",
-      "duration": "Entre 2 e 4 horas / 180€ pelas primeiras 2 horas + 80€ por hora adicional",
-      "listLabel": "Minha oferta inclui:",
-      "listItem1": "Texto 1",
-      "listItem2": "Texto 2"
+      "eyebrow": "Compras pessoais & styling",
+      "title": "Compras pessoais & styling",
+      "intro": "Juntos, encontramos peças que realmente combinam com você – sem frustração nem erros de compra.",
+      "meta": "2–4 horas / 180€ + 80€ por hora adicional",
+      "listLabel": "Meu acompanhamento inclui:",
+      "listItem1": "uma seleção objetiva, adequada ao seu cotidiano",
+      "listItem2": "sugestões de combinações com mais segurança"
     },
     "individualConsultation": {
-      "heading": "Consultoria de estilo individual",
-      "intro": "Desenvolvemos seu estilo pessoal com base na sua personalidade, no seu estilo de vida e na sua forma corporal. Você entende o que realmente te destaca – e como expressar isso através da roupa.",
-      "listLabel": "Minha oferta inclui:",
-      "listItem1": "Texto 1",
-      "listItem2": "Texto 2"
+      "eyebrow": "Consultoria de estilo individual",
+      "title": "Consultoria de estilo individual",
+      "intro": "Desenvolvemos seu estilo pessoal com base na sua personalidade, fase da vida e silhueta.",
+      "meta": "Personalizado",
+      "listLabel": "O foco está em:",
+      "listItem1": "sua expressão, postura e bem-estar",
+      "listItem2": "uma estratégia clara para o seu cotidiano e guarda-roupa"
     }
   },
   "contact": {

@@ -12,11 +12,23 @@
   <nav class="navbar">
     <div class="nav-left">
       <a href="index.html" data-i18n="nav.home"></a>
-      <a href="#about" data-i18n="nav.about"></a>
-      <a href="#leistungen" data-i18n="nav.services"></a>
-      <a href="#kontakt" data-i18n="nav.contact"></a>
+      <a href="stilberatung.html" data-i18n="nav.stilberatung"></a>
+      <a href="atelier.html" data-i18n="nav.atelier"></a>
+      <a href="shop.html" data-i18n="nav.shop"></a>
+      <!-- <a href="#kontakt" data-i18n="nav.contact"></a> -->
     </div>
     <div class="nav-right">
+      <div class="nav-icon-group">
+        <a href="mailto:paulasevarolli@hotmail.com" class="nav-icon-btn" aria-label="E-Mail" title="E-Mail">
+          <img src="images/email.png" alt="E-Mail" />
+        </a>
+        <a href="https://instagram.com/paulasevarolli" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="Instagram" title="Instagram">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://wa.me/491234567890" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="WhatsApp" title="WhatsApp">
+          <img src="images/whatsapp.png" alt="WhatsApp" />
+        </a>
+      </div>
       <div class="lang-switch" role="group" aria-label="Language switcher">
         <button type="button" class="lang active" data-lang="de">DE</button>
         <button type="button" class="lang" data-lang="pt">PT</button>
@@ -24,75 +36,46 @@
     </div>
   </nav>
 
-  <header class="hero" id="home">
-    <div class="hero-content">
-      <h1>Paula Sevarolli Atelier</h1>
-      <p>Gestaltung, Beratung und kreative Begleitung rund um Stil und Ausdruck.</p>
-      <div class="hero-actions">
-        <a href="mailto:paulasevarolli@hotmail.com" class="hero-icon-btn" aria-label="E-Mail" title="E-Mail">
-          <img src="images/email.png" alt="E-Mail" />
-        </a>
-        <a href="https://instagram.com/paulasevarolli" target="_blank" rel="noopener noreferrer" class="hero-icon-btn" aria-label="Instagram" title="Instagram">
-          <img src="images/instagram.png" alt="Instagram" />
-        </a>
-        <a href="https://wa.me/491234567890" target="_blank" rel="noopener noreferrer" class="hero-icon-btn" aria-label="WhatsApp" title="WhatsApp">
-          <img src="images/whatsapp.png" alt="WhatsApp" />
-        </a>
-      </div>
+  <header class="page-hero" id="home">
+    <div class="page-hero-content">
+      <p class="eyebrow" data-i18n="atelier.eyebrow"></p>
+      <h1 data-i18n="atelier.title"></h1>
+      <p data-i18n="atelier.description"></p>
     </div>
   </header>
 
-  <section class="about" id="about">
-    <h2>About</h2>
-    <p>Das Atelier steht für kreative Stilberatung, individuelle Begleitung und einen sensiblen Blick für Form, Farbe und Ausdruck.</p>
-    <p>Hier entstehen persönliche Lösungen für Menschen, die sich bewusst und eigenständig präsentieren möchten.</p>
+  <section class="page-section" id="about">
+    <h2 data-i18n="atelier.aboutTitle"></h2>
+    <p data-i18n="atelier.aboutText1"></p>
+    <p data-i18n="atelier.aboutText2"></p>
   </section>
 
-  <section class="services" id="leistungen">
-    <h2>Leistungen</h2>
-
-    <div class="card" data-service="atelier-service-1">
-      <h3>Individuelle Stilberatung</h3>
-      <p>Dummy-Leistung für die spätere Befüllung.</p>
+  <section class="page-section" id="leistungen">
+    <h2 data-i18n="atelier.servicesTitle"></h2>
+    <div class="service-list">
+      <div class="service-card">
+        <h3 data-i18n="atelier.service1Title"></h3>
+        <p data-i18n="atelier.service1Text"></p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="atelier.service2Title"></h3>
+        <p data-i18n="atelier.service2Text"></p>
+      </div>
+      <div class="service-card">
+        <h3 data-i18n="atelier.service3Title"></h3>
+        <p data-i18n="atelier.service3Text"></p>
+      </div>
     </div>
-
-    <div class="card" data-service="atelier-service-2">
-      <h3>Atelier-Begleitung</h3>
-      <p>Dummy-Leistung für die spätere Befüllung.</p>
-    </div>
-
-    <div class="card" data-service="atelier-service-3">
-      <h3>Konzept & kreative Entwicklung</h3>
-      <p>Dummy-Leistung für die spätere Befüllung.</p>
-    </div>
-  </section>
-
-  <section id="atelier-service-1" class="subpage" style="display: none;">
-    <button class="back-btn" onclick="showMain()">Zurück</button>
-    <h2>Individuelle Stilberatung</h2>
-    <p>Diese Leistung wird später mit dem passenden Inhalt befüllt.</p>
-  </section>
-
-  <section id="atelier-service-2" class="subpage" style="display: none;">
-    <button class="back-btn" onclick="showMain()">Zurück</button>
-    <h2>Atelier-Begleitung</h2>
-    <p>Diese Leistung wird später mit dem passenden Inhalt befüllt.</p>
-  </section>
-
-  <section id="atelier-service-3" class="subpage" style="display: none;">
-    <button class="back-btn" onclick="showMain()">Zurück</button>
-    <h2>Konzept & kreative Entwicklung</h2>
-    <p>Diese Leistung wird später mit dem passenden Inhalt befüllt.</p>
   </section>
 
   <section class="contact" id="kontakt">
-    <h2>Kontakt</h2>
-    <a class="btn" href="mailto:paulasevarolli@hotmail.com">E-Mail schreiben</a>
-    <a class="btn" href="https://instagram.com/paulasevarolli" target="_blank">Instagram</a>
-    <a class="btn" href="https://wa.me/491234567890" target="_blank">WhatsApp</a>
+    <h2 data-i18n="contact.heading"></h2>
+    <a class="btn" href="mailto:paulasevarolli@hotmail.com" data-i18n="contact.email"></a>
+    <a class="btn" href="https://instagram.com/paulasevarolli" target="_blank" data-i18n="contact.instagram"></a>
+    <a class="btn" href="https://wa.me/491234567890" target="_blank" data-i18n="contact.whatsapp"></a>
   </section>
 
-  <footer>© 2026 Paula Sevarolli Atelier</footer>
+  <footer data-i18n="footer"></footer>
 
   <script>
     let currentLang = 'de';
