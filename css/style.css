@@ -144,6 +144,7 @@ footer {
     margin-top: 88px;
 }
 
+/* Animation der Bilder */
 .landing-half {
   position: relative;
   display: flex;
@@ -156,8 +157,27 @@ footer {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: imageReveal 2s ease forwards;
 }
+@keyframes imageReveal {
+    from {
+        opacity:0;
+        transform:scale(1.06);
+    }
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* .landing-half.stilberatung {
+    animation-delay:0.15s;
+}
+
+
+.landing-half.atelier {
+    animation-delay:0.35s;
+} */
 
 /* .landing-half::before {
   content: "";
@@ -186,10 +206,24 @@ footer {
   background-image: url('../images/atelier.jpg');
 }
 
+/* Animation Unterer Text */
 .landing-half-content {
-  position: relative;
-  z-index: 1;
-  max-width: 500px;
+    position:relative;
+    z-index:1;
+    max-width:500px;
+    opacity:0;
+    animation:textReveal 1.4s ease forwards;
+    animation-delay:.8s;
+}
+@keyframes textReveal {
+    from {
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .landing-half h2 {
@@ -525,39 +559,6 @@ footer {
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 10px 24px rgba(233, 184, 200, 0.22);
 }
 
-/* Schwebender Titel */
-.landing-logo {
-    position: absolute;
-    top: 105px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
-    text-align: center;
-    pointer-events: none;
-    width: 100%;
-}
-
-.landing-logo h1 {
-    margin: 0;
-    font-family: 'Alex Brush', cursive;
-    font-size: clamp(58px, 7vw, 95px);
-    font-weight: normal;
-    color: #ffffff;
-    text-shadow:
-        0 2px 8px rgba(0,0,0,.35),
-        0 8px 25px rgba(0,0,0,.35);
-}
-
-.landing-logo p {
-    margin-top: 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,.95);
-    text-shadow: 0 2px 8px rgba(0,0,0,.35);
-}
-
 /* ===========================
    Luxury Landing Logo
 =========================== */
@@ -574,70 +575,61 @@ footer {
 }
 
 .landing-logo h1{
-
     margin:0;
-
     font-family:'Alex Brush',cursive;
-
     font-size:clamp(70px,7vw,110px);
-
     font-weight:400;
-
     color:#ffffff;
-
     text-shadow:
         0 3px 12px rgba(0,0,0,.45),
         0 10px 30px rgba(0,0,0,.30);
 }
 
 .logo-divider{
-
     margin:8px auto 15px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:14px;
 }
 
 .logo-divider span{
-
     width:90px;
-
     height:1px;
-
     background:rgba(255,255,255,.75);
 }
 
 .diamond{
-
     width:8px;
-
     height:8px;
-
     background:#e7c99c;
-
     transform:rotate(45deg);
-
     box-shadow:0 0 8px rgba(231,201,156,.5);
 }
 
 .landing-logo p{
-
     margin:0;
-
     font-family:'Inter',sans-serif;
-
     font-size:14px;
-
     letter-spacing:8px;
-
     color:white;
-
     text-transform:uppercase;
-
     text-shadow:0 3px 10px rgba(0,0,0,.35);
+}
+
+/* ===========================
+   Opening Animation - Logo
+=========================== */
+.landing-logo {
+    animation: logoFadeIn 1.8s ease forwards;
+}
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -25px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
