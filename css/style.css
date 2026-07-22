@@ -159,11 +159,23 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.landing-half::before {
+/* .landing-half::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.62) 100%);
+} */
+
+.landing-half::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,.35) 0%,
+        rgba(0,0,0,.18) 35%,
+        rgba(0,0,0,.62) 100%
+    );
 }
 
 .landing-half.stilberatung {
