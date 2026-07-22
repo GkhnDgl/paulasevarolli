@@ -138,10 +138,10 @@ footer {
 }
 
 .landing-split {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  min-height: calc(100vh - 88px);
-  margin-top: 88px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: calc(100vh - 88px);
+    margin-top: 88px;
 }
 
 .landing-half {
@@ -149,7 +149,7 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  min-height: calc(100vh - 88px);
+  height: calc(100vh - 88px);
   padding: 48px;
   text-decoration: none;
   color: #fff;
@@ -171,10 +171,10 @@ footer {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        180deg,
-        rgba(0,0,0,.35) 0%,
-        rgba(0,0,0,.18) 35%,
-        rgba(0,0,0,.62) 100%
+      180deg,
+      rgba(0,0,0,.40) 0%,
+      rgba(0,0,0,.15) 40%,
+      rgba(0,0,0,.60) 100%
     );
 }
 
@@ -328,11 +328,44 @@ footer {
   z-index: 30;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  background: rgba(255, 250, 252, 0.72);
-  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(213, 177, 191, 0.28);
+  border-bottom: 1px solid rgba(255,255,255,.15);
   box-shadow: 0 10px 35px rgba(213, 177, 191, 0.14);
+}
+
+.nav-center{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.site-logo{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-family:'Alex Brush',cursive;
+
+    font-size:58px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.35),
+        0 8px 24px rgba(0,0,0,.35);
+
+    transition:.3s;
+}
+
+.site-logo:hover{
+
+    transform:scale(1.03);
+
+    color:white;
 }
 
 .nav-left,
@@ -494,13 +527,14 @@ footer {
 
 /* Schwebender Titel */
 .landing-logo {
-    position: fixed;
-    top: 120px;
+    position: absolute;
+    top: 105px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 40;
+    z-index: 20;
     text-align: center;
     pointer-events: none;
+    width: 100%;
 }
 
 .landing-logo h1 {
@@ -522,4 +556,88 @@ footer {
     text-transform: uppercase;
     color: rgba(255,255,255,.95);
     text-shadow: 0 2px 8px rgba(0,0,0,.35);
+}
+
+/* ===========================
+   Luxury Landing Logo
+=========================== */
+
+.landing-logo{
+    position:fixed;
+    top:85px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:100;
+    text-align:center;
+    pointer-events:none;
+    width:100%;
+}
+
+.landing-logo h1{
+
+    margin:0;
+
+    font-family:'Alex Brush',cursive;
+
+    font-size:clamp(70px,7vw,110px);
+
+    font-weight:400;
+
+    color:#ffffff;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,.45),
+        0 10px 30px rgba(0,0,0,.30);
+}
+
+.logo-divider{
+
+    margin:8px auto 15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+}
+
+.logo-divider span{
+
+    width:90px;
+
+    height:1px;
+
+    background:rgba(255,255,255,.75);
+}
+
+.diamond{
+
+    width:8px;
+
+    height:8px;
+
+    background:#e7c99c;
+
+    transform:rotate(45deg);
+
+    box-shadow:0 0 8px rgba(231,201,156,.5);
+}
+
+.landing-logo p{
+
+    margin:0;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:14px;
+
+    letter-spacing:8px;
+
+    color:white;
+
+    text-transform:uppercase;
+
+    text-shadow:0 3px 10px rgba(0,0,0,.35);
 }
