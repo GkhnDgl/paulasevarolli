@@ -2,39 +2,480 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title data-i18n="meta.title"></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&family=Alex+Brush&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/scroll.js"></script>
+  <title data-i18n="meta.title">Stilberatung - Services</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS / CSS VARIABLEN (Harmonized with style.css & Light Theme)
+       ========================================================================== */
+    :root {
+      /* Farben - Primär & Akzente */
+      --color-primary: #8d6376;
+      --color-primary-hover: #7a4d63;
+      --color-text-main: #4d4a4f;
+      --color-text-muted: #725b64;
+      --color-text-light: #9d9198;
+      --color-accent-gold: #d4af37;
+      --bg-right-content: #ffffff;
+      --bg-right-content-subtle: #fffafc;
+
+      /* Gradients */
+      --bg-main-gradient: linear-gradient(180deg, #fffafc 0%, #f7f3f5 100%);
+      --bg-btn-gradient: linear-gradient(135deg, rgba(255, 236, 242, 0.95), rgba(233, 184, 200, 0.55));
+      --bg-btn-primary: linear-gradient(135deg, #8d6376 0%, #7a4d63 100%);
+
+      /* Schriften */
+      --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      --font-serif: 'Cormorant Garamond', 'Playfair Display', serif;
+      --font-script: 'Alex Brush', cursive;
+
+      /* Rahmen & Schatten */
+      --border-pink: 1px solid rgba(233, 184, 200, 0.4);
+      --shadow-btn: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 8px 20px rgba(233, 184, 200, 0.2);
+      --shadow-btn-hover: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 24px rgba(233, 184, 200, 0.3);
+      --shadow-soft: 0 10px 30px rgba(141, 99, 118, 0.08);
+    }
+
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #ffffff;
+      color: var(--color-text-main);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(233, 184, 200, 0.25);
+      box-shadow: 0 4px 25px rgba(141, 99, 118, 0.06);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: var(--color-text-main);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: var(--color-primary);
+      background: rgba(233, 184, 200, 0.16);
+    }
+
+    /* Dropdown */
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-link-dropdown {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-link-dropdown::after {
+      content: "▾";
+      display: inline-block;
+      font-size: 12px;
+      color: var(--color-primary);
+      transition: transform 0.25s ease;
+    }
+
+    .nav-dropdown:hover .nav-link-dropdown::after {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(255, 250, 252, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      min-width: 220px;
+      padding: 10px;
+      border-radius: 16px;
+      box-shadow: 0 16px 35px rgba(141, 99, 118, 0.15);
+      border: 1px solid rgba(233, 184, 200, 0.3);
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nav-dropdown:hover .dropdown-menu {
+      display: flex;
+    }
+
+    .dropdown-menu a {
+      color: var(--color-text-main);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(233, 184, 200, 0.2);
+      color: var(--color-primary);
+    }
+
+    /* Elegant Social Icon Buttons */
+    .nav-icon-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-btn-gradient);
+      border: var(--border-pink);
+      color: var(--color-primary);
+      box-shadow: var(--shadow-btn);
+      transition: all 0.3s ease;
+      padding: 0 !important;
+    }
+
+    .nav-icon-btn svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icon-btn:hover {
+      transform: translateY(-2px);
+      color: var(--color-primary-hover);
+      box-shadow: var(--shadow-btn-hover);
+      background: #ffffff;
+    }
+
+    .nav-icon-btn:hover svg {
+      transform: scale(1.08);
+    }
+
+    /* Language Switcher */
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border: var(--border-pink);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    .lang-switch button {
+      background: transparent;
+      border: none;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.85rem;
+      padding: 5px 12px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-switch button.active {
+      color: var(--color-primary);
+      font-weight: 600;
+      background: var(--bg-btn-gradient);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 2px 8px rgba(233, 184, 200, 0.25);
+    }
+
+    /* Fullscreen Chapter Layout */
+    .chapter {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: row; /* Bild links, Text rechts */
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Links: Bild 1/3 (33.333%) */
+    .chapter-image-container {
+      width: 33.333%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .chapter-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+
+    .chapter:hover .chapter-image {
+      transform: scale(1.03);
+    }
+
+    /* Rechts: Text 2/3 (66.667%) - Light Background & Elegant Styling */
+    .chapter-content {
+      width: 66.667%;
+      height: 100%;
+      background-color: var(--bg-right-content);
+      background: linear-gradient(135deg, #ffffff 0%, #fffafc 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6% 10% 5% 8%;
+      position: relative;
+    }
+
+    .chapter-content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(233,184,200,0) 0%, rgba(233,184,200,0.3) 50%, rgba(233,184,200,0) 100%);
+    }
+
+    /* Typografie */
+    .chapter-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .chapter-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 4vw, 4.5rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--color-primary);
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .chapter-meta {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chapter-meta::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background-color: var(--color-primary);
+    }
+
+    .chapter-text {
+      font-family: var(--font-sans);
+      font-size: clamp(0.95rem, 1.05vw, 1.1rem);
+      font-weight: 300;
+      color: var(--color-text-main);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      max-width: 780px;
+    }
+
+    .chapter-list-label {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-hover);
+      margin-bottom: 12px;
+      margin-top: 6px;
+    }
+
+    .chapter-list {
+      list-style-type: none;
+      margin-bottom: 32px;
+    }
+
+    .chapter-list li {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--color-text-main);
+      line-height: 1.7;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .chapter-list li::before {
+      content: "✦";
+      color: var(--color-primary);
+      font-size: 0.75rem;
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+
+    /* Buttons */
+    .chapter-btn-wrapper {
+      margin-top: 10px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--bg-btn-gradient);
+      border: var(--border-pink);
+      color: var(--color-primary);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 14px 34px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: var(--shadow-btn);
+      transition: all 0.3s ease;
+      letter-spacing: 0.4px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      color: var(--color-primary-hover);
+      box-shadow: var(--shadow-btn-hover);
+      background: #ffffff;
+    }
+
+    /* Seiten-Navigation (Dots) */
+    .chapter-nav {
+      position: fixed;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: rgba(141, 99, 118, 0.25);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .nav-dot.active {
+      background-color: var(--color-primary);
+      transform: scale(1.5);
+      box-shadow: 0 0 10px rgba(141, 99, 118, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      body { scroll-snap-type: none; }
+      .navbar { padding: 15px 20px; flex-direction: column; gap: 12px; }
+      .nav-left, .nav-right { flex-wrap: wrap; justify-content: center; }
+      .chapter { flex-direction: column; height: auto; min-height: 100vh; }
+      .chapter-image-container { width: 100%; height: 45vh; }
+      .chapter-content { width: 100%; height: auto; padding: 40px 24px 60px; }
+      .chapter-nav { display: none; }
+      .chapter-btn-wrapper { flex-direction: column; }
+      .btn { text-align: center; }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-left">
-      <a href="index.html" data-i18n="nav.home"></a>
-      <a href="#about" data-i18n="nav.about"></a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
       <div class="nav-dropdown">
-        <a href="#leistungen" class="nav-link-dropdown" data-i18n="nav.services"></a>
+        <a href="stilberatung.html" class="nav-link-dropdown" data-i18n="nav.stilberatung">Stilberatung</a>
         <div class="dropdown-menu">
-          <a href="kleiderschrankreset.html" data-i18n="services.wardrobeReset.title"></a>
-          <a href="farbberatung.html" data-i18n="services.colorConsultation.title"></a>
-          <a href="personalshoppingstyling.html" data-i18n="services.personalShopping.title"></a>
-          <a href="individuellestilberatung.html" data-i18n="services.individualConsultation.title"></a>
+          <a href="#reset" data-i18n="services.wardrobeReset.title">Kleiderschrank-Reset</a>
+          <a href="#color" data-i18n="services.colorConsultation.title">Farbberatung</a>
+          <a href="#shopping" data-i18n="services.personalShopping.title">Personal Shopping</a>
+          <a href="#individual" data-i18n="services.individualConsultation.title">Individuelle Stilberatung</a>
         </div>
       </div>
-      <a href="#rezensionen" data-i18n="nav.reviews"></a>
-      <!-- <a href="#kontakt" data-i18n="nav.contact"></a> -->
+      <a href="shop.html" data-i18n="nav.shop">Shop</a>
+      <a href="#rezensionen" data-i18n="nav.reviews">Rezensionen</a>
     </div>
     <div class="nav-right">
       <div class="nav-icon-group">
+        <!-- Mail Icon -->
         <a href="mailto:paulasevarolli@hotmail.com" class="nav-icon-btn" aria-label="E-Mail" title="E-Mail">
-          <img src="images/email.png" alt="E-Mail" />
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
         </a>
+        <!-- Instagram Icon -->
         <a href="https://instagram.com/paulasevarolli" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="Instagram" title="Instagram">
-          <img src="images/instagram.png" alt="Instagram" />
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
         </a>
+        <!-- WhatsApp Icon -->
         <a href="https://wa.me/491234567890" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="WhatsApp" title="WhatsApp">
-          <img src="images/whatsapp.png" alt="WhatsApp" />
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
         </a>
       </div>
       <div class="lang-switch" role="group" aria-label="Language switcher">
@@ -44,66 +485,138 @@
     </div>
   </nav>
 
-  <header class="page-hero" id="home">
-    <div class="page-hero-content">
-      <p class="eyebrow" data-i18n="stilberatungPage.eyebrow"></p>
-      <h1 data-i18n="stilberatungPage.title"></h1>
-      <p data-i18n="stilberatungPage.description"></p>
+  <!-- Seiten-Navigation Dots -->
+  <div class="chapter-nav">
+    <div class="nav-dot active"></div>
+    <div class="nav-dot"></div>
+    <div class="nav-dot"></div>
+    <div class="nav-dot"></div>
+  </div>
+
+  <!-- KAPITEL 1: Kleiderschrank-Reset -->
+  <section class="chapter" id="reset">
+    <div class="chapter-image-container">
+      <img src="images/kleiderschrankreset.jpg" alt="Kleiderschrank-Reset" class="chapter-image">
     </div>
-  </header>
+    <div class="chapter-content">
+      <p class="chapter-eyebrow" data-i18n="servicePages.wardrobeReset.eyebrow"></p>
+      <h1 class="chapter-title" data-i18n="servicePages.wardrobeReset.title"></h1>
+      <p class="chapter-meta" data-i18n="servicePages.wardrobeReset.meta"></p>
+      
+      <p class="chapter-text" data-i18n="servicePages.wardrobeReset.intro"></p>
+      
+      <p class="chapter-list-label" data-i18n="servicePages.wardrobeReset.listLabel"></p>
+      <ul class="chapter-list">
+        <li data-i18n="servicePages.wardrobeReset.listItem1"></li>
+        <li data-i18n="servicePages.wardrobeReset.listItem2"></li>
+      </ul>
 
-  <section class="page-section" id="about">
-    <h2 data-i18n="stilberatungPage.aboutTitle"></h2>
-    <p data-i18n="stilberatungPage.aboutText"></p>
-  </section>
-
-  <section class="page-section" id="leistungen">
-    <h2 data-i18n="stilberatungPage.servicesTitle"></h2>
-    <div class="service-list">
-      <a class="service-card" href="kleiderschrankreset.html">
-        <h3 data-i18n="services.wardrobeReset.title"></h3>
-        <p data-i18n="services.wardrobeReset.text"></p>
-      </a>
-      <a class="service-card" href="farbberatung.html">
-        <h3 data-i18n="services.colorConsultation.title"></h3>
-        <p data-i18n="services.colorConsultation.text"></p>
-      </a>
-      <a class="service-card" href="personalshoppingstyling.html">
-        <h3 data-i18n="services.personalShopping.title"></h3>
-        <p data-i18n="services.personalShopping.text"></p>
-      </a>
-      <a class="service-card" href="individuellestilberatung.html">
-        <h3 data-i18n="services.individualConsultation.title"></h3>
-        <p data-i18n="services.individualConsultation.text"></p>
-      </a>
-    </div>
-  </section>
-
-  <section class="page-section" id="rezensionen">
-    <h2 data-i18n="stilberatungPage.reviewsTitle"></h2>
-    <div class="review-grid">
-      <div class="review-card">
-        <p data-i18n="stilberatungPage.review1"></p>
-      </div>
-      <div class="review-card">
-        <p data-i18n="stilberatungPage.review2"></p>
-      </div>
-      <div class="review-card">
-        <p data-i18n="stilberatungPage.review3"></p>
+      <div class="chapter-btn-wrapper">
+        <a href="mailto:paulasevarolli@hotmail.com" class="btn" data-i18n="servicePages.cta"></a>
       </div>
     </div>
   </section>
 
-  <section class="contact" id="kontakt">
-    <h2 data-i18n="contact.heading"></h2>
-    <a class="btn" href="mailto:paulasevarolli@hotmail.com" data-i18n="contact.email"></a>
-    <a class="btn" href="https://instagram.com/paulasevarolli" target="_blank" data-i18n="contact.instagram"></a>
-    <a class="btn" href="https://wa.me/491234567890" target="_blank" data-i18n="contact.whatsapp"></a>
+  <!-- KAPITEL 2: Farbberatung -->
+  <section class="chapter" id="color">
+    <div class="chapter-image-container">
+      <img src="images/farbberatung.jpg" alt="Farbberatung" class="chapter-image">
+    </div>
+    <div class="chapter-content">
+      <p class="chapter-eyebrow" data-i18n="servicePages.colorConsultation.eyebrow"></p>
+      <h1 class="chapter-title" data-i18n="servicePages.colorConsultation.title"></h1>
+      <p class="chapter-meta" data-i18n="servicePages.colorConsultation.meta"></p>
+      
+      <p class="chapter-text" data-i18n="servicePages.colorConsultation.intro"></p>
+      
+      <p class="chapter-list-label" data-i18n="servicePages.colorConsultation.listLabel"></p>
+      <ul class="chapter-list">
+        <li data-i18n="servicePages.colorConsultation.listItem1"></li>
+        <li data-i18n="servicePages.colorConsultation.listItem2"></li>
+      </ul>
+
+      <div class="chapter-btn-wrapper">
+        <a href="mailto:paulasevarolli@hotmail.com" class="btn" data-i18n="servicePages.cta"></a>
+      </div>
+    </div>
   </section>
 
-  <footer data-i18n="footer"></footer>
+  <!-- KAPITEL 3: Personal Shopping & Styling -->
+  <section class="chapter" id="shopping">
+    <div class="chapter-image-container">
+      <img src="images/personalshoppingstyling.jpg" alt="Personal Shopping & Styling" class="chapter-image">
+    </div>
+    <div class="chapter-content">
+      <p class="chapter-eyebrow" data-i18n="servicePages.personalShopping.eyebrow"></p>
+      <h1 class="chapter-title" data-i18n="servicePages.personalShopping.title"></h1>
+      <p class="chapter-meta" data-i18n="servicePages.personalShopping.meta"></p>
+      
+      <p class="chapter-text" data-i18n="servicePages.personalShopping.intro"></p>
+      
+      <p class="chapter-list-label" data-i18n="servicePages.personalShopping.listLabel"></p>
+      <ul class="chapter-list">
+        <li data-i18n="servicePages.personalShopping.listItem1"></li>
+        <li data-i18n="servicePages.personalShopping.listItem2"></li>
+      </ul>
 
+      <div class="chapter-btn-wrapper">
+        <a href="mailto:paulasevarolli@hotmail.com" class="btn" data-i18n="servicePages.cta"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KAPITEL 4: Individuelle Stilberatung -->
+  <section class="chapter" id="individual">
+    <div class="chapter-image-container">
+      <img src="images/individuellestilberatung.jpg" alt="Individuelle Stilberatung" class="chapter-image">
+    </div>
+    <div class="chapter-content">
+      <p class="chapter-eyebrow" data-i18n="servicePages.individualConsultation.eyebrow"></p>
+      <h1 class="chapter-title" data-i18n="servicePages.individualConsultation.title"></h1>
+      <p class="chapter-meta" data-i18n="servicePages.individualConsultation.meta"></p>
+      
+      <p class="chapter-text" data-i18n="servicePages.individualConsultation.intro"></p>
+      
+      <p class="chapter-list-label" data-i18n="servicePages.individualConsultation.listLabel"></p>
+      <ul class="chapter-list">
+        <li data-i18n="servicePages.individualConsultation.listItem1"></li>
+        <li data-i18n="servicePages.individualConsultation.listItem2"></li>
+      </ul>
+
+      <div class="chapter-btn-wrapper">
+        <a href="mailto:paulasevarolli@hotmail.com" class="btn" data-i18n="servicePages.cta"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- i18n & Scroll Script -->
   <script>
+    // Chapter Dots Logic
+    const chapters = document.querySelectorAll('.chapter');
+    const dots = document.querySelectorAll('.nav-dot');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Array.from(chapters).indexOf(entry.target);
+          dots.forEach(dot => dot.classList.remove('active'));
+          if (dots[index]) {
+            dots[index].classList.add('active');
+          }
+        }
+      });
+    }, { threshold: 0.5 });
+
+    chapters.forEach(chapter => observer.observe(chapter));
+
+    // Allow clicking on dots to scroll to section
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        chapters[index].scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Translation Logic (from original files)
     let currentLang = 'de';
 
     function updateLanguageButtons() {
@@ -115,20 +628,25 @@
     }
 
     async function loadLanguage(lang) {
-      const response = await fetch(`lang/${lang}.json`);
-      const translations = await response.json();
+      try {
+        const response = await fetch(`lang/${lang}.json`);
+        const translations = await response.json();
 
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const value = key.split('.').reduce((o, i) => o?.[i], translations);
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          const value = key.split('.').reduce((o, i) => o?.[i], translations);
 
-        if (value) {
-          const textNodes = Array.from(el.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
-          textNodes.forEach(node => node.remove());
-          const textNode = document.createTextNode(value);
-          el.prepend(textNode);
-        }
-      });
+          if (value) {
+            // Remove existing text nodes to replace them, keeping child elements intact if any
+            const textNodes = Array.from(el.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
+            textNodes.forEach(node => node.remove());
+            const textNode = document.createTextNode(value);
+            el.prepend(textNode);
+          }
+        });
+      } catch (error) {
+        console.error("Error loading language file:", error);
+      }
     }
 
     function setLanguage(lang) {
@@ -149,5 +667,6 @@
       setLanguage(savedLang);
     });
   </script>
+
 </body>
 </html>
