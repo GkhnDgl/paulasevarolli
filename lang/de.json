@@ -87,6 +87,41 @@
     "headline": "Der Shop ist gerade im Entstehen",
     "message": "Hier entsteht bald etwas Besonderes – ein Ort für bewusste Stücke, kreative Inspiration und einen Stil, der mit dir wächst. Für den Moment ist noch nicht alles sichtbar, aber der erste Funke ist schon da."
   },
+  "reviewsPage": {
+    "title": "Rezensionen",
+    "headline": "Stimmen, die für sich sprechen",
+    "message": "Jede Beratung ist einzigartig – hier erzählen Kundinnen, wie sich ihr Weg zu einem stimmigeren, selbstbewussteren Stil angefühlt hat.",
+    "review1": {
+      "text": "„Nach dem Kleiderschrank-Reset mit Paula fühlt sich mein Alltag plötzlich so viel leichter an. Ich weiß morgens sofort, was ich anziehen möchte.“",
+      "author": "Julia K.",
+      "service": "Kleiderschrank-Reset"
+    },
+    "review2": {
+      "text": "„Die Farbberatung hat mir die Augen geöffnet. Ich traue mich jetzt Farben zu tragen, an die ich mich vorher nie herangewagt hätte.“",
+      "author": "Sandra M.",
+      "service": "Farbberatung"
+    },
+    "review3": {
+      "text": "„Personal Shopping mit Paula war das erste Mal, dass Einkaufen wirklich Spaß gemacht hat – ganz ohne Stress und ohne Fehlkäufe.“",
+      "author": "Nina R.",
+      "service": "Personal Shopping & Styling"
+    },
+    "review4": {
+      "text": "„Die individuelle Stilberatung hat mir geholfen, meine Persönlichkeit endlich auch nach außen sichtbar zu machen.“",
+      "author": "Carla T.",
+      "service": "Individuelle Stilberatung"
+    },
+    "review5": {
+      "text": "„Nach meiner Schwangerschaft hat mir Paula geholfen, mich in meinem Körper und meinem Stil neu zuhause zu fühlen.“",
+      "author": "Melanie S.",
+      "service": "Individuelle Stilberatung"
+    },
+    "review6": {
+      "text": "„Beim Einstieg in meine neue berufliche Rolle hat mir die Beratung genau die Sicherheit gegeben, die ich gebraucht habe.“",
+      "author": "Franziska B.",
+      "service": "Farbberatung"
+    }
+  },
   "servicePages": {
     "cta": "Termin vereinbaren",
     "back": "Zurück zur Stilberatung",

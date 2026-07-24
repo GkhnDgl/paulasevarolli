@@ -632,6 +632,32 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+.review-card .review-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  margin-bottom: 16px;
+}
+
+.review-card .review-author {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 2px;
+}
+
+.review-card .review-service {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
 /* ==========================================================================
    7. KEYFRAME ANIMATIONS
    ========================================================================== */

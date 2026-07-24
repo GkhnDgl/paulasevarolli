@@ -87,6 +87,41 @@
     "headline": "O shop está sendo criado",
     "message": "Em breve, algo especial vai surgir aqui – um espaço para peças conscientes, inspiração criativa e um estilo que cresce com você. Por ora, ainda está em construção, mas já há um primeiro impulso em formação."
   },
+  "reviewsPage": {
+    "title": "Depoimentos",
+    "headline": "Vozes que falam por si",
+    "message": "Cada consultoria é única – aqui, clientes contam como foi a experiência de encontrar um estilo mais coerente e confiante.",
+    "review1": {
+      "text": "„Depois do reset de guarda-roupa com a Paula, meu dia a dia ficou muito mais leve. De manhã já sei na hora o que vestir.“",
+      "author": "Julia K.",
+      "service": "Reset de guarda-roupa"
+    },
+    "review2": {
+      "text": "„A consultoria de cores abriu meus olhos. Agora tenho coragem de usar cores que antes nunca teria ousado experimentar.“",
+      "author": "Sandra M.",
+      "service": "Consultoria de cores"
+    },
+    "review3": {
+      "text": "„Fazer compras pessoais com a Paula foi a primeira vez que comprar roupa foi realmente divertido – sem estresse e sem erros de compra.“",
+      "author": "Nina R.",
+      "service": "Compras pessoais & styling"
+    },
+    "review4": {
+      "text": "„A consultoria de estilo individual me ajudou a finalmente tornar minha personalidade visível também por fora.“",
+      "author": "Carla T.",
+      "service": "Consultoria de estilo individual"
+    },
+    "review5": {
+      "text": "„Depois da minha gravidez, a Paula me ajudou a me sentir em casa novamente no meu corpo e no meu estilo.“",
+      "author": "Melanie S.",
+      "service": "Consultoria de estilo individual"
+    },
+    "review6": {
+      "text": "„Ao iniciar minha nova fase profissional, a consultoria me deu exatamente a segurança que eu precisava.“",
+      "author": "Franziska B.",
+      "service": "Consultoria de cores"
+    }
+  },
   "servicePages": {
     "cta": "Marcar um horário",
     "back": "Voltar para a consultoria de estilo",
