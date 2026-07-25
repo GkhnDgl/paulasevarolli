@@ -112,6 +112,10 @@ footer {
   font-size: 14px;
 }
 
+.chapters-page footer {
+  scroll-snap-align: start;
+}
+
 .footer-links {
   margin-top: 8px;
   display: flex;
@@ -243,6 +247,13 @@ footer {
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Dropdowns im rechten Navbar-Bereich (z.B. Rechtliches) öffnen nach links,
+   damit das Menü nicht über den Bildschirmrand hinausragt */
+.nav-right .dropdown-menu {
+  left: auto;
+  right: 0;
 }
 
 .nav-dropdown:hover .dropdown-menu,
