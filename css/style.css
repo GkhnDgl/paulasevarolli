@@ -151,7 +151,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  z-index: 30;
+  z-index: 200;
   box-sizing: border-box;
   font-family: var(--font-sans);
   background: rgba(255, 255, 255, 0.85);
@@ -247,6 +247,7 @@ footer {
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
   border: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 201;
 }
 
 /* Dropdowns im rechten Navbar-Bereich (z.B. Rechtliches) öffnen nach links,
@@ -575,7 +576,7 @@ footer {
   top: 85px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 20;
   text-align: center;
   pointer-events: none;
   width: 100%;
