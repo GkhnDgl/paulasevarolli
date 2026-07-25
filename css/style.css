@@ -112,6 +112,29 @@ footer {
   font-size: 14px;
 }
 
+.footer-links {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary-hover);
+}
+
+.footer-links .divider-dot {
+  color: rgba(0, 0, 0, 0.2);
+}
+
 /* ==========================================================================
    3. NAVIGATION BAR
    ========================================================================== */
@@ -395,6 +418,7 @@ footer {
   position: relative;
   text-align: center;
   max-width: 760px;
+  margin: 0 auto;
   padding: 20px;
   color: var(--color-text-main);
   z-index: 1;
@@ -416,6 +440,54 @@ footer {
   flex-wrap: wrap;
   margin-top: 24px;
 }
+
+/* Dezenter Linie-Diamant-Divider, wiederverwendetes Motiv aus dem Logo-Header */
+.hero-divider {
+  margin: 10px auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero-divider span {
+  width: 60px;
+  height: 1px;
+  background: rgba(88, 86, 87, 0.3);
+}
+
+.hero-divider .diamond {
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent-gold);
+  transform: rotate(45deg);
+  box-shadow: 0 0 6px rgba(231, 201, 156, 0.5);
+}
+
+/* Rechtstexte (Impressum, Datenschutz) */
+.legal-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-section {
+  margin-bottom: 36px;
+}
+
+.legal-section h2 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.legal-section p {
+  margin-bottom: 10px;
+}
+
+.legal-placeholder {
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
 
 /* Luxury Landing Logo Header */
 .landing-logo {

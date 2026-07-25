@@ -168,5 +168,43 @@
     "instagram": "Instagram",
     "whatsapp": "WhatsApp"
   },
+  "legal": {
+    "footerImpressum": "Impressum",
+    "footerDatenschutz": "Datenschutz",
+    "impressum": {
+      "eyebrow": "Impressum",
+      "title": "Impressum",
+      "section1Heading": "Angaben gemäß § 5 TMG",
+      "name": "[Bitte vollständigen Namen bzw. Firmierung ergänzen]",
+      "address": "[Bitte vollständige Anschrift ergänzen]",
+      "contactHeading": "Kontakt",
+      "email": "E-Mail: paulasevarolli@hotmail.com",
+      "phone": "[Bitte Telefonnummer ergänzen – optional]",
+      "vatHeading": "Umsatzsteuer-ID",
+      "vatText": "[Bitte USt-IdNr. gemäß § 27a UStG ergänzen, falls vorhanden]",
+      "responsibleHeading": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+      "responsibleText": "[Bitte Namen der inhaltlich verantwortlichen Person ergänzen]",
+      "disputeHeading": "Streitschlichtung",
+      "disputeText": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+    },
+    "datenschutz": {
+      "eyebrow": "Datenschutz",
+      "title": "Datenschutzerklärung",
+      "section1Heading": "Verantwortliche Stelle",
+      "section1Text": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+      "section2Heading": "Hosting und Server-Logfiles",
+      "section2Text": "[Bitte Namen und Anschrift des Hosting-Anbieters ergänzen sowie Angaben zu erhobenen Server-Logfiles]",
+      "section3Heading": "Lokale Speicherung (localStorage)",
+      "section3Text": "Diese Website speichert Ihre gewählte Sprache (Deutsch oder Portugiesisch) lokal im localStorage Ihres Browsers. Es werden dabei keine personenbezogenen Daten erhoben, keine Cookies gesetzt und keine Daten an einen Server übertragen. Sie können diese Angabe jederzeit über die Browsereinstellungen löschen.",
+      "section4Heading": "Google Fonts",
+      "section4Text": "Diese Website bindet Schriftarten von Google Fonts über den Server fonts.googleapis.com ein. Beim Laden der Schriftarten kann eine Verbindung zu Servern von Google LLC hergestellt werden, wobei Ihre IP-Adresse übermittelt wird. Weitere Informationen finden Sie in der Datenschutzerklärung von Google unter https://policies.google.com/privacy.",
+      "section5Heading": "Verlinkte Dienste (Instagram, WhatsApp, E-Mail)",
+      "section5Text": "Diese Website enthält Links zu Instagram, WhatsApp und einer E-Mail-Adresse. Beim Anklicken dieser Links verlassen Sie unsere Website und gelangen zu Angeboten Dritter (Meta Platforms Ireland Ltd. für Instagram und WhatsApp bzw. Ihrem eigenen E-Mail-Programm). Für die Datenverarbeitung dieser Dienste sind die jeweiligen Anbieter verantwortlich; es gelten deren Datenschutzbestimmungen.",
+      "section6Heading": "Ihre Rechte",
+      "section6Text": "Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie ein Widerspruchsrecht gegen die Verarbeitung und ein Recht auf Datenübertragbarkeit. Bei Fragen wenden Sie sich bitte an die oben genannte verantwortliche Stelle.",
+      "section7Heading": "Änderungen dieser Datenschutzerklärung",
+      "section7Text": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder bei Änderungen des Angebots anzupassen."
+    }
+  },
   "footer": "© 2026 Paula Sevarolli"
 }

@@ -168,5 +168,43 @@
     "instagram": "Instagram",
     "whatsapp": "WhatsApp"
   },
+  "legal": {
+    "footerImpressum": "Aviso Legal",
+    "footerDatenschutz": "Privacidade",
+    "impressum": {
+      "eyebrow": "Aviso Legal",
+      "title": "Aviso Legal (Impressum)",
+      "section1Heading": "Dados conforme § 5 TMG (lei alemã)",
+      "name": "[Inserir nome completo / razão social]",
+      "address": "[Inserir endereço completo]",
+      "contactHeading": "Contato",
+      "email": "E-mail: paulasevarolli@hotmail.com",
+      "phone": "[Inserir telefone – opcional]",
+      "vatHeading": "Número de identificação fiscal (USt-IdNr.)",
+      "vatText": "[Inserir número de identificação fiscal conforme § 27a UStG, se houver]",
+      "responsibleHeading": "Responsável pelo conteúdo conforme § 18 Abs. 2 MStV",
+      "responsibleText": "[Inserir nome da pessoa responsável pelo conteúdo]",
+      "disputeHeading": "Resolução de litígios",
+      "disputeText": "A Comissão Europeia disponibiliza uma plataforma para resolução online de litígios (OS): https://ec.europa.eu/consumers/odr/. Não somos obrigados nem estamos dispostos a participar de um processo de resolução de litígios perante uma instância de arbitragem de consumo."
+    },
+    "datenschutz": {
+      "eyebrow": "Privacidade",
+      "title": "Política de Privacidade",
+      "section1Heading": "Responsável pelo tratamento de dados",
+      "section1Text": "O responsável pelo tratamento de dados neste site é:",
+      "section2Heading": "Hospedagem e arquivos de log do servidor",
+      "section2Text": "[Inserir nome e endereço do provedor de hospedagem, bem como informações sobre os arquivos de log do servidor coletados]",
+      "section3Heading": "Armazenamento local (localStorage)",
+      "section3Text": "Este site armazena o idioma selecionado (alemão ou português) localmente no localStorage do seu navegador. Nenhum dado pessoal é coletado, nenhum cookie é definido e nenhum dado é transmitido a um servidor. Você pode apagar essa informação a qualquer momento nas configurações do seu navegador.",
+      "section4Heading": "Google Fonts",
+      "section4Text": "Este site carrega fontes do Google Fonts a partir do servidor fonts.googleapis.com. Ao carregar as fontes, pode ser estabelecida uma conexão com servidores do Google LLC, transmitindo o seu endereço IP. Mais informações na política de privacidade do Google em https://policies.google.com/privacy.",
+      "section5Heading": "Serviços vinculados (Instagram, WhatsApp, e-mail)",
+      "section5Text": "Este site contém links para Instagram, WhatsApp e um endereço de e-mail. Ao clicar nesses links, você sai deste site e acessa serviços de terceiros (Meta Platforms Ireland Ltd. para Instagram e WhatsApp, ou o seu próprio programa de e-mail). Os respectivos provedores são responsáveis pelo tratamento de dados desses serviços; aplicam-se as suas próprias políticas de privacidade.",
+      "section6Heading": "Seus direitos",
+      "section6Text": "Você tem, a qualquer momento, o direito de acesso, retificação, exclusão e limitação do tratamento dos seus dados pessoais, bem como o direito de oposição ao tratamento e o direito à portabilidade dos dados. Em caso de dúvidas, entre em contato com o responsável mencionado acima.",
+      "section7Heading": "Alterações desta Política de Privacidade",
+      "section7Text": "Reservamo-nos o direito de adaptar esta política de privacidade sempre que necessário, para refletir alterações legais ou mudanças na oferta do site."
+    }
+  },
   "footer": "© 2026 Paula Sevarolli"
 }
