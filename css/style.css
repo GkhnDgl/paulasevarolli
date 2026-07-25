@@ -499,6 +499,51 @@ footer {
   font-style: italic;
 }
 
+/* Preistabelle (z.B. Atelier / Änderungsschneiderei) */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-family: var(--font-sans);
+}
+
+.price-table th,
+.price-table td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 15px;
+  color: var(--color-text-main);
+}
+
+.price-table th {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.price-table th:last-child,
+.price-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: var(--color-primary-hover);
+  white-space: nowrap;
+}
+
+.price-table tbody tr:hover {
+  background: rgba(88, 86, 87, 0.03);
+}
+
+.price-note {
+  font-size: 13px;
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-top: -8px;
+  margin-bottom: 24px;
+}
+
 
 /* Luxury Landing Logo Header */
 .landing-logo {
