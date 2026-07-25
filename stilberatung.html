@@ -176,6 +176,12 @@
     </div>
   </section>
 
+  <button type="button" class="nav-icon-btn scroll-to-top-btn" id="scrollToTopBtn" aria-label="Nach oben scrollen" title="Nach oben">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 7.2 5.8 13.4 7.2 14.8 12 10 16.8 14.8 18.2 13.4 12 7.2Z"/>
+    </svg>
+  </button>
+
   <footer>
     <p data-i18n="footer"></p>
     <div class="footer-links">
@@ -190,20 +196,35 @@
     // Chapter Dots Logic
     const chapters = document.querySelectorAll('.chapter');
     const dots = document.querySelectorAll('.nav-dot');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    const updateChapterState = (index) => {
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) {
+        dots[index].classList.add('active');
+      }
+
+      if (scrollToTopBtn) {
+        scrollToTopBtn.classList.toggle('visible', index > 0);
+      }
+    };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const index = Array.from(chapters).indexOf(entry.target);
-          dots.forEach(dot => dot.classList.remove('active'));
-          if (dots[index]) {
-            dots[index].classList.add('active');
-          }
+          updateChapterState(index);
         }
       });
     }, { threshold: 0.5 });
 
     chapters.forEach(chapter => observer.observe(chapter));
+
+    if (scrollToTopBtn) {
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     // Allow clicking on dots to scroll to section
     dots.forEach((dot, index) => {

@@ -401,6 +401,30 @@ footer {
   transform: scale(1.08);
 }
 
+.scroll-to-top-btn {
+  position: fixed;
+  left: 50%;
+  bottom: 45px;
+  transform: translateX(-50%) translateY(12px);
+  width: 44px;
+  height: 44px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 120;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-to-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.scroll-to-top-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ==========================================================================
    5. LANDING / HERO SECTIONS
    ========================================================================== */
