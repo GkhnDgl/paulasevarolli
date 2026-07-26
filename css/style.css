@@ -438,7 +438,7 @@ footer {
 .page-hero h1 {
   font-size: 64px;
   margin-bottom: 12px;
-  font-family: var(--font-script);
+  font-family: var(--font-serif);
   color: var(--color-text-main);
 }
 
@@ -585,7 +585,7 @@ footer {
 
 .landing-logo h1 {
   margin: 0;
-  font-family: var(--font-script);
+  font-family: var(--font-serif);
   font-size: clamp(70px, 7vw, 110px);
   font-weight: 400;
   color: #ffffff;
