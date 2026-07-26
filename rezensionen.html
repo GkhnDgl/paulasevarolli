@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scroll.js"></script>
 </head>
-<body>
+<body class="fixed-image-layout">
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-left">
@@ -66,14 +66,22 @@
     </div>
   </nav>
 
-  <header class="page-hero">
-    <div class="page-hero-content">
-      <p class="eyebrow" data-i18n="reviewsPage.title"></p>
-      <div class="hero-divider"><span></span><div class="diamond"></div><span></span></div>
-      <h1 data-i18n="reviewsPage.headline"></h1>
-      <p data-i18n="reviewsPage.message"></p>
+  <!-- Seiten-Navigation Dots -->
+  <div class="chapter-nav">
+    <div class="nav-dot active"></div>
+    <div class="nav-dot"></div>
+  </div>
+
+  <section class="chapter">
+    <div class="chapter-image-container">
+      <img src="images/hero.jpg" alt="Rezensionen" class="chapter-image">
     </div>
-  </header>
+    <div class="chapter-content">
+      <p class="chapter-eyebrow" data-i18n="reviewsPage.title"></p>
+      <h1 class="chapter-title" data-i18n="reviewsPage.headline"></h1>
+      <p class="chapter-text" data-i18n="reviewsPage.message"></p>
+    </div>
+  </section>
 
   <section class="page-section reviews">
     <div class="review-grid">
@@ -110,6 +118,12 @@
     </div>
   </section>
 
+  <button type="button" class="nav-icon-btn scroll-to-top-btn" id="scrollToTopBtn" aria-label="Nach oben scrollen" title="Nach oben">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 7.2 5.8 13.4 7.2 14.8 12 10 16.8 14.8 18.2 13.4 12 7.2Z"/>
+    </svg>
+  </button>
+
   <footer>
     <p data-i18n="footer"></p>
     <div class="footer-links">
@@ -120,6 +134,54 @@
   </footer>
 
   <script>
+    // Seiten-Navigation Dots & Scroll-to-Top (Bild links bleibt fix, nur Text scrollt)
+    const chapters = Array.from(document.querySelectorAll('.chapter, .page-section, footer'));
+    const dots = document.querySelectorAll('.nav-dot');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    const updateChapterState = (index) => {
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) {
+        dots[index].classList.add('active');
+      }
+    };
+
+    // Aktiven Punkt anhand der Scrollposition bestimmen (funktioniert in
+    // beide Scroll-Richtungen zuverlässig, unabhängig von unterschiedlich
+    // hohen Abschnitten wie der Bewertungs- oder Preistabelle).
+    const updateActiveDot = () => {
+      const scrollPos = window.scrollY + window.innerHeight * 0.4;
+      let activeIndex = 0;
+      chapters.forEach((section, i) => {
+        if (section.offsetTop <= scrollPos) {
+          activeIndex = i;
+        }
+      });
+      updateChapterState(activeIndex);
+    };
+
+    window.addEventListener('scroll', updateActiveDot);
+    window.addEventListener('resize', updateActiveDot);
+    updateActiveDot();
+
+    if (scrollToTopBtn) {
+      window.addEventListener('scroll', () => {
+        scrollToTopBtn.classList.toggle('visible', window.scrollY > window.innerHeight * 0.5);
+      });
+
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        if (chapters[index]) {
+          chapters[index].scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
     let currentLang = 'de';
 
     function updateLanguageButtons() {

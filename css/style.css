@@ -879,6 +879,9 @@ footer {
 /* Vollbild-Kapitel */
 .chapter {
   width: 100vw;
+  max-width: none; /* überschreibt die generische section { max-width: 1100px } Regel */
+  margin: 0;
+  padding: 0;
   height: 100vh;
   display: flex;
   flex-direction: row; /* Bild links, Text rechts */
@@ -914,23 +917,12 @@ footer {
 .chapter-content {
   width: 66.667%;
   height: 100%;
-  background-color: var(--bg-content-white);
-  background: linear-gradient(135deg, #ffffff 0%, #f7f6f6 100%);
+  background: var(--bg-content-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 6% 10% 5% 8%;
   position: relative;
-}
-
-.chapter-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(88, 86, 87, 0) 0%, var(--divider-soft) 50%, rgba(88, 86, 87, 0) 100%);
 }
 
 /* Typografie */
@@ -1089,5 +1081,92 @@ footer {
 
   .chapter-btn-wrapper .btn {
     text-align: center;
+  }
+}
+
+/* ==========================================================================
+   10. FIXED-IMAGE LAYOUT (Sekundärseiten mit Bild links fix / Text rechts scrollt)
+   Wird zusätzlich zu .chapter/.chapter-image-container/.chapter-content auf
+   den Seiten rezensionen.html, stilberatung_about.html, stilberatung_shop.html,
+   atelier.html und atelier_shop.html verwendet. Im Unterschied zu
+   stilberatung.html bleibt hier das Bild links fix stehen, während nur der
+   Text rechts (und alles darunter, inkl. Footer) normal nach unten scrollt.
+   ========================================================================== */
+html:has(body.fixed-image-layout) {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.fixed-image-layout {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.fixed-image-layout .chapter {
+  display: block;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.fixed-image-layout .chapter-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 33.333%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.fixed-image-layout .chapter-content {
+  margin: 0 0 0 33.333%;
+  width: 66.667%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.fixed-image-layout .page-section {
+  margin: 0 0 0 33.333%;
+  max-width: none;
+  width: 66.667%;
+  scroll-snap-align: start;
+}
+
+.fixed-image-layout footer {
+  margin: 0 0 0 33.333%;
+  width: 66.667%;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 900px) {
+  html:has(body.fixed-image-layout) {
+    scroll-snap-type: none;
+  }
+
+  .fixed-image-layout {
+    scroll-snap-type: none;
+  }
+
+  .fixed-image-layout .chapter {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .fixed-image-layout .chapter-image-container {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+  }
+
+  .fixed-image-layout .chapter-content,
+  .fixed-image-layout .page-section,
+  .fixed-image-layout footer {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .fixed-image-layout .chapter-nav,
+  .fixed-image-layout .scroll-to-top-btn {
+    display: none;
   }
 }
