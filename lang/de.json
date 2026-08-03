@@ -37,7 +37,7 @@
     "paragraph3": "Als Mutter und Frau, die selbst unterschiedliche Lebensphasen, Körperveränderungen und kulturelle Übergänge erlebt hat, weiß ich, wie eng Stil mit dem eigenen Lebensgefühl verbunden ist – und wie herausfordernd es sein kann, sich in bestimmten Momenten neu zu definieren.",
     "paragraph4": "Ich arbeite mit Menschen, die sich in genau solchen Übergängen befinden: nach einer Schwangerschaft, beim Einstieg in eine neue berufliche Rolle oder beim Ankommen in einer neuen Kultur. Mein Ansatz ist dabei bewusst persönlich und alltagsnah – fern von starren Regeln oder kurzfristigen Trends.",
     "paragraph5": "Mode verstehe ich als leises, aber kraftvolles Ausdrucksmittel. Ein stimmiger Stil entsteht nicht durch Perfektion, sondern durch Klarheit, Selbstkenntnis und das gute Gefühl, ganz bei sich zu sein. Mit meinem geschulten Blick für Farben, Schnitte, Formen und Proportionen unterstütze ich dich dabei, einen authentischen Stil zu entwickeln, der wirklich zu deinem Alltag passt. Es geht nicht darum, Trends zu folgen, sondern dich selbst besser kennenzulernen und diesen Ausdruck nach außen zu tragen.",
-    "paragraph6": "Ob Kleiderschrank-Reset, Personal Shopping, Farbberatung oder individuelle Stilberatung – ich begleite dich auf deinem Weg zu mehr Klarheit, Selbstsicherheit und Wohlbefinden in deinem Stil.",
+    "paragraph6": "Ob Kleiderschrank-Reset, Personal Shopper, Farbberatung oder individuelle Stilberatung – ich begleite dich auf deinem Weg zu mehr Klarheit, Selbstsicherheit und Wohlbefinden in deinem Stil.",
     "paragraph7": "Denn Stil beginnt dort, wo du dich selbst erkennst."
   },
   "services": {
@@ -51,7 +51,7 @@
       "text": "Entdecke deine individuellen Farben und lasse deine Ausstrahlung bewusst wirken."
     },
     "personalShopping": {
-      "title": "Personal Shopping & Styling",
+      "title": "Personal Shopper & Styling",
       "text": "Gemeinsam finden wir Stücke, die dich wirklich begleiten – ohne Fehlkäufe und Zweifel."
     },
     "individualConsultation": {
@@ -120,7 +120,7 @@
     "review3": {
       "text": "„Personal Shopping mit Paula war das erste Mal, dass Einkaufen wirklich Spaß gemacht hat – ganz ohne Stress und ohne Fehlkäufe.“",
       "author": "Nina R.",
-      "service": "Personal Shopping & Styling"
+      "service": "Personal Shopper & Styling"
     },
     "review4": {
       "text": "„Die individuelle Stilberatung hat mir geholfen, meine Persönlichkeit endlich auch nach außen sichtbar zu machen.“",
@@ -160,8 +160,8 @@
       "listItem2": "ein klarerer Blick auf deine persönliche Farbwelt"
     },
     "personalShopping": {
-      "eyebrow": "Personal Shopping & Styling",
-      "title": "Personal Shopping & Styling",
+      "eyebrow": "Personal Shopper & Styling",
+      "title": "Personal Shopper & Styling",
       "intro": "Gemeinsam finden wir gezielt Kleidung, die wirklich zu dir passt – ohne Frust und Fehlkäufe.",
       "meta": "2–4 Stunden / 180€ + 80€ pro weitere Stunde",
       "listLabel": "Meine Begleitung umfasst:",
