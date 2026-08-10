@@ -107,6 +107,8 @@
     "title": "Depoimentos",
     "headline": "Vozes que falam por si",
     "message": "Cada consultoria é única – aqui, clientes contam como foi a experiência de encontrar um estilo mais coerente e confiante.",
+    "readMore": "Leia mais",
+    "readMoreAria": "Ler o texto completo da avaliação",
     "review1": {
       "text": "„Depois do reset de guarda-roupa com a Paula, meu dia a dia ficou muito mais leve. De manhã já sei na hora o que vestir.“",
       "author": "Julia K.",
@@ -136,6 +138,16 @@
       "text": "„Ao iniciar minha nova fase profissional, a consultoria me deu exatamente a segurança que eu precisava.“",
       "author": "Franziska B.",
       "service": "Consultoria de cores"
+    },
+    "review7": {
+      "text": "„Quando comecei meu escritório, percebi que a minha imagem poderia me ajudar a comunicar valor antes mesmo de eu ter a oportunidade de falar sobre o meu trabalho. A consultoria me ajudou a encontrar o equilíbrio entre a formalidade da advocacia e a minha própria personalidade, para que eu pudesse transmitir profissionalismo sem deixar de me reconhecer no que vestia. Paula soube construir uma estratégia a partir de quem eu era e da mensagem que eu queria transmitir, e não simplesmente seguindo tendências. Mais do que aprender sobre cores, peças ou combinações, aprendi a perceber as mensagens implícitas de cada escolha e a usá-las de forma intencional. Foi um processo que transformou não só a forma como as pessoas me percebiam, mas também a forma como eu me enxergava e é um aprendizado que carrego comigo até hoje.“",
+      "author": "Deise Cordeiro",
+      "service": "Consultoria de estilo individual"
+    },
+    "review8": {
+      "text": "„A consultoria que a Paula prestou para meu então marido foi de extrema importância. Através dela nós conseguimos fazê-lo entender que o estilo despojado e casual tem hora e lugar. Conseguimos com o tempo investir em peças atemporais que elevaram o senso de estilo e elegância do cliente final.“",
+      "author": "Natany Gomes",
+      "service": "Consultoria de estilo individual"
     }
   },
   "servicePages": {

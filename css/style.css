@@ -1,4 +1,30 @@
 /* ==========================================================================
+   INHALTSVERZEICHNIS
+   ==========================================================================
+   1.  Design Tokens / CSS-Variablen
+   1b. Reset für Seiten mit Kapitel-Layout (Stilberatung etc.)
+   2.  Global / Base Styles
+   3.  Navigation Bar
+   4.  Buttons & Icon-Buttons
+   5.  Landing / Hero Sections
+   6.  Content & Services Sections
+   7.  Keyframe-Animationen
+   8.  Media Queries (Responsive Design, allgemein)
+   9.  Kapitel-Layout (Service-Detailseiten, z.B. stilberatung.html)
+   10. Fixed-Image-Layout (Sekundärseiten, z.B. rezensionen.html)
+
+   HINWEIS ZU DEN DREI SCROLL-LAYOUT-SYSTEMEN:
+   - .chapters-page      -> volle Kapitel scrollen/snappen selbst (Abschnitt 9)
+   - .fixed-image-layout -> Bild bleibt links fix, Text scrollt (Abschnitt 10)
+   - .reviews-page        -> Sonderfall von .fixed-image-layout: Kopf/Bild ist
+                             sticky, darunter folgen paginierte Karten-Seiten
+                             (siehe Kommentar in Abschnitt 10)
+   Jedes System hat sein eigenes @media (max-width: 900px)-Block, bewusst
+   getrennt gehalten und in der Nähe des jeweiligen Layouts platziert, damit
+   Layout-Regeln und ihre mobile Anpassung zusammen gepflegt werden können.
+   ========================================================================== */
+
+/* ==========================================================================
    1. DESIGN TOKENS / CSS VARIABLEN
    Zentrale Pflege von Farben, Schriften und Schatten.
    ========================================================================== */
@@ -84,6 +110,7 @@ a {
   color: inherit;
 }
 
+/* Standard-Container für "normale" Seiten (ohne Kapitel-/Fixed-Image-Layout) */
 section {
   max-width: 1100px;
   margin: auto;
@@ -105,6 +132,7 @@ h2 {
   color: var(--color-text-main);
 }
 
+/* Footer (Standard) */
 footer {
   text-align: center;
   padding: 30px;
@@ -112,10 +140,12 @@ footer {
   font-size: 14px;
 }
 
+/* Auf Kapitel-Layout-Seiten ist der Footer eine eigene Snap-Sektion */
 .chapters-page footer {
   scroll-snap-align: start;
 }
 
+/* Links im Footer (z.B. Impressum · Datenschutz) */
 .footer-links {
   margin-top: 8px;
   display: flex;
@@ -142,6 +172,8 @@ footer {
 /* ==========================================================================
    3. NAVIGATION BAR
    ========================================================================== */
+
+/* Fixe, blurred Navbar über der gesamten Seite */
 .navbar {
   position: fixed;
   top: 0;
@@ -316,6 +348,8 @@ footer {
 /* ==========================================================================
    4. BUTTONS & ICON-BUTTONS
    ========================================================================== */
+
+/* Standard-Button (Pill-Form, mit Glas-/Gradient-Optik) */
 .btn {
   display: inline-block;
   margin: 10px;
@@ -355,6 +389,7 @@ footer {
   box-shadow: var(--shadow-btn-hover);
 }
 
+/* Runde Icon-Buttons (z.B. Social-Icons im Hero, Icon-Links in der Navbar) */
 .hero-icon-btn,
 .nav-icon-btn {
   display: inline-flex;
@@ -402,6 +437,7 @@ footer {
   transform: scale(1.08);
 }
 
+/* "Nach oben"-Button, blendet sich per JS (Klasse .visible) ein/aus */
 .scroll-to-top-btn {
   position: fixed;
   left: 50%;
@@ -569,8 +605,7 @@ footer {
   margin-bottom: 24px;
 }
 
-
-/* Luxury Landing Logo Header */
+/* Luxury Landing Logo Header (fixiertes Logo über dem Split-Hero) */
 .landing-logo {
   position: fixed;
   top: 85px;
@@ -626,7 +661,7 @@ footer {
   box-shadow: 0 0 8px rgba(231, 201, 156, 0.5);
 }
 
-/* Split Landing Page */
+/* Split Landing Page (Startseite: zwei halbseitige Bild-Links) */
 .landing-split {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -700,6 +735,8 @@ footer {
 /* ==========================================================================
    6. CONTENT & SERVICES SECTIONS
    ========================================================================== */
+
+/* Breiterer Innenbereich für Inhaltsseiten (z.B. About, Rechtstexte) */
 .page-section {
   max-width: 1000px;
   padding: 60px 20px;
@@ -770,7 +807,9 @@ footer {
   margin: 20px 0;
 }
 
-/* Reviews Grid */
+/* Reviews Grid (Basis-Optik der Karten; Layout/Position wird für die
+   rezensionen.html-Seite in Abschnitt 10 per .reviews-page/.review-page
+   ergänzt bzw. überschrieben – siehe Kommentar dort) */
 .review-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -849,6 +888,9 @@ footer {
 
 /* ==========================================================================
    8. MEDIA QUERIES (RESPONSIVE DESIGN)
+   Allgemeine, seitenunabhängige Anpassungen (Grids, Navbar).
+   Die layoutspezifischen Breakpoints stehen jeweils am Ende von
+   Abschnitt 9 und Abschnitt 10.
    ========================================================================== */
 @media (max-width: 900px) {
   .choice-grid,
@@ -1044,7 +1086,7 @@ footer {
   box-shadow: 0 0 10px var(--dot-active-glow);
 }
 
-/* Responsive: Kapitel-Layout */
+/* Responsive: Kapitel-Layout (siehe Abschnitt 9 oben) */
 @media (max-width: 900px) {
   html:has(body.chapters-page) {
     scroll-snap-type: none;
@@ -1103,6 +1145,13 @@ html:has(body.fixed-image-layout) {
   scroll-behavior: smooth;
 }
 
+/* Gleiche Box-Berechnung wie im Kapitel-Referenzlayout, damit das Innenpadding
+   die rechte Textspalte nicht vergrößert oder ihren Inhalt verschiebt. */
+.fixed-image-layout,
+.fixed-image-layout * {
+  box-sizing: border-box;
+}
+
 .fixed-image-layout .chapter {
   display: block;
   height: 100vh;
@@ -1138,6 +1187,271 @@ html:has(body.fixed-image-layout) {
   scroll-snap-align: start;
 }
 
+/* --------------------------------------------------------------------------
+   REZENSIONEN-SEITE (rezensionen.html)
+   Der Kopf und jede Karten-Seite belegen je genau einen Viewport. So vermischt
+   sich die Einleitung nicht mit der ersten Kartenzeile und es werden nie
+   angeschnittene Karten angezeigt.
+   -------------------------------------------------------------------------- */
+.reviews-page .chapter {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.reviews-page .chapter-content {
+  margin-left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: start;
+  gap: 12px;
+  justify-content: initial;
+  padding-top: 110px;
+  padding-bottom: 12px;
+  height: 100%;
+  min-height: 0;
+}
+
+.reviews-page .reviews-heading .chapter-text {
+  margin-bottom: 0;
+}
+
+.reviews-image-container {
+  overflow: hidden;
+}
+
+.reviews-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.reviews-page .reviews {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+  display: block;
+}
+
+.reviews-pages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-page {
+  width: 100%;
+  height: 100svh;
+  min-height: 100svh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  /* Die feste Navigation ist rund 80px hoch; etwas Abstand verhindert, dass
+     sie die oberste Kartenzeile überlagert. Die Höhe der Seite bleibt gleich,
+     daher verteilt das Raster die Karten auf den verbleibenden Raum. */
+  padding: 88px clamp(20px, 4vw, 80px) 28px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.reviews-page .review-grid {
+  width: min(100%, 1500px);
+  height: 100%;
+  display: grid;
+  /* Spaltenanzahl wird von buildReviewPages()/buildNavDots() (JS) live als
+     --review-columns gesetzt, abhängig von Kartenanzahl & Breakpoint */
+  /* Gleich breite Spalten bewahren den ruhigen Rhythmus; die Karten darin
+     erhalten unten ihre individuelle, textbasierte Breite. */
+  grid-template-columns: repeat(var(--review-columns, 3), minmax(0, 28rem));
+  /* Jede Zeile nimmt nur so viel Raum ein wie ihr längstes Zitat benötigt.
+     Die vollständige Kartengruppe bleibt dabei ruhig im Viewport zentriert. */
+  grid-template-rows: repeat(var(--review-rows, 2), max-content);
+  justify-content: center;
+  align-content: center;
+  align-items: start;
+  gap: 12px;
+  padding: 0;
+}
+
+/* Ergänzt/überschreibt bewusst dieselbe .review-card-Regel aus Abschnitt 6:
+   Karten auf der rezensionen.html-Seite sind kompakter (kleinere Höhe,
+   engeres Padding), damit eine ganze Karten-Seite ohne Scrollen ins
+   Snap-Segment passt. Da hier dieselbe (nicht spezifischere) Selektor-
+   Spezifität greift, gewinnt diese spätere Regel per Kaskade. */
+.review-card {
+  min-height: 0;
+  align-self: start;
+  width: min(100%, var(--review-card-width, 28rem));
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px 18px 16px;
+}
+
+/* Review-Karten auf der Landing-Page identisch und elegant mit fester Höhe. */
+.reviews-page .review-card {
+  height: var(--review-card-height, 270px);
+  min-height: var(--review-card-height, 270px);
+  max-height: var(--review-card-height, 270px);
+  overflow: hidden;
+  position: relative;
+  border-radius: 26px;
+  background: linear-gradient(180deg, #fffdfb 0%, #f9f4ee 100%);
+  border: 1px solid rgba(115, 79, 35, 0.12);
+  box-shadow: 0 12px 40px rgba(71, 50, 34, 0.08), inset 0 0 0 1px rgba(255,255,255,0.8);
+  color: var(--color-text-main);
+}
+
+.reviews-page .review-card .review-quote {
+  overflow: hidden;
+  max-height: 142px;
+  flex: 1 1 auto;
+  margin: 0 0 14px;
+  font-size: clamp(15px, 1.52vw, 17px);
+  line-height: 1.62;
+}
+
+.reviews-page .review-card .review-author {
+  margin-top: auto;
+}
+
+.reviews-page .review-card .review-service {
+  margin-top: 2px;
+}
+
+.reviews-page .review-card .review-read-more {
+  display: none;
+  align-self: flex-end;
+  margin-top: 6px;
+  background: transparent;
+  border: 0;
+  padding: 4px 0 0;
+  font: inherit;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.reviews-page .review-card .review-read-more::after {
+  content: '…';
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.reviews-page .review-card .review-read-more:hover,
+.reviews-page .review-card .review-read-more:focus {
+  color: var(--color-text-main);
+}
+
+.reviews-page .review-card.has-read-more .review-read-more {
+  display: inline-flex;
+  align-items: center;
+}
+
+.reviews-page .review-read-more,
+.reviews-page .review-read-more:focus {
+  outline: none;
+}
+
+.review-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-y: auto;
+  background: rgba(56, 45, 30, 0.54);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 260ms ease, visibility 260ms ease;
+}
+
+.review-modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.review-modal-panel {
+  width: min(100%, 640px);
+  max-width: min(640px, calc(100vw - 48px));
+  max-height: min(88vh, 720px);
+  overflow-y: auto;
+  background: #fdfaf6;
+  border-radius: 30px;
+  border: 1px solid rgba(116, 84, 47, 0.2);
+  box-shadow: 0 20px 64px rgba(43, 25, 7, 0.2);
+  padding: 54px 46px 40px;
+  position: relative;
+}
+
+.review-modal-panel .review-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-main);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.review-modal-panel .review-modal-close:hover,
+.review-modal-panel .review-modal-close:focus {
+  background: rgba(105, 83, 51, 0.08);
+}
+
+.review-modal-quote {
+  margin: 0 0 22px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(20px, 2.1vw, 28px);
+  line-height: 1.5;
+  color: var(--color-text-main);
+}
+
+.review-modal-author {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.review-modal-service {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.reviews-page footer {
+  display: none;
+}
+
 @media (max-width: 900px) {
   html:has(body.fixed-image-layout) {
     scroll-snap-type: none;
@@ -1168,5 +1482,52 @@ html:has(body.fixed-image-layout) {
   .fixed-image-layout .chapter-nav,
   .fixed-image-layout .scroll-to-top-btn {
     display: none;
+  }
+
+  .reviews-page {
+    height: auto;
+    overflow: visible;
+  }
+
+  .reviews-page .chapter {
+    height: auto;
+    overflow: visible;
+  }
+
+  .reviews-page .chapter-content {
+    display: block;
+    padding: 40px 24px 60px;
+  }
+
+  .reviews-image-container {
+    height: 45vh;
+    margin: 0;
+  }
+
+  .reviews-page .reviews {
+    overflow: hidden;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 24px 60px;
+  }
+
+  .reviews-page .review-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    height: auto;
+  }
+
+  .review-page {
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .reviews-page .review-card {
+    min-height: clamp(200px, 22vh, 250px);
+  }
+
+  .reviews-page footer {
+    display: block;
   }
 }

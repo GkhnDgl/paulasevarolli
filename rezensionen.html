@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scroll.js"></script>
 </head>
-<body class="fixed-image-layout">
+<body class="fixed-image-layout reviews-page">
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-left">
@@ -68,23 +68,24 @@
 
   <!-- Seiten-Navigation Dots -->
   <div class="chapter-nav">
-    <div class="nav-dot active"></div>
-    <div class="nav-dot"></div>
+    <!-- Punkte werden per JS erzeugt: 1x Kopf-Bereich + Z Karten-Seiten -->
   </div>
 
   <section class="chapter">
-    <div class="chapter-image-container">
-      <img src="images/hero.jpg" alt="Rezensionen" class="chapter-image">
-    </div>
     <div class="chapter-content">
-      <p class="chapter-eyebrow" data-i18n="reviewsPage.title"></p>
-      <h1 class="chapter-title" data-i18n="reviewsPage.headline"></h1>
-      <p class="chapter-text" data-i18n="reviewsPage.message"></p>
+      <div class="reviews-heading">
+        <p class="chapter-eyebrow" data-i18n="reviewsPage.title"></p>
+        <h1 class="chapter-title" data-i18n="reviewsPage.headline"></h1>
+        <p class="chapter-text" data-i18n="reviewsPage.message"></p>
+      </div>
+      <div class="reviews-image-container">
+        <img src="images/hero.jpg" alt="Rezensionen" class="reviews-image">
+      </div>
     </div>
   </section>
 
-  <section class="page-section reviews">
-    <div class="review-grid">
+  <section class="page-section reviews" id="reviewsScroll">
+    <div class="reviews-pages" id="reviewsPages">
       <div class="review-card">
         <p class="review-quote" data-i18n="reviewsPage.review1.text"></p>
         <p class="review-author" data-i18n="reviewsPage.review1.author"></p>
@@ -115,6 +116,16 @@
         <p class="review-author" data-i18n="reviewsPage.review6.author"></p>
         <p class="review-service" data-i18n="reviewsPage.review6.service"></p>
       </div>
+      <div class="review-card">
+        <p class="review-quote" data-i18n="reviewsPage.review7.text"></p>
+        <p class="review-author" data-i18n="reviewsPage.review7.author"></p>
+        <p class="review-service" data-i18n="reviewsPage.review7.service"></p>
+      </div>
+      <div class="review-card">
+        <p class="review-quote" data-i18n="reviewsPage.review8.text"></p>
+        <p class="review-author" data-i18n="reviewsPage.review8.author"></p>
+        <p class="review-service" data-i18n="reviewsPage.review8.service"></p>
+      </div>
     </div>
   </section>
 
@@ -134,35 +145,245 @@
   </footer>
 
   <script>
-    // Seiten-Navigation Dots & Scroll-to-Top (Bild links bleibt fix, nur Text scrollt)
-    const chapters = Array.from(document.querySelectorAll('.chapter, .page-section, footer'));
-    const dots = document.querySelectorAll('.nav-dot');
+    let currentLang = 'de';
+
+    const reviewsPages = document.getElementById('reviewsPages');
+
+    function getReviewLayout() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      let columns = 1;
+      if (width >= 1500) columns = 4;
+      else if (width >= 1100) columns = 3;
+      else if (width >= 760) columns = 2;
+
+      const visibleRows = Math.max(1, Math.min(3, Math.floor((height * 0.68) / 230)));
+      return {
+        columns,
+        rows: visibleRows,
+        pageSize: columns * visibleRows
+      };
+    }
+
+    function buildReviewPages() {
+      if (!reviewsPages) return [];
+
+      const sourceCards = Array.from(reviewsPages.querySelectorAll('.review-card'));
+      if (!sourceCards.length) return [];
+
+      // Y = m x n (Spalten x sichtbare Zeilen) = wie viele ganze Karten passen.
+      const { pageSize } = getReviewLayout();
+      reviewsPages.innerHTML = '';
+
+      // Z = Aufrunden(X / Y) Seiten, jede mit genau Y ganzen Karten (letzte ggf. weniger).
+      for (let index = 0; index < sourceCards.length; index += pageSize) {
+        const batch = sourceCards.slice(index, index + pageSize);
+        const page = document.createElement('div');
+        page.className = 'review-page';
+
+        const grid = document.createElement('div');
+        grid.className = 'review-grid';
+
+        batch.forEach(card => {
+          grid.appendChild(card.cloneNode(true));
+        });
+
+        page.appendChild(grid);
+        reviewsPages.appendChild(page);
+      }
+
+      return Array.from(reviewsPages.querySelectorAll('.review-page'));
+    }
+
+    function updateReviewLayout() {
+      if (!reviewsPages) return;
+
+      const { columns, rows } = getReviewLayout();
+      reviewsPages.style.setProperty('--review-columns', columns);
+      reviewsPages.style.setProperty('--review-rows', rows);
+      const columnWidth = window.innerWidth <= 900
+        ? 'minmax(0, 1fr)'
+        : 'minmax(0, 28rem)';
+      reviewsPages.querySelectorAll('.review-grid').forEach(grid => {
+        grid.style.gridTemplateColumns = `repeat(${columns}, ${columnWidth})`;
+        grid.querySelectorAll('.review-card').forEach(card => {
+          if (window.innerWidth <= 900) {
+            card.style.removeProperty('--review-card-width');
+            card.style.setProperty('--review-card-height', 'auto');
+            return;
+          }
+
+          const quoteLength = card.querySelector('.review-quote')?.textContent.trim().length || 0;
+          const cardWidth = Math.min(448, Math.max(288, 160 + quoteLength * 1.8));
+          card.style.setProperty('--review-card-width', `${cardWidth}px`);
+          card.style.setProperty('--review-card-height', '270px');
+        });
+      });
+    }
+
+    function setupReviewCardReadMore(readMoreTextOverride = null, readMoreAriaOverride = null) {
+      if (!reviewsPages) return;
+
+      const cards = reviewsPages.querySelectorAll('.review-card');
+      const readMoreText = readMoreTextOverride || (currentLang === 'pt' ? 'Leia mais' : 'Weiter lesen');
+      const readMoreAria = readMoreAriaOverride || (currentLang === 'pt' ? 'Ler o texto completo da avaliação' : 'Vollen Review-Text lesen');
+
+      cards.forEach(card => {
+        const quote = card.querySelector('.review-quote');
+        if (!quote) return;
+
+        const quoteText = quote.textContent.trim();
+        const hasOverflow = quote.scrollHeight > quote.clientHeight;
+        const existingButton = card.querySelector('.review-read-more');
+
+        if (hasOverflow && quoteText.length > 0) {
+          card.classList.add('has-read-more');
+
+          if (!existingButton) {
+            const readMoreButton = document.createElement('button');
+            readMoreButton.type = 'button';
+            readMoreButton.className = 'review-read-more';
+            readMoreButton.textContent = readMoreText;
+            readMoreButton.setAttribute('aria-label', readMoreAria);
+            card.appendChild(readMoreButton);
+          } else {
+            existingButton.textContent = readMoreText;
+            existingButton.setAttribute('aria-label', readMoreAria);
+          }
+        } else {
+          card.classList.remove('has-read-more');
+          if (existingButton) {
+            existingButton.remove();
+          }
+        }
+      });
+    }
+
+    function openReviewModal(card) {
+      if (!card || !modalBackdrop) return;
+
+      const quote = card.querySelector('.review-quote')?.textContent.trim() || '';
+      const author = card.querySelector('.review-author')?.textContent.trim() || '';
+      const service = card.querySelector('.review-service')?.textContent.trim() || '';
+
+      if (!quote) return;
+
+      modalQuote.textContent = quote;
+      modalAuthor.textContent = author;
+      modalService.textContent = service;
+
+      modalBackdrop.classList.add('is-open');
+      modalBackdrop.setAttribute('aria-hidden', 'false');
+      modalCloseButton.focus();
+    }
+
+    function closeReviewModal() {
+      if (!modalBackdrop) return;
+      modalBackdrop.classList.remove('is-open');
+      modalBackdrop.setAttribute('aria-hidden', 'true');
+    }
+
+    const modalBackdrop = document.createElement('div');
+    modalBackdrop.className = 'review-modal-backdrop';
+
+    modalBackdrop.innerHTML = `
+      <div class="review-modal-panel" role="dialog" aria-modal="true" aria-label="Vollständiger Review-Text">
+        <button type="button" class="review-modal-close" aria-label="Schließen">×</button>
+        <p class="review-modal-quote"></p>
+        <p class="review-modal-author"></p>
+        <p class="review-modal-service"></p>
+      </div>
+    `;
+    modalBackdrop.setAttribute('aria-hidden', 'true');
+
+    const modalCloseButton = modalBackdrop.querySelector('.review-modal-close');
+    const modalQuote = modalBackdrop.querySelector('.review-modal-quote');
+    const modalAuthor = modalBackdrop.querySelector('.review-modal-author');
+    const modalService = modalBackdrop.querySelector('.review-modal-service');
+
+    modalCloseButton.addEventListener('click', closeReviewModal);
+    modalBackdrop.addEventListener('click', (event) => {
+      if (event.target === modalBackdrop) {
+        closeReviewModal();
+      }
+    });
+
+    document.body.appendChild(modalBackdrop);
+
+    reviewsPages.addEventListener('click', (event) => {
+      const readMoreButton = event.target.closest('.review-read-more');
+      if (!readMoreButton) return;
+
+      const card = readMoreButton.closest('.review-card');
+      if (card) {
+        openReviewModal(card);
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modalBackdrop.classList.contains('is-open')) {
+        closeReviewModal();
+      }
+    });
+
+    // Seiten-Navigation Dots & Scroll-to-Top wie auf den anderen Unterseiten:
+    // die komplette Seite scrollt, die Karten selbst zeigen keinen inneren Slider.
+    // Punkte: 1x Kopf-Bereich + Z Punkte für die Karten-Seiten
+    // (Z = Aufrunden(Anzahl Karten X / angezeigte Karten Y = Spalten m x Zeilen n)).
+    const chapterSection = document.querySelector('.chapter');
+    const chapterNav = document.querySelector('.chapter-nav');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    const updateChapterState = (index) => {
+    let sections = [];
+
+    function buildNavDots(reviewPages) {
+      if (!chapterNav) return;
+
+      chapterNav.innerHTML = '';
+
+      const totalDots = 1 + reviewPages.length; // 1 (Kopf) + Z (Karten-Seiten)
+      for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'nav-dot';
+        chapterNav.appendChild(dot);
+      }
+    }
+
+    function updateChapterState(index) {
+      const dots = chapterNav ? chapterNav.querySelectorAll('.nav-dot') : [];
       dots.forEach(dot => dot.classList.remove('active'));
       if (dots[index]) {
         dots[index].classList.add('active');
       }
-    };
+    }
 
-    // Aktiven Punkt anhand der Scrollposition bestimmen (funktioniert in
-    // beide Scroll-Richtungen zuverlässig, unabhängig von unterschiedlich
-    // hohen Abschnitten wie der Bewertungs- oder Preistabelle).
-    const updateActiveDot = () => {
-      const scrollPos = window.scrollY + window.innerHeight * 0.4;
+    function updateActiveDot() {
+      const scrollPos = window.scrollY + window.innerHeight * 0.45;
       let activeIndex = 0;
-      chapters.forEach((section, i) => {
+
+      sections.forEach((section, index) => {
         if (section.offsetTop <= scrollPos) {
-          activeIndex = i;
+          activeIndex = index;
         }
       });
-      updateChapterState(activeIndex);
-    };
 
-    window.addEventListener('scroll', updateActiveDot);
-    window.addEventListener('resize', updateActiveDot);
-    updateActiveDot();
+      updateChapterState(activeIndex);
+    }
+
+    function refreshLayout(readMoreTextOverride = null, readMoreAriaOverride = null) {
+      const reviewPages = buildReviewPages();
+      updateReviewLayout();
+      setupReviewCardReadMore(readMoreTextOverride, readMoreAriaOverride);
+      buildNavDots(reviewPages);
+      sections = chapterSection ? [chapterSection, ...reviewPages] : reviewPages;
+      updateActiveDot();
+    }
+
+    refreshLayout();
+
+    window.addEventListener('scroll', updateActiveDot, { passive: true });
+    window.addEventListener('resize', refreshLayout);
 
     if (scrollToTopBtn) {
       window.addEventListener('scroll', () => {
@@ -174,15 +395,18 @@
       });
     }
 
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        if (chapters[index]) {
-          chapters[index].scrollIntoView({ behavior: 'smooth' });
+    if (chapterNav) {
+      chapterNav.addEventListener('click', (event) => {
+        const dot = event.target.closest('.nav-dot');
+        if (!dot) return;
+
+        const dots = Array.from(chapterNav.querySelectorAll('.nav-dot'));
+        const target = sections[dots.indexOf(dot)];
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
-    });
-
-    let currentLang = 'de';
+    }
 
     function updateLanguageButtons() {
       document.querySelectorAll('.lang').forEach(button => {
@@ -207,6 +431,15 @@
           el.prepend(textNode);
         }
       });
+
+      const readMoreText = translations.reviewsPage?.readMore || (currentLang === 'pt' ? 'Leia mais' : 'Weiter lesen');
+      const readMoreAria = translations.reviewsPage?.readMoreAria || (currentLang === 'pt' ? 'Ler o texto completo da avaliação' : 'Vollen Review-Text lesen');
+
+      modalCloseButton.setAttribute('aria-label', currentLang === 'pt' ? 'Fechar' : 'Schließen');
+      modalBackdrop.setAttribute('aria-label', currentLang === 'pt' ? 'Texto completo da avaliação' : 'Vollständiger Review-Text');
+
+      // Erst nach dem Übersetzen ist die tatsächliche Länge der Zitate bekannt.
+      refreshLayout(readMoreText, readMoreAria);
     }
 
     function setLanguage(lang) {

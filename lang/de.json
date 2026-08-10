@@ -107,6 +107,8 @@
     "title": "Rezensionen",
     "headline": "Stimmen, die für sich sprechen",
     "message": "Jede Beratung ist einzigartig – hier erzählen Kundinnen, wie sich ihr Weg zu einem stimmigeren, selbstbewussteren Stil angefühlt hat.",
+    "readMore": "Weiter lesen",
+    "readMoreAria": "Vollen Review-Text lesen",
     "review1": {
       "text": "„Nach dem Kleiderschrank-Reset mit Paula fühlt sich mein Alltag plötzlich so viel leichter an. Ich weiß morgens sofort, was ich anziehen möchte.“",
       "author": "Julia K.",
@@ -136,6 +138,16 @@
       "text": "„Beim Einstieg in meine neue berufliche Rolle hat mir die Beratung genau die Sicherheit gegeben, die ich gebraucht habe.“",
       "author": "Franziska B.",
       "service": "Farbberatung"
+    },
+    "review7": {
+      "text": "„Als ich meine Anwaltskanzlei gründete, wurde mir klar, dass mein Erscheinungsbild dazu beitragen konnte, meinen Wert zu vermitteln, noch bevor ich überhaupt die Gelegenheit hatte, über meine Arbeit zu sprechen. Die Beratung half mir, eine Balance zwischen der Förmlichkeit des Anwaltsberufs und meiner eigenen Persönlichkeit zu finden; so konnte ich Professionalität ausstrahlen und mich gleichzeitig in meiner Kleidung ganz als ich selbst fühlen. Paula verstand es, eine Strategie zu entwickeln, die auf meiner Persönlichkeit und der von mir angestrebten Botschaft basierte, anstatt einfach nur Trends zu folgen. Ich lernte weit mehr als nur etwas über Farben, Kleidungsstücke oder Kombinationen: Ich lernte, die unterschwelligen Botschaften hinter jeder Entscheidung zu erkennen und sie gezielt einzusetzen. Es war ein Prozess, der nicht nur die Wahrnehmung anderer mir gegenüber veränderte, sondern auch mein eigenes Selbstbild – eine Lektion, die mich bis heute begleitet.“",
+      "author": "Deise Cordeiro",
+      "service": "Individuelle Stilberatung"
+    },
+    "review8": {
+      "text": "„Die Beratung, die Paula meinem damaligen Mann zuteilwerden ließ, war von enormer Bedeutung. Dank ihr konnten wir ihm vermitteln, dass ein entspannter, legerer Stil durchaus seine Berechtigung hat – allerdings nur zu bestimmten Gelegenheiten. Im Laufe der Zeit gelang es uns, in zeitlose Kleidungsstücke zu investieren, die seinen Sinn für Stil und Eleganz auf ein höheres Niveau hoben.“",
+      "author": "Natany Gomes",
+      "service": "Individuelle Stilberatung"
     }
   },
   "servicePages": {
