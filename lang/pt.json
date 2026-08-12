@@ -234,5 +234,19 @@
       "section7Text": "Reservamo-nos o direito de adaptar esta política de privacidade sempre que necessário, para refletir alterações legais ou mudanças na oferta do site."
     }
   },
+  "contactPage": {
+    "eyebrow": "Contacte-me",
+    "title": "Escreva-me",
+    "intro": "Gostaria de entrar em contacto comigo? Preencha o formulário. Terei todo o gosto em receber a sua mensagem.",
+    "nameLabel": "Nome",
+    "namePlaceholder": "O seu nome",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "o.seu@email.com",
+    "messageLabel": "Mensagem",
+    "messagePlaceholder": "Como posso ajudar?",
+    "back": "Voltar",
+    "submit": "Enviar mensagem",
+    "note": "A sua mensagem será enviada de forma confidencial para Paula Sevarolli."
+  },
   "footer": "© 2026 Paula Sevarolli"
 }

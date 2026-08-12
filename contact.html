@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me · Paula Sevarolli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="contact-page">
+
+  <nav class="navbar">
+    <div class="nav-left"></div>
+
+    <div class="nav-right">
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="lang active" data-lang="de">DE</button>
+        <button type="button" class="lang" data-lang="pt">PT</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="contact-wrapper">
+    <section class="contact-card" aria-labelledby="contact-title">
+
+      <p class="contact-eyebrow" data-i18n="eyebrow">Contact Me</p>
+
+      <h1 id="contact-title" class="contact-title" data-i18n="contactPage.title">
+        Schreib mir
+      </h1>
+
+      <div class="contact-divider" aria-hidden="true">
+        <span></span>
+        <div class="diamond"></div>
+        <span></span>
+      </div>
+
+      <p class="contact-intro" data-i18n="contactPage.intro">
+        Du möchtest mir schreiben? Fülle einfach das Formular aus. Ich freue mich auf deine Nachricht.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formsubmit.co/gkhndgl86@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="Neue Nachricht über Paula Sevarolli">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="contact-field">
+          <label for="name" data-i18n="contactPage.nameLabel">Name</label>
+          <input id="name" type="text" name="name" autocomplete="name"
+                 required data-i18n-placeholder="contactPage.namePlaceholder">
+        </div>
+
+        <div class="contact-field">
+          <label for="email" data-i18n="contactPage.emailLabel">E-Mail</label>
+          <input id="email" type="email" name="email" autocomplete="email"
+                 required data-i18n-placeholder="contactPage.emailPlaceholder">
+        </div>
+
+        <div class="contact-field">
+          <label for="message" data-i18n="contactPage.messageLabel">Nachricht</label>
+          <textarea id="message" name="message" required
+                    data-i18n-placeholder="contactPage.messagePlaceholder"></textarea>
+        </div>
+
+        <div class="contact-submit-row">
+          <a href="#" class="contact-back" id="contactBack" data-i18n="contactPage.back">
+            Zurück
+          </a>
+
+          <button type="submit" class="contact-submit" data-i18n="contactPage.submit">
+            Nachricht senden
+          </button>
+        </div>
+
+        <p class="contact-note" data-i18n="contactPage.note">
+          Deine Nachricht wird vertraulich an Paula Sevarolli übermittelt.
+        </p>
+      </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="footer"></p>
+    <div class="footer-links">
+      <a href="impressum.html" data-i18n="legal.footerImpressum"></a>
+      <span class="divider-dot" aria-hidden="true">·</span>
+      <a href="datenschutz.html" data-i18n="legal.footerDatenschutz"></a>
+    </div>
+  </footer>
+
+  <script>
+    let currentLang = 'de';
+
+    function updateLanguageButtons() {
+      document.querySelectorAll('.lang').forEach(button => {
+        const isActive = button.getAttribute('data-lang') === currentLang;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    }
+
+    async function loadLanguage(lang) {
+      const response = await fetch(`lang/${lang}.json`);
+      const translations = await response.json();
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const value = key.split('.').reduce((o, i) => o?.[i], translations);
+
+        if (value) {
+          const textNodes = Array.from(el.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
+          textNodes.forEach(node => node.remove());
+          const textNode = document.createTextNode(value);
+          el.prepend(textNode);
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        const value = key.split('.').reduce((o, i) => o?.[i], translations);
+
+        if (value) {
+          el.setAttribute('placeholder', value);
+        }
+      });
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      loadLanguage(lang);
+      localStorage.setItem('lang', lang);
+      updateLanguageButtons();
+    }
+
+    function setupBackLink() {
+      const backLink = document.getElementById('contactBack');
+      const referrer = document.referrer;
+      let target = 'index.html';
+
+      if (referrer) {
+        try {
+          const refUrl = new URL(referrer);
+
+          if (
+            refUrl.origin === window.location.origin &&
+            refUrl.href !== window.location.href
+          ) {
+            target = refUrl.href;
+          }
+        } catch (error) {
+          // Fallback bleibt index.html.
+        }
+      }
+
+      backLink.href = target;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.lang').forEach(button => {
+        button.addEventListener('click', () => {
+          setLanguage(button.getAttribute('data-lang'));
+        });
+      });
+
+      const savedLang = localStorage.getItem('lang') || 'de';
+      setLanguage(savedLang);
+      setupBackLink();
+    });
+  </script>
+
+</body>
+</html>

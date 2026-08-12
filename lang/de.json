@@ -234,5 +234,19 @@
       "section7Text": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder bei Änderungen des Angebots anzupassen."
     }
   },
+  "contactPage": {
+    "eyebrow": "Contact Me",
+    "title": "Schreib mir",
+    "intro": "Du möchtest mir schreiben? Fülle einfach das Formular aus. Ich freue mich auf deine Nachricht.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Dein Name",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "deine@email.de",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Wie kann ich dir helfen?",
+    "back": "Zurück",
+    "submit": "Nachricht senden",
+    "note": "Deine Nachricht wird vertraulich an Paula Sevarolli übermittelt."
+  },
   "footer": "© 2026 Paula Sevarolli"
 }
