@@ -74,6 +74,10 @@
   </header>
 
   <section class="page-section">
+    <a href="#" class="contact-back" id="contactBack" data-i18n="contactPage.back">
+      Zurück
+    </a>
+
     <div class="legal-content">
       <div class="legal-section">
         <h2 data-i18n="legal.datenschutz.section1Heading"></h2>
@@ -159,6 +163,29 @@
       updateLanguageButtons();
     }
 
+    function setupBackLink() {
+      const backLink = document.getElementById('contactBack');
+      const referrer = document.referrer;
+      let target = 'index.html';
+
+      if (referrer) {
+        try {
+          const refUrl = new URL(referrer);
+
+          if (
+            refUrl.origin === window.location.origin &&
+            refUrl.href !== window.location.href
+          ) {
+            target = refUrl.href;
+          }
+        } catch (error) {
+          // Fallback bleibt index.html.
+        }
+      }
+
+      backLink.href = target;
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.lang').forEach(button => {
         button.addEventListener('click', () => {
@@ -168,6 +195,7 @@
 
       const savedLang = localStorage.getItem('lang') || 'de';
       setLanguage(savedLang);
+      setupBackLink();
     });
   </script>
 </body>
