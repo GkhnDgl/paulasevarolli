@@ -24,6 +24,8 @@
    Layout-Regeln und ihre mobile Anpassung zusammen gepflegt werden können.
    ========================================================================== */
 
+@charset "UTF-8";
+
 /* ==========================================================================
    1. DESIGN TOKENS / CSS VARIABLEN
    Zentrale Pflege von Farben, Schriften und Schatten.
@@ -257,7 +259,7 @@ footer {
 }
 
 .nav-link-dropdown::after {
-  content: "▾";
+  content: "\25BE";
   display: inline-block;
   font-size: 13px;
   line-height: 1;
@@ -1070,7 +1072,7 @@ footer {
 }
 
 .chapter-list li::before {
-  content: "✦";
+  content: "\2726";
   color: var(--color-primary);
   font-size: 0.75rem;
   position: absolute;
@@ -1353,7 +1355,7 @@ html:has(body.fixed-image-layout) {
 }
 
 .reviews-page .review-card .review-read-more::after {
-  content: '…';
+  content: '\2026';
   display: inline-block;
   margin-left: 4px;
 }
@@ -1702,7 +1704,7 @@ html:has(body.fixed-image-layout) {
 }
 
 .contact-back::before {
-  content: "←";
+  content: "\2190";
   font-size: 17px;
 }
 
