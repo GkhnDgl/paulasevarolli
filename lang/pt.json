@@ -65,11 +65,7 @@
     "description": "Clareza, segurança e um estilo que realmente combina com você.",
     "aboutTitle": "O que é consultoria de estilo?",
     "aboutText": "A consultoria de estilo é um processo pessoal e sensível, em que buscamos juntos um caminho para uma expressão autêntica. Olhamos para a sua personalidade, fase da vida, cores e contexto do seu cotidiano para criar algo que realmente seja seu.",
-    "servicesTitle": "Serviços",
-    "reviewsTitle": "Depoimentos",
-    "review1": "„Paula me acompanhou para eu me encontrar de novo no meu próprio estilo – com calma e muita sensibilidade.“",
-    "review2": "„A consultoria foi precisa, inspiradora e deixou meu guarda-roupa muito mais leve.“",
-    "review3": "„Finalmente entendi quais cores e cortes realmente combinam comigo.“"
+    "servicesTitle": "Serviços"
   },
   "atelier": {
     "eyebrow": "Atelier",
@@ -84,18 +80,20 @@
     "priceListTitle": "Tabela de preços – Ajustes e reformas",
     "priceTableHeadService": "Serviço",
     "priceTableHeadPrice": "Preço",
-    "priceItem1": { "name": "Barra de calça (sem virar)", "price": "a partir de 15 €" },
-    "priceItem2": { "name": "Barra de calça (com virar)", "price": "a partir de 20 €" },
-    "priceItem3": { "name": "Ajuste de cintura da calça", "price": "a partir de 18 €" },
-    "priceItem4": { "name": "Ajustar comprimento de vestido", "price": "a partir de 25 €" },
-    "priceItem5": { "name": "Ajustar caimento de vestido", "price": "a partir de 30 €" },
-    "priceItem6": { "name": "Barra de saia", "price": "a partir de 15 €" },
-    "priceItem7": { "name": "Troca de zíper", "price": "a partir de 20 €" },
-    "priceItem8": { "name": "Ajuste de manga (blazer, jaqueta, casaco)", "price": "a partir de 22 €" },
-    "priceItem9": { "name": "Ajuste de blazer ou jaqueta ao corpo", "price": "a partir de 35 €" },
-    "priceItem10": { "name": "Ajuste de botão ou casa de botão", "price": "a partir de 8 €" },
-    "priceItem11": { "name": "Ajuste individual sob consulta", "price": "sob consulta" },
-    "priceItem12": { "name": "Prova & consultoria no local", "price": "gratuito" },
+    "priceItems": [
+      { "name": "Barra de calça (sem virar)", "price": "a partir de 15 €" },
+      { "name": "Barra de calça (com virar)", "price": "a partir de 20 €" },
+      { "name": "Ajuste de cintura da calça", "price": "a partir de 18 €" },
+      { "name": "Ajustar comprimento de vestido", "price": "a partir de 25 €" },
+      { "name": "Ajustar caimento de vestido", "price": "a partir de 30 €" },
+      { "name": "Barra de saia", "price": "a partir de 15 €" },
+      { "name": "Troca de zíper", "price": "a partir de 20 €" },
+      { "name": "Ajuste de manga (blazer, jaqueta, casaco)", "price": "a partir de 22 €" },
+      { "name": "Ajuste de blazer ou jaqueta ao corpo", "price": "a partir de 35 €" },
+      { "name": "Ajuste de botão ou casa de botão", "price": "a partir de 8 €" },
+      { "name": "Ajuste individual sob consulta", "price": "sob consulta" },
+      { "name": "Prova & consultoria no local", "price": "gratuito" }
+    ],
     "priceListNote": "Todos os preços são valores de referência e podem variar conforme a complexidade e o material."
   },
   "shop": {
@@ -109,46 +107,48 @@
     "message": "Cada consultoria é única – aqui, clientes contam como foi a experiência de encontrar um estilo mais coerente e confiante.",
     "readMore": "Leia mais",
     "readMoreAria": "Ler o texto completo da avaliação",
-    "review1": {
-      "text": "„Depois do reset de guarda-roupa com a Paula, meu dia a dia ficou muito mais leve. De manhã já sei na hora o que vestir.“",
-      "author": "Julia K.",
-      "service": "Reset de guarda-roupa"
-    },
-    "review2": {
-      "text": "„A consultoria de cores abriu meus olhos. Agora tenho coragem de usar cores que antes nunca teria ousado experimentar.“",
-      "author": "Sandra M.",
-      "service": "Consultoria de cores"
-    },
-    "review3": {
-      "text": "„Fazer compras pessoais com a Paula foi a primeira vez que comprar roupa foi realmente divertido – sem estresse e sem erros de compra.“",
-      "author": "Nina R.",
-      "service": "Personal shopper & styling"
-    },
-    "review4": {
-      "text": "„A consultoria de estilo individual me ajudou a finalmente tornar minha personalidade visível também por fora.“",
-      "author": "Carla T.",
-      "service": "Consultoria de estilo individual"
-    },
-    "review5": {
-      "text": "„Depois da minha gravidez, a Paula me ajudou a me sentir em casa novamente no meu corpo e no meu estilo.“",
-      "author": "Melanie S.",
-      "service": "Consultoria de estilo individual"
-    },
-    "review6": {
-      "text": "„Ao iniciar minha nova fase profissional, a consultoria me deu exatamente a segurança que eu precisava.“",
-      "author": "Franziska B.",
-      "service": "Consultoria de cores"
-    },
-    "review7": {
-      "text": "„Quando comecei meu escritório, percebi que a minha imagem poderia me ajudar a comunicar valor antes mesmo de eu ter a oportunidade de falar sobre o meu trabalho. A consultoria me ajudou a encontrar o equilíbrio entre a formalidade da advocacia e a minha própria personalidade, para que eu pudesse transmitir profissionalismo sem deixar de me reconhecer no que vestia. Paula soube construir uma estratégia a partir de quem eu era e da mensagem que eu queria transmitir, e não simplesmente seguindo tendências. Mais do que aprender sobre cores, peças ou combinações, aprendi a perceber as mensagens implícitas de cada escolha e a usá-las de forma intencional. Foi um processo que transformou não só a forma como as pessoas me percebiam, mas também a forma como eu me enxergava e é um aprendizado que carrego comigo até hoje.“",
-      "author": "Deise Cordeiro",
-      "service": "Consultoria de estilo individual"
-    },
-    "review8": {
-      "text": "„A consultoria que a Paula prestou para meu então marido foi de extrema importância. Através dela nós conseguimos fazê-lo entender que o estilo despojado e casual tem hora e lugar. Conseguimos com o tempo investir em peças atemporais que elevaram o senso de estilo e elegância do cliente final.“",
-      "author": "Natany Gomes",
-      "service": "Consultoria de estilo individual"
-    }
+    "reviews": [
+      {
+        "text": "„Depois do reset de guarda-roupa com a Paula, meu dia a dia ficou muito mais leve. De manhã já sei na hora o que vestir.“",
+        "author": "Julia K.",
+        "service": "Reset de guarda-roupa"
+      },
+      {
+        "text": "„A consultoria de cores abriu meus olhos. Agora tenho coragem de usar cores que antes nunca teria ousado experimentar.“",
+        "author": "Sandra M.",
+        "service": "Consultoria de cores"
+      },
+      {
+        "text": "„Fazer compras pessoais com a Paula foi a primeira vez que comprar roupa foi realmente divertido – sem estresse e sem erros de compra.“",
+        "author": "Nina R.",
+        "service": "Personal shopper & styling"
+      },
+      {
+        "text": "„A consultoria de estilo individual me ajudou a finalmente tornar minha personalidade visível também por fora.“",
+        "author": "Carla T.",
+        "service": "Consultoria de estilo individual"
+      },
+      {
+        "text": "„Depois da minha gravidez, a Paula me ajudou a me sentir em casa novamente no meu corpo e no meu estilo.“",
+        "author": "Melanie S.",
+        "service": "Consultoria de estilo individual"
+      },
+      {
+        "text": "„Ao iniciar minha nova fase profissional, a consultoria me deu exatamente a segurança que eu precisava.“",
+        "author": "Franziska B.",
+        "service": "Consultoria de cores"
+      },
+      {
+        "text": "„Quando comecei meu escritório, percebi que a minha imagem poderia me ajudar a comunicar valor antes mesmo de eu ter a oportunidade de falar sobre o meu trabalho. A consultoria me ajudou a encontrar o equilíbrio entre a formalidade da advocacia e a minha própria personalidade, para que eu pudesse transmitir profissionalismo sem deixar de me reconhecer no que vestia. Paula soube construir uma estratégia a partir de quem eu era e da mensagem que eu queria transmitir, e não simplesmente seguindo tendências. Mais do que aprender sobre cores, peças ou combinações, aprendi a perceber as mensagens implícitas de cada escolha e a usá-las de forma intencional. Foi um processo que transformou não só a forma como as pessoas me percebiam, mas também a forma como eu me enxergava e é um aprendizado que carrego comigo até hoje.“",
+        "author": "Deise Cordeiro",
+        "service": "Consultoria de estilo individual"
+      },
+      {
+        "text": "„A consultoria que a Paula prestou para meu então marido foi de extrema importância. Através dela nós conseguimos fazê-lo entender que o estilo despojado e casual tem hora e lugar. Conseguimos com o tempo investir em peças atemporais que elevaram o senso de estilo e elegância do cliente final.“",
+        "author": "Natany Gomes",
+        "service": "Consultoria de estilo individual"
+      }
+    ]
   },
   "servicePages": {
     "cta": "Marcar um horário",

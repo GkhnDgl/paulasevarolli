@@ -65,11 +65,7 @@
     "description": "Klarheit, Selbstvertrauen und ein Stilgefühl, das wirklich zu dir passt.",
     "aboutTitle": "Was ist Stilberatung?",
     "aboutText": "Stilberatung ist ein persönlicher, sensibler Prozess, bei dem wir gemeinsam deinen Weg zu einem authentischen Ausdruck finden. Wir schauen auf deine Persönlichkeit, deine Lebensphase, deine Farben und deine gewohnte Umgebung – und entwickeln daraus etwas, das ganz zu dir gehört.",
-    "servicesTitle": "Leistungen",
-    "reviewsTitle": "Rezensionen",
-    "review1": "„Paula hat mich dabei begleitet, mich in meinem eigenen Stil wiederzufinden – mit Ruhe und viel Feingefühl.“",
-    "review2": "„Die Beratung war präzise, inspirierend und hat meinen Kleiderschrank sofort leichter gemacht.“",
-    "review3": "„Ich habe endlich verstanden, welche Farben und Schnitte wirklich zu mir passen.“"
+    "servicesTitle": "Leistungen"
   },
   "atelier": {
     "eyebrow": "Atelier",
@@ -84,18 +80,20 @@
     "priceListTitle": "Preisliste Änderungsschneiderei",
     "priceTableHeadService": "Leistung",
     "priceTableHeadPrice": "Preis",
-    "priceItem1": { "name": "Hosensaum kürzen (ohne Umschlag)", "price": "ab 15 €" },
-    "priceItem2": { "name": "Hosensaum kürzen (mit Umschlag)", "price": "ab 20 €" },
-    "priceItem3": { "name": "Hosenbund enger oder weiter machen", "price": "ab 18 €" },
-    "priceItem4": { "name": "Kleid kürzen", "price": "ab 25 €" },
-    "priceItem5": { "name": "Kleid enger oder weiter machen", "price": "ab 30 €" },
-    "priceItem6": { "name": "Rocksaum kürzen", "price": "ab 15 €" },
-    "priceItem7": { "name": "Reißverschluss austauschen", "price": "ab 20 €" },
-    "priceItem8": { "name": "Ärmel kürzen (Blazer, Jacke, Mantel)", "price": "ab 22 €" },
-    "priceItem9": { "name": "Jackett oder Blazer taillieren", "price": "ab 35 €" },
-    "priceItem10": { "name": "Knopf oder Knopfloch anpassen", "price": "ab 8 €" },
-    "priceItem11": { "name": "Individuelle Änderung nach Absprache", "price": "auf Anfrage" },
-    "priceItem12": { "name": "Anprobe & Beratung vor Ort", "price": "kostenlos" },
+    "priceItems": [
+      { "name": "Hosensaum kürzen (ohne Umschlag)", "price": "ab 15 €" },
+      { "name": "Hosensaum kürzen (mit Umschlag)", "price": "ab 20 €" },
+      { "name": "Hosenbund enger oder weiter machen", "price": "ab 18 €" },
+      { "name": "Kleid kürzen", "price": "ab 25 €" },
+      { "name": "Kleid enger oder weiter machen", "price": "ab 30 €" },
+      { "name": "Rocksaum kürzen", "price": "ab 15 €" },
+      { "name": "Reißverschluss austauschen", "price": "ab 20 €" },
+      { "name": "Ärmel kürzen (Blazer, Jacke, Mantel)", "price": "ab 22 €" },
+      { "name": "Jackett oder Blazer taillieren", "price": "ab 35 €" },
+      { "name": "Knopf oder Knopfloch anpassen", "price": "ab 8 €" },
+      { "name": "Individuelle Änderung nach Absprache", "price": "auf Anfrage" },
+      { "name": "Anprobe & Beratung vor Ort", "price": "kostenlos" }
+    ],
     "priceListNote": "Alle Preise verstehen sich als Richtwerte und können je nach Aufwand und Material variieren."
   },
   "shop": {
@@ -109,46 +107,48 @@
     "message": "Jede Beratung ist einzigartig – hier erzählen Kundinnen, wie sich ihr Weg zu einem stimmigeren, selbstbewussteren Stil angefühlt hat.",
     "readMore": "Weiter lesen",
     "readMoreAria": "Vollen Review-Text lesen",
-    "review1": {
-      "text": "„Nach dem Kleiderschrank-Reset mit Paula fühlt sich mein Alltag plötzlich so viel leichter an. Ich weiß morgens sofort, was ich anziehen möchte.“",
-      "author": "Julia K.",
-      "service": "Kleiderschrank-Reset"
-    },
-    "review2": {
-      "text": "„Die Farbberatung hat mir die Augen geöffnet. Ich traue mich jetzt Farben zu tragen, an die ich mich vorher nie herangewagt hätte.“",
-      "author": "Sandra M.",
-      "service": "Farbberatung"
-    },
-    "review3": {
-      "text": "„Personal Shopping mit Paula war das erste Mal, dass Einkaufen wirklich Spaß gemacht hat – ganz ohne Stress und ohne Fehlkäufe.“",
-      "author": "Nina R.",
-      "service": "Personal Shopper & Styling"
-    },
-    "review4": {
-      "text": "„Die individuelle Stilberatung hat mir geholfen, meine Persönlichkeit endlich auch nach außen sichtbar zu machen.“",
-      "author": "Carla T.",
-      "service": "Individuelle Stilberatung"
-    },
-    "review5": {
-      "text": "„Nach meiner Schwangerschaft hat mir Paula geholfen, mich in meinem Körper und meinem Stil neu zuhause zu fühlen.“",
-      "author": "Melanie S.",
-      "service": "Individuelle Stilberatung"
-    },
-    "review6": {
-      "text": "„Beim Einstieg in meine neue berufliche Rolle hat mir die Beratung genau die Sicherheit gegeben, die ich gebraucht habe.“",
-      "author": "Franziska B.",
-      "service": "Farbberatung"
-    },
-    "review7": {
-      "text": "„Als ich meine Anwaltskanzlei gründete, wurde mir klar, dass mein Erscheinungsbild dazu beitragen konnte, meinen Wert zu vermitteln, noch bevor ich überhaupt die Gelegenheit hatte, über meine Arbeit zu sprechen. Die Beratung half mir, eine Balance zwischen der Förmlichkeit des Anwaltsberufs und meiner eigenen Persönlichkeit zu finden; so konnte ich Professionalität ausstrahlen und mich gleichzeitig in meiner Kleidung ganz als ich selbst fühlen. Paula verstand es, eine Strategie zu entwickeln, die auf meiner Persönlichkeit und der von mir angestrebten Botschaft basierte, anstatt einfach nur Trends zu folgen. Ich lernte weit mehr als nur etwas über Farben, Kleidungsstücke oder Kombinationen: Ich lernte, die unterschwelligen Botschaften hinter jeder Entscheidung zu erkennen und sie gezielt einzusetzen. Es war ein Prozess, der nicht nur die Wahrnehmung anderer mir gegenüber veränderte, sondern auch mein eigenes Selbstbild – eine Lektion, die mich bis heute begleitet.“",
-      "author": "Deise Cordeiro",
-      "service": "Individuelle Stilberatung"
-    },
-    "review8": {
-      "text": "„Die Beratung, die Paula meinem damaligen Mann zuteilwerden ließ, war von enormer Bedeutung. Dank ihr konnten wir ihm vermitteln, dass ein entspannter, legerer Stil durchaus seine Berechtigung hat – allerdings nur zu bestimmten Gelegenheiten. Im Laufe der Zeit gelang es uns, in zeitlose Kleidungsstücke zu investieren, die seinen Sinn für Stil und Eleganz auf ein höheres Niveau hoben.“",
-      "author": "Natany Gomes",
-      "service": "Individuelle Stilberatung"
-    }
+    "reviews": [
+      {
+        "text": "„Nach dem Kleiderschrank-Reset mit Paula fühlt sich mein Alltag plötzlich so viel leichter an. Ich weiß morgens sofort, was ich anziehen möchte.“",
+        "author": "Julia K.",
+        "service": "Kleiderschrank-Reset"
+      },
+      {
+        "text": "„Die Farbberatung hat mir die Augen geöffnet. Ich traue mich jetzt Farben zu tragen, an die ich mich vorher nie herangewagt hätte.“",
+        "author": "Sandra M.",
+        "service": "Farbberatung"
+      },
+      {
+        "text": "„Personal Shopping mit Paula war das erste Mal, dass Einkaufen wirklich Spaß gemacht hat – ganz ohne Stress und ohne Fehlkäufe.“",
+        "author": "Nina R.",
+        "service": "Personal Shopper & Styling"
+      },
+      {
+        "text": "„Die individuelle Stilberatung hat mir geholfen, meine Persönlichkeit endlich auch nach außen sichtbar zu machen.“",
+        "author": "Carla T.",
+        "service": "Individuelle Stilberatung"
+      },
+      {
+        "text": "„Nach meiner Schwangerschaft hat mir Paula geholfen, mich in meinem Körper und meinem Stil neu zuhause zu fühlen.“",
+        "author": "Melanie S.",
+        "service": "Individuelle Stilberatung"
+      },
+      {
+        "text": "„Beim Einstieg in meine neue berufliche Rolle hat mir die Beratung genau die Sicherheit gegeben, die ich gebraucht habe.“",
+        "author": "Franziska B.",
+        "service": "Farbberatung"
+      },
+      {
+        "text": "„Als ich meine Anwaltskanzlei gründete, wurde mir klar, dass mein Erscheinungsbild dazu beitragen konnte, meinen Wert zu vermitteln, noch bevor ich überhaupt die Gelegenheit hatte, über meine Arbeit zu sprechen. Die Beratung half mir, eine Balance zwischen der Förmlichkeit des Anwaltsberufs und meiner eigenen Persönlichkeit zu finden; so konnte ich Professionalität ausstrahlen und mich gleichzeitig in meiner Kleidung ganz als ich selbst fühlen. Paula verstand es, eine Strategie zu entwickeln, die auf meiner Persönlichkeit und der von mir angestrebten Botschaft basierte, anstatt einfach nur Trends zu folgen. Ich lernte weit mehr als nur etwas über Farben, Kleidungsstücke oder Kombinationen: Ich lernte, die unterschwelligen Botschaften hinter jeder Entscheidung zu erkennen und sie gezielt einzusetzen. Es war ein Prozess, der nicht nur die Wahrnehmung anderer mir gegenüber veränderte, sondern auch mein eigenes Selbstbild – eine Lektion, die mich bis heute begleitet.“",
+        "author": "Deise Cordeiro",
+        "service": "Individuelle Stilberatung"
+      },
+      {
+        "text": "„Die Beratung, die Paula meinem damaligen Mann zuteilwerden ließ, war von enormer Bedeutung. Dank ihr konnten wir ihm vermitteln, dass ein entspannter, legerer Stil durchaus seine Berechtigung hat – allerdings nur zu bestimmten Gelegenheiten. Im Laufe der Zeit gelang es uns, in zeitlose Kleidungsstücke zu investieren, die seinen Sinn für Stil und Eleganz auf ein höheres Niveau hoben.“",
+        "author": "Natany Gomes",
+        "service": "Individuelle Stilberatung"
+      }
+    ]
   },
   "servicePages": {
     "cta": "Termin vereinbaren",

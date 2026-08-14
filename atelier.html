@@ -85,19 +85,8 @@
           <th data-i18n="atelier.priceTableHeadPrice"></th>
         </tr>
       </thead>
-      <tbody>
-        <tr><td data-i18n="atelier.priceItem1.name"></td><td data-i18n="atelier.priceItem1.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem2.name"></td><td data-i18n="atelier.priceItem2.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem3.name"></td><td data-i18n="atelier.priceItem3.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem4.name"></td><td data-i18n="atelier.priceItem4.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem5.name"></td><td data-i18n="atelier.priceItem5.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem6.name"></td><td data-i18n="atelier.priceItem6.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem7.name"></td><td data-i18n="atelier.priceItem7.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem8.name"></td><td data-i18n="atelier.priceItem8.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem9.name"></td><td data-i18n="atelier.priceItem9.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem10.name"></td><td data-i18n="atelier.priceItem10.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem11.name"></td><td data-i18n="atelier.priceItem11.price"></td></tr>
-        <tr><td data-i18n="atelier.priceItem12.name"></td><td data-i18n="atelier.priceItem12.price"></td></tr>
+      <tbody id="priceTableBody">
+        <!-- Wird dynamisch per JavaScript befüllt -->
       </tbody>
     </table>
     <p class="price-note" data-i18n="atelier.priceListNote"></p>
@@ -185,6 +174,7 @@
       const response = await fetch(`lang/${lang}.json`);
       const translations = await response.json();
 
+      // 1. Standard-Übersetzungen (Titel, Tabellenköpfe, CTA, Footer, etc.) einfügen
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const value = key.split('.').reduce((o, i) => o?.[i], translations);
@@ -196,6 +186,27 @@
           el.prepend(textNode);
         }
       });
+
+      // 2. DYNAMISCHES RENDERN DER PREISLISTE aus priceItems
+      const priceTableBody = document.getElementById('priceTableBody');
+      if (priceTableBody && translations.atelier?.priceItems) {
+        priceTableBody.innerHTML = ''; // Vorherige Eintrags-Zeilen leeren
+
+        translations.atelier.priceItems.forEach(item => {
+          const row = document.createElement('tr');
+
+          const nameCell = document.createElement('td');
+          nameCell.textContent = item.name || '';
+
+          const priceCell = document.createElement('td');
+          priceCell.textContent = item.price || '';
+
+          row.appendChild(nameCell);
+          row.appendChild(priceCell);
+
+          priceTableBody.appendChild(row);
+        });
+      }
     }
 
     function setLanguage(lang) {

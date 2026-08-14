@@ -86,46 +86,7 @@
 
   <section class="page-section reviews" id="reviewsScroll">
     <div class="reviews-pages" id="reviewsPages">
-      <div class="review-card">
-        <p class="review-quote" data-i18n="reviewsPage.review1.text"></p>
-        <p class="review-author" data-i18n="reviewsPage.review1.author"></p>
-        <p class="review-service" data-i18n="reviewsPage.review1.service"></p>
-      </div>
-      <div class="review-card">
-        <p class="review-quote" data-i18n="reviewsPage.review2.text"></p>
-        <p class="review-author" data-i18n="reviewsPage.review2.author"></p>
-        <p class="review-service" data-i18n="reviewsPage.review2.service"></p>
-      </div>
-      <div class="review-card">
-        <p class="review-quote" data-i18n="reviewsPage.review3.text"></p>
-        <p class="review-author" data-i18n="reviewsPage.review3.author"></p>
-        <p class="review-service" data-i18n="reviewsPage.review3.service"></p>
-      </div>
-      <div class="review-card">
-        <p class="review-quote" data-i18n="reviewsPage.review4.text"></p>
-        <p class="review-author" data-i18n="reviewsPage.review4.author"></p>
-        <p class="review-service" data-i18n="reviewsPage.review4.service"></p>
-      </div>
-      <div class="review-card">
-        <p class="review-quote" data-i18n="reviewsPage.review5.text"></p>
-        <p class="review-author" data-i18n="reviewsPage.review5.author"></p>
-        <p class="review-service" data-i18n="reviewsPage.review5.service"></p>
-      </div>
-      <div class="review-card">
-        <p class="review-quote" data-i18n="reviewsPage.review6.text"></p>
-        <p class="review-author" data-i18n="reviewsPage.review6.author"></p>
-        <p class="review-service" data-i18n="reviewsPage.review6.service"></p>
-      </div>
-      <div class="review-card">
-        <p class="review-quote" data-i18n="reviewsPage.review7.text"></p>
-        <p class="review-author" data-i18n="reviewsPage.review7.author"></p>
-        <p class="review-service" data-i18n="reviewsPage.review7.service"></p>
-      </div>
-      <div class="review-card">
-        <p class="review-quote" data-i18n="reviewsPage.review8.text"></p>
-        <p class="review-author" data-i18n="reviewsPage.review8.author"></p>
-        <p class="review-service" data-i18n="reviewsPage.review8.service"></p>
-      </div>
+      <!-- Wird jetzt dynamisch per JavaScript befüllt -->
     </div>
   </section>
 
@@ -420,6 +381,7 @@
       const response = await fetch(`lang/${lang}.json`);
       const translations = await response.json();
 
+      // 1. Standard-Übersetzungen (Kopfbereich, Navigation, Footer, etc.) einsetzen
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const value = key.split('.').reduce((o, i) => o?.[i], translations);
@@ -432,13 +394,43 @@
         }
       });
 
+      // 2. DYNAMISCHES RENDERN DER REZENSIONEN aus dem reviews-Array
+      const reviewsPages = document.getElementById('reviewsPages');
+      if (reviewsPages && translations.reviewsPage?.reviews) {
+        reviewsPages.innerHTML = ''; // Vorherige Elemente leeren
+
+        translations.reviewsPage.reviews.forEach(review => {
+          const card = document.createElement('div');
+          card.className = 'review-card';
+
+          const quote = document.createElement('p');
+          quote.className = 'review-quote';
+          quote.textContent = review.text || '';
+
+          const author = document.createElement('p');
+          author.className = 'review-author';
+          author.textContent = review.author || '';
+
+          const service = document.createElement('p');
+          service.className = 'review-service';
+          service.textContent = review.service || '';
+
+          card.appendChild(quote);
+          card.appendChild(author);
+          card.appendChild(service);
+
+          reviewsPages.appendChild(card);
+        });
+      }
+
+      // 3. Modals & Zusatztexte vorbereiten
       const readMoreText = translations.reviewsPage?.readMore || (currentLang === 'pt' ? 'Leia mais' : 'Weiter lesen');
       const readMoreAria = translations.reviewsPage?.readMoreAria || (currentLang === 'pt' ? 'Ler o texto completo da avaliação' : 'Vollen Review-Text lesen');
 
       modalCloseButton.setAttribute('aria-label', currentLang === 'pt' ? 'Fechar' : 'Schließen');
       modalBackdrop.setAttribute('aria-label', currentLang === 'pt' ? 'Texto completo da avaliação' : 'Vollständiger Review-Text');
 
-      // Erst nach dem Übersetzen ist die tatsächliche Länge der Zitate bekannt.
+      // 4. Layout neu berechnen (Grid, ReadMore-Buttons, Dots)
       refreshLayout(readMoreText, readMoreAria);
     }
 

@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scroll.js" defer></script>
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <div class="landing-logo">
@@ -143,6 +145,17 @@
 
       const savedLang = localStorage.getItem('lang') || 'de';
       setLanguage(savedLang);
+
+      // NETLIFY IDENTITY REDIRECT
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
     });
   </script>
 </body>

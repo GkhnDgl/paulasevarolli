@@ -1,0 +1,429 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+i18n:
+  structure: multiple_files
+  locales: [de, pt]
+  default_locale: de
+
+collections:
+  # =========================================================
+  # 1. NAVIGATION & META
+  # =========================================================
+  - name: "general"
+    label: "Navigation, Meta & Footer"
+    files:
+      - file: "lang/de.json"
+        label: "Navigation & Meta"
+        name: "general"
+        i18n: true
+        fields:
+          - label: "Meta & Seitentitel"
+            name: "meta"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Titel", name: "title", widget: "string", i18n: true }
+
+          - label: "Hauptnavigation"
+            name: "nav"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Home", name: "home", widget: "string", i18n: true }
+              - { label: "Stilberatung", name: "stilberatung", widget: "string", i18n: true }
+              - { label: "Atelier", name: "atelier", widget: "string", i18n: true }
+              - { label: "Shop", name: "shop", widget: "string", i18n: true }
+              - { label: "Leistungen", name: "services", widget: "string", i18n: true }
+              - { label: "Was ist Stilberatung?", name: "about", widget: "string", i18n: true }
+              - { label: "Rezensionen", name: "reviews", widget: "string", i18n: true }
+              - { label: "Kontakt aufnehmen", name: "contact", widget: "string", i18n: true }
+
+          - { label: "Footer Copyright", name: "footer", widget: "string", i18n: true }
+
+  # =========================================================
+  # 2. STARTSEITE / LANDINGPAGE
+  # =========================================================
+  - name: "home"
+    label: "Startseite (Landingpage)"
+    files:
+      - file: "lang/de.json"
+        label: "Startseite"
+        name: "home"
+        i18n: true
+        fields:
+          - label: "Hero-Bereich"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Titel", name: "title", widget: "string", i18n: true }
+              - { label: "Untertitel", name: "subtitle", widget: "text", i18n: true }
+              - { label: "Button-Text", name: "contact", widget: "string", i18n: true }
+
+          - label: "Landingpage-Split"
+            name: "landing"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+              - { label: "Titel", name: "title", widget: "string", i18n: true }
+              - { label: "Beschreibung", name: "description", widget: "text", i18n: true }
+              - { label: "Stilberatung Titel", name: "stilberatungTitle", widget: "string", i18n: true }
+              - { label: "Stilberatung Text", name: "stilberatungText", widget: "text", i18n: true }
+              - { label: "Stilberatung Button", name: "stilberatungCta", widget: "string", i18n: true }
+              - { label: "Atelier Titel", name: "atelierTitle", widget: "string", i18n: true }
+              - { label: "Atelier Text", name: "atelierText", widget: "text", i18n: true }
+              - { label: "Atelier Button", name: "atelierCta", widget: "string", i18n: true }
+              - { label: "Über die Angebote Titel", name: "aboutTitle", widget: "string", i18n: true }
+              - { label: "Über die Angebote Text", name: "aboutText", widget: "text", i18n: true }
+
+  # =========================================================
+  # 3. ÜBER MICH (ABOUT)
+  # =========================================================
+  - name: "about_page"
+    label: "Über mich (Paula Sevarolli)"
+    files:
+      - file: "lang/de.json"
+        label: "Über mich"
+        name: "about_page"
+        i18n: true
+        fields:
+          - label: "Über mich Texte"
+            name: "about"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Überschrift", name: "heading", widget: "string", i18n: true }
+              - { label: "Absatz 1", name: "paragraph1", widget: "text", i18n: true }
+              - { label: "Absatz 2", name: "paragraph2", widget: "text", i18n: true }
+              - { label: "Absatz 3", name: "paragraph3", widget: "text", i18n: true }
+              - { label: "Absatz 4", name: "paragraph4", widget: "text", i18n: true }
+              - { label: "Absatz 5", name: "paragraph5", widget: "text", i18n: true }
+              - { label: "Absatz 6", name: "paragraph6", widget: "text", i18n: true }
+              - { label: "Absatz 7", name: "paragraph7", widget: "text", i18n: true }
+
+  # =========================================================
+  # 4. STILBERATUNG & LEISTUNGEN
+  # =========================================================
+  - name: "services_page"
+    label: "Stilberatung & Leistungen"
+    files:
+      - file: "lang/de.json"
+        label: "Stilberatung"
+        name: "services_page"
+        i18n: true
+        fields:
+          - label: "Stilberatung Hauptseite"
+            name: "stilberatungPage"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              # - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+              - { label: "Titel", name: "title", widget: "string", i18n: true }
+              # - { label: "Beschreibung", name: "description", widget: "text", i18n: true }
+              - { label: "About Titel", name: "aboutTitle", widget: "string", i18n: true }
+              - { label: "About Text", name: "aboutText", widget: "text", i18n: true }
+              # - { label: "Leistungen Titel", name: "servicesTitle", widget: "string", i18n: true }
+
+          # - label: "Leistungen (Kurzübersicht)"
+          #   name: "services"
+          #   widget: "object"
+          #   collapsed: false
+          #   i18n: true
+          #   fields:
+          #     - { label: "Überschrift", name: "heading", widget: "string", i18n: true }
+          #     - label: "Kleiderschrank-Reset"
+          #       name: "wardrobeReset"
+          #       widget: "object"
+          #       i18n: true
+          #       fields:
+          #         - { label: "Titel", name: "title", widget: "string", i18n: true }
+          #         - { label: "Text", name: "text", widget: "text", i18n: true }
+          #     - label: "Farbberatung"
+          #       name: "colorConsultation"
+          #       widget: "object"
+          #       i18n: true
+          #       fields:
+          #         - { label: "Titel", name: "title", widget: "string", i18n: true }
+          #         - { label: "Text", name: "text", widget: "text", i18n: true }
+          #     - label: "Personal Shopper"
+          #       name: "personalShopping"
+          #       widget: "object"
+          #       i18n: true
+          #       fields:
+          #         - { label: "Titel", name: "title", widget: "string", i18n: true }
+          #         - { label: "Text", name: "text", widget: "text", i18n: true }
+          #     - label: "Individuelle Stilberatung"
+          #       name: "individualConsultation"
+          #       widget: "object"
+          #       i18n: true
+          #       fields:
+          #         - { label: "Titel", name: "title", widget: "string", i18n: true }
+          #         - { label: "Text", name: "text", widget: "text", i18n: true }
+
+          - label: "Leistungs-Detailseiten (Preise & Dauer)"
+            name: "servicePages"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              # - { label: "Button Termin vereinbaren", name: "cta", widget: "string", i18n: true }
+              # - { label: "Button Zurück", name: "back", widget: "string", i18n: true }
+              - label: "Kleiderschrank-Reset Detail"
+                name: "wardrobeReset"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+                  - { label: "Titel", name: "title", widget: "string", i18n: true }
+                  - { label: "Intro", name: "intro", widget: "text", i18n: true }
+                  - { label: "Dauer & Preis", name: "meta", widget: "string", i18n: true }
+                  - { label: "Listen-Titel", name: "listLabel", widget: "string", i18n: true }
+                  - { label: "Punkt 1", name: "listItem1", widget: "string", i18n: true }
+                  - { label: "Punkt 2", name: "listItem2", widget: "string", i18n: true }
+              - label: "Farbberatung Detail"
+                name: "colorConsultation"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+                  - { label: "Titel", name: "title", widget: "string", i18n: true }
+                  - { label: "Intro", name: "intro", widget: "text", i18n: true }
+                  - { label: "Dauer & Preis", name: "meta", widget: "string", i18n: true }
+                  - { label: "Listen-Titel", name: "listLabel", widget: "string", i18n: true }
+                  - { label: "Punkt 1", name: "listItem1", widget: "string", i18n: true }
+                  - { label: "Punkt 2", name: "listItem2", widget: "string", i18n: true }
+              - label: "Personal Shopper Detail"
+                name: "personalShopping"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+                  - { label: "Titel", name: "title", widget: "string", i18n: true }
+                  - { label: "Intro", name: "intro", widget: "text", i18n: true }
+                  - { label: "Dauer & Preis", name: "meta", widget: "string", i18n: true }
+                  - { label: "Listen-Titel", name: "listLabel", widget: "string", i18n: true }
+                  - { label: "Punkt 1", name: "listItem1", widget: "string", i18n: true }
+                  - { label: "Punkt 2", name: "listItem2", widget: "string", i18n: true }
+              - label: "Individuelle Stilberatung Detail"
+                name: "individualConsultation"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+                  - { label: "Titel", name: "title", widget: "string", i18n: true }
+                  - { label: "Intro", name: "intro", widget: "text", i18n: true }
+                  - { label: "Dauer & Preis", name: "meta", widget: "string", i18n: true }
+                  - { label: "Listen-Titel", name: "listLabel", widget: "string", i18n: true }
+                  - { label: "Punkt 1", name: "listItem1", widget: "string", i18n: true }
+                  - { label: "Punkt 2", name: "listItem2", widget: "string", i18n: true }
+
+  # =========================================================
+  # 5. ATELIER & PREISLISTE
+  # =========================================================
+  - name: "atelier_page"
+    label: "Atelier & Preisliste"
+    files:
+      - file: "lang/de.json"
+        label: "Atelier"
+        name: "atelier_page"
+        i18n: true
+        fields:
+          - label: "Atelier Texte & Preisliste"
+            name: "atelier"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+              - { label: "Titel", name: "title", widget: "string", i18n: true }
+              - { label: "Beschreibung", name: "description", widget: "text", i18n: true }
+              - { label: "About Titel", name: "aboutTitle", widget: "string", i18n: true }
+              - { label: "About Text 1", name: "aboutText1", widget: "text", i18n: true }
+              - { label: "About Text 2", name: "aboutText2", widget: "text", i18n: true }
+              - { label: "Leistungen Titel", name: "servicesTitle", widget: "string", i18n: true }
+              - { label: "Service 1 Titel", name: "service1Title", widget: "string", i18n: true }
+              - { label: "Service 1 Text", name: "service1Text", widget: "text", i18n: true }
+              - { label: "Preisliste Titel", name: "priceListTitle", widget: "string", i18n: true }
+              - { label: "Tabellenkopf Leistung", name: "priceTableHeadService", widget: "string", i18n: true }
+              - { label: "Tabellenkopf Preis", name: "priceTableHeadPrice", widget: "string", i18n: true }
+              - { label: "Hinweistext Preisliste", name: "priceListNote", widget: "text", i18n: true }
+
+              # DYNAMISCHE PREISLISTE (Hinzufügen & Entfernen)
+              - label: "Preisliste Einträge"
+                name: "priceItems"
+                widget: "list"
+                i18n: true
+                summary: '{{fields.name}} - {{fields.price}}'
+                fields:
+                  - { label: "Name der Leistung", name: "name", widget: "string", i18n: true }
+                  - { label: "Preis", name: "price", widget: "string", i18n: true }
+
+  # =========================================================
+  # 6. SHOP
+  # =========================================================
+  - name: "shop_page"
+    label: "Shop Seite"
+    files:
+      - file: "lang/de.json"
+        label: "Shop"
+        name: "shop_page"
+        i18n: true
+        fields:
+          - label: "Shop Inhalte"
+            name: "shop"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Titel", name: "title", widget: "string", i18n: true }
+              - { label: "Headline", name: "headline", widget: "string", i18n: true }
+              - { label: "Nachricht", name: "message", widget: "text", i18n: true }
+
+  # =========================================================
+  # 7. REZENSIONEN
+  # =========================================================
+  - name: "reviews_page"
+    label: "Rezensionen (Kundenstimmen)"
+    files:
+      - file: "lang/de.json"
+        label: "Rezensionen"
+        name: "reviews_page"
+        i18n: true
+        fields:
+          - label: "Rezensionen Übersicht & Liste"
+            name: "reviewsPage"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Titel", name: "title", widget: "string", i18n: true }
+              - { label: "Headline", name: "headline", widget: "string", i18n: true }
+              - { label: "Nachricht / Intro", name: "message", widget: "text", i18n: true }
+              - { label: "Weiter lesen Button", name: "readMore", widget: "string", i18n: true }
+              - { label: "Weiter lesen Aria-Label", name: "readMoreAria", widget: "string", i18n: true }
+
+              # DYNAMISCHE REZENSIONSLISTE (Hinzufügen & Entfernen)
+              - label: "Kundenstimmen / Rezensionen"
+                name: "reviews"
+                widget: "list"
+                i18n: true
+                summary: '{{fields.author}} ({{fields.service}})'
+                fields:
+                  - { label: "Text", name: "text", widget: "text", i18n: true }
+                  - { label: "Autor", name: "author", widget: "string", i18n: true }
+                  - { label: "Gebuchte Leistung", name: "service", widget: "string", i18n: true }
+
+  # =========================================================
+  # 8. KONTAKT
+  # =========================================================
+  - name: "contact_page"
+    label: "Kontakt & Formular"
+    files:
+      - file: "lang/de.json"
+        label: "Kontakt"
+        name: "contact_page"
+        i18n: true
+        fields:
+          - label: "Kontakt-Buttons (Schnellzugriff)"
+            name: "contact"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Überschrift", name: "heading", widget: "string", i18n: true }
+              - { label: "E-Mail", name: "email", widget: "string", i18n: true }
+              - { label: "Instagram", name: "instagram", widget: "string", i18n: true }
+              - { label: "WhatsApp", name: "whatsapp", widget: "string", i18n: true }
+
+          - label: "Kontaktformular-Seite"
+            name: "contactPage"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+              - { label: "Titel", name: "title", widget: "string", i18n: true }
+              - { label: "Intro Text", name: "intro", widget: "text", i18n: true }
+              - { label: "Name Feld Label", name: "nameLabel", widget: "string", i18n: true }
+              - { label: "Name Platzhalter", name: "namePlaceholder", widget: "string", i18n: true }
+              - { label: "E-Mail Feld Label", name: "emailLabel", widget: "string", i18n: true }
+              - { label: "E-Mail Platzhalter", name: "emailPlaceholder", widget: "string", i18n: true }
+              - { label: "Nachricht Feld Label", name: "messageLabel", widget: "string", i18n: true }
+              - { label: "Nachricht Platzhalter", name: "messagePlaceholder", widget: "string", i18n: true }
+              - { label: "Zurück Button", name: "back", widget: "string", i18n: true }
+              - { label: "Absenden Button", name: "submit", widget: "string", i18n: true }
+              - { label: "Hinweis", name: "note", widget: "text", i18n: true }
+
+  # =========================================================
+  # 9. RECHTLICHES
+  # =========================================================
+  - name: "legal_page"
+    label: "Impressum & Datenschutz"
+    files:
+      - file: "lang/de.json"
+        label: "Rechtliches"
+        name: "legal_page"
+        i18n: true
+        fields:
+          - label: "Rechtliches & Datenschutz"
+            name: "legal"
+            widget: "object"
+            collapsed: false
+            i18n: true
+            fields:
+              - { label: "Footer Link Impressum", name: "footerImpressum", widget: "string", i18n: true }
+              - { label: "Footer Link Datenschutz", name: "footerDatenschutz", widget: "string", i18n: true }
+              - label: "Impressum Details"
+                name: "impressum"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+                  - { label: "Titel", name: "title", widget: "string", i18n: true }
+                  - { label: "Überschrift Abs. 1", name: "section1Heading", widget: "string", i18n: true }
+                  - { label: "Name", name: "name", widget: "string", i18n: true }
+                  - { label: "Adresse", name: "address", widget: "string", i18n: true }
+                  - { label: "Überschrift Kontakt", name: "contactHeading", widget: "string", i18n: true }
+                  - { label: "E-Mail", name: "email", widget: "string", i18n: true }
+                  - { label: "Telefon", name: "phone", widget: "string", i18n: true }
+                  - { label: "Überschrift USt-ID", name: "vatHeading", widget: "string", i18n: true }
+                  - { label: "Text USt-ID", name: "vatText", widget: "text", i18n: true }
+                  - { label: "Überschrift Verantwortlich", name: "responsibleHeading", widget: "string", i18n: true }
+                  - { label: "Text Verantwortlich", name: "responsibleText", widget: "text", i18n: true }
+                  - { label: "Überschrift Streitschlichtung", name: "disputeHeading", widget: "string", i18n: true }
+                  - { label: "Text Streitschlichtung", name: "disputeText", widget: "text", i18n: true }
+              - label: "Datenschutz Details"
+                name: "datenschutz"
+                widget: "object"
+                i18n: true
+                fields:
+                  - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+                  - { label: "Titel", name: "title", widget: "string", i18n: true }
+                  - { label: "Abschnitt 1 Titel", name: "section1Heading", widget: "string", i18n: true }
+                  - { label: "Abschnitt 1 Text", name: "section1Text", widget: "text", i18n: true }
+                  - { label: "Abschnitt 2 Titel", name: "section2Heading", widget: "string", i18n: true }
+                  - { label: "Abschnitt 2 Text", name: "section2Text", widget: "text", i18n: true }
+                  - { label: "Abschnitt 3 Titel", name: "section3Heading", widget: "string", i18n: true }
+                  - { label: "Abschnitt 3 Text", name: "section3Text", widget: "text", i18n: true }
+                  - { label: "Abschnitt 4 Titel", name: "section4Heading", widget: "string", i18n: true }
+                  - { label: "Abschnitt 4 Text", name: "section4Text", widget: "text", i18n: true }
+                  - { label: "Abschnitt 5 Titel", name: "section5Heading", widget: "string", i18n: true }
+                  - { label: "Abschnitt 5 Text", name: "section5Text", widget: "text", i18n: true }
+                  - { label: "Abschnitt 6 Titel", name: "section6Heading", widget: "string", i18n: true }
+                  - { label: "Abschnitt 6 Text", name: "section6Text", widget: "text", i18n: true }
+                  - { label: "Abschnitt 7 Titel", name: "section7Heading", widget: "string", i18n: true }
+                  - { label: "Abschnitt 7 Text", name: "section7Text", widget: "text", i18n: true }
