@@ -338,16 +338,16 @@ collections:
         name: "contact_page"
         i18n: true
         fields:
-          - label: "Kontakt-Buttons (Schnellzugriff)"
-            name: "contact"
-            widget: "object"
-            collapsed: false
-            i18n: true
-            fields:
-              - { label: "Überschrift", name: "heading", widget: "string", i18n: true }
-              - { label: "E-Mail", name: "email", widget: "string", i18n: true }
-              - { label: "Instagram", name: "instagram", widget: "string", i18n: true }
-              - { label: "WhatsApp", name: "whatsapp", widget: "string", i18n: true }
+          # - label: "Kontakt-Buttons (Schnellzugriff)"
+          #   name: "contact"
+          #   widget: "object"
+          #   collapsed: false
+          #   i18n: true
+          #   fields:
+          #     - { label: "Überschrift", name: "heading", widget: "string", i18n: true }
+          #     - { label: "E-Mail", name: "email", widget: "string", i18n: true }
+          #     - { label: "Instagram", name: "instagram", widget: "string", i18n: true }
+          #     - { label: "WhatsApp", name: "whatsapp", widget: "string", i18n: true }
 
           - label: "Kontaktformular-Seite"
             name: "contactPage"
@@ -358,14 +358,14 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Titel", name: "title", widget: "string", i18n: true }
               - { label: "Intro Text", name: "intro", widget: "text", i18n: true }
-              - { label: "Name Feld Label", name: "nameLabel", widget: "string", i18n: true }
+              # - { label: "Name Feld Label", name: "nameLabel", widget: "string", i18n: true }
               - { label: "Name Platzhalter", name: "namePlaceholder", widget: "string", i18n: true }
-              - { label: "E-Mail Feld Label", name: "emailLabel", widget: "string", i18n: true }
+              # - { label: "E-Mail Feld Label", name: "emailLabel", widget: "string", i18n: true }
               - { label: "E-Mail Platzhalter", name: "emailPlaceholder", widget: "string", i18n: true }
-              - { label: "Nachricht Feld Label", name: "messageLabel", widget: "string", i18n: true }
+              # - { label: "Nachricht Feld Label", name: "messageLabel", widget: "string", i18n: true }
               - { label: "Nachricht Platzhalter", name: "messagePlaceholder", widget: "string", i18n: true }
-              - { label: "Zurück Button", name: "back", widget: "string", i18n: true }
-              - { label: "Absenden Button", name: "submit", widget: "string", i18n: true }
+              # - { label: "Zurück Button", name: "back", widget: "string", i18n: true }
+              # - { label: "Absenden Button", name: "submit", widget: "string", i18n: true }
               - { label: "Hinweis", name: "note", widget: "text", i18n: true }
 
   # =========================================================
