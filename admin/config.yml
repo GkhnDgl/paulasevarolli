@@ -20,10 +20,10 @@ collections:
     label: "Navigation, Meta & Footer"
     files:
       - file: "lang/de.json"
-        label: "Navigation & Meta"
-        name: "general"
+        label: "Navigation & Meta (de)"
+        name: "general_de"
         i18n: true
-        fields:
+        fields: &general_fields   # <--- Anchor definieren
           - label: "Meta & Seitentitel"
             name: "meta"
             widget: "object"
@@ -49,6 +49,12 @@ collections:
 
           - { label: "Footer Copyright", name: "footer", widget: "string", i18n: true }
 
+      - file: "lang/pt.json"
+        label: "Navigation & Meta (pt)"
+        name: "general_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
+
   # =========================================================
   # 2. STARTSEITE / LANDINGPAGE
   # =========================================================
@@ -56,49 +62,40 @@ collections:
     label: "Startseite (Landingpage)"
     files:
       - file: "lang/de.json"
-        label: "Startseite"
-        name: "home"
+        label: "Startseite (de)"
+        name: "home_de"
         i18n: true
-        fields:
-          - label: "Hero-Bereich"
-            name: "hero"
-            widget: "object"
-            collapsed: false
-            i18n: true
-            fields:
-              - { label: "Titel", name: "title", widget: "string", i18n: true }
-              - { label: "Untertitel", name: "subtitle", widget: "text", i18n: true }
-              - { label: "Button-Text", name: "contact", widget: "string", i18n: true }
-
-          - label: "Landingpage-Split"
+        fields: &general_fields   # <--- Anchor definieren
+          - label: "Home"
             name: "landing"
             widget: "object"
             collapsed: false
             i18n: true
             fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
-              - { label: "Titel", name: "title", widget: "string", i18n: true }
-              - { label: "Beschreibung", name: "description", widget: "text", i18n: true }
               - { label: "Stilberatung Titel", name: "stilberatungTitle", widget: "string", i18n: true }
               - { label: "Stilberatung Text", name: "stilberatungText", widget: "text", i18n: true }
               - { label: "Stilberatung Button", name: "stilberatungCta", widget: "string", i18n: true }
               - { label: "Atelier Titel", name: "atelierTitle", widget: "string", i18n: true }
               - { label: "Atelier Text", name: "atelierText", widget: "text", i18n: true }
               - { label: "Atelier Button", name: "atelierCta", widget: "string", i18n: true }
-              - { label: "Über die Angebote Titel", name: "aboutTitle", widget: "string", i18n: true }
-              - { label: "Über die Angebote Text", name: "aboutText", widget: "text", i18n: true }
+
+      - file: "lang/pt.json"
+        label: "Startseite (pt)"
+        name: "home_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
 
   # =========================================================
   # 3. ÜBER MICH (ABOUT)
   # =========================================================
   - name: "about_page"
-    label: "Über mich (Paula Sevarolli)"
+    label: "Über mich (Paula Sevarolli) | AKTUELL NICHT IN BENUTZUNG"
     files:
       - file: "lang/de.json"
-        label: "Über mich"
-        name: "about_page"
+        label: "Über mich (de)"
+        name: "about_page_de"
         i18n: true
-        fields:
+        fields: &general_fields   # <--- Anchor definieren
           - label: "Über mich Texte"
             name: "about"
             widget: "object"
@@ -114,6 +111,12 @@ collections:
               - { label: "Absatz 6", name: "paragraph6", widget: "text", i18n: true }
               - { label: "Absatz 7", name: "paragraph7", widget: "text", i18n: true }
 
+      - file: "lang/pt.json"
+        label: "Über mich (pt)"
+        name: "about_page_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
+
   # =========================================================
   # 4. STILBERATUNG & LEISTUNGEN
   # =========================================================
@@ -121,70 +124,30 @@ collections:
     label: "Stilberatung & Leistungen"
     files:
       - file: "lang/de.json"
-        label: "Stilberatung"
-        name: "services_page"
+        label: "Stilberatung (de)"
+        name: "services_page_de"
         i18n: true
-        fields:
+        fields: &general_fields   # <--- Anchor definieren
           - label: "Stilberatung Hauptseite"
             name: "stilberatungPage"
             widget: "object"
-            collapsed: false
+            collapsed: true
             i18n: true
             fields:
-              # - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Titel", name: "title", widget: "string", i18n: true }
-              # - { label: "Beschreibung", name: "description", widget: "text", i18n: true }
               - { label: "About Titel", name: "aboutTitle", widget: "string", i18n: true }
               - { label: "About Text", name: "aboutText", widget: "text", i18n: true }
-              # - { label: "Leistungen Titel", name: "servicesTitle", widget: "string", i18n: true }
-
-          # - label: "Leistungen (Kurzübersicht)"
-          #   name: "services"
-          #   widget: "object"
-          #   collapsed: false
-          #   i18n: true
-          #   fields:
-          #     - { label: "Überschrift", name: "heading", widget: "string", i18n: true }
-          #     - label: "Kleiderschrank-Reset"
-          #       name: "wardrobeReset"
-          #       widget: "object"
-          #       i18n: true
-          #       fields:
-          #         - { label: "Titel", name: "title", widget: "string", i18n: true }
-          #         - { label: "Text", name: "text", widget: "text", i18n: true }
-          #     - label: "Farbberatung"
-          #       name: "colorConsultation"
-          #       widget: "object"
-          #       i18n: true
-          #       fields:
-          #         - { label: "Titel", name: "title", widget: "string", i18n: true }
-          #         - { label: "Text", name: "text", widget: "text", i18n: true }
-          #     - label: "Personal Shopper"
-          #       name: "personalShopping"
-          #       widget: "object"
-          #       i18n: true
-          #       fields:
-          #         - { label: "Titel", name: "title", widget: "string", i18n: true }
-          #         - { label: "Text", name: "text", widget: "text", i18n: true }
-          #     - label: "Individuelle Stilberatung"
-          #       name: "individualConsultation"
-          #       widget: "object"
-          #       i18n: true
-          #       fields:
-          #         - { label: "Titel", name: "title", widget: "string", i18n: true }
-          #         - { label: "Text", name: "text", widget: "text", i18n: true }
 
           - label: "Leistungs-Detailseiten (Preise & Dauer)"
             name: "servicePages"
             widget: "object"
-            collapsed: false
+            collapsed: true
             i18n: true
             fields:
-              # - { label: "Button Termin vereinbaren", name: "cta", widget: "string", i18n: true }
-              # - { label: "Button Zurück", name: "back", widget: "string", i18n: true }
               - label: "Kleiderschrank-Reset Detail"
                 name: "wardrobeReset"
                 widget: "object"
+                collapsed: true
                 i18n: true
                 fields:
                   - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
@@ -197,6 +160,7 @@ collections:
               - label: "Farbberatung Detail"
                 name: "colorConsultation"
                 widget: "object"
+                collapsed: true
                 i18n: true
                 fields:
                   - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
@@ -209,6 +173,7 @@ collections:
               - label: "Personal Shopper Detail"
                 name: "personalShopping"
                 widget: "object"
+                collapsed: true
                 i18n: true
                 fields:
                   - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
@@ -221,6 +186,7 @@ collections:
               - label: "Individuelle Stilberatung Detail"
                 name: "individualConsultation"
                 widget: "object"
+                collapsed: true
                 i18n: true
                 fields:
                   - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
@@ -231,6 +197,12 @@ collections:
                   - { label: "Punkt 1", name: "listItem1", widget: "string", i18n: true }
                   - { label: "Punkt 2", name: "listItem2", widget: "string", i18n: true }
 
+      - file: "lang/pt.json"
+        label: "Stilberatung (pt)"
+        name: "services_page_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
+
   # =========================================================
   # 5. ATELIER & PREISLISTE
   # =========================================================
@@ -238,10 +210,10 @@ collections:
     label: "Atelier & Preisliste"
     files:
       - file: "lang/de.json"
-        label: "Atelier"
-        name: "atelier_page"
+        label: "Atelier (de)"
+        name: "atelier_page_de"
         i18n: true
-        fields:
+        fields: &general_fields   # <--- Anchor definieren
           - label: "Atelier Texte & Preisliste"
             name: "atelier"
             widget: "object"
@@ -251,12 +223,6 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Titel", name: "title", widget: "string", i18n: true }
               - { label: "Beschreibung", name: "description", widget: "text", i18n: true }
-              # - { label: "About Titel", name: "aboutTitle", widget: "string", i18n: true }
-              # - { label: "About Text 1", name: "aboutText1", widget: "text", i18n: true }
-              # - { label: "About Text 2", name: "aboutText2", widget: "text", i18n: true }
-              # - { label: "Leistungen Titel", name: "servicesTitle", widget: "string", i18n: true }
-              # - { label: "Service 1 Titel", name: "service1Title", widget: "string", i18n: true }
-              # - { label: "Service 1 Text", name: "service1Text", widget: "text", i18n: true }
               - { label: "Preisliste Titel", name: "priceListTitle", widget: "string", i18n: true }
               - { label: "Tabellenkopf Leistung", name: "priceTableHeadService", widget: "string", i18n: true }
               - { label: "Tabellenkopf Preis", name: "priceTableHeadPrice", widget: "string", i18n: true }
@@ -272,6 +238,12 @@ collections:
                   - { label: "Name der Leistung", name: "name", widget: "string", i18n: true }
                   - { label: "Preis", name: "price", widget: "string", i18n: true }
 
+      - file: "lang/pt.json"
+        label: "Atelier (pt)"
+        name: "atelier_page_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
+
   # =========================================================
   # 6. SHOP
   # =========================================================
@@ -279,10 +251,10 @@ collections:
     label: "Shop Seite"
     files:
       - file: "lang/de.json"
-        label: "Shop"
-        name: "shop_page"
+        label: "Shop (de)"
+        name: "shop_page_de"
         i18n: true
-        fields:
+        fields: &general_fields   # <--- Anchor definieren
           - label: "Shop Inhalte"
             name: "shop"
             widget: "object"
@@ -293,6 +265,12 @@ collections:
               - { label: "Headline", name: "headline", widget: "string", i18n: true }
               - { label: "Nachricht", name: "message", widget: "text", i18n: true }
 
+      - file: "lang/pt.json"
+        label: "Shop (pt)"
+        name: "shop_page_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
+
   # =========================================================
   # 7. REZENSIONEN
   # =========================================================
@@ -300,10 +278,10 @@ collections:
     label: "Rezensionen (Kundenstimmen)"
     files:
       - file: "lang/de.json"
-        label: "Rezensionen"
-        name: "reviews_page"
+        label: "Rezensionen (de)"
+        name: "reviews_page_de"
         i18n: true
-        fields:
+        fields: &general_fields   # <--- Anchor definieren
           - label: "Rezensionen Übersicht & Liste"
             name: "reviewsPage"
             widget: "object"
@@ -313,8 +291,6 @@ collections:
               - { label: "Titel", name: "title", widget: "string", i18n: true }
               - { label: "Headline", name: "headline", widget: "string", i18n: true }
               - { label: "Nachricht / Intro", name: "message", widget: "text", i18n: true }
-              # - { label: "Weiter lesen Button", name: "readMore", widget: "string", i18n: true }
-              # - { label: "Weiter lesen Aria-Label", name: "readMoreAria", widget: "string", i18n: true }
 
               # DYNAMISCHE REZENSIONSLISTE (Hinzufügen & Entfernen)
               - label: "Kundenstimmen / Rezensionen"
@@ -327,6 +303,12 @@ collections:
                   - { label: "Autor", name: "author", widget: "string", i18n: true }
                   - { label: "Gebuchte Leistung", name: "service", widget: "string", i18n: true }
 
+      - file: "lang/pt.json"
+        label: "Rezensionen (pt)"
+        name: "reviews_page_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
+
   # =========================================================
   # 8. KONTAKT
   # =========================================================
@@ -334,21 +316,10 @@ collections:
     label: "Kontakt & Formular"
     files:
       - file: "lang/de.json"
-        label: "Kontakt"
-        name: "contact_page"
+        label: "Kontakt (de)"
+        name: "contact_page_de"
         i18n: true
-        fields:
-          # - label: "Kontakt-Buttons (Schnellzugriff)"
-          #   name: "contact"
-          #   widget: "object"
-          #   collapsed: false
-          #   i18n: true
-          #   fields:
-          #     - { label: "Überschrift", name: "heading", widget: "string", i18n: true }
-          #     - { label: "E-Mail", name: "email", widget: "string", i18n: true }
-          #     - { label: "Instagram", name: "instagram", widget: "string", i18n: true }
-          #     - { label: "WhatsApp", name: "whatsapp", widget: "string", i18n: true }
-
+        fields: &general_fields   # <--- Anchor definieren
           - label: "Kontaktformular-Seite"
             name: "contactPage"
             widget: "object"
@@ -358,15 +329,16 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Titel", name: "title", widget: "string", i18n: true }
               - { label: "Intro Text", name: "intro", widget: "text", i18n: true }
-              # - { label: "Name Feld Label", name: "nameLabel", widget: "string", i18n: true }
               - { label: "Name Platzhalter", name: "namePlaceholder", widget: "string", i18n: true }
-              # - { label: "E-Mail Feld Label", name: "emailLabel", widget: "string", i18n: true }
               - { label: "E-Mail Platzhalter", name: "emailPlaceholder", widget: "string", i18n: true }
-              # - { label: "Nachricht Feld Label", name: "messageLabel", widget: "string", i18n: true }
               - { label: "Nachricht Platzhalter", name: "messagePlaceholder", widget: "string", i18n: true }
-              # - { label: "Zurück Button", name: "back", widget: "string", i18n: true }
-              # - { label: "Absenden Button", name: "submit", widget: "string", i18n: true }
               - { label: "Hinweis", name: "note", widget: "text", i18n: true }
+
+      - file: "lang/pt.json"
+        label: "Kontakt (pt)"
+        name: "contact_page_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
 
   # =========================================================
   # 9. RECHTLICHES
@@ -375,55 +347,36 @@ collections:
     label: "Impressum & Datenschutz"
     files:
       - file: "lang/de.json"
-        label: "Rechtliches"
-        name: "legal_page"
+        label: "Rechtliches (de)"
+        name: "legal_page_de"
         i18n: true
-        fields:
+        fields: &general_fields   # <--- Anchor definieren
           - label: "Rechtliches & Datenschutz"
             name: "legal"
             widget: "object"
             collapsed: false
             i18n: true
             fields:
-              # - { label: "Footer Link Impressum", name: "footerImpressum", widget: "string", i18n: true }
-              # - { label: "Footer Link Datenschutz", name: "footerDatenschutz", widget: "string", i18n: true }
               - label: "Impressum Details"
                 name: "impressum"
                 widget: "object"
                 i18n: true
                 fields:
-                  # - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
-                  # - { label: "Titel", name: "title", widget: "string", i18n: true }
-                  # - { label: "Überschrift Abs. 1", name: "section1Heading", widget: "string", i18n: true }
                   - { label: "Name", name: "name", widget: "string", i18n: true }
                   - { label: "Adresse", name: "address", widget: "string", i18n: true }
-                  # - { label: "Überschrift Kontakt", name: "contactHeading", widget: "string", i18n: true }
                   - { label: "E-Mail", name: "email", widget: "string", i18n: true }
                   - { label: "Telefon", name: "phone", widget: "string", i18n: true }
-                  # - { label: "Überschrift USt-ID", name: "vatHeading", widget: "string", i18n: true }
                   - { label: "Text USt-ID", name: "vatText", widget: "text", i18n: true }
-                  # - { label: "Überschrift Verantwortlich", name: "responsibleHeading", widget: "string", i18n: true }
                   - { label: "Text Verantwortlich", name: "responsibleText", widget: "text", i18n: true }
-                  # - { label: "Überschrift Streitschlichtung", name: "disputeHeading", widget: "string", i18n: true }
-                  # - { label: "Text Streitschlichtung", name: "disputeText", widget: "text", i18n: true }
               - label: "Datenschutz Details"
                 name: "datenschutz"
                 widget: "object"
                 i18n: true
                 fields:
-                  # - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
-                  # - { label: "Titel", name: "title", widget: "string", i18n: true }
-                  # - { label: "Abschnitt 1 Titel", name: "section1Heading", widget: "string", i18n: true }
-                  # - { label: "Abschnitt 1 Text", name: "section1Text", widget: "text", i18n: true }
-                  # - { label: "Abschnitt 2 Titel", name: "section2Heading", widget: "string", i18n: true }
                   - { label: "Abschnitt 2 Text", name: "section2Text", widget: "text", i18n: true }
-                  # - { label: "Abschnitt 3 Titel", name: "section3Heading", widget: "string", i18n: true }
-                  # - { label: "Abschnitt 3 Text", name: "section3Text", widget: "text", i18n: true }
-                  # - { label: "Abschnitt 4 Titel", name: "section4Heading", widget: "string", i18n: true }
-                  # - { label: "Abschnitt 4 Text", name: "section4Text", widget: "text", i18n: true }
-                  # - { label: "Abschnitt 5 Titel", name: "section5Heading", widget: "string", i18n: true }
-                  # - { label: "Abschnitt 5 Text", name: "section5Text", widget: "text", i18n: true }
-                  # - { label: "Abschnitt 6 Titel", name: "section6Heading", widget: "string", i18n: true }
-                  # - { label: "Abschnitt 6 Text", name: "section6Text", widget: "text", i18n: true }
-                  # - { label: "Abschnitt 7 Titel", name: "section7Heading", widget: "string", i18n: true }
-                  # - { label: "Abschnitt 7 Text", name: "section7Text", widget: "text", i18n: true }
+
+      - file: "lang/pt.json"
+        label: "Rechtliches (pt)"
+        name: "legal_page_pt"
+        i18n: true
+        fields: *general_fields    # <--- Alias wiederverwenden!
