@@ -251,12 +251,12 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
               - { label: "Titel", name: "title", widget: "string", i18n: true }
               - { label: "Beschreibung", name: "description", widget: "text", i18n: true }
-              - { label: "About Titel", name: "aboutTitle", widget: "string", i18n: true }
-              - { label: "About Text 1", name: "aboutText1", widget: "text", i18n: true }
-              - { label: "About Text 2", name: "aboutText2", widget: "text", i18n: true }
-              - { label: "Leistungen Titel", name: "servicesTitle", widget: "string", i18n: true }
-              - { label: "Service 1 Titel", name: "service1Title", widget: "string", i18n: true }
-              - { label: "Service 1 Text", name: "service1Text", widget: "text", i18n: true }
+              # - { label: "About Titel", name: "aboutTitle", widget: "string", i18n: true }
+              # - { label: "About Text 1", name: "aboutText1", widget: "text", i18n: true }
+              # - { label: "About Text 2", name: "aboutText2", widget: "text", i18n: true }
+              # - { label: "Leistungen Titel", name: "servicesTitle", widget: "string", i18n: true }
+              # - { label: "Service 1 Titel", name: "service1Title", widget: "string", i18n: true }
+              # - { label: "Service 1 Text", name: "service1Text", widget: "text", i18n: true }
               - { label: "Preisliste Titel", name: "priceListTitle", widget: "string", i18n: true }
               - { label: "Tabellenkopf Leistung", name: "priceTableHeadService", widget: "string", i18n: true }
               - { label: "Tabellenkopf Preis", name: "priceTableHeadPrice", widget: "string", i18n: true }
