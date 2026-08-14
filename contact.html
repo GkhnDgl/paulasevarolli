@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/i18n.js" defer></script>
 </head>
 
 <body class="contact-page">
@@ -19,10 +20,8 @@
     </div>
 
     <div class="nav-right">
-      <div class="lang-switch" role="group" aria-label="Language switcher">
-        <button type="button" class="lang active" data-lang="de">DE</button>
-        <button type="button" class="lang" data-lang="pt">PT</button>
-      </div>
+      <!-- Dynamischer Sprachumschalter -->
+      <div class="lang-switch" id="lang-switcher" role="group" aria-label="Language switcher"></div>
     </div>
   </nav>
 
@@ -106,51 +105,6 @@
   </footer>
 
   <script>
-    let currentLang = 'de';
-
-    function updateLanguageButtons() {
-      document.querySelectorAll('.lang').forEach(button => {
-        const isActive = button.getAttribute('data-lang') === currentLang;
-        button.classList.toggle('active', isActive);
-        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-      });
-    }
-
-    async function loadLanguage(lang) {
-      const response = await fetch(`lang/${lang}.json`);
-      const translations = await response.json();
-
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const value = key.split('.').reduce((o, i) => o?.[i], translations);
-
-        if (value) {
-          const textNodes = Array.from(el.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
-          textNodes.forEach(node => node.remove());
-          const textNode = document.createTextNode(value);
-          el.prepend(textNode);
-        }
-      });
-
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        const value = key.split('.').reduce((o, i) => o?.[i], translations);
-
-        if (value) {
-          el.setAttribute('placeholder', value);
-        }
-      });
-
-      prefillSubject(lang, translations);
-    }
-
-    function setLanguage(lang) {
-      currentLang = lang;
-      loadLanguage(lang);
-      localStorage.setItem('lang', lang);
-      updateLanguageButtons();
-    }
-
     function setupBackLink() {
       const backLink = document.getElementById('contactBack');
       const referrer = document.referrer;
@@ -159,7 +113,6 @@
       if (referrer) {
         try {
           const refUrl = new URL(referrer);
-
           if (
             refUrl.origin === window.location.origin &&
             refUrl.href !== window.location.href
@@ -174,42 +127,57 @@
       backLink.href = target;
     }
 
-    function prefillSubject(lang, translations) {
-      const urlParams = new URLSearchParams(window.location.search);
-      const serviceKey = urlParams.get('service');
-      const subjectInput = document.getElementById('subject');
+    async function updateContactFormTranslations() {
+      const lang = localStorage.getItem('lang') || 'de';
+      try {
+        const response = await fetch(`lang/${lang}.json`);
+        const translations = await response.json();
 
-      if (serviceKey && subjectInput) {
-        // Richtigen Titel aus den i18n-Übersetzungen holen
-        const serviceTitle = servicePagesTitleMap(serviceKey, translations);
-        const prefix = translations.contactPage?.subjectPrefix || "Terminanfrage:";
-        
-        if (serviceTitle) {
-          subjectInput.value = `${prefix} ${serviceTitle}`;
+        // Placeholders setzen
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          const value = key.split('.').reduce((o, i) => o?.[i], translations);
+          if (value) {
+            el.setAttribute('placeholder', value);
+          }
+        });
+
+        // Betreff vorausfüllen
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceKey = urlParams.get('service');
+        const subjectInput = document.getElementById('subject');
+
+        if (serviceKey && subjectInput) {
+          const map = {
+            'reset': translations.servicePages?.wardrobeReset?.title,
+            'color': translations.servicePages?.colorConsultation?.title,
+            'shopping': translations.servicePages?.personalShopping?.title,
+            'individual': translations.servicePages?.individualConsultation?.title
+          };
+          const serviceTitle = map[serviceKey] || '';
+          const prefix = translations.contactPage?.subjectPrefix || "Terminanfrage:";
+          
+          if (serviceTitle) {
+            subjectInput.value = `${prefix} ${serviceTitle}`;
+          }
         }
+      } catch (err) {
+        console.error('Fehler beim Aktualisieren des Kontaktformulars:', err);
       }
     }
 
-    function servicePagesTitleMap(key, translations) {
-      const map = {
-        'reset': translations.servicePages?.wardrobeReset?.title,
-        'color': translations.servicePages?.colorConsultation?.title,
-        'shopping': translations.servicePages?.personalShopping?.title,
-        'individual': translations.servicePages?.individualConsultation?.title
-      };
-      return map[key] || '';
-    }
-
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.lang').forEach(button => {
-        button.addEventListener('click', () => {
-          setLanguage(button.getAttribute('data-lang'));
-        });
-      });
-
-      const savedLang = localStorage.getItem('lang') || 'de';
-      setLanguage(savedLang);
       setupBackLink();
+      updateContactFormTranslations();
+
+      const langSwitcher = document.getElementById('lang-switcher');
+      if (langSwitcher) {
+        langSwitcher.addEventListener('click', (e) => {
+          if (e.target.tagName === 'BUTTON') {
+            setTimeout(updateContactFormTranslations, 50);
+          }
+        });
+      }
     });
   </script>
 

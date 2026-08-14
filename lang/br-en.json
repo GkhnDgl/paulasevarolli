@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "title": "Paula Sevarolli"
+  },
+  "nav": {
+    "home": "Home",
+    "stilberatung": "Style Consulting",
+    "atelier": "Atelier",
+    "shop": "Shop",
+    "services": "Services",
+    "about": "What is Style Consulting?",
+    "reviews": "Reviews",
+    "contact": "Get in Touch"
+  },
+  "hero": {
+    "title": "Paula Sevarolli Style Consulting",
+    "subtitle": "Style consulting for real phases of life – so you truly feel like yourself in your clothes.",
+    "contact": "Get in Touch"
+  },
+  "landing": {
+    "eyebrow": "Fashion Design & Style Consulting",
+    "title": "Paula Sevarolli",
+    "description": "Choose the right service for you and discover Style Consulting or the Atelier.",
+    "stilberatungTitle": "Style Consulting",
+    "stilberatungText": "Personal guidance towards clarity, self-confidence, and a style that truly fits who you are.",
+    "stilberatungCta": "To Style Consulting",
+    "atelierTitle": "Atelier",
+    "atelierText": "Creative guidance surrounding expression, shape, color, and personal style development.",
+    "atelierCta": "To Atelier",
+    "aboutTitle": "About the Offerings",
+    "aboutText": "Style Consulting supports you through personal life transitions, while the Atelier provides a creative environment for individual design and expression."
+  },
+  "about": {
+    "heading": "About Me",
+    "paragraph1": "I am Paula Sevarolli, stylist and fashion designer with a deep passion for creativity, fashion, and aesthetics. As a Brazilian with Italian roots, I have lived in Brazil, Italy, Germany, and the Czech Republic. These experiences have deeply shaped my perspective on style, culture, and individuality.",
+    "paragraph2": "I completed my Master’s degree in Fashion Design at the IED in Florence, Italy, and further specialized as a style consultant. Over the years, I gained experience across various sectors of the fashion industry. This combination of academic study, hands-on practice, and personal growth defines my work today.",
+    "paragraph3": "As a mother and woman who has navigated life changes, body transformations, and cultural transitions firsthand, I know how closely style is tied to self-image – and how challenging it can be to redefine yourself in certain moments.",
+    "paragraph4": "I work with people going through these exact transitions: after pregnancy, entering a new professional role, or adjusting to a new culture. My approach is deliberately personal and practical – free from rigid rules or short-lived trends.",
+    "paragraph5": "I view fashion as a subtle yet powerful tool for self-expression. A harmonious style is not built on perfection, but on clarity, self-knowledge, and feeling comfortable in your own skin. With a trained eye for colors, cuts, shapes, and proportions, I help you craft an authentic style tailored to your daily life.",
+    "paragraph6": "Whether it is a wardrobe reset, personal shopping, color analysis, or individual style consulting – I am here to guide you toward greater clarity, confidence, and comfort in your style.",
+    "paragraph7": "Because style truly begins when you recognize yourself."
+  },
+  "services": {
+    "heading": "Services",
+    "wardrobeReset": {
+      "title": "Wardrobe Reset",
+      "text": "More organization, ease, and a sense of style aligned with your everyday life."
+    },
+    "colorConsultation": {
+      "title": "Color Analysis",
+      "text": "Discover your flattering personal colors and enhance your natural glow with intention."
+    },
+    "personalShopping": {
+      "title": "Personal Shopping & Styling",
+      "text": "Together we find pieces that truly work for you – without regret or second thoughts."
+    },
+    "individualConsultation": {
+      "title": "Individual Style Consulting",
+      "text": "Personalized guidance to build a style that reflects your authentic personality."
+    }
+  },
+  "stilberatungPage": {
+    "eyebrow": "Style Consulting",
+    "title": "Paula Sevarolli Style Consulting",
+    "description": "Clarity, confidence, and a sense of style that truly suits you.",
+    "aboutTitle": "What is Style Consulting?",
+    "aboutText": "Style consulting is a personal, sensitive journey where we discover your path to authentic expression together. We look at your personality, life stage, color palette, and routine to craft something uniquely yours.",
+    "servicesTitle": "Services"
+  },
+  "atelier": {
+    "eyebrow": "Atelier",
+    "title": "Paula Sevarolli Atelier",
+    "description": "Design, consulting, and creative direction around style and self-expression.",
+    "aboutTitle": "About the Atelier",
+    "aboutText1": "The Atelier stands for creative style consulting, personalized guidance, and a keen eye for shape, color, and expression.",
+    "aboutText2": "Here we craft tailored solutions for individuals who wish to present themselves with confidence and intent.",
+    "servicesTitle": "Services",
+    "service1Title": "Individual Style Consulting",
+    "service1Text": "A path tailored to your personality for greater clarity and self-assurance.",
+    "priceListTitle": "Tailoring & Alterations Price List",
+    "priceTableHeadService": "Service",
+    "priceTableHeadPrice": "Price",
+    "priceItems": [
+      { "name": "Hemming trousers (plain)", "price": "from R$ 90" },
+      { "name": "Hemming trousers (with cuff)", "price": "from R$ 120" },
+      { "name": "Taking in or letting out trouser waist", "price": "from R$ 110" },
+      { "name": "Shortening dress length", "price": "from R$ 150" },
+      { "name": "Taking in or letting out dress", "price": "from R$ 180" },
+      { "name": "Hemming skirt", "price": "from R$ 90" },
+      { "name": "Replacing zipper", "price": "from R$ 120" },
+      { "name": "Shortening sleeves (blazer, jacket, coat)", "price": "from R$ 135" },
+      { "name": "Tailoring suit jacket or blazer", "price": "from R$ 210" },
+      { "name": "Adjusting button or buttonhole", "price": "from R$ 50" },
+      { "name": "Custom alterations upon request", "price": "upon request" },
+      { "name": "On-site fitting & consultation", "price": "free" }
+    ],
+    "priceListNote": "All prices are estimates and may vary based on garment complexity and fabric."
+  },
+  "shop": {
+    "title": "Shop",
+    "headline": "The shop is coming soon",
+    "message": "Something special is currently taking shape – a curated place for intentional pieces, creative inspiration, and a style that grows with you."
+  },
+  "reviewsPage": {
+    "title": "Reviews",
+    "headline": "Voices that speak for themselves",
+    "message": "Every consultation is unique – hear from clients about how their journey toward a more confident style felt.",
+    "readMore": "Read more",
+    "readMoreAria": "Read full review text",
+    "reviews": [
+      {
+        "text": "“After the wardrobe reset with Paula, my daily routine feels so much lighter. I know exactly what to wear every morning.”",
+        "author": "Julia K.",
+        "service": "Wardrobe Reset"
+      },
+      {
+        "text": "“The color analysis was an eye-opener. I now feel confident wearing colors I never would have dared to try before.”",
+        "author": "Sandra M.",
+        "service": "Color Analysis"
+      },
+      {
+        "text": "“Personal shopping with Paula was the first time clothes shopping was genuinely fun – zero stress and no impulse buys.”",
+        "author": "Nina R.",
+        "service": "Personal Shopping & Styling"
+      },
+      {
+        "text": "“The individual style consulting helped me finally express my true self on the outside.”",
+        "author": "Carla T.",
+        "service": "Individual Style Consulting"
+      },
+      {
+        "text": "“After my pregnancy, Paula helped me feel comfortable and at home in my body and style again.”",
+        "author": "Melanie S.",
+        "service": "Individual Style Consulting"
+      },
+      {
+        "text": "“Stepping into my new career role, the consultation gave me the exact confidence boost I needed.”",
+        "author": "Franziska B.",
+        "service": "Color Analysis"
+      },
+      {
+        "text": "“When I founded my law firm, I realized my appearance could convey my value before I even spoke about my work. Paula helped me balance professional formality with my personal essence. She created a strategy based on who I am and what I wanted to communicate, rather than just following trends. I learned far more than just colors or combinations: I learned to recognize the subtle message behind every choice.”",
+        "author": "Deise Cordeiro",
+        "service": "Individual Style Consulting"
+      },
+      {
+        "text": "“The style advice Paula provided to my former husband was invaluable. She helped us show him that relaxed style has its place, but at the right moments. Over time, we invested in timeless pieces that elevated his elegance.”",
+        "author": "Natany Gomes",
+        "service": "Individual Style Consulting"
+      }
+    ]
+  },
+  "servicePages": {
+    "cta": "Book an Appointment",
+    "back": "Back to Style Consulting",
+    "wardrobeReset": {
+      "eyebrow": "Wardrobe Reset",
+      "title": "Wardrobe Reset",
+      "intro": "Together we bring clarity to your closet and ease to your everyday routine.",
+      "meta": "Approx. 3 hours / R$ 1,500",
+      "listLabel": "I guide you through:",
+      "listItem1": "organizing by color, fit, and function",
+      "listItem2": "developing a practical, personal wardrobe"
+    },
+    "colorConsultation": {
+      "eyebrow": "Color Analysis",
+      "title": "Color Analysis",
+      "intro": "We discover the colors that make you look fresh, vibrant, and authentic.",
+      "meta": "Approx. 1.5 hours / R$ 900",
+      "listLabel": "The result is:",
+      "listItem1": "more confidence when shopping and pairing outfits",
+      "listItem2": "a clearer understanding of your personal color palette"
+    },
+    "personalShopping": {
+      "eyebrow": "Personal Shopping & Styling",
+      "title": "Personal Shopping & Styling",
+      "intro": "Together we find targeted pieces that genuinely suit you – without frustration or wrong buys.",
+      "meta": "2–4 hours / R$ 1,100 + R$ 480 per additional hour",
+      "listLabel": "My service includes:",
+      "listItem1": "a curated selection tailored to your daily routine",
+      "listItem2": "styling tips for confident outfit combinations"
+    },
+    "individualConsultation": {
+      "eyebrow": "Individual Style Consulting",
+      "title": "Individual Style Consulting",
+      "intro": "We develop your personal style based on your personality, life stage, and body type.",
+      "meta": "Custom tailored",
+      "listLabel": "The focus is on:",
+      "listItem1": "your expression, posture, and well-being",
+      "listItem2": "a clear strategy for your wardrobe and routine"
+    }
+  },
+  "contact": {
+    "heading": "Contact",
+    "email": "Send Email",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp"
+  },
+  "legal": {
+    "footerImpressum": "Legal Notice",
+    "footerDatenschutz": "Privacy Policy",
+    "impressum": {
+      "eyebrow": "Legal Notice",
+      "title": "Legal Notice",
+      "section1Heading": "Legal Information",
+      "name": "Paula Sevarolli",
+      "address": "[Full Address]",
+      "contactHeading": "Contact",
+      "email": "Email: paulasevarolli@hotmail.com",
+      "phone": "[Phone Number]",
+      "vatHeading": "Tax ID",
+      "vatText": "[CPF / CNPJ]",
+      "responsibleHeading": "Responsible for Content",
+      "responsibleText": "Paula Sevarolli",
+      "disputeHeading": "Dispute Resolution",
+      "disputeText": "We are neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board."
+    },
+    "datenschutz": {
+      "eyebrow": "Privacy",
+      "title": "Privacy Policy",
+      "section1Heading": "Data Controller",
+      "section1Text": "The entity responsible for data processing on this website is Paula Sevarolli.",
+      "section2Heading": "Hosting and Server Logs",
+      "section2Text": "This website is hosted on Netlify.",
+      "section3Heading": "Local Storage (localStorage)",
+      "section3Text": "This website stores your language preference locally in your browser using localStorage. No personal data is collected or transmitted to external servers for this purpose.",
+      "section4Heading": "Google Fonts",
+      "section4Text": "This website embeds fonts from Google Fonts. Loading fonts may establish a connection to Google servers.",
+      "section5Heading": "Linked Services (Instagram, WhatsApp, Email)",
+      "section5Text": "Clicking links to Instagram, WhatsApp, or Email redirects you to third-party services subject to their respective privacy policies.",
+      "section6Heading": "Your Rights",
+      "section6Text": "You have the right to request access, correction, or deletion of your personal data at any time.",
+      "section7Heading": "Changes to Policy",
+      "section7Text": "We reserve the right to update this privacy policy to reflect changing legal requirements."
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contact Me",
+    "title": "Send a Message",
+    "intro": "Would you like to get in touch? Simply fill out the form below. I look forward to hearing from you.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your Name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Subject of your message",
+    "subjectPrefix": "Appointment Inquiry:",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can I help you?",
+    "back": "Back",
+    "submit": "Send Message",
+    "note": "Your message will be sent confidentially to Paula Sevarolli."
+  },
+  "footer": "© 2026 Paula Sevarolli"
+}

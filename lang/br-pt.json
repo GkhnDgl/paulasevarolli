@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "title": "Paula Sevarolli"
+  },
+  "nav": {
+    "home": "Início",
+    "stilberatung": "Consultoria de Estilo",
+    "atelier": "Ateliê",
+    "shop": "Loja",
+    "services": "Serviços",
+    "about": "O que é Consultoria de Estilo?",
+    "reviews": "Depoimentos",
+    "contact": "Entrar em contato"
+  },
+  "hero": {
+    "title": "Paula Sevarolli Consultoria de Estilo",
+    "subtitle": "Consultoria de estilo para fases reais da vida – para que você se reconheça de verdade nas suas roupas.",
+    "contact": "Entrar em contato"
+  },
+  "landing": {
+    "eyebrow": "Design de Moda & Consultoria de Estilo",
+    "title": "Paula Sevarolli",
+    "description": "Escolha a opção ideal para você e descubra a consultoria de estilo ou o ateliê.",
+    "stilberatungTitle": "Consultoria de Estilo",
+    "stilberatungText": "Acompanhamento pessoal para alcançar mais clareza, autoconfiança e um estilo que realmente combina com você.",
+    "stilberatungCta": "Ver Consultoria de Estilo",
+    "atelierTitle": "Ateliê",
+    "atelierText": "Acompanhamento criativo envolvendo expressão, forma, cor e o desenvolvimento de um estilo individual.",
+    "atelierCta": "Ver Ateliê",
+    "aboutTitle": "Sobre os Serviços",
+    "aboutText": "A consultoria de estilo te acompanha em momentos de transição pessoal, enquanto o ateliê oferece um espaço criativo para expressão e design individual."
+  },
+  "about": {
+    "heading": "Sobre mim",
+    "paragraph1": "Sou Paula Sevarolli, estilista e designer de moda, apaixonada por criatividade, moda e estética. Como brasileira com raízes italianas, já morei no Brasil, Itália, Alemanha e República Tcheca. Esssas experiências moldaram profundamente minha visão sobre estilo, cultura e individualidade.",
+    "paragraph2": "Concluí meu mestrado em Design de Moda no IED em Florença, na Itália, e me especializei como consultora de estilo. Ao longo dos anos, acumulei experiência em diversas áreas da indústria da moda. Essa união entre formação acadêmica, prática e desenvolvimento pessoal define meu trabalho hoje.",
+    "paragraph3": "Como mãe e mulher que viveu diferentes fases da vida, transformações corporais e transições culturais, sei o quanto o estilo está conectado à nossa autoestima e como pode ser desafiador se redefinir em certos momentos.",
+    "paragraph4": "Trabalho com pessoas que estão passando por essas transições: após a gravidez, ao assumir um novo cargo profissional ou ao se adaptar a uma nova cultura. Minha abordagem é intencionalmente pessoal e prática – longe de regras rígidas ou tendências passageiras.",
+    "paragraph5": "Vejo a moda como uma forma discreta, porém poderosa, de expressão. Um estilo autêntico não nasce da perfeição, mas da clareza, do autoconhecimento e da sensação de estar bem consigo mesma. Com meu olhar atento para cores, cortes, formas e proporções, ajudo você a desenvolver um estilo autêntico que se encaixe perfeitamente na sua rotina.",
+    "paragraph6": "Seja para um closet detox, personal shopper, análise de coloração pessoal ou consultoria de estilo individual – estou aqui para te acompanhar nessa jornada rumo a mais clareza, autoconfiança e bem-estar com seu estilo.",
+    "paragraph7": "Afinal, o estilo começa no momento em que você se reconhece."
+  },
+  "services": {
+    "heading": "Serviços",
+    "wardrobeReset": {
+      "title": "Closet Detox",
+      "text": "Mais organização, leveza e um senso de estilo alinhado com o seu dia a dia."
+    },
+    "colorConsultation": {
+      "title": "Coloração Pessoal",
+      "text": "Descubra suas cores ideais e valorize sua beleza natural com intenção."
+    },
+    "personalShopping": {
+      "title": "Personal Shopper & Styling",
+      "text": "Juntas encontramos peças que realmente funcionam para você – sem compras por impulso ou dúvidas."
+    },
+    "individualConsultation": {
+      "title": "Consultoria de Estilo Individual",
+      "text": "Um acompanhamento personalizado para criar um estilo que reflita sua essência."
+    }
+  },
+  "stilberatungPage": {
+    "eyebrow": "Consultoria de Estilo",
+    "title": "Paula Sevarolli Consultoria de Estilo",
+    "description": "Clareza, autoconfiança e uma identidade de estilo que realmente combina com você.",
+    "aboutTitle": "O que é Consultoria de Estilo?",
+    "aboutText": "A consultoria de estilo é um processo pessoal e sensível, no qual encontramos juntas o seu caminho para uma expressão autêntica. Olhamos para a sua personalidade, sua fase de vida, suas cores e sua rotina para criar algo exclusivamente seu.",
+    "servicesTitle": "Serviços"
+  },
+  "atelier": {
+    "eyebrow": "Ateliê",
+    "title": "Paula Sevarolli Ateliê",
+    "description": "Design, consultoria e acompanhamento criativo em torno de estilo e expressão.",
+    "aboutTitle": "Sobre o Ateliê",
+    "aboutText1": "O ateliê representa a consultoria de estilo criativa, o acompanhamento individual e um olhar atento para formas, cores e expressão.",
+    "aboutText2": "Aqui nascem soluções personalizadas para pessoas que desejam se apresentar de forma consciente e autêntica.",
+    "servicesTitle": "Serviços",
+    "service1Title": "Consultoria de Estilo Individual",
+    "service1Text": "Um caminho sob medida para a sua personalidade, trazendo mais clareza e autoconfiança.",
+    "priceListTitle": "Tabela de Preços - Ajustes e Costura",
+    "priceTableHeadService": "Serviço",
+    "priceTableHeadPrice": "Valor",
+    "priceItems": [
+      { "name": "Bainha de calça (simples)", "price": "a partir de R$ 90" },
+      { "name": "Bainha de calça (com dobra)", "price": "a partir de R$ 120" },
+      { "name": "Ajuste de cós/cintura de calça", "price": "a partir de R$ 110" },
+      { "name": "Ajuste de comprimento de vestido", "price": "a partir de R$ 150" },
+      { "name": "Apertar ou folgar vestido", "price": "a partir de R$ 180" },
+      { "name": "Bainha de saia", "price": "a partir de R$ 90" },
+      { "name": "Troca de zíper", "price": "a partir de R$ 120" },
+      { "name": "Ajuste de manga (blazer, jaqueta, casaco)", "price": "a partir de R$ 135" },
+      { "name": "Acinturar paletó ou blazer", "price": "a partir de R$ 210" },
+      { "name": "Ajuste de botão ou casadoura", "price": "a partir de R$ 50" },
+      { "name": "Ajustes personalizados", "price": "sob consulta" },
+      { "name": "Prova & avaliação presencial", "price": "gratuito" }
+    ],
+    "priceListNote": "Todos os valores são estimativas e podem variar conforme a complexidade e o tecido da peça."
+  },
+  "shop": {
+    "title": "Loja",
+    "headline": "A loja está em desenvolvimento",
+    "message": "Em breve teremos um espaço especial – pensado para peças intencionais, inspiração criativa e um estilo que evolui com você. Por enquanto, nem tudo está visível, mas os primeiros passos já foram dados."
+  },
+  "reviewsPage": {
+    "title": "Depoimentos",
+    "headline": "Depoimentos de quem vivenciou a experiência",
+    "message": "Cada consultoria é única – confira como clientes vivenciaram a transformação em direção a um estilo mais alinhado e confiante.",
+    "readMore": "Ler mais",
+    "readMoreAria": "Ler depoimento completo",
+    "reviews": [
+      {
+        "text": "„Depois do closet detox com a Paula, minha rotina ficou muito mais leve. Agora sei exatamente o que vestir todas as manhãs.“",
+        "author": "Julia K.",
+        "service": "Closet Detox"
+      },
+      {
+        "text": "„A análise de coloração pessoal abriu meus olhos. Hoje me sinto confiante para usar cores que antes jamais imaginaria.“",
+        "author": "Sandra M.",
+        "service": "Coloração Pessoal"
+      },
+      {
+        "text": "„Fazer personal shopping com a Paula foi a primeira vez que comprar roupas foi realmente divertido – sem estresse e sem compras erradas.“",
+        "author": "Nina R.",
+        "service": "Personal Shopper & Styling"
+      },
+      {
+        "text": "„A consultoria de estilo individual me ajudou a finalmente expressar minha personalidade através da minha imagem.“",
+        "author": "Carla T.",
+        "service": "Consultoria de Estilo Individual"
+      },
+      {
+        "text": "„Após a gravidez, a Paula me ajudou a me reconectar com meu corpo e a me sentir em casa novamente com o meu estilo.“",
+        "author": "Melanie S.",
+        "service": "Consultoria de Estilo Individual"
+      },
+      {
+        "text": "„Na transição para o meu novo cargo profissional, a consultoria me deu exatamente a segurança que eu precisava.“",
+        "author": "Franziska B.",
+        "service": "Coloração Pessoal"
+      },
+      {
+        "text": "„Quando fundei meu escritório de advocacia, percebi que minha imagem poderia transmitir meu valor antes mesmo de eu falar sobre meu trabalho. A consultoria me ajudou a encontrar o equilíbrio entre a formalidade da advocacia e a minha própria essência. A Paula soube criar uma estratégia baseada em quem eu sou e na mensagem que eu queria passar, em vez de apenas seguir tendências. Aprendi muito mais do que sobre cores ou combinações: aprendi a reconhecer as mensagens por trás de cada escolha. Foi um processo que mudou a percepção dos outros sobre mim e a minha própria autoimagem.“",
+        "author": "Deise Cordeiro",
+        "service": "Consultoria de Estilo Individual"
+      },
+      {
+        "text": "„A consultoria que a Paula fez com o meu ex-marido foi de enorme importância. Graças a ela, conseguimos mostrar a ele que um estilo casual tem seu valor, mas nos momentos certos. Com o tempo, investimos em peças atemporais que elevaram o estilo e a elegância dele.“",
+        "author": "Natany Gomes",
+        "service": "Consultoria de Estilo Individual"
+      }
+    ]
+  },
+  "servicePages": {
+    "cta": "Agendar horário",
+    "back": "Voltar para Consultoria de Estilo",
+    "wardrobeReset": {
+      "eyebrow": "Closet Detox",
+      "title": "Closet Detox",
+      "intro": "Juntas trazemos clareza para o seu guarda-roupa e mais leveza para o seu dia a dia.",
+      "meta": "Aprox. 3 horas / R$ 1.500",
+      "listLabel": "Te acompanho no processo de:",
+      "listItem1": "organização por cor, modelagem e funcionalidade",
+      "listItem2": "desenvolvimento de um guarda-roupa prático e autêntico"
+    },
+    "colorConsultation": {
+      "eyebrow": "Coloração Pessoal",
+      "title": "Coloração Pessoal",
+      "intro": "Descubra as cores que valorizam sua beleza natural, trazendo frescor e autenticidade.",
+      "meta": "Aprox. 1,5 horas / R$ 900",
+      "listLabel": "O resultado é:",
+      "listItem1": "mais segurança na hora de comprar e combinar roupas",
+      "listItem2": "um olhar mais claro sobre a sua cartela de cores pessoal"
+    },
+    "personalShopping": {
+      "eyebrow": "Personal Shopper & Styling",
+      "title": "Personal Shopper & Styling",
+      "intro": "Encontramos juntas peças intencionais que realmente funcionam para você – sem frustração ou desperdício.",
+      "meta": "2–4 horas / R$ 1.100 + R$ 480 por hora adicional",
+      "listLabel": "Meu acompanhamento inclui:",
+      "listItem1": "uma seleção estratégica focada na sua rotina",
+      "listItem2": "dicas de Styling para criar combinações com confiança"
+    },
+    "individualConsultation": {
+      "eyebrow": "Consultoria de Estilo Individual",
+      "title": "Consultoria de Estilo Individual",
+      "intro": "Desenvolvemos o seu estilo pessoal com base na sua essência, fase de vida e biotipo.",
+      "meta": "Personalizado sob medida",
+      "listLabel": "O foco está em:",
+      "listItem1": "sua expressão, presença e bem-estar",
+      "listItem2": "uma estratégia clara para a sua rotina e seu armário"
+    }
+  },
+  "contact": {
+    "heading": "Contato",
+    "email": "Enviar e-mail",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp"
+  },
+  "legal": {
+    "footerImpressum": "Aviso Legal",
+    "footerDatenschutz": "Política de Privacidade",
+    "impressum": {
+      "eyebrow": "Aviso Legal",
+      "title": "Aviso Legal",
+      "section1Heading": "Informações legais",
+      "name": "Paula Sevarolli",
+      "address": "[Endereço completo]",
+      "contactHeading": "Contato",
+      "email": "E-mail: paulasevarolli@hotmail.com",
+      "phone": "[Telefone de contato]",
+      "vatHeading": "Identificação Fiscal",
+      "vatText": "[CPF / CNPJ]",
+      "responsibleHeading": "Responsável pelo conteúdo",
+      "responsibleText": "Paula Sevarolli",
+      "disputeHeading": "Resolução de Litígios",
+      "disputeText": "Não somos obrigados nem nos dispomos a participar de procedimentos de resolução de litígios perante órgãos de arbitragem de consumidores."
+    },
+    "datenschutz": {
+      "eyebrow": "Privacidade",
+      "title": "Política de Privacidade",
+      "section1Heading": "Responsável pelo Tratamento de Dados",
+      "section1Text": "A responsável pelo tratamento dos dados neste site é Paula Sevarolli.",
+      "section2Heading": "Hospedagem e Arquivos de Log",
+      "section2Text": "Este site é hospedado na plataforma Netlify.",
+      "section3Heading": "Armazenamento Local (localStorage)",
+      "section3Text": "Este site armazena sua preferência de idioma localmente no seu navegador através do localStorage. Nenhum dado pessoal é coletado ou transmitido a servidores externos para essa finalidade.",
+      "section4Heading": "Google Fonts",
+      "section4Text": "Este site utiliza fontes do Google Fonts. Ao carregar a página, uma conexão com os servidores do Google pode ser estabelecida.",
+      "section5Heading": "Links Externos (Instagram, WhatsApp, E-mail)",
+      "section5Text": "Ao clicar nos links para Instagram, WhatsApp ou E-mail, você será redirecionado para serviços de terceiros sob as políticas de privacidade de seus respectivos provedores.",
+      "section6Heading": "Seus Direitos",
+      "section6Text": "Você tem o direito de solicitar informações, retificação ou exclusão dos seus dados pessoais a qualquer momento.",
+      "section7Heading": "Alterações nesta Política",
+      "section7Text": "Reservamo-nos o direito de atualizar esta política de privacidade para refletir mudanças legais ou de serviços."
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Fale Conosco",
+    "title": "Entre em contato",
+    "intro": "Deseja enviar uma mensagem? Preencha o formulário abaixo. Será um prazer te atender.",
+    "nameLabel": "Nome",
+    "namePlaceholder": "Seu nome",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "seu@email.com",
+    "subjectLabel": "Assunto",
+    "subjectPlaceholder": "Assunto da mensagem",
+    "subjectPrefix": "Solicitação de agendamento:",
+    "messageLabel": "Mensagem",
+    "messagePlaceholder": "Como posso te ajudar?",
+    "back": "Voltar",
+    "submit": "Enviar mensagem",
+    "note": "Sua mensagem será enviada de forma confidencial para Paula Sevarolli."
+  },
+  "footer": "© 2026 Paula Sevarolli"
+}

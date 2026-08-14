@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/scroll.js"></script>
+  <script src="js/i18n.js" defer></script>
 </head>
 <body class="fixed-image-layout reviews-page">
   <!-- Navbar -->
@@ -59,10 +60,7 @@
           <a href="datenschutz.html" data-i18n="legal.footerDatenschutz">Datenschutz</a>
         </div>
       </div>
-      <div class="lang-switch" role="group" aria-label="Language switcher">
-        <button type="button" class="lang active" data-lang="de">DE</button>
-        <button type="button" class="lang" data-lang="pt">PT</button>
-      </div>
+      <div class="lang-switch" id="lang-switcher" role="group" aria-label="Language switcher"></div>
     </div>
   </nav>
 
@@ -106,8 +104,6 @@
   </footer>
 
   <script>
-    let currentLang = 'de';
-
     const reviewsPages = document.getElementById('reviewsPages');
 
     function getReviewLayout() {
@@ -187,8 +183,8 @@
       if (!reviewsPages) return;
 
       const cards = reviewsPages.querySelectorAll('.review-card');
-      const readMoreText = readMoreTextOverride || (currentLang === 'pt' ? 'Leia mais' : 'Weiter lesen');
-      const readMoreAria = readMoreAriaOverride || (currentLang === 'pt' ? 'Ler o texto completo da avaliação' : 'Vollen Review-Text lesen');
+      const readMoreText = readMoreTextOverride || 'Weiter lesen';
+      const readMoreAria = readMoreAriaOverride || 'Vollen Review-Text lesen';
 
       cards.forEach(card => {
         const quote = card.querySelector('.review-quote');
@@ -332,10 +328,16 @@
       updateChapterState(activeIndex);
     }
 
+    let currentReadMoreText = 'Weiter lesen';
+    let currentReadMoreAria = 'Vollen Review-Text lesen';
+
     function refreshLayout(readMoreTextOverride = null, readMoreAriaOverride = null) {
+      const readMoreText = readMoreTextOverride || currentReadMoreText;
+      const readMoreAria = readMoreAriaOverride || currentReadMoreAria;
+
       const reviewPages = buildReviewPages();
       updateReviewLayout();
-      setupReviewCardReadMore(readMoreTextOverride, readMoreAriaOverride);
+      setupReviewCardReadMore(readMoreText, readMoreAria);
       buildNavDots(reviewPages);
       sections = chapterSection ? [chapterSection, ...reviewPages] : reviewPages;
       updateActiveDot();
@@ -344,7 +346,7 @@
     refreshLayout();
 
     window.addEventListener('scroll', updateActiveDot, { passive: true });
-    window.addEventListener('resize', refreshLayout);
+    window.addEventListener('resize', () => refreshLayout());
 
     if (scrollToTopBtn) {
       window.addEventListener('scroll', () => {
@@ -369,87 +371,44 @@
       });
     }
 
-    function updateLanguageButtons() {
-      document.querySelectorAll('.lang').forEach(button => {
-        const isActive = button.getAttribute('data-lang') === currentLang;
-        button.classList.toggle('active', isActive);
-        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-      });
-    }
-
-    async function loadLanguage(lang) {
-      const response = await fetch(`lang/${lang}.json`);
-      const translations = await response.json();
-
-      // 1. Standard-Übersetzungen (Kopfbereich, Navigation, Footer, etc.) einsetzen
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const value = key.split('.').reduce((o, i) => o?.[i], translations);
-
-        if (value) {
-          const textNodes = Array.from(el.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
-          textNodes.forEach(node => node.remove());
-          const textNode = document.createTextNode(value);
-          el.prepend(textNode);
-        }
-      });
-
-      // 2. DYNAMISCHES RENDERN DER REZENSIONEN aus dem reviews-Array
-      const reviewsPages = document.getElementById('reviewsPages');
+    document.addEventListener('i18n:loaded', ({ detail: { lang, translations } }) => {
       if (reviewsPages && translations.reviewsPage?.reviews) {
-        reviewsPages.innerHTML = ''; // Vorherige Elemente leeren
+        reviewsPages.innerHTML = '';
 
         translations.reviewsPage.reviews.forEach(review => {
           const card = document.createElement('div');
           card.className = 'review-card';
-
           const quote = document.createElement('p');
           quote.className = 'review-quote';
           quote.textContent = review.text || '';
-
           const author = document.createElement('p');
           author.className = 'review-author';
           author.textContent = review.author || '';
-
           const service = document.createElement('p');
           service.className = 'review-service';
           service.textContent = review.service || '';
-
-          card.appendChild(quote);
-          card.appendChild(author);
-          card.appendChild(service);
-
+          card.append(quote, author, service);
           reviewsPages.appendChild(card);
         });
       }
 
-      // 3. Modals & Zusatztexte vorbereiten
-      const readMoreText = translations.reviewsPage?.readMore || (currentLang === 'pt' ? 'Leia mais' : 'Weiter lesen');
-      const readMoreAria = translations.reviewsPage?.readMoreAria || (currentLang === 'pt' ? 'Ler o texto completo da avaliação' : 'Vollen Review-Text lesen');
+      const isPortuguese = lang === 'pt' || lang === 'br-pt';
 
-      modalCloseButton.setAttribute('aria-label', currentLang === 'pt' ? 'Fechar' : 'Schließen');
-      modalBackdrop.setAttribute('aria-label', currentLang === 'pt' ? 'Texto completo da avaliação' : 'Vollständiger Review-Text');
 
-      // 4. Layout neu berechnen (Grid, ReadMore-Buttons, Dots)
-      refreshLayout(readMoreText, readMoreAria);
-    }
 
-    function setLanguage(lang) {
-      currentLang = lang;
-      loadLanguage(lang);
-      localStorage.setItem('lang', lang);
-      updateLanguageButtons();
-    }
+      currentReadMoreText =
+        translations.reviewsPage?.readMore ||
+        (isPortuguese ? 'Leia mais' : 'Weiter lesen');
 
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.lang').forEach(button => {
-        button.addEventListener('click', () => {
-          setLanguage(button.getAttribute('data-lang'));
-        });
-      });
+      currentReadMoreAria =
+        translations.reviewsPage?.readMoreAria ||
+        (isPortuguese
+          ? 'Ler o texto completo da avaliação'
+          : 'Vollen Review-Text lesen');
 
-      const savedLang = localStorage.getItem('lang') || 'de';
-      setLanguage(savedLang);
+      modalCloseButton.setAttribute('aria-label', isPortuguese ? 'Fechar' : 'Schließen');
+      modalBackdrop.setAttribute('aria-label', isPortuguese ? 'Texto completo da avaliação' : 'Vollständiger Review-Text');
+      refreshLayout();
     });
   </script>
 </body>
