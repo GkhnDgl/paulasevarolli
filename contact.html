@@ -69,6 +69,12 @@
           <input id="email" type="email" name="email" autocomplete="email"
                  required data-i18n-placeholder="contactPage.emailPlaceholder">
         </div>
+        
+        <div class="contact-field">
+          <label for="subject" data-i18n="contactPage.subjectLabel">Betreff</label>
+          <input id="subject" type="text" name="_subject"
+                 required data-i18n-placeholder="contactPage.subjectPlaceholder">
+        </div>
 
         <div class="contact-field">
           <label for="message" data-i18n="contactPage.messageLabel">Nachricht</label>
@@ -134,6 +140,8 @@
           el.setAttribute('placeholder', value);
         }
       });
+
+      prefillSubject(lang, translations);
     }
 
     function setLanguage(lang) {
@@ -164,6 +172,32 @@
       }
 
       backLink.href = target;
+    }
+
+    function prefillSubject(lang, translations) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceKey = urlParams.get('service');
+      const subjectInput = document.getElementById('subject');
+
+      if (serviceKey && subjectInput) {
+        // Richtigen Titel aus den i18n-Übersetzungen holen
+        const serviceTitle = servicePagesTitleMap(serviceKey, translations);
+        const prefix = translations.contactPage?.subjectPrefix || "Terminanfrage:";
+        
+        if (serviceTitle) {
+          subjectInput.value = `${prefix} ${serviceTitle}`;
+        }
+      }
+    }
+
+    function servicePagesTitleMap(key, translations) {
+      const map = {
+        'reset': translations.servicePages?.wardrobeReset?.title,
+        'color': translations.servicePages?.colorConsultation?.title,
+        'shopping': translations.servicePages?.personalShopping?.title,
+        'individual': translations.servicePages?.individualConsultation?.title
+      };
+      return map[key] || '';
     }
 
     document.addEventListener('DOMContentLoaded', () => {
