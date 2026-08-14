@@ -313,8 +313,8 @@ collections:
               - { label: "Titel", name: "title", widget: "string", i18n: true }
               - { label: "Headline", name: "headline", widget: "string", i18n: true }
               - { label: "Nachricht / Intro", name: "message", widget: "text", i18n: true }
-              - { label: "Weiter lesen Button", name: "readMore", widget: "string", i18n: true }
-              - { label: "Weiter lesen Aria-Label", name: "readMoreAria", widget: "string", i18n: true }
+              # - { label: "Weiter lesen Button", name: "readMore", widget: "string", i18n: true }
+              # - { label: "Weiter lesen Aria-Label", name: "readMoreAria", widget: "string", i18n: true }
 
               # DYNAMISCHE REZENSIONSLISTE (Hinzufügen & Entfernen)
               - label: "Kundenstimmen / Rezensionen"
