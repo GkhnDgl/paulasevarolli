@@ -385,45 +385,45 @@ collections:
             collapsed: false
             i18n: true
             fields:
-              - { label: "Footer Link Impressum", name: "footerImpressum", widget: "string", i18n: true }
-              - { label: "Footer Link Datenschutz", name: "footerDatenschutz", widget: "string", i18n: true }
+              # - { label: "Footer Link Impressum", name: "footerImpressum", widget: "string", i18n: true }
+              # - { label: "Footer Link Datenschutz", name: "footerDatenschutz", widget: "string", i18n: true }
               - label: "Impressum Details"
                 name: "impressum"
                 widget: "object"
                 i18n: true
                 fields:
-                  - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
-                  - { label: "Titel", name: "title", widget: "string", i18n: true }
-                  - { label: "Überschrift Abs. 1", name: "section1Heading", widget: "string", i18n: true }
+                  # - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+                  # - { label: "Titel", name: "title", widget: "string", i18n: true }
+                  # - { label: "Überschrift Abs. 1", name: "section1Heading", widget: "string", i18n: true }
                   - { label: "Name", name: "name", widget: "string", i18n: true }
                   - { label: "Adresse", name: "address", widget: "string", i18n: true }
-                  - { label: "Überschrift Kontakt", name: "contactHeading", widget: "string", i18n: true }
+                  # - { label: "Überschrift Kontakt", name: "contactHeading", widget: "string", i18n: true }
                   - { label: "E-Mail", name: "email", widget: "string", i18n: true }
                   - { label: "Telefon", name: "phone", widget: "string", i18n: true }
-                  - { label: "Überschrift USt-ID", name: "vatHeading", widget: "string", i18n: true }
+                  # - { label: "Überschrift USt-ID", name: "vatHeading", widget: "string", i18n: true }
                   - { label: "Text USt-ID", name: "vatText", widget: "text", i18n: true }
-                  - { label: "Überschrift Verantwortlich", name: "responsibleHeading", widget: "string", i18n: true }
+                  # - { label: "Überschrift Verantwortlich", name: "responsibleHeading", widget: "string", i18n: true }
                   - { label: "Text Verantwortlich", name: "responsibleText", widget: "text", i18n: true }
-                  - { label: "Überschrift Streitschlichtung", name: "disputeHeading", widget: "string", i18n: true }
-                  - { label: "Text Streitschlichtung", name: "disputeText", widget: "text", i18n: true }
+                  # - { label: "Überschrift Streitschlichtung", name: "disputeHeading", widget: "string", i18n: true }
+                  # - { label: "Text Streitschlichtung", name: "disputeText", widget: "text", i18n: true }
               - label: "Datenschutz Details"
                 name: "datenschutz"
                 widget: "object"
                 i18n: true
                 fields:
-                  - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
-                  - { label: "Titel", name: "title", widget: "string", i18n: true }
-                  - { label: "Abschnitt 1 Titel", name: "section1Heading", widget: "string", i18n: true }
-                  - { label: "Abschnitt 1 Text", name: "section1Text", widget: "text", i18n: true }
-                  - { label: "Abschnitt 2 Titel", name: "section2Heading", widget: "string", i18n: true }
+                  # - { label: "Eyebrow", name: "eyebrow", widget: "string", i18n: true }
+                  # - { label: "Titel", name: "title", widget: "string", i18n: true }
+                  # - { label: "Abschnitt 1 Titel", name: "section1Heading", widget: "string", i18n: true }
+                  # - { label: "Abschnitt 1 Text", name: "section1Text", widget: "text", i18n: true }
+                  # - { label: "Abschnitt 2 Titel", name: "section2Heading", widget: "string", i18n: true }
                   - { label: "Abschnitt 2 Text", name: "section2Text", widget: "text", i18n: true }
-                  - { label: "Abschnitt 3 Titel", name: "section3Heading", widget: "string", i18n: true }
-                  - { label: "Abschnitt 3 Text", name: "section3Text", widget: "text", i18n: true }
-                  - { label: "Abschnitt 4 Titel", name: "section4Heading", widget: "string", i18n: true }
-                  - { label: "Abschnitt 4 Text", name: "section4Text", widget: "text", i18n: true }
-                  - { label: "Abschnitt 5 Titel", name: "section5Heading", widget: "string", i18n: true }
-                  - { label: "Abschnitt 5 Text", name: "section5Text", widget: "text", i18n: true }
-                  - { label: "Abschnitt 6 Titel", name: "section6Heading", widget: "string", i18n: true }
-                  - { label: "Abschnitt 6 Text", name: "section6Text", widget: "text", i18n: true }
-                  - { label: "Abschnitt 7 Titel", name: "section7Heading", widget: "string", i18n: true }
-                  - { label: "Abschnitt 7 Text", name: "section7Text", widget: "text", i18n: true }
+                  # - { label: "Abschnitt 3 Titel", name: "section3Heading", widget: "string", i18n: true }
+                  # - { label: "Abschnitt 3 Text", name: "section3Text", widget: "text", i18n: true }
+                  # - { label: "Abschnitt 4 Titel", name: "section4Heading", widget: "string", i18n: true }
+                  # - { label: "Abschnitt 4 Text", name: "section4Text", widget: "text", i18n: true }
+                  # - { label: "Abschnitt 5 Titel", name: "section5Heading", widget: "string", i18n: true }
+                  # - { label: "Abschnitt 5 Text", name: "section5Text", widget: "text", i18n: true }
+                  # - { label: "Abschnitt 6 Titel", name: "section6Heading", widget: "string", i18n: true }
+                  # - { label: "Abschnitt 6 Text", name: "section6Text", widget: "text", i18n: true }
+                  # - { label: "Abschnitt 7 Titel", name: "section7Heading", widget: "string", i18n: true }
+                  # - { label: "Abschnitt 7 Text", name: "section7Text", widget: "text", i18n: true }
