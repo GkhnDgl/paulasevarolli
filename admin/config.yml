@@ -17,10 +17,10 @@ collections:
   # 1. NAVIGATION & META
   # =========================================================
   - name: "general"
-    label: "Navigation, Meta & Footer"
+    label: "Navigation & Footer"
     files:
       - file: "lang/de.json"
-        label: "Navigation & Meta (de)"
+        label: "Navigation & Footer (de)"
         name: "general_de"
         i18n: true
         fields: &general_fields   # <--- Anchor definieren
@@ -50,7 +50,7 @@ collections:
           - { label: "Footer Copyright", name: "footer", widget: "string", i18n: true }
 
       - file: "lang/pt.json"
-        label: "Navigation & Meta (pt)"
+        label: "Navigation & Footer (pt)"
         name: "general_pt"
         i18n: true
         fields: *general_fields    # <--- Alias wiederverwenden!
@@ -59,7 +59,7 @@ collections:
   # 2. STARTSEITE / LANDINGPAGE
   # =========================================================
   - name: "home"
-    label: "Startseite (Landingpage)"
+    label: "Startseite"
     files:
       - file: "lang/de.json"
         label: "Startseite (de)"
@@ -89,7 +89,7 @@ collections:
   # 3. ÜBER MICH (ABOUT)
   # =========================================================
   - name: "about_page"
-    label: "Über mich (Paula Sevarolli) | AKTUELL NICHT IN BENUTZUNG"
+    label: "Über mich | AKTUELL NICHT IN BENUTZUNG"
     files:
       - file: "lang/de.json"
         label: "Über mich (de)"
@@ -121,7 +121,7 @@ collections:
   # 4. STILBERATUNG & LEISTUNGEN
   # =========================================================
   - name: "services_page"
-    label: "Stilberatung & Leistungen"
+    label: "Stilberatung"
     files:
       - file: "lang/de.json"
         label: "Stilberatung (de)"
@@ -207,7 +207,7 @@ collections:
   # 5. ATELIER & PREISLISTE
   # =========================================================
   - name: "atelier_page"
-    label: "Atelier & Preisliste"
+    label: "Atelier"
     files:
       - file: "lang/de.json"
         label: "Atelier (de)"
@@ -248,7 +248,7 @@ collections:
   # 6. SHOP
   # =========================================================
   - name: "shop_page"
-    label: "Shop Seite"
+    label: "Shop"
     files:
       - file: "lang/de.json"
         label: "Shop (de)"
@@ -275,7 +275,7 @@ collections:
   # 7. REZENSIONEN
   # =========================================================
   - name: "reviews_page"
-    label: "Rezensionen (Kundenstimmen)"
+    label: "Rezensionen"
     files:
       - file: "lang/de.json"
         label: "Rezensionen (de)"
@@ -313,7 +313,7 @@ collections:
   # 8. KONTAKT
   # =========================================================
   - name: "contact_page"
-    label: "Kontakt & Formular"
+    label: "Kontakt"
     files:
       - file: "lang/de.json"
         label: "Kontakt (de)"
