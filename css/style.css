@@ -99,11 +99,16 @@ html:has(body.chapters-page) {
 /* ==========================================================================
    2. GLOBAL / BASE STYLES
    ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);
   background: #ffffff;
   color: var(--color-text-main);
+  overflow-x: hidden;
 }
 
 a {
@@ -615,13 +620,14 @@ footer {
   text-align: center;
   pointer-events: none;
   width: 100%;
+  padding: 0 15px;
   animation: logoFadeIn 1.8s ease forwards;
 }
 
 .landing-logo h1 {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: clamp(70px, 7vw, 110px);
+  font-size: clamp(40px, 6vw, 110px);
   font-weight: 400;
   color: #ffffff;
   text-shadow:
@@ -632,8 +638,8 @@ footer {
 .landing-logo p {
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 14px;
-  letter-spacing: 8px;
+  font-size: clamp(10px, 1.5vw, 14px);
+  letter-spacing: clamp(3px, 1vw, 8px);
   color: #ffffff;
   text-transform: uppercase;
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
@@ -648,7 +654,7 @@ footer {
 }
 
 .logo-divider span {
-  width: 90px;
+  width: clamp(40px, 8vw, 90px);
   height: 1px;
   background: rgba(255, 255, 255, 0.75);
 }
@@ -666,7 +672,10 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   height: 100vh;
+  height: 100dvh;
+  width: 100vw;
   margin-top: 0;
+  overflow: hidden;
 }
 
 .landing-half {
@@ -674,8 +683,8 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  height: 100vh;
-  padding: 48px;
+  height: 100%;
+  padding: clamp(20px, 4vw, 48px);
   text-decoration: none;
   color: #ffffff;
   background-size: cover;
@@ -719,17 +728,34 @@ footer {
 }
 
 .landing-half h2 {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: #ffffff;
   font-family: var(--font-serif);
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: clamp(24px, 3.5vw, 48px);
 }
 
 .landing-half p {
-  margin: 0 0 18px;
-  line-height: 1.65;
-  font-size: 18px;
+  margin: 0 0 14px;
+  line-height: 1.5;
+  font-size: clamp(14px, 1.8vw, 18px);
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive Anpassung für kleinere Bildschirme / Mobilgeräte */
+@media (max-width: 900px) {
+  .landing-split {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .landing-logo {
+    top: 75px;
+  }
+
+  .landing-half {
+    align-items: flex-end;
+    padding: 20px 24px;
+  }
 }
 
 /* ==========================================================================
@@ -921,12 +947,12 @@ footer {
 /* Vollbild-Kapitel */
 .chapter {
   width: 100vw;
-  max-width: none; /* überschreibt die generische section { max-width: 1100px } Regel */
+  max-width: none;
   margin: 0;
   padding: 0;
   height: 100vh;
   display: flex;
-  flex-direction: row; /* Bild links, Text rechts */
+  flex-direction: row;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   position: relative;
@@ -1086,7 +1112,7 @@ footer {
   box-shadow: 0 0 10px var(--dot-active-glow);
 }
 
-/* Responsive: Kapitel-Layout (siehe Abschnitt 9 oben) */
+/* Responsive: Kapitel-Layout */
 @media (max-width: 900px) {
   html:has(body.chapters-page) {
     scroll-snap-type: none;
@@ -1145,8 +1171,6 @@ html:has(body.fixed-image-layout) {
   scroll-behavior: smooth;
 }
 
-/* Gleiche Box-Berechnung wie im Kapitel-Referenzlayout, damit das Innenpadding
-   die rechte Textspalte nicht vergrößert oder ihren Inhalt verschiebt. */
 .fixed-image-layout,
 .fixed-image-layout * {
   box-sizing: border-box;
@@ -1252,9 +1276,6 @@ html:has(body.fixed-image-layout) {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  /* Die feste Navigation ist rund 80px hoch; etwas Abstand verhindert, dass
-     sie die oberste Kartenzeile überlagert. Die Höhe der Seite bleibt gleich,
-     daher verteilt das Raster die Karten auf den verbleibenden Raum. */
   padding: 88px clamp(20px, 4vw, 80px) 28px;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -1264,13 +1285,7 @@ html:has(body.fixed-image-layout) {
   width: min(100%, 1500px);
   height: 100%;
   display: grid;
-  /* Spaltenanzahl wird von buildReviewPages()/buildNavDots() (JS) live als
-     --review-columns gesetzt, abhängig von Kartenanzahl & Breakpoint */
-  /* Gleich breite Spalten bewahren den ruhigen Rhythmus; die Karten darin
-     erhalten unten ihre individuelle, textbasierte Breite. */
   grid-template-columns: repeat(var(--review-columns, 3), minmax(0, 28rem));
-  /* Jede Zeile nimmt nur so viel Raum ein wie ihr längstes Zitat benötigt.
-     Die vollständige Kartengruppe bleibt dabei ruhig im Viewport zentriert. */
   grid-template-rows: repeat(var(--review-rows, 2), max-content);
   justify-content: center;
   align-content: center;
@@ -1279,11 +1294,6 @@ html:has(body.fixed-image-layout) {
   padding: 0;
 }
 
-/* Ergänzt/überschreibt bewusst dieselbe .review-card-Regel aus Abschnitt 6:
-   Karten auf der rezensionen.html-Seite sind kompakter (kleinere Höhe,
-   engeres Padding), damit eine ganze Karten-Seite ohne Scrollen ins
-   Snap-Segment passt. Da hier dieselbe (nicht spezifischere) Selektor-
-   Spezifität greift, gewinnt diese spätere Regel per Kaskade. */
 .review-card {
   min-height: 0;
   align-self: start;
@@ -1295,7 +1305,6 @@ html:has(body.fixed-image-layout) {
   padding: 18px 18px 16px;
 }
 
-/* Review-Karten auf der Landing-Page identisch und elegant mit fester Höhe. */
 .reviews-page .review-card {
   height: var(--review-card-height, 270px);
   min-height: var(--review-card-height, 270px);
@@ -1531,7 +1540,6 @@ html:has(body.fixed-image-layout) {
     display: block;
   }
 }
-
 
 /* ==========================================================================
    11. CONTACT PAGE
