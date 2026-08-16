@@ -60,8 +60,6 @@
     </div>
   </nav>
 
-  </nav>
-
 
   <!-- AUTOMATISCHE SEITENPUNKTE -->
   <div class="chapter-nav" id="chapterNav" aria-label="Seitennavigation"></div>
@@ -125,7 +123,7 @@
   <script>
 
     /* ==========================================================
-       HERKUNFT DER ABOUT-SEITE
+       HERKUNFT DER ABOUT-SEITE & NAVIGATION
        ========================================================== */
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -256,94 +254,89 @@
 
 
     /* ==========================================================
-       AUTOMATISCHE SEITENANZAHL
+       DYNAMISCHES LADEN DER JSON-SPRACHDATEI (WIE ATELIER)
        ========================================================== */
 
-    const aboutChapter =
-      document.querySelector('.about-chapter');
+    async function renderAboutContent() {
+      const lang = localStorage.getItem('lang') || 'de';
+      try {
+        const response = await fetch(`lang/${lang}.json`);
+        const translations = await response.json();
 
-    const chapterNav =
-      document.getElementById('chapterNav');
+        if (translations.about) {
+          const eyebrow = document.querySelector('[data-i18n="about.eyebrow"]');
+          if (eyebrow && translations.about.eyebrow) {
+            eyebrow.textContent = translations.about.eyebrow;
+          }
 
-    const scrollToTopBtn =
-      document.getElementById('scrollToTopBtn');
+          const heading = document.querySelector('[data-i18n="about.heading"]');
+          if (heading && translations.about.heading) {
+            heading.textContent = translations.about.heading;
+          }
 
+          // Paragraphen 1 bis 7 dynamisch aus der JSON befüllen
+          for (let i = 1; i <= 7; i++) {
+            const paragraph = document.querySelector(`[data-i18n="about.paragraph${i}"]`);
+            if (paragraph && translations.about[`paragraph${i}`]) {
+              paragraph.textContent = translations.about[`paragraph${i}`];
+            }
+          }
+        }
+
+        // Nach dem Laden der Texte Seitenpunkte neu berechnen
+        calculatePages();
+
+      } catch (err) {
+        console.error('Fehler beim Laden der Übersetzungen:', err);
+      }
+    }
+
+
+    /* ==========================================================
+       AUTOMATISCHE SEITENANZAHL BERECHNEN
+       ========================================================== */
+
+    const aboutChapter = document.querySelector('.about-chapter');
+    const chapterNav = document.getElementById('chapterNav');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
     let pageCount = 1;
 
-
     function calculatePages() {
-
       if (!aboutChapter || !chapterNav) {
         return;
       }
 
-
-      /*
-       * Gesamthöhe des tatsächlichen About-Inhalts.
-       *
-       * Beispiel:
-       *
-       * Inhalt = 2100 px
-       * Fenster = 900 px
-       *
-       * 2100 / 900 = 2.33
-       *
-       * => 3 Seiten
-       */
-
-      const totalHeight =
-        aboutChapter.scrollHeight;
-
-      const viewportHeight =
-        window.innerHeight;
-
+      const totalHeight = aboutChapter.scrollHeight;
+      const viewportHeight = window.innerHeight;
 
       pageCount = Math.max(
         1,
         Math.ceil(totalHeight / viewportHeight)
       );
 
-
-      /*
-       * Punkte komplett neu aufbauen.
-       */
-
       chapterNav.innerHTML = '';
 
-
       for (let i = 0; i < pageCount; i++) {
-
-        const dot =
-          document.createElement('div');
-
+        const dot = document.createElement('div');
         dot.className = 'nav-dot';
 
         if (i === 0) {
           dot.classList.add('active');
         }
 
-
         dot.addEventListener('click', () => {
-
-          const targetY =
-            i * viewportHeight;
-
+          const targetY = i * viewportHeight;
           window.scrollTo({
             top: targetY,
             behavior: 'smooth'
           });
-
         });
 
-
         chapterNav.appendChild(dot);
-
       }
 
-
       updatePage();
-
     }
 
 
@@ -352,118 +345,57 @@
        ========================================================== */
 
     function updatePage() {
-
       if (pageCount <= 0) {
         return;
       }
 
+      const viewportHeight = window.innerHeight;
+      const currentPage = Math.min(
+        pageCount - 1,
+        Math.round(window.scrollY / viewportHeight)
+      );
 
-      const viewportHeight =
-        window.innerHeight;
-
-
-      const currentPage =
-        Math.min(
-          pageCount - 1,
-          Math.round(window.scrollY / viewportHeight)
-        );
-
-
-      const dots =
-        chapterNav.querySelectorAll('.nav-dot');
-
-
+      const dots = chapterNav.querySelectorAll('.nav-dot');
       dots.forEach((dot, index) => {
-
-        dot.classList.toggle(
-          'active',
-          index === currentPage
-        );
-
+        dot.classList.toggle('active', index === currentPage);
       });
-
-
-      /*
-       * Pfeil erst ab Seite 2 anzeigen.
-       */
 
       if (scrollToTopBtn) {
-
-        scrollToTopBtn.classList.toggle(
-          'visible',
-          currentPage > 0
-        );
-
+        scrollToTopBtn.classList.toggle('visible', currentPage > 0);
       }
-
     }
 
 
     /* ==========================================================
-       SCROLL
+       EVENT LISTENER
        ========================================================== */
 
-    window.addEventListener(
-      'scroll',
-      updatePage,
-      { passive: true }
-    );
-
-
-    /* ==========================================================
-       RESIZE
-       ========================================================== */
-
-    window.addEventListener(
-      'resize',
-      calculatePages
-    );
-
-
-    /* ==========================================================
-       NACH OBEN
-       ========================================================== */
+    window.addEventListener('scroll', updatePage, { passive: true });
+    window.addEventListener('resize', calculatePages);
 
     if (scrollToTopBtn) {
-
       scrollToTopBtn.addEventListener('click', () => {
-
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
-
     }
 
 
     /* ==========================================================
-       INITIALISIERUNG
+       INITIALISIERUNG & SPRACHWECHSEL
        ========================================================== */
 
-    window.addEventListener(
-      'load',
-      calculatePages
-    );
+    document.addEventListener('DOMContentLoaded', () => {
+      renderAboutContent();
 
-
-    /*
-     * Falls i18n die Texte erst nach DOMContentLoaded
-     * einsetzt, danach nochmals berechnen.
-     */
-
-    document.addEventListener(
-      'DOMContentLoaded',
-      () => {
-
-        setTimeout(
-          calculatePages,
-          100
-        );
-
+      const langSwitcher = document.getElementById('lang-switcher');
+      if (langSwitcher) {
+        langSwitcher.addEventListener('click', (e) => {
+          if (e.target.tagName === 'BUTTON') {
+            setTimeout(renderAboutContent, 50);
+          }
+        });
       }
-    );
+    });
 
   </script>
 
