@@ -194,8 +194,8 @@ footer {
   box-sizing: border-box;
   font-family: var(--font-sans);
   background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
 }
@@ -408,6 +408,7 @@ footer {
   text-decoration: none;
   border-radius: 50%;
   background: var(--bg-btn-gradient);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(3px);
   transition: all 0.3s ease;
   box-shadow: var(--shadow-btn);
@@ -1843,6 +1844,6 @@ html:has(body.fixed-image-layout) {
 .fixed-image-layout .chapter-content {
   height: auto !important;
   min-height: 100vh;
-  padding-top: 120px;    /* Platz für die fixierte Navbar oben */
+  padding-top: 110px;    /* Platz für die fixierte Navbar oben */
   padding-bottom: 60px;  /* Genügend Platz am Ende des Textes */
 }
