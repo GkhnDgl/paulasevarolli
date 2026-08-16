@@ -60,34 +60,23 @@
     </div>
   </nav>
 
-
-  <!-- AUTOMATISCHE SEITENPUNKTE -->
-  <div class="chapter-nav" id="chapterNav" aria-label="Seitennavigation"></div>
-
-
   <!-- ABOUT -->
-  <section class="chapter about-chapter">
-
-    <!-- LINKES DRITTEL -->
+   <section class="chapter">
     <div class="chapter-image-container">
       <img src="images/paula.jpg" alt="Paula Sevarolli" class="chapter-image">
     </div>
-
-    <!-- RECHTE ZWEI DRITTEL -->
+    
     <div class="chapter-content">
-      <p class="chapter-eyebrow" data-i18n="about.eyebrow">Über mich</p>
-      <h1 class="chapter-title" data-i18n="about.heading">Über mich</h1>
-      <div class="about-text">
-        <p class="chapter-text" data-i18n="about.paragraph1"></p>
-        <p class="chapter-text" data-i18n="about.paragraph2"></p>
-        <p class="chapter-text" data-i18n="about.paragraph3"></p>
-        <p class="chapter-text" data-i18n="about.paragraph4"></p>
-        <p class="chapter-text" data-i18n="about.paragraph5"></p>
-        <p class="chapter-text" data-i18n="about.paragraph6"></p>
-        <p class="chapter-text" data-i18n="about.paragraph7"></p>
-      </div>
+      <p class="chapter-eyebrow" data-i18n="about.eyebrow"></p>
+      <h1 class="chapter-title" data-i18n="about.heading"></h1>
+      <p class="chapter-text" data-i18n="about.paragraph1"></p>
+      <p class="chapter-text" data-i18n="about.paragraph2"></p>
+      <p class="chapter-text" data-i18n="about.paragraph3"></p>
+      <p class="chapter-text" data-i18n="about.paragraph4"></p>
+      <p class="chapter-text" data-i18n="about.paragraph5"></p>
+      <p class="chapter-text" data-i18n="about.paragraph6"></p>
+      <p class="chapter-text" data-i18n="about.paragraph7"></p>
     </div>
-
   </section>
 
 
@@ -254,7 +243,7 @@
 
 
     /* ==========================================================
-       DYNAMISCHES LADEN DER JSON-SPRACHDATEI (WIE ATELIER)
+       DYNAMISCHES LADEN DER JSON-SPRACHDATEI
        ========================================================== */
 
     async function renderAboutContent() {
@@ -273,18 +262,19 @@
           if (heading && translations.about.heading) {
             heading.textContent = translations.about.heading;
           }
-
           // Paragraphen 1 bis 7 dynamisch aus der JSON befüllen
           for (let i = 1; i <= 7; i++) {
             const paragraph = document.querySelector(`[data-i18n="about.paragraph${i}"]`);
-            if (paragraph && translations.about[`paragraph${i}`]) {
-              paragraph.textContent = translations.about[`paragraph${i}`];
+            if (paragraph) {
+              if (translations.about && translations.about[`paragraph${i}`]) {
+                paragraph.textContent = translations.about[`paragraph${i}`];
+                paragraph.style.display = 'block'; // Anzeigen, wenn Text da ist
+              } else {
+                paragraph.style.display = 'none';  // Ausblenden, falls kein Text vorhanden ist
+              }
             }
           }
         }
-
-        // Nach dem Laden der Texte Seitenpunkte neu berechnen
-        calculatePages();
 
       } catch (err) {
         console.error('Fehler beim Laden der Übersetzungen:', err);
@@ -293,96 +283,33 @@
 
 
     /* ==========================================================
-       AUTOMATISCHE SEITENANZAHL BERECHNEN
+       SCROLL-TO-TOP BUTTON VISIBILITY
        ========================================================== */
 
-    const aboutChapter = document.querySelector('.about-chapter');
-    const chapterNav = document.getElementById('chapterNav');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    let pageCount = 1;
-
-    function calculatePages() {
-      if (!aboutChapter || !chapterNav) {
-        return;
-      }
-
-      const totalHeight = aboutChapter.scrollHeight;
-      const viewportHeight = window.innerHeight;
-
-      pageCount = Math.max(
-        1,
-        Math.ceil(totalHeight / viewportHeight)
-      );
-
-      chapterNav.innerHTML = '';
-
-      for (let i = 0; i < pageCount; i++) {
-        const dot = document.createElement('div');
-        dot.className = 'nav-dot';
-
-        if (i === 0) {
-          dot.classList.add('active');
-        }
-
-        dot.addEventListener('click', () => {
-          const targetY = i * viewportHeight;
-          window.scrollTo({
-            top: targetY,
-            behavior: 'smooth'
-          });
-        });
-
-        chapterNav.appendChild(dot);
-      }
-
-      updatePage();
-    }
-
-
-    /* ==========================================================
-       AKTUELLE SEITE ERMITTELN
-       ========================================================== */
-
-    function updatePage() {
-      if (pageCount <= 0) {
-        return;
-      }
-
-      const viewportHeight = window.innerHeight;
-      const currentPage = Math.min(
-        pageCount - 1,
-        Math.round(window.scrollY / viewportHeight)
-      );
-
-      const dots = chapterNav.querySelectorAll('.nav-dot');
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentPage);
-      });
-
+    function toggleScrollToTopBtn() {
       if (scrollToTopBtn) {
-        scrollToTopBtn.classList.toggle('visible', currentPage > 0);
+        if (window.scrollY > 150) {
+          scrollToTopBtn.classList.add('visible');
+        } else {
+          scrollToTopBtn.classList.remove('visible');
+        }
       }
     }
 
 
     /* ==========================================================
-       EVENT LISTENER
+       EVENT LISTENER & INITIALISIERUNG
        ========================================================== */
 
-    window.addEventListener('scroll', updatePage, { passive: true });
-    window.addEventListener('resize', calculatePages);
+    window.addEventListener('scroll', toggleScrollToTopBtn, { passive: true });
 
     if (scrollToTopBtn) {
       scrollToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
-
-
-    /* ==========================================================
-       INITIALISIERUNG & SPRACHWECHSEL
-       ========================================================== */
 
     document.addEventListener('DOMContentLoaded', () => {
       renderAboutContent();

@@ -1833,3 +1833,16 @@ html:has(body.fixed-image-layout) {
   }
 
 }
+
+/* Erlaubt dem Text-Container, sich dynamisch nach unten auszudehnen */
+.fixed-image-layout .chapter {
+  height: auto !important;
+  min-height: 100vh;
+}
+
+.fixed-image-layout .chapter-content {
+  height: auto !important;
+  min-height: 100vh;
+  padding-top: 120px;    /* Platz für die fixierte Navbar oben */
+  padding-bottom: 60px;  /* Genügend Platz am Ende des Textes */
+}
