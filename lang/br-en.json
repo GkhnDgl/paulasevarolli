@@ -8,7 +8,7 @@
     "atelier": "Atelier",
     "shop": "Shop",
     "services": "Services",
-    "about": "What is Style Consulting?",
+    "about": "About Me",
     "reviews": "Reviews",
     "contact": "Get in Touch"
   },
@@ -31,6 +31,7 @@
     "aboutText": "Style Consulting supports you through personal life transitions, while the Atelier provides a creative environment for individual design and expression."
   },
   "about": {
+    "eyebrow": "About Me",
     "heading": "About Me",
     "paragraph1": "I am Paula Sevarolli, stylist and fashion designer with a deep passion for creativity, fashion, and aesthetics. As a Brazilian with Italian roots, I have lived in Brazil, Italy, Germany, and the Czech Republic. These experiences have deeply shaped my perspective on style, culture, and individuality.",
     "paragraph2": "I completed my Master’s degree in Fashion Design at the IED in Florence, Italy, and further specialized as a style consultant. Over the years, I gained experience across various sectors of the fashion industry. This combination of academic study, hands-on practice, and personal growth defines my work today.",

@@ -8,7 +8,7 @@
     "atelier": "Atelier",
     "shop": "Shop",
     "services": "Serviços",
-    "about": "O que é consultoria de estilo?",
+    "about": "Sobre mim",
     "reviews": "Depoimentos",
     "contact": "Entrar em contato"
   },
@@ -31,6 +31,7 @@
     "aboutText": "A consultoria de estilo acompanha você em transições pessoais, enquanto o atelier oferece um espaço criativo para Gestaltung e expressão individual."
   },
   "about": {
+    "eyebrow": "About Me",
     "heading": "Sobre mim",
     "paragraph1": "Eu sou Paula Sevarolli, estilista e designer de moda, com uma grande paixão por criatividade, moda e estética. Como brasileira com raízes italianas, vivi no Brasil, Itália, Alemanha e República Tcheca. Essas experiências moldaram profundamente minha visão sobre estilo, cultura e individualidade.",
     "paragraph2": "Completei meu mestrado em design de moda no IED, em Florença, Itália, e também me especializei como consultora de estilo. Ao longo dos anos, acumulei experiência em diferentes áreas da indústria da moda. Essa conexão entre estudo, prática e desenvolvimento pessoal marca meu trabalho até hoje.",

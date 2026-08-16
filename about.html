@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title data-i18n="meta.title">Über mich</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Alex+Brush&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/i18n.js" defer></script>
+</head>
+
+
+<body class="fixed-image-layout">
+
+  <!-- NAVIGATION -->
+
+  <nav class="navbar">
+
+    <div class="nav-left"></div>
+
+    <div class="nav-right">
+
+      <div class="nav-icon-group">
+
+        <a
+          href="contact.html"
+          class="nav-icon-btn"
+          aria-label="Contact Me"
+          title="Contact Me"
+        >
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+
+        <a
+          href="https://instagram.com/paulasevarolli"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-icon-btn"
+          aria-label="Instagram"
+          title="Instagram"
+        >
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-4.849 0-3.204.012-3.583.069-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.07 4.849-.07z"/>
+          </svg>
+        </a>
+
+      </div>
+
+
+      <div class="nav-dropdown">
+
+        <a
+          href="impressum.html"
+          class="nav-icon-btn"
+          aria-label="Rechtliches"
+          title="Rechtliches"
+        >
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+        </a>
+
+        <div class="dropdown-menu">
+
+          <a
+            href="impressum.html"
+            data-i18n="legal.footerImpressum"
+          >
+            Impressum
+          </a>
+
+          <a
+            href="datenschutz.html"
+            data-i18n="legal.footerDatenschutz"
+          >
+            Datenschutz
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="lang-switch"
+        id="lang-switcher"
+        role="group"
+        aria-label="Language switcher"
+      ></div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- AUTOMATISCHE SEITENPUNKTE -->
+
+  <div
+    class="chapter-nav"
+    id="chapterNav"
+    aria-label="Seitennavigation"
+  ></div>
+
+
+  <!-- ABOUT -->
+
+  <section class="chapter about-chapter">
+
+    <!-- LINKES DRITTEL -->
+
+    <div class="chapter-image-container">
+
+      <img
+        src="images/paula.jpg"
+        alt="Paula Sevarolli"
+        class="chapter-image"
+      >
+
+    </div>
+
+
+    <!-- RECHTE ZWEI DRITTEL -->
+
+    <div class="chapter-content">
+
+      <p
+        class="chapter-eyebrow"
+        data-i18n="about.heading"
+      >
+        Über mich
+      </p>
+
+      <h1
+        class="chapter-title"
+        data-i18n="about.heading"
+      >
+        Über mich
+      </h1>
+
+
+      <div class="about-text">
+
+        <p
+          class="chapter-text"
+          data-i18n="about.paragraph1"
+        ></p>
+
+        <p
+          class="chapter-text"
+          data-i18n="about.paragraph2"
+        ></p>
+
+        <p
+          class="chapter-text"
+          data-i18n="about.paragraph3"
+        ></p>
+
+        <p
+          class="chapter-text"
+          data-i18n="about.paragraph4"
+        ></p>
+
+        <p
+          class="chapter-text"
+          data-i18n="about.paragraph5"
+        ></p>
+
+        <p
+          class="chapter-text"
+          data-i18n="about.paragraph6"
+        ></p>
+
+        <p
+          class="chapter-text"
+          data-i18n="about.paragraph7"
+        ></p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- NACH OBEN -->
+
+  <button
+    type="button"
+    class="nav-icon-btn scroll-to-top-btn"
+    id="scrollToTopBtn"
+    aria-label="Nach oben scrollen"
+    title="Nach oben"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d="M12 7.2 5.8 13.4 7.2 14.8 12 10 16.8 14.8 18.2 13.4 12 7.2Z"/>
+    </svg>
+  </button>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p data-i18n="footer"></p>
+
+    <div class="footer-links">
+
+      <a
+        href="impressum.html"
+        data-i18n="legal.footerImpressum"
+      ></a>
+
+      <span class="divider-dot">·</span>
+
+      <a
+        href="datenschutz.html"
+        data-i18n="legal.footerDatenschutz"
+      ></a>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    /* ==========================================================
+       HERKUNFT DER ABOUT-SEITE
+       ========================================================== */
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const from = urlParams.get('from');
+
+    const navLeft = document.querySelector('.nav-left');
+
+
+    if (from === 'stilberatung') {
+
+      navLeft.innerHTML = `
+        <a href="index.html" data-i18n="nav.home">Home</a>
+
+        <a
+          href="about.html?from=stilberatung"
+          data-i18n="nav.about"
+        >
+          Über mich
+        </a>
+
+        <div class="nav-dropdown">
+
+          <a
+            href="stilberatung.html"
+            class="nav-link-dropdown"
+            data-i18n="nav.stilberatung"
+          >
+            Stilberatung
+          </a>
+
+          <div class="dropdown-menu">
+
+            <a
+              href="stilberatung.html#reset"
+              data-i18n="services.wardrobeReset.title"
+            >
+              Kleiderschrank-Reset
+            </a>
+
+            <a
+              href="stilberatung.html#color"
+              data-i18n="services.colorConsultation.title"
+            >
+              Farbberatung
+            </a>
+
+            <a
+              href="stilberatung.html#shopping"
+              data-i18n="services.personalShopping.title"
+            >
+              Personal Shopping
+            </a>
+
+            <a
+              href="stilberatung.html#individual"
+              data-i18n="services.individualConsultation.title"
+            >
+              Individuelle Stilberatung
+            </a>
+
+          </div>
+
+        </div>
+
+        <a
+          href="stilberatung_shop.html"
+          data-i18n="nav.shop"
+        >
+          Shop
+        </a>
+
+        <a
+          href="rezensionen.html"
+          data-i18n="nav.reviews"
+        >
+          Rezensionen
+        </a>
+      `;
+
+
+    } else if (from === 'atelier') {
+
+      navLeft.innerHTML = `
+        <a href="index.html" data-i18n="nav.home">Home</a>
+
+        <a
+          href="about.html?from=atelier"
+          data-i18n="nav.about"
+        >
+          Über mich
+        </a>
+
+        <a
+          href="atelier.html"
+          data-i18n="nav.services"
+        >
+          Leistungen
+        </a>
+
+        <a
+          href="atelier_shop.html"
+          data-i18n="nav.shop"
+        >
+          Shop
+        </a>
+      `;
+
+
+    } else {
+
+      navLeft.innerHTML = `
+        <a
+          href="index.html"
+          data-i18n="nav.home"
+        >
+          Home
+        </a>
+
+        <a
+          href="about.html?from=index"
+          data-i18n="nav.about"
+        >
+          Über mich
+        </a>
+      `;
+
+    }
+
+
+    /* ==========================================================
+       AUTOMATISCHE SEITENANZAHL
+       ========================================================== */
+
+    const aboutChapter =
+      document.querySelector('.about-chapter');
+
+    const chapterNav =
+      document.getElementById('chapterNav');
+
+    const scrollToTopBtn =
+      document.getElementById('scrollToTopBtn');
+
+
+    let pageCount = 1;
+
+
+    function calculatePages() {
+
+      if (!aboutChapter || !chapterNav) {
+        return;
+      }
+
+
+      /*
+       * Gesamthöhe des tatsächlichen About-Inhalts.
+       *
+       * Beispiel:
+       *
+       * Inhalt = 2100 px
+       * Fenster = 900 px
+       *
+       * 2100 / 900 = 2.33
+       *
+       * => 3 Seiten
+       */
+
+      const totalHeight =
+        aboutChapter.scrollHeight;
+
+      const viewportHeight =
+        window.innerHeight;
+
+
+      pageCount = Math.max(
+        1,
+        Math.ceil(totalHeight / viewportHeight)
+      );
+
+
+      /*
+       * Punkte komplett neu aufbauen.
+       */
+
+      chapterNav.innerHTML = '';
+
+
+      for (let i = 0; i < pageCount; i++) {
+
+        const dot =
+          document.createElement('div');
+
+        dot.className = 'nav-dot';
+
+        if (i === 0) {
+          dot.classList.add('active');
+        }
+
+
+        dot.addEventListener('click', () => {
+
+          const targetY =
+            i * viewportHeight;
+
+          window.scrollTo({
+            top: targetY,
+            behavior: 'smooth'
+          });
+
+        });
+
+
+        chapterNav.appendChild(dot);
+
+      }
+
+
+      updatePage();
+
+    }
+
+
+    /* ==========================================================
+       AKTUELLE SEITE ERMITTELN
+       ========================================================== */
+
+    function updatePage() {
+
+      if (pageCount <= 0) {
+        return;
+      }
+
+
+      const viewportHeight =
+        window.innerHeight;
+
+
+      const currentPage =
+        Math.min(
+          pageCount - 1,
+          Math.round(window.scrollY / viewportHeight)
+        );
+
+
+      const dots =
+        chapterNav.querySelectorAll('.nav-dot');
+
+
+      dots.forEach((dot, index) => {
+
+        dot.classList.toggle(
+          'active',
+          index === currentPage
+        );
+
+      });
+
+
+      /*
+       * Pfeil erst ab Seite 2 anzeigen.
+       */
+
+      if (scrollToTopBtn) {
+
+        scrollToTopBtn.classList.toggle(
+          'visible',
+          currentPage > 0
+        );
+
+      }
+
+    }
+
+
+    /* ==========================================================
+       SCROLL
+       ========================================================== */
+
+    window.addEventListener(
+      'scroll',
+      updatePage,
+      { passive: true }
+    );
+
+
+    /* ==========================================================
+       RESIZE
+       ========================================================== */
+
+    window.addEventListener(
+      'resize',
+      calculatePages
+    );
+
+
+    /* ==========================================================
+       NACH OBEN
+       ========================================================== */
+
+    if (scrollToTopBtn) {
+
+      scrollToTopBtn.addEventListener('click', () => {
+
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+
+      });
+
+    }
+
+
+    /* ==========================================================
+       INITIALISIERUNG
+       ========================================================== */
+
+    window.addEventListener(
+      'load',
+      calculatePages
+    );
+
+
+    /*
+     * Falls i18n die Texte erst nach DOMContentLoaded
+     * einsetzt, danach nochmals berechnen.
+     */
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      () => {
+
+        setTimeout(
+          calculatePages,
+          100
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
