@@ -15,7 +15,7 @@
       ? `stilberatung.html#${serviceKey}`
       : previousPage || originTargets[sessionStorage.getItem('navOrigin')] || 'index.html';
 
-    if (!sessionStorage.getItem('navPreviousPage') && document.referrer) {
+    if (!previousPage && document.referrer) {
       try {
         const referrerUrl = new URL(document.referrer);
         if (referrerUrl.origin === window.location.origin && referrerUrl.href !== window.location.href) {
@@ -28,34 +28,36 @@
     backLink.href = target;
   }
 
-  async function updateForm(translations) {
+  if (!subjectInput) return;
+
+  document.addEventListener('i18n:loaded', async event => {
     try {
-      const data = translations || await fetch(`lang/${localStorage.getItem('lang') || 'de'}.json`)
+      const translations = event.detail?.translations || await fetch(`lang/${localStorage.getItem('lang') || 'de'}.json`)
         .then(response => {
           if (!response.ok) throw new Error(`Übersetzung konnte nicht geladen werden (${response.status}).`);
           return response.json();
         });
 
       document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
-        const value = element.dataset.i18nPlaceholder.split('.').reduce((result, part) => result?.[part], data);
+        const value = element.dataset.i18nPlaceholder
+          .split('.')
+          .reduce((result, part) => result?.[part], translations);
         if (value) element.setAttribute('placeholder', value);
       });
 
       const serviceTitles = {
-        reset: data.servicePages?.wardrobeReset?.title,
-        color: data.servicePages?.colorConsultation?.title,
-        shopping: data.servicePages?.personalShopping?.title,
-        individual: data.servicePages?.individualConsultation?.title
+        reset: translations.servicePages?.wardrobeReset?.title,
+        color: translations.servicePages?.colorConsultation?.title,
+        shopping: translations.servicePages?.personalShopping?.title,
+        individual: translations.servicePages?.individualConsultation?.title
       };
       const serviceTitle = serviceTitles[serviceKey];
-      if (subjectInput && serviceTitle) {
-        const prefix = data.contactPage?.subjectPrefix || 'Terminanfrage:';
+      if (serviceTitle) {
+        const prefix = translations.contactPage?.subjectPrefix || 'Terminanfrage:';
         subjectInput.value = `${prefix} ${serviceTitle}`;
       }
     } catch (error) {
       console.error('Fehler beim Aktualisieren des Kontaktformulars:', error);
     }
-  }
-
-  document.addEventListener('i18n:loaded', event => updateForm(event.detail?.translations));
+  });
 })();
