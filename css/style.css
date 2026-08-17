@@ -1066,7 +1066,7 @@ footer {
 /* ==========================================================================
    10. FIXED-IMAGE LAYOUT (Sekundärseiten mit Bild links fix / Text rechts scrollt)
    Wird zusätzlich zu .chapter/.chapter-image-container/.chapter-content auf
-   den Seiten rezensionen.html, stilberatung_about.html, stilberatung_shop.html,
+   den Seiten rezensionen.html, stilberatung_shop.html,
    atelier.html und atelier_shop.html verwendet. Im Unterschied zu
    stilberatung.html bleibt hier das Bild links fix stehen, während nur der
    Text rechts (und alles darunter, inkl. Footer) normal nach unten scrollt.
