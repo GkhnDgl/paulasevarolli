@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/i18n.js" defer></script>
   <script src="js/nav-loader.js" defer></script>
+  <script src="js/contact.js" defer></script>
 </head>
 
 <body class="contact-page">
@@ -98,79 +99,6 @@
       <a href="datenschutz.html" data-i18n="legal.footerDatenschutz"></a>
     </div>
   </footer>
-
-  <script>
-    function setupBackLink() {
-      const backLink = document.getElementById('contactBack');
-      const referrer = document.referrer;
-      let target = 'index.html';
-
-      if (referrer) {
-        try {
-          const refUrl = new URL(referrer);
-          if (
-            refUrl.origin === window.location.origin &&
-            refUrl.href !== window.location.href
-          ) {
-            target = refUrl.href;
-          }
-        } catch (error) {
-          // Fallback bleibt index.html.
-        }
-      }
-
-      backLink.href = target;
-    }
-
-    async function updateContactFormTranslations(event) {
-      const translationsFromEvent = event?.detail?.translations;
-      const lang = event?.detail?.lang || localStorage.getItem('lang') || 'de';
-      try {
-        const translations = translationsFromEvent || await fetch(`lang/${lang}.json`).then(response => {
-          if (!response.ok) throw new Error(`Übersetzung konnte nicht geladen werden (${response.status}).`);
-          return response.json();
-        });
-
-        // Placeholders setzen
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-          const key = el.getAttribute('data-i18n-placeholder');
-          const value = key.split('.').reduce((o, i) => o?.[i], translations);
-          if (value) {
-            el.setAttribute('placeholder', value);
-          }
-        });
-
-        // Betreff vorausfüllen
-        const urlParams = new URLSearchParams(window.location.search);
-        const serviceKey = urlParams.get('service');
-        const subjectInput = document.getElementById('subject');
-
-        if (serviceKey && subjectInput) {
-          const map = {
-            'reset': translations.servicePages?.wardrobeReset?.title,
-            'color': translations.servicePages?.colorConsultation?.title,
-            'shopping': translations.servicePages?.personalShopping?.title,
-            'individual': translations.servicePages?.individualConsultation?.title
-          };
-          const serviceTitle = map[serviceKey] || '';
-          const prefix = translations.contactPage?.subjectPrefix || "Terminanfrage:";
-          
-          if (serviceTitle) {
-            subjectInput.value = `${prefix} ${serviceTitle}`;
-          }
-        }
-      } catch (err) {
-        console.error('Fehler beim Aktualisieren des Kontaktformulars:', err);
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      setupBackLink();
-      updateContactFormTranslations();
-
-      document.addEventListener('i18n:loaded', updateContactFormTranslations);
-    });
-  </script>
 
 </body>
 </html>

@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/i18n.js" defer></script>
   <script src="js/nav-loader.js" defer></script>
+  <script src="js/page-navigation.js" defer></script>
+  <script src="js/atelier-price.js" defer></script>
 </head>
 <body class="fixed-image-layout">
   <!-- Navbar -->
@@ -67,91 +69,5 @@
       <a href="datenschutz.html" data-i18n="legal.footerDatenschutz"></a>
     </div>
   </footer>
-
-  <script>
-    // Seiten-Navigation Dots & Scroll-to-Top
-    const chapters = Array.from(document.querySelectorAll('.chapter, .page-section, footer'));
-    const dots = document.querySelectorAll('.nav-dot');
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-    const updateChapterState = (index) => {
-      dots.forEach(dot => dot.classList.remove('active'));
-      if (dots[index]) {
-        dots[index].classList.add('active');
-      }
-    };
-
-    const updateActiveDot = () => {
-      const scrollPos = window.scrollY + window.innerHeight * 0.4;
-      let activeIndex = 0;
-      chapters.forEach((section, i) => {
-        if (section.offsetTop <= scrollPos) {
-          activeIndex = i;
-        }
-      });
-      updateChapterState(activeIndex);
-    };
-
-    window.addEventListener('scroll', updateActiveDot);
-    window.addEventListener('resize', updateActiveDot);
-    updateActiveDot();
-
-    if (scrollToTopBtn) {
-      window.addEventListener('scroll', () => {
-        scrollToTopBtn.classList.toggle('visible', window.scrollY > window.innerHeight * 0.5);
-      });
-
-      scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        if (chapters[index]) {
-          chapters[index].scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-
-    // Dynamisches Rendern der Preisliste bei Sprachwechsel
-    async function renderPriceTable() {
-      const lang = localStorage.getItem('lang') || 'de';
-      try {
-        const response = await fetch(`lang/${lang}.json`);
-        const translations = await response.json();
-        const priceTableBody = document.getElementById('priceTableBody');
-
-        if (priceTableBody && translations.atelier?.priceItems) {
-          priceTableBody.innerHTML = '';
-          translations.atelier.priceItems.forEach(item => {
-            const row = document.createElement('tr');
-            const nameCell = document.createElement('td');
-            nameCell.textContent = item.name || '';
-            const priceCell = document.createElement('td');
-            priceCell.textContent = item.price || '';
-            row.appendChild(nameCell);
-            row.appendChild(priceCell);
-            priceTableBody.appendChild(row);
-          });
-        }
-      } catch (err) {
-        console.error('Fehler beim Laden der Preisliste:', err);
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      renderPriceTable();
-
-      const langSwitcher = document.getElementById('lang-switcher');
-      if (langSwitcher) {
-        langSwitcher.addEventListener('click', (e) => {
-          if (e.target.tagName === 'BUTTON') {
-            setTimeout(renderPriceTable, 50);
-          }
-        });
-      }
-    });
-  </script>
 </body>
 </html>

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/i18n.js" defer></script>
   <script src="js/nav-loader.js" defer></script>
+  <script src="js/stilberatung-navigation.js" defer></script>
 </head>
 <body class="chapters-page">
 
@@ -150,47 +151,6 @@
       <a href="datenschutz.html" data-i18n="legal.footerDatenschutz"></a>
     </div>
   </footer>
-
-  <script>
-    // Chapter Dots Logic
-    const chapters = document.querySelectorAll('.chapter');
-    const dots = document.querySelectorAll('.nav-dot');
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-    const updateChapterState = (index) => {
-      dots.forEach(dot => dot.classList.remove('active'));
-      if (dots[index]) {
-        dots[index].classList.add('active');
-      }
-
-      if (scrollToTopBtn) {
-        scrollToTopBtn.classList.toggle('visible', index > 0);
-      }
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const index = Array.from(chapters).indexOf(entry.target);
-          updateChapterState(index);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    chapters.forEach(chapter => observer.observe(chapter));
-
-    if (scrollToTopBtn) {
-      scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        chapters[index].scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
 
 </body>
 </html>

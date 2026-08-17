@@ -8,7 +8,15 @@
 (function() {
   const NAV_FILE = 'includes/nav.html';
   const SESSION_KEY = 'navOrigin';
+  const CURRENT_PAGE_KEY = 'navCurrentPage';
+  const PREVIOUS_PAGE_KEY = 'navPreviousPage';
   const MOBILE_BREAKPOINT = 768;
+
+  function getPageReference() {
+    const url = new URL(window.location.href);
+    const filename = url.pathname.split('/').pop() || 'index.html';
+    return `${filename}${url.search}${url.hash}`;
+  }
 
   /**
    * Bestimmt, ob Mobile-Version angezeigt werden soll
@@ -177,6 +185,14 @@
    */
   function recordCurrentPage() {
     const navType = getCurrentPageType();
+    const currentPage = getPageReference();
+    const previousPage = sessionStorage.getItem(CURRENT_PAGE_KEY);
+
+    if (previousPage && previousPage !== currentPage) {
+      sessionStorage.setItem(PREVIOUS_PAGE_KEY, previousPage);
+    }
+    sessionStorage.setItem(CURRENT_PAGE_KEY, currentPage);
+
     if (navType) {
       const pageMap = {
         'a': 'index',

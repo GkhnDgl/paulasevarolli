@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/i18n.js" defer></script>
   <script src="js/nav-loader.js" defer></script>
+  <script src="js/back-link.js" defer></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -78,32 +79,5 @@
     </div>
   </footer>
 
-  <script>
-    function setupBackLink() {
-      const backLink = document.getElementById('contactBack');
-      const referrer = document.referrer;
-      let target = 'index.html';
-
-      if (referrer) {
-        try {
-          const refUrl = new URL(referrer);
-          if (
-            refUrl.origin === window.location.origin &&
-            refUrl.href !== window.location.href
-          ) {
-            target = refUrl.href;
-          }
-        } catch (error) {
-          // Fallback bleibt index.html.
-        }
-      }
-
-      backLink.href = target;
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      setupBackLink();
-    });
-  </script>
 </body>
 </html>
