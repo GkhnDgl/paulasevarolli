@@ -89,7 +89,7 @@ function detectRegion() {
   return navigator.language?.toLowerCase() === 'pt-br' ? REGION_CONFIGS.BR : REGION_CONFIGS.DEFAULT;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initI18n() {
   currentRegionConfig = detectRegion();
   renderLanguageButtons();
 
@@ -98,4 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
     ? savedLang
     : currentRegionConfig.defaultLang;
   void setLanguage(initialLang);
-});
+}
+
+// Globale Funktion für nav-loader.js
+window.reinitI18n = () => {
+  renderLanguageButtons();
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang && currentRegionConfig.availableLangs.some(option => option.code === savedLang)) {
+    void setLanguage(savedLang);
+  }
+};
+
+document.addEventListener('DOMContentLoaded', initI18n);
