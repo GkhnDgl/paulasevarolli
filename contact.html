@@ -71,7 +71,7 @@
         
         <div class="contact-field">
           <label for="subject" data-i18n="contactPage.subjectLabel">Betreff</label>
-          <input id="subject" type="text" name="_subject"
+        <input id="subject" type="text" name="subject"
                  required data-i18n-placeholder="contactPage.subjectPlaceholder">
         </div>
 
@@ -127,11 +127,14 @@
       backLink.href = target;
     }
 
-    async function updateContactFormTranslations() {
-      const lang = localStorage.getItem('lang') || 'de';
+    async function updateContactFormTranslations(event) {
+      const translationsFromEvent = event?.detail?.translations;
+      const lang = event?.detail?.lang || localStorage.getItem('lang') || 'de';
       try {
-        const response = await fetch(`lang/${lang}.json`);
-        const translations = await response.json();
+        const translations = translationsFromEvent || await fetch(`lang/${lang}.json`).then(response => {
+          if (!response.ok) throw new Error(`Übersetzung konnte nicht geladen werden (${response.status}).`);
+          return response.json();
+        });
 
         // Placeholders setzen
         document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
@@ -170,14 +173,7 @@
       setupBackLink();
       updateContactFormTranslations();
 
-      const langSwitcher = document.getElementById('lang-switcher');
-      if (langSwitcher) {
-        langSwitcher.addEventListener('click', (e) => {
-          if (e.target.tagName === 'BUTTON') {
-            setTimeout(updateContactFormTranslations, 50);
-          }
-        });
-      }
+      document.addEventListener('i18n:loaded', updateContactFormTranslations);
     });
   </script>
 

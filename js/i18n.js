@@ -1,116 +1,101 @@
 const REGION_CONFIGS = {
   BR: {
     defaultLang: 'br-pt',
-    availableLangs: [
-      { code: 'br-pt', label: 'PT' },
-      { code: 'br-en', label: 'EN' }
-    ]
+    availableLangs: [{ code: 'br-pt', label: 'PT' }, { code: 'br-en', label: 'EN' }]
   },
   DEFAULT: {
     defaultLang: 'de',
-    availableLangs: [
-      { code: 'de', label: 'DE' },
-      { code: 'pt', label: 'PT' }
-    ]
+    availableLangs: [{ code: 'de', label: 'DE' }, { code: 'pt', label: 'PT' }]
   }
 };
 
 let currentLang = 'de';
 let currentRegionConfig = REGION_CONFIGS.DEFAULT;
+let languageRequestId = 0;
+
+const getTranslation = (translations, key) =>
+  key.split('.').reduce((value, part) => value?.[part], translations);
 
 function renderLanguageButtons() {
   const container = document.getElementById('lang-switcher');
   if (!container) return;
 
-  container.innerHTML = '';
-
-  currentRegionConfig.availableLangs.forEach(langObj => {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'lang';
-    btn.setAttribute('data-lang', langObj.code);
-    btn.textContent = langObj.label;
-
-    btn.addEventListener('click', () => {
-      setLanguage(langObj.code);
-    });
-
-    container.appendChild(btn);
-  });
+  container.replaceChildren(...currentRegionConfig.availableLangs.map(({ code, label }) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'lang';
+    button.dataset.lang = code;
+    button.textContent = label;
+    button.addEventListener('click', () => void setLanguage(code));
+    return button;
+  }));
 }
 
 function updateLanguageButtons() {
   document.querySelectorAll('.lang').forEach(button => {
-    const isActive = button.getAttribute('data-lang') === currentLang;
+    const isActive = button.dataset.lang === currentLang;
     button.classList.toggle('active', isActive);
-    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    button.setAttribute('aria-pressed', String(isActive));
+  });
+}
+
+function applyTranslations(translations) {
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const value = getTranslation(translations, element.dataset.i18n);
+    if (typeof value !== 'string') return;
+
+    Array.from(element.childNodes)
+      .filter(node => node.nodeType === Node.TEXT_NODE)
+      .forEach(node => node.remove());
+    element.prepend(document.createTextNode(value));
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    const value = getTranslation(translations, element.dataset.i18nPlaceholder);
+    if (typeof value === 'string') element.setAttribute('placeholder', value);
   });
 }
 
 async function loadLanguage(lang) {
-  try {
-    const response = await fetch(`lang/${lang}.json`);
-    const translations = await response.json();
+  const response = await fetch(`lang/${lang}.json`);
+  if (!response.ok) throw new Error(`Übersetzung konnte nicht geladen werden (${response.status}).`);
 
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const value = key.split('.').reduce((o, i) => o?.[i], translations);
-
-      if (value) {
-        // Textknoten austauschen, ohne verschachtelte HTML-Elemente wie SVGs zu löschen
-        const textNodes = Array.from(el.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
-        textNodes.forEach(node => node.remove());
-        const textNode = document.createTextNode(value);
-        el.prepend(textNode);
-      }
-    });
-
-    document.dispatchEvent(new CustomEvent('i18n:loaded', {
-      detail: { lang, translations }
-    }));
-  } catch (err) {
-    console.error(`Fehler beim Laden von lang/${lang}.json:`, err);
-  }
+  return response.json();
 }
 
-function setLanguage(lang) {
-  currentLang = lang;
-  loadLanguage(lang);
-  localStorage.setItem('lang', lang);
-  updateLanguageButtons();
-}
-
-async function detectRegion() {
-  // Test-Modus per URL (?geo=BR)
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('geo')?.toUpperCase() === 'BR') {
-    return REGION_CONFIGS.BR;
-  }
+async function setLanguage(lang) {
+  if (!currentRegionConfig.availableLangs.some(option => option.code === lang)) return;
+  const requestId = ++languageRequestId;
 
   try {
-    const res = await fetch('https://ipapi.co/json/');
-    const data = await res.json();
-    if (data.country_code === 'BR') {
-      return REGION_CONFIGS.BR;
-    }
-  } catch (err) {
-    console.warn('Geo-IP konnte nicht geladen werden:', err);
-  }
+    const translations = await loadLanguage(lang);
+    if (requestId !== languageRequestId) return;
 
-  return REGION_CONFIGS.DEFAULT;
+    applyTranslations(translations);
+    currentLang = lang;
+    document.documentElement.lang = lang === 'br-pt' ? 'pt-BR' : lang.split('-').pop();
+    localStorage.setItem('lang', lang);
+    updateLanguageButtons();
+    document.dispatchEvent(new CustomEvent('i18n:loaded', { detail: { lang, translations } }));
+  } catch (error) {
+    console.error(`Fehler beim Laden von lang/${lang}.json:`, error);
+  }
 }
 
-// Initialisierung auf jeder Seite
-document.addEventListener('DOMContentLoaded', async () => {
-  currentRegionConfig = await detectRegion();
+function detectRegion() {
+  // Browser locale avoids a slow external Geo-IP call and the related privacy leak.
+  const forcedRegion = new URLSearchParams(window.location.search).get('geo')?.toUpperCase();
+  if (forcedRegion === 'BR') return REGION_CONFIGS.BR;
+  return navigator.language?.toLowerCase() === 'pt-br' ? REGION_CONFIGS.BR : REGION_CONFIGS.DEFAULT;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  currentRegionConfig = detectRegion();
   renderLanguageButtons();
 
   const savedLang = localStorage.getItem('lang');
-  const isValidSavedLang = currentRegionConfig.availableLangs.some(l => l.code === savedLang);
-
-  if (savedLang && isValidSavedLang) {
-    setLanguage(savedLang);
-  } else {
-    setLanguage(currentRegionConfig.defaultLang);
-  }
+  const initialLang = currentRegionConfig.availableLangs.some(option => option.code === savedLang)
+    ? savedLang
+    : currentRegionConfig.defaultLang;
+  void setLanguage(initialLang);
 });
