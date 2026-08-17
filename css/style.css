@@ -717,9 +717,14 @@ footer {
 
 /* Responsive Anpassung für kleinere Bildschirme / Mobilgeräte */
 @media (max-width: 900px) {
+  :root {
+    --mobile-gutter: clamp(16px, 4.5vw, 20px);
+  }
+
   .landing-split {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    width: 100%;
   }
 
   .landing-logo {
@@ -728,7 +733,7 @@ footer {
 
   .landing-half {
     align-items: flex-end;
-    padding: 20px 24px;
+    padding: 20px var(--mobile-gutter);
   }
 }
 
@@ -1247,6 +1252,7 @@ footer {
 
   .chapter {
     flex-direction: column;
+    width: 100%;
     height: auto;
     min-height: 100vh;
   }
@@ -1259,7 +1265,12 @@ footer {
   .chapter-content {
     width: 100%;
     height: auto;
-    padding: 40px 24px 60px;
+    padding: 40px var(--mobile-gutter) 60px;
+  }
+
+  .page-section {
+    padding-left: var(--mobile-gutter);
+    padding-right: var(--mobile-gutter);
   }
 
   .chapter-nav {
@@ -1628,7 +1639,7 @@ html:has(body.fixed-image-layout) {
 
   .reviews-page .chapter-content {
     display: block;
-    padding: 40px 24px 60px;
+    padding: 40px var(--mobile-gutter) 60px;
   }
 
   .reviews-image-container {
@@ -1640,7 +1651,7 @@ html:has(body.fixed-image-layout) {
     overflow: hidden;
     height: auto;
     min-height: 100vh;
-    padding: 20px 24px 60px;
+    padding: 20px var(--mobile-gutter) 60px;
   }
 
   .reviews-page .review-grid {
@@ -1870,12 +1881,12 @@ html:has(body.fixed-image-layout) {
 
   .contact-page .contact-wrapper {
     min-height: calc(100vh - 74px);
-    padding: 35px 16px 45px;
+    padding: 35px var(--mobile-gutter) 45px;
   }
 
   .contact-card {
     border-radius: 22px;
-    padding: 28px 20px;
+    padding: 28px var(--mobile-gutter);
   }
 
   .contact-submit-row {
@@ -1906,6 +1917,15 @@ html:has(body.fixed-image-layout) {
   min-height: 100vh;
   padding-top: 110px;    /* Platz für die fixierte Navbar oben */
   padding-bottom: 60px;  /* Genügend Platz am Ende des Textes */
+}
+
+@media (max-width: 900px) {
+  .fixed-image-layout .chapter-content {
+    min-height: 0;
+    justify-content: flex-start;
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
 }
 
 /* Keyboard navigation stays as visible as hover interactions. */
