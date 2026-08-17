@@ -117,6 +117,57 @@
     if (window.reinitI18n) window.reinitI18n();
   }
 
+  function cleanupMobileNavigation() {
+    if (window.mobileNavigationCleanup) {
+      window.mobileNavigationCleanup();
+      window.mobileNavigationCleanup = null;
+    }
+  }
+
+  function setupMobileNavigation(navbar, navLeft) {
+    cleanupMobileNavigation();
+
+    const toggle = navbar.querySelector('.mobile-menu-toggle');
+    const drawer = navbar.querySelector('.mobile-navigation-drawer');
+    const drawerLinks = navbar.querySelector('.mobile-drawer-primary');
+    if (!toggle || !drawer || !drawerLinks) return;
+
+    drawerLinks.replaceChildren(...Array.from(navLeft.children).map(link => link.cloneNode(true)));
+    const closeTriggers = navbar.querySelectorAll('[data-mobile-menu-close]');
+    const focusableSelector = 'a, button';
+
+    const setOpen = isOpen => {
+      navbar.classList.toggle('mobile-nav-open', isOpen);
+      drawer.setAttribute('aria-hidden', String(!isOpen));
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      document.body.classList.toggle('mobile-nav-is-open', isOpen);
+      if (isOpen) drawer.querySelector(focusableSelector)?.focus();
+      else toggle.focus();
+    };
+
+    const onToggle = () => setOpen(!navbar.classList.contains('mobile-nav-open'));
+    const onClose = () => setOpen(false);
+    const onKeyDown = event => {
+      if (event.key === 'Escape' && navbar.classList.contains('mobile-nav-open')) onClose();
+    };
+    const onLinkClick = event => {
+      if (event.target.closest('a')) onClose();
+    };
+
+    toggle.addEventListener('click', onToggle);
+    closeTriggers.forEach(trigger => trigger.addEventListener('click', onClose));
+    drawer.addEventListener('click', onLinkClick);
+    document.addEventListener('keydown', onKeyDown);
+
+    window.mobileNavigationCleanup = () => {
+      toggle.removeEventListener('click', onToggle);
+      closeTriggers.forEach(trigger => trigger.removeEventListener('click', onClose));
+      drawer.removeEventListener('click', onLinkClick);
+      document.removeEventListener('keydown', onKeyDown);
+      document.body.classList.remove('mobile-nav-is-open');
+    };
+  }
+
   /**
    * Lädt die Navigation und setzt sie in die Navbar ein
    */
@@ -163,10 +214,18 @@
 
       // Nav-Right einsetzen
       const navRight = navbar.querySelector('.nav-right');
-      const rightTemplate = tempDiv.querySelector('#nav-template-right');
+      const rightTemplateId = deviceType === 'mobile'
+        ? '#nav-template-right-mobile'
+        : '#nav-template-right';
+      const rightTemplate = tempDiv.querySelector(rightTemplateId);
       if (navRight && rightTemplate) {
         const rightContent = rightTemplate.content.querySelector('.nav-right');
         navRight.replaceChildren(...Array.from(rightContent.childNodes).map(node => node.cloneNode(true)));
+        if (deviceType === 'mobile') {
+          setupMobileNavigation(navbar, navbar.querySelector('.nav-left'));
+        } else {
+          cleanupMobileNavigation();
+        }
       }
 
       // i18n neu initialisieren: Language Buttons + Translations

@@ -6,6 +6,33 @@
   </div>
 </template>
 
+<template id="nav-template-right-mobile">
+  <div class="nav-right mobile-nav-right">
+    <button type="button" class="mobile-menu-toggle" aria-label="Menü öffnen" aria-controls="mobile-navigation-drawer" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="mobile-menu-backdrop" data-mobile-menu-close></div>
+    <aside class="mobile-navigation-drawer" id="mobile-navigation-drawer" aria-label="Navigation" aria-hidden="true">
+      <div class="mobile-drawer-header">
+        <span class="mobile-drawer-kicker">Paula Sevarolli</span>
+        <button type="button" class="mobile-menu-close" aria-label="Menü schließen" data-mobile-menu-close>×</button>
+      </div>
+      <nav class="mobile-drawer-primary"></nav>
+      <div class="mobile-drawer-secondary">
+        <a href="contact.html" data-i18n="nav.contact">Kontakt aufnehmen</a>
+        <a href="impressum.html" data-i18n="legal.footerImpressum">Impressum</a>
+        <a href="datenschutz.html" data-i18n="legal.footerDatenschutz">Datenschutz</a>
+      </div>
+      <div class="mobile-drawer-footer">
+        <div class="lang-switch" id="lang-switcher" role="group" aria-label="Language switcher"></div>
+        <a href="https://instagram.com/paulasevarolli" target="_blank" rel="noopener noreferrer" class="mobile-instagram-link" data-i18n="nav.instagram">Instagram</a>
+      </div>
+    </aside>
+  </div>
+</template>
+
 <template id="nav-template-a-mobile">
   <div class="nav-left">
     <a href="index.html" data-i18n="nav.home">Home</a>
