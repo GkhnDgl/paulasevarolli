@@ -124,14 +124,21 @@
     }
   }
 
-  function setupMobileNavigation(navbar, navLeft) {
+  function setupMobileNavigation(navbar, navLeft, navType) {
     cleanupMobileNavigation();
 
     const toggle = navbar.querySelector('.mobile-menu-toggle');
     const drawer = navbar.querySelector('.mobile-navigation-drawer');
     const drawerLinks = navbar.querySelector('.mobile-drawer-primary');
+    const drawerKicker = navbar.querySelector('[data-mobile-drawer-kicker]');
     if (!toggle || !drawer || !drawerLinks) return;
 
+    const drawerKickers = {
+      a: 'Paula Sevarolli',
+      b: 'Paula Sevarolli Stilberatung',
+      c: 'Paula Sevarolli Atelier'
+    };
+    if (drawerKicker) drawerKicker.textContent = drawerKickers[navType] || drawerKickers.a;
     drawerLinks.replaceChildren(...Array.from(navLeft.children).map(link => link.cloneNode(true)));
     const closeTriggers = navbar.querySelectorAll('[data-mobile-menu-close]');
     const focusableSelector = 'a, button';
@@ -222,7 +229,7 @@
         const rightContent = rightTemplate.content.querySelector('.nav-right');
         navRight.replaceChildren(...Array.from(rightContent.childNodes).map(node => node.cloneNode(true)));
         if (deviceType === 'mobile') {
-          setupMobileNavigation(navbar, navbar.querySelector('.nav-left'));
+          setupMobileNavigation(navbar, navbar.querySelector('.nav-left'), navType);
         } else {
           cleanupMobileNavigation();
         }
