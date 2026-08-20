@@ -4,9 +4,9 @@
   },
   "nav": {
     "home": "Início",
-    "stilberatung": "Consultoria de Estilo",
-    "atelier": "Ateliê",
-    "shop": "Loja",
+    "stilberatung": "Consultoria de estilo",
+    "atelier": "Atelier",
+    "shop": "Shop",
     "services": "Serviços",
     "about": "Sobre mim",
     "reviews": "Depoimentos",
@@ -65,7 +65,9 @@
     "title": "Paula Sevarolli Consultoria de Estilo",
     "description": "Clareza, autoconfiança e uma identidade de estilo que realmente combina com você.",
     "aboutTitle": "O que é Consultoria de Estilo?",
-    "aboutText": "A consultoria de estilo é um processo pessoal e sensível, no qual encontramos juntas o seu caminho para uma expressão autêntica. Olhamos para a sua personalidade, sua fase de vida, suas cores e sua rotina para criar algo exclusivamente seu.",
+    "aboutText1": "Eu te ajudo a montar um guarda-roupa que seja autêntico e versátil, e que te acompanhe em todas as fases da vida. Minha abordagem se concentra em expressar a identidade interior de cada cliente por meio de suas roupas, em vez de me basear em regras da moda.",
+    "aboutText2": "Eu te ajudo a superar as transições da vida — como uma nova profissão, a maternidade ou a mudança para um novo país —, adaptando sua aparência à pessoa que você é no momento.",
+    "aboutText3": "Juntas, escolhemos cores, tecidos e cortes que realçam sua visão pessoal de estilo e, ao mesmo tempo, montamos um guarda-roupa que seja prático, harmonioso e duradouro.",
     "servicesTitle": "Serviços"
   },
   "atelier": {
@@ -152,48 +154,48 @@
     ]
   },
   "servicePages": {
-    "cta": "Agendar horário",
-    "back": "Voltar para Consultoria de Estilo",
+    "cta": "Marcar um horário",
+    "back": "Voltar para a consultoria de estilo",
     "wardrobeReset": {
-      "eyebrow": "Closet Detox",
-      "title": "Closet Detox",
-      "intro": "Juntas trazemos clareza para o seu guarda-roupa e mais leveza para o seu dia a dia.",
+      "eyebrow": "Reset de guarda-roupa",
+      "title": "Reset de guarda-roupa",
+      "intro": "Vamos organizar juntos o seu guarda-roupa e trazer clareza. Você vai ficar apenas com o que realmente combina com a sua vida atual, o seu estilo e o seu corpo – todo o resto pode ir embora. Para ter mais leveza e organização no dia a dia.",
       "meta": "Aprox. 3 horas / R$ 1.500",
-      "listLabel": "Te acompanho no processo de:",
-      "listItem1": "organização por cor, modelagem e funcionalidade",
-      "listItem2": "desenvolvimento de um guarda-roupa prático e autêntico"
+      "listLabel": "Eu te acompanho em:",
+      "listItem1": "a organização por cor, forma e função",
+      "listItem2": "o desenvolvimento de um visual prático e pessoal"
     },
     "colorConsultation": {
-      "eyebrow": "Coloração Pessoal",
-      "title": "Coloração Pessoal",
-      "intro": "Descubra as cores que valorizam sua beleza natural, trazendo frescor e autenticidade.",
+      "eyebrow": "Consultoria de cores",
+      "title": "Consultoria de cores",
+      "intro": "Encontramos as cores que combinam com você, fazendo com que pareça revigorada, cheia de vida e autêntica. Você aprenderá quais nuances realçam seu charme natural – para ter mais confiança na hora de comprar e combinar roupas.",
       "meta": "Aprox. 1,5 horas / R$ 900",
       "listLabel": "O resultado é:",
-      "listItem1": "mais segurança na hora de comprar e combinar roupas",
-      "listItem2": "um olhar mais claro sobre a sua cartela de cores pessoal"
+      "listItem1": "mais segurança ao comprar e combinar peças",
+      "listItem2": "uma visão mais clara do seu universo de cores"
     },
     "personalShopping": {
-      "eyebrow": "Personal Shopper & Styling",
-      "title": "Personal Shopper & Styling",
-      "intro": "Encontramos juntas peças intencionais que realmente funcionam para você – sem frustração ou desperdício.",
+      "eyebrow": "Personal shopper & styling",
+      "title": "Personal shopper & styling",
+      "intro": "Juntos, vamos encontrar roupas que combinem perfeitamente com você – em vez de compras erradas e frustrações. Você terá um acompanhamento sincero e cheio de estilo durante as compras, adaptado ao seu dia a dia, ao seu corpo e ao seu estilo.",
       "meta": "2–4 horas / R$ 1.100 + R$ 480 por hora adicional",
       "listLabel": "Meu acompanhamento inclui:",
-      "listItem1": "uma seleção estratégica focada na sua rotina",
-      "listItem2": "dicas de Styling para criar combinações com confiança"
+      "listItem1": "uma seleção objetiva, adequada ao seu cotidiano",
+      "listItem2": "sugestões de combinações com mais segurança"
     },
     "individualConsultation": {
-      "eyebrow": "Consultoria de Estilo Individual",
-      "title": "Consultoria de Estilo Individual",
-      "intro": "Desenvolvemos o seu estilo pessoal com base na sua essência, fase de vida e biotipo.",
-      "meta": "Personalizado sob medida",
+      "eyebrow": "Consultoria de estilo individual",
+      "title": "Consultoria de estilo individual",
+      "intro": "Desenvolvemos seu estilo pessoal com base na sua personalidade, no seu estilo de vida e no seu tipo físico. Você vai entender o que realmente define quem você é – e como expressar isso por meio das roupas.",
+      "meta": "Personalizado",
       "listLabel": "O foco está em:",
-      "listItem1": "sua expressão, presença e bem-estar",
-      "listItem2": "uma estratégia clara para a sua rotina e seu armário"
+      "listItem1": "sua expressão, postura e bem-estar",
+      "listItem2": "uma estratégia clara para o seu cotidiano e guarda-roupa"
     }
   },
   "contact": {
     "heading": "Contato",
-    "email": "Enviar e-mail",
+    "email": "Escrever e-mail",
     "instagram": "Instagram",
     "whatsapp": "WhatsApp"
   },

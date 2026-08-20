@@ -65,7 +65,9 @@
     "title": "Paula Sevarolli Stilberatung",
     "description": "Klarheit, Selbstvertrauen und ein Stilgefühl, das wirklich zu dir passt.",
     "aboutTitle": "Was ist Stilberatung?",
-    "aboutText": "Stilberatung ist ein persönlicher, sensibler Prozess, bei dem wir gemeinsam deinen Weg zu einem authentischen Ausdruck finden. Wir schauen auf deine Persönlichkeit, deine Lebensphase, deine Farben und deine gewohnte Umgebung – und entwickeln daraus etwas, das ganz zu dir gehört.",
+    "aboutText1": "Ich begleite dich eine Garderobe zusammenzustellen, die authentisch und vielseitig ist und dich in jeder Lebensphase unterstützt. Mein Ansatz konzentriert sich darauf, die innere Identität jeder Kundin durch ihre Kleidung zum Ausdruck zu bringen, anstatt mich auf Moderegeln zu verlassen.",
+    "aboutText2": "Ich helfe dir dabei, Lebensübergänge – wie einen neuen Beruf, die Mutterschaft oder den Umzug in ein neues Land – zu meistern, indem ich dein Erscheinungsbild darauf abstimme, wer du gerade bist.",
+    "aboutText3": "Gemeinsam wählen wir Farben, Stoffe und Schnitte aus, die deine persönliche Stilvision unterstreichen, und bauen gleichzeitig eine Garderobe auf, die praktisch, stimmig und langlebig ist.",
     "servicesTitle": "Leistungen"
   },
   "atelier": {
@@ -157,7 +159,7 @@
     "wardrobeReset": {
       "eyebrow": "Kleiderschrank-Reset",
       "title": "Kleiderschrank-Reset",
-      "intro": "Gemeinsam schaffen wir Klarheit im Kleiderschrank und geben deinem Alltag mehr Leichtigkeit.",
+      "intro": "Wir sortieren gemeinsam deinen Kleiderschrank und schaffen Klarheit. Du behältst nur, was wirklich zu deinem heutigen Leben, deinem Stil und deinem Körper passt – alles andere darf gehen. Für mehr Leichtigkeit und Überblick im Alltag.",
       "meta": "Ca. 3 Stunden / 250€",
       "listLabel": "Ich begleite dich dabei bei:",
       "listItem1": "der Sortierung nach Farbe, Form und Funktion",
@@ -166,7 +168,7 @@
     "colorConsultation": {
       "eyebrow": "Farbberatung",
       "title": "Farbberatung",
-      "intro": "Wir finden die Farben, die dich frisch, lebendig und authentisch wirken lassen.",
+      "intro": "Wir finden deine individuellen Farben, die dich frisch, lebendig und authentisch wirken lassen. Du lernst, welche Nuancen deine natürliche Ausstrahlung unterstreichen – für mehr Sicherheit beim Einkaufen und Kombinieren.",
       "meta": "Ca. 1,5 Stunden / 150€",
       "listLabel": "Das Ergebnis ist:",
       "listItem1": "mehr Sicherheit beim Einkaufen und Kombinieren",
@@ -175,7 +177,7 @@
     "personalShopping": {
       "eyebrow": "Personal Shopper & Styling",
       "title": "Personal Shopper & Styling",
-      "intro": "Gemeinsam finden wir gezielt Kleidung, die wirklich zu dir passt – ohne Frust und Fehlkäufe.",
+      "intro": "Gemeinsam finden wir gezielt Kleidung, die wirklich zu dir passt – statt Fehlkäufen und Frust. Du bekommst eine ehrliche, stilvolle Begleitung beim Einkaufen, abgestimmt auf deinen Alltag, deine Figur und deinen Stil.",
       "meta": "2–4 Stunden / 180€ + 80€ pro weitere Stunde",
       "listLabel": "Meine Begleitung umfasst:",
       "listItem1": "eine gezielte Auswahl passend zu deinem Alltag",
@@ -184,7 +186,7 @@
     "individualConsultation": {
       "eyebrow": "Individuelle Stilberatung",
       "title": "Individuelle Stilberatung",
-      "intro": "Wir entwickeln deinen persönlichen Stil auf Basis deiner Persönlichkeit, deiner Lebensphase und deiner Figur.",
+      "intro": "Wir entwickeln deinen persönlichen Stil auf Basis deiner Persönlichkeit, deines Lebensstils und deiner Körperform. Du verstehst, was dich wirklich ausmacht – und wie du das durch Kleidung sichtbar machst.",
       "meta": "Individuell abgestimmt",
       "listLabel": "Im Fokus stehen:",
       "listItem1": "dein Ausdruck, deine Haltung und dein Wohlgefühl",

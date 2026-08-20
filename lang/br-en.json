@@ -65,7 +65,9 @@
     "title": "Paula Sevarolli Style Consulting",
     "description": "Clarity, confidence, and a sense of style that truly suits you.",
     "aboutTitle": "What is Style Consulting?",
-    "aboutText": "Style consulting is a personal, sensitive journey where we discover your path to authentic expression together. We look at your personality, life stage, color palette, and routine to craft something uniquely yours.",
+    "aboutText1": "I’ll help you put together a wardrobe that’s authentic and versatile and supports you through every stage of life. My approach focuses on expressing each client’s inner identity through her clothing, rather than relying on fashion rules.",
+    "aboutText2": "I’ll help you navigate life transitions—such as a new career, motherhood, or moving to a new country—by tailoring your look to who you are right now.",
+    "aboutText3": "Together, we’ll select colors, fabrics, and cuts that highlight your personal style vision, while building a wardrobe that’s practical, cohesive, and long-lasting.",
     "servicesTitle": "Services"
   },
   "atelier": {
@@ -157,7 +159,7 @@
     "wardrobeReset": {
       "eyebrow": "Wardrobe Reset",
       "title": "Wardrobe Reset",
-      "intro": "Together we bring clarity to your closet and ease to your everyday routine.",
+      "intro": "Together, we'll organize your closet and bring some clarity. You'll keep only what truly fits your current lifestyle, your style, and your body—everything else can go. For more ease and a clearer overview in your everyday life.",
       "meta": "Approx. 3 hours / R$ 1,500",
       "listLabel": "I guide you through:",
       "listItem1": "organizing by color, fit, and function",
@@ -166,7 +168,7 @@
     "colorConsultation": {
       "eyebrow": "Color Analysis",
       "title": "Color Analysis",
-      "intro": "We discover the colors that make you look fresh, vibrant, and authentic.",
+      "intro": "We'll help you discover the colors that are right for you—colors that make you look fresh, vibrant, and authentic. You'll learn which shades bring out your natural radiance—giving you more confidence when shopping and putting together outfits.",
       "meta": "Approx. 1.5 hours / R$ 900",
       "listLabel": "The result is:",
       "listItem1": "more confidence when shopping and pairing outfits",
@@ -175,7 +177,7 @@
     "personalShopping": {
       "eyebrow": "Personal Shopping & Styling",
       "title": "Personal Shopping & Styling",
-      "intro": "Together we find targeted pieces that genuinely suit you – without frustration or wrong buys.",
+      "intro": "Together, we’ll find clothes that are just right for you—instead of making bad purchases and feeling frustrated. You’ll get honest, stylish guidance while shopping, tailored to your everyday life, your body type, and your personal style.",
       "meta": "2–4 hours / R$ 1,100 + R$ 480 per additional hour",
       "listLabel": "My service includes:",
       "listItem1": "a curated selection tailored to your daily routine",
@@ -184,7 +186,7 @@
     "individualConsultation": {
       "eyebrow": "Individual Style Consulting",
       "title": "Individual Style Consulting",
-      "intro": "We develop your personal style based on your personality, life stage, and body type.",
+      "intro": "We'll help you develop your personal style based on your personality, lifestyle, and body type. You'll understand what truly defines you—and how to express that through your clothing.",
       "meta": "Custom tailored",
       "listLabel": "The focus is on:",
       "listItem1": "your expression, posture, and well-being",

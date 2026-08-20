@@ -65,7 +65,9 @@
     "title": "Paula Sevarolli Consultoria de estilo",
     "description": "Clareza, segurança e um estilo que realmente combina com você.",
     "aboutTitle": "O que é consultoria de estilo?",
-    "aboutText": "A consultoria de estilo é um processo pessoal e sensível, em que buscamos juntos um caminho para uma expressão autêntica. Olhamos para a sua personalidade, fase da vida, cores e contexto do seu cotidiano para criar algo que realmente seja seu.",
+    "aboutText1": "Eu te ajudo a montar um guarda-roupa que seja autêntico e versátil, e que te acompanhe em todas as fases da vida. Minha abordagem se concentra em expressar a identidade interior de cada cliente por meio de suas roupas, em vez de me basear em regras da moda.",
+    "aboutText2": "Eu te ajudo a superar as transições da vida — como uma nova profissão, a maternidade ou a mudança para um novo país —, adaptando sua aparência à pessoa que você é no momento.",
+    "aboutText3": "Juntas, escolhemos cores, tecidos e cortes que realçam sua visão pessoal de estilo e, ao mesmo tempo, montamos um guarda-roupa que seja prático, harmonioso e duradouro.",
     "servicesTitle": "Serviços"
   },
   "atelier": {
@@ -157,7 +159,7 @@
     "wardrobeReset": {
       "eyebrow": "Reset de guarda-roupa",
       "title": "Reset de guarda-roupa",
-      "intro": "Juntos, criamos mais clareza no guarda-roupa e mais leveza no seu dia a dia.",
+      "intro": "Vamos organizar juntos o seu guarda-roupa e trazer clareza. Você vai ficar apenas com o que realmente combina com a sua vida atual, o seu estilo e o seu corpo – todo o resto pode ir embora. Para ter mais leveza e organização no dia a dia.",
       "meta": "Cerca de 3 horas / 250€",
       "listLabel": "Eu te acompanho em:",
       "listItem1": "a organização por cor, forma e função",
@@ -166,7 +168,7 @@
     "colorConsultation": {
       "eyebrow": "Consultoria de cores",
       "title": "Consultoria de cores",
-      "intro": "Encontramos as cores que fazem você parecer mais fresca, viva e autêntica.",
+      "intro": "Encontramos as cores que combinam com você, fazendo com que pareça revigorada, cheia de vida e autêntica. Você aprenderá quais nuances realçam seu charme natural – para ter mais confiança na hora de comprar e combinar roupas.",
       "meta": "Cerca de 1,5 horas / 150€",
       "listLabel": "O resultado é:",
       "listItem1": "mais segurança ao comprar e combinar peças",
@@ -175,7 +177,7 @@
     "personalShopping": {
       "eyebrow": "Personal shopper & styling",
       "title": "Personal shopper & styling",
-      "intro": "Juntos, encontramos peças que realmente combinam com você – sem frustração nem erros de compra.",
+      "intro": "Juntos, vamos encontrar roupas que combinem perfeitamente com você – em vez de compras erradas e frustrações. Você terá um acompanhamento sincero e cheio de estilo durante as compras, adaptado ao seu dia a dia, ao seu corpo e ao seu estilo.",
       "meta": "2–4 horas / 180€ + 80€ por hora adicional",
       "listLabel": "Meu acompanhamento inclui:",
       "listItem1": "uma seleção objetiva, adequada ao seu cotidiano",
@@ -184,7 +186,7 @@
     "individualConsultation": {
       "eyebrow": "Consultoria de estilo individual",
       "title": "Consultoria de estilo individual",
-      "intro": "Desenvolvemos seu estilo pessoal com base na sua personalidade, fase da vida e silhueta.",
+      "intro": "Desenvolvemos seu estilo pessoal com base na sua personalidade, no seu estilo de vida e no seu tipo físico. Você vai entender o que realmente define quem você é – e como expressar isso por meio das roupas.",
       "meta": "Personalizado",
       "listLabel": "O foco está em:",
       "listItem1": "sua expressão, postura e bem-estar",
