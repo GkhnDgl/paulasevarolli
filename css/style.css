@@ -1896,7 +1896,7 @@ html:has(body.fixed-image-layout) {
 
   .contact-submit,
   .contact-back {
-    justify-content: center;
+    justify-content: left;
     width: 100%;
     box-sizing: border-box;
   }
