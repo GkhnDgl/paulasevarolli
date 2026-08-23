@@ -155,6 +155,7 @@
   },
   "servicePages": {
     "cta": "Marcar um horário",
+    "moreLabel": "Saiba mais",
     "back": "Voltar para a consultoria de estilo",
     "wardrobeReset": {
       "eyebrow": "Reset de guarda-roupa",
@@ -163,7 +164,8 @@
       "meta": "Cerca de 3 horas / 250€",
       "listLabel": "Eu te acompanho em:",
       "listItem1": "a organização por cor, forma e função",
-      "listItem2": "o desenvolvimento de um visual prático e pessoal"
+      "listItem2": "o desenvolvimento de um visual prático e pessoal",
+      "moreText": "Texto provisório: analisamos seu guarda-roupa atual, criamos primeiras combinações e identificamos o que apoia sua rotina."
     },
     "colorConsultation": {
       "eyebrow": "Consultoria de cores",
@@ -172,7 +174,8 @@
       "meta": "Cerca de 1,5 horas / 150€",
       "listLabel": "O resultado é:",
       "listItem1": "mais segurança ao comprar e combinar peças",
-      "listItem2": "uma visão mais clara do seu universo de cores"
+      "listItem2": "uma visão mais clara do seu universo de cores",
+      "moreText": "Texto provisório: testamos famílias de cores e reunimos anotações para orientar suas escolhas ao se vestir e fazer compras."
     },
     "personalShopping": {
       "eyebrow": "Personal shopper & styling",
@@ -181,7 +184,8 @@
       "meta": "2–4 horas / 180€ + 80€ por hora adicional",
       "listLabel": "Meu acompanhamento inclui:",
       "listItem1": "uma seleção objetiva, adequada ao seu cotidiano",
-      "listItem2": "sugestões de combinações com mais segurança"
+      "listItem2": "sugestões de combinações com mais segurança",
+      "moreText": "Texto provisório: alinhamos ocasião, desejos e orçamento antes de criar uma seleção pessoal para sua rotina."
     },
     "individualConsultation": {
       "eyebrow": "Consultoria de estilo individual",
@@ -190,7 +194,8 @@
       "meta": "Personalizado",
       "listLabel": "O foco está em:",
       "listItem1": "sua expressão, postura e bem-estar",
-      "listItem2": "uma estratégia clara para o seu cotidiano e guarda-roupa"
+      "listItem2": "uma estratégia clara para o seu cotidiano e guarda-roupa",
+      "moreText": "Texto provisório: conectamos sua personalidade a silhuetas, materiais e fórmulas de looks que fazem sentido para você."
     }
   },
   "contact": {
