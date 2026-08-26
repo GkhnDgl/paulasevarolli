@@ -59,6 +59,9 @@
   --divider-soft: rgba(88, 86, 87, 0.3);
   --dot-muted: rgba(88, 86, 87, 0.25);
   --dot-active-glow: rgba(88, 86, 87, 0.4);
+
+  /* Animationsdauer für die Bildrotation (Stilberatung) */
+  /* --rotation-transition: 2.0s; */
 }
 
 /* ==========================================================================
@@ -680,7 +683,7 @@ footer {
 }
 
 .landing-half.stilberatung {
-  background-image: url('../images/stilberatung.jpg');
+  background-image: url('../images/stilberatung01.jpg');
 }
 
 .landing-half.atelier {
@@ -1095,18 +1098,36 @@ footer {
   overflow: hidden;
   flex-shrink: 0;
 }
+.chapter-image-container-rotation {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.chapter-image-track {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+  /* Die Transition wird jetzt dynamic in JS gesteuert, damit das Zurückspringen lautlos erfolgt */
+}
 
 .chapter-image {
+  /* Bild nimmt exakt 100% des elterlichen Rahmens (.chapter-image-container) ein */
   width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   height: 100%;
+  flex-shrink: 0;
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: transform 0.8s ease;
 }
 
-.chapter:hover .chapter-image {
-  transform: scale(1.03);
+/* Hover: Rotation kurz pausieren (über JS realisiert) */
+.chapter-image-container.paused .chapter-image-track {
+  transition-duration: 0s;
 }
 
 /* Rechts: Text - weißer Hintergrund */
