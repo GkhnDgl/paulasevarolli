@@ -933,7 +933,7 @@ footer {
     flex-direction: column;
     padding: 0 24px 24px;
     overflow-y: auto;
-    background: #fffdfd;
+    background: var(--bg-content-white);
     -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
     border-left: 1px solid rgba(88, 86, 87, 0.14);
@@ -954,12 +954,16 @@ footer {
   }
 
   .mobile-drawer-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 44px;
     margin: 0 -24px;
     padding: 6px 24px;
+    background: var(--bg-content-white);
     border-bottom: 1px solid rgba(88, 86, 87, 0.14);
   }
 
