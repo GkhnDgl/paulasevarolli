@@ -60,6 +60,10 @@
   --dot-muted: rgba(88, 86, 87, 0.25);
   --dot-active-glow: rgba(88, 86, 87, 0.4);
 
+  --chapter-image-width: 40vw;
+  --chapter-content-width: 60vw;
+  --chapter-image-height: 100vh;
+
   /* Animationsdauer für die Bildrotation (Stilberatung) */
   /* --rotation-transition: 2.0s; */
 }
@@ -1092,15 +1096,15 @@ footer {
 
 /* Links: Bild  */
 .chapter-image-container {
-  width: 40%;
-  height: 100%;
+  width: var(--chapter-image-width);
+  height: var(--chapter-image-height);
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
 .chapter-image-container-rotation {
-  width: 40%;
-  height: 100%;
+  width: var(--chapter-image-width);
+  height: var(--chapter-image-height);
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
@@ -1132,7 +1136,7 @@ footer {
 
 /* Rechts: Text - weißer Hintergrund */
 .chapter-content {
-  width: 60%;
+  width: var(--chapter-content-width);
   height: 100%;
   background: var(--bg-content-white);
   display: flex;
@@ -1342,28 +1346,28 @@ html:has(body.fixed-image-layout) {
   position: fixed;
   top: 0;
   left: 0;
-  width: 40%;
-  height: 100vh;
+  width: var(--chapter-image-width);
+  height: var(--chapter-image-height);
   z-index: 1;
 }
 
 .fixed-image-layout .chapter-content {
-  margin: 0 0 0 40%;
-  width: 60%;
+  margin: 0 0 0 var(--chapter-image-width);
+  width: var(--chapter-content-width);
   height: auto;
   min-height: 100vh;
 }
 
 .fixed-image-layout .page-section {
-  margin: 0 0 0 40%;
+  margin: 0 0 0 var(--chapter-image-width);
   max-width: none;
-  width: 60%;
+  width: var(--chapter-content-width);
   scroll-snap-align: start;
 }
 
 .fixed-image-layout footer {
-  margin: 0 0 0 40%;
-  width: 60%;
+  margin: 0 0 0 var(--chapter-image-width);
+  width: var(--chapter-content-width);
   scroll-snap-align: start;
 }
 
