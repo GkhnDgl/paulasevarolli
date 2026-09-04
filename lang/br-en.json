@@ -165,7 +165,20 @@
       "listLabel": "I guide you through:",
       "listItem1": "organizing by color, fit, and function",
       "listItem2": "developing a practical, personal wardrobe",
-      "moreText": "Placeholder text: we review your current wardrobe, create first outfit combinations, and identify what supports your routine."
+      "detailIntro": "For anyone who wants more clarity, order, and ease in their wardrobe.",
+      "detailText1": "Perhaps you know the feeling: your wardrobe is full, yet you feel you have nothing to wear. Between unworn clothes, bad purchases, pieces saved for someday, and old favorites, it is hard to see the bigger picture.",
+      "detailText2": "This is where we begin. We look at your wardrobe piece by piece and decide honestly and without pressure what stays, what can be altered or newly combined, and what you want to let go of.",
+      "detailText3": "We consider your taste, but especially your current life, daily routine, body, and personal style.",
+      "detailText4": "Together, we optimize your wardrobe, find the right proportions between tops and bottoms, and reorganize everything so all pieces are visible and practical.",
+      "detailListLabel": "We ask questions such as:",
+      "detailList1": "What do you really enjoy wearing regularly?",
+      "detailList2": "Which clothes suit your current daily life?",
+      "detailList3": "What suits you and makes you feel comfortable?",
+      "detailList4": "Which pieces can be combined?",
+      "detailList5": "Which important basics might be missing?",
+      "detailList6": "Which clothes stay only because you do not want to part with them?",
+      "detailText5": "You receive an honest, appreciative outside perspective. The aim is to shop more consciously and shorten your mornings in front of the mirror. Your wardrobe should become clearer, more cohesive, and practical.",
+      "moreText": ""
     },
     "colorConsultation": {
       "eyebrow": "Color Analysis",
@@ -175,7 +188,18 @@
       "listLabel": "The result is:",
       "listItem1": "more confidence when shopping and pairing outfits",
       "listItem2": "a clearer understanding of your personal color palette",
-      "moreText": "Placeholder text: we explore color families and gather notes to guide your choices when dressing and shopping."
+      "detailIntro": "Discover the colors that enhance your natural radiance.",
+      "detailText1": "Colors strongly influence our look. We are all born with a personal combination of skin, hair, eyelash, eyebrow, and lip colors. Clothing, makeup, accessories, and hair colors should harmonize with it.",
+      "detailText2": "The right shades even out your skin, highlight your eyes, and create a rested, youthful appearance. Others can make you look pale, emphasize dark circles, and make you look tired.",
+      "detailText3": "In the personal analysis, we identify temperature, contrast, and intensity and find the palette that harmonizes best with you.",
+      "detailText4": "You receive your personal 12-season color palette in print as practical guidance for shopping and building your wardrobe.",
+      "detailListLabel": "Your palette includes recommendations for:",
+      "detailList1": "clothing",
+      "detailList2": "makeup",
+      "detailList3": "hair colors",
+      "detailList4": "accessories",
+      "detailText5": "Your key colors are always at hand. You learn to choose and combine them consciously and see which garments make the biggest difference. No rigid rules, only better awareness.",
+      "moreText": ""
     },
     "personalShopping": {
       "eyebrow": "Personal Shopping & Styling",
@@ -185,7 +209,17 @@
       "listLabel": "My service includes:",
       "listItem1": "a curated selection tailored to your daily routine",
       "listItem2": "styling tips for confident outfit combinations",
-      "moreText": "Placeholder text: we clarify occasion, wishes, and budget before creating a personal selection for your routine."
+      "detailIntro": "Shop with purpose instead of searching for hours and still finding nothing suitable.",
+      "detailText1": "Shopping can be fun, but also tiring and frustrating. Too many options, different cuts, trends, and the question “Does this really suit me?” make decisions difficult.",
+      "detailText2": "With Personal Shopping, I accompany you and help you find clothes that truly fit your life, style, figure, wishes, and budget.",
+      "detailText3": "The goal is not to buy many clothes, but to shop consciously and find key pieces that complement your wardrobe and combine well.",
+      "detailListLabel": "For example, I show you:",
+      "detailList1": "which cuts support your proportions,",
+      "detailList2": "which materials and silhouettes suit you,",
+      "detailList3": "how to combine individual garments,",
+      "detailList4": "which pieces you should avoid.",
+      "detailText4": "I show you how to recognize good materials and construction and when to invest. You do not need to force yourself into trends. Your style should follow you. The aim is a comfortable wardrobe that fits your life and offers easy outfit options.",
+      "moreText": ""
     },
     "individualConsultation": {
       "eyebrow": "Individual Style Consulting",
@@ -195,7 +229,20 @@
       "listLabel": "The focus is on:",
       "listItem1": "your expression, posture, and well-being",
       "listItem2": "a clear strategy for your wardrobe and routine",
-      "moreText": "Placeholder text: we connect your personality with silhouettes, materials, and outfit formulas that feel natural to wear."
+      "detailIntro": "Our appearance is an important form of communication, even when we do not notice it.",
+      "detailText1": "Before we speak, our appearance communicates seriousness, professionalism, personality, accessibility, authority, and lifestyle.",
+      "detailText2": "Dressing well goes beyond trends and beautiful clothes. The image we convey may not reflect who we are, our personality, daily life, or current stage of life. Style must make sense, be practical and functional, and reflect your identity.",
+      "detailText3": "Developing a style concept is a process of self-awareness and analysis. We understand your preferences, needs, goals, priorities, and daily life and turn them into a coherent, authentic, strategic appearance.",
+      "detailText4": "The goal is clarity and independence, so you know not only what to wear, but why certain choices work for you.",
+      "detailListLabel": "During the consultation, you will:",
+      "detailList1": "understand the image you want to convey,",
+      "detailList2": "discover colors that highlight your beauty,",
+      "detailList3": "learn to choose cuts and fits for your body,",
+      "detailList4": "build a cohesive, versatile, functional wardrobe,",
+      "detailList5": "receive tools for conscious, confident shopping.",
+      "detailText5": "Individual style consulting is a comprehensive process including services such as personal color analysis, wardrobe analysis, and Personal Shopping.",
+      "detailText6": "We develop an exclusive style concept based on your personality, daily life, goals, and preferences. The consultation changes not only your wardrobe, but also your relationship with it, so your appearance aligns with who you are.",
+      "moreText": ""
     }
   },
   "contact": {

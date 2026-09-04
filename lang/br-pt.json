@@ -55,7 +55,7 @@
       "title": "Personal Shopper & Styling",
       "text": "Juntas encontramos peças que realmente funcionam para você – sem compras por impulso ou dúvidas."
     },
-    "individualConsultation": {
+    "wardrobeReset": {
       "title": "Consultoria de Estilo Individual",
       "text": "Um acompanhamento personalizado para criar um estilo que reflita sua essência."
     }
@@ -165,7 +165,20 @@
       "listLabel": "Eu te acompanho em:",
       "listItem1": "a organização por cor, forma e função",
       "listItem2": "o desenvolvimento de um visual prático e pessoal",
-      "moreText": "Texto provisório: analisamos seu guarda-roupa, criamos primeiras combinações e identificamos o que apoia sua rotina."
+      "detailIntro": "Para quem deseja mais clareza, organização e leveza no guarda-roupa.",
+      "detailText1": "Talvez você conheça a sensação: o guarda-roupa está cheio, mas parece que você não tem nada para vestir. Entre peças esquecidas, compras erradas, roupas guardadas para algum dia e antigos favoritos, falta visão geral.",
+      "detailText2": "É aí que começamos juntas. Analisamos seu guarda-roupa peça por peça e decidimos, com honestidade e sem pressão, o que fica, o que pode ser transformado ou combinado de outra forma e do que você quer se despedir.",
+      "detailText3": "Consideramos seu gosto, mas principalmente sua vida atual, sua rotina, seu corpo e seu estilo pessoal.",
+      "detailText4": "Otimizamos o guarda-roupa, encontramos as proporções certas entre partes de cima e de baixo e reorganizamos tudo para que as peças fiquem visíveis e práticas.",
+      "detailListLabel": "Perguntamos, por exemplo:",
+      "detailList1": "O que você realmente gosta de usar regularmente?",
+      "detailList2": "O que combina com sua rotina atual?",
+      "detailList3": "O que valoriza você e em que se sente bem?",
+      "detailList4": "Quais peças combinam entre si?",
+      "detailList5": "Quais básicos importantes estão faltando?",
+      "detailList6": "Quais roupas ficam no armário porque você não quer se desfazer delas?",
+      "detailText5": "Você recebe um olhar externo honesto e acolhedor. A ideia é comprar com mais consciência e reduzir o tempo diante do espelho. Ao final, seu guarda-roupa estará mais claro, coerente e funcional.",
+      "moreText": ""
     },
     "colorConsultation": {
       "eyebrow": "Consultoria de cores",
@@ -175,7 +188,18 @@
       "listLabel": "O resultado é:",
       "listItem1": "mais segurança ao comprar e combinar peças",
       "listItem2": "uma visão mais clara do seu universo de cores",
-      "moreText": "Texto provisório: testamos famílias de cores e reunimos orientações para suas escolhas ao se vestir e fazer compras."
+      "detailIntro": "Descubra as cores que realçam sua beleza natural.",
+      "detailText1": "As cores influenciam fortemente nosso visual. Cada pessoa nasce com uma combinação própria de tom de pele, cabelo, cílios, sobrancelhas e lábios. Roupas, maquiagem, acessórios e cabelos devem harmonizar com ela.",
+      "detailText2": "Os tons certos uniformizam a pele, destacam os olhos e dão aparência descansada e jovem. Outros podem deixar você pálida, acentuar olheiras e transmitir cansaço.",
+      "detailText3": "Na análise pessoal, identificamos temperatura, contraste e intensidade das suas cores e descobrimos qual paleta combina melhor com você.",
+      "detailText4": "Ao final, você recebe sua paleta pessoal de 12 estações impressa, como orientação para compras e para montar sua coleção.",
+      "detailListLabel": "Sua paleta traz recomendações para:",
+      "detailList1": "roupas",
+      "detailList2": "maquiagem",
+      "detailList3": "cores de cabelo",
+      "detailList4": "acessórios",
+      "detailText5": "Suas cores ficam sempre à mão. Você aprende a escolhê-las e combiná-las e percebe em quais peças elas fazem a maior diferença. Não há regras rígidas, apenas escolhas conscientes.",
+      "moreText": ""
     },
     "personalShopping": {
       "eyebrow": "Personal shopper & styling",
@@ -185,7 +209,17 @@
       "listLabel": "Meu acompanhamento inclui:",
       "listItem1": "uma seleção objetiva, adequada ao seu cotidiano",
       "listItem2": "sugestões de combinações com mais segurança",
-      "moreText": "Texto provisório: alinhamos ocasião, desejos e orçamento antes de criar uma seleção pessoal para sua rotina."
+      "detailIntro": "Compre de forma objetiva, em vez de procurar por horas e ainda não encontrar nada adequado.",
+      "detailText1": "Fazer compras pode ser divertido, mas também cansativo e frustrante. Muitas opções, cortes, tendências e a dúvida “Será que isso fica bem em mim?” dificultam as decisões.",
+      "detailText2": "No Personal Shopping, acompanho você e ajudo a encontrar roupas que combinam com você. Antes da compra, consideramos sua rotina, estilo, corpo, desejos e orçamento.",
+      "detailText3": "Não se trata de comprar muitas peças, mas de comprar com consciência e procurar peças-chave que complementem seu guarda-roupa e combinem entre si.",
+      "detailListLabel": "Eu mostro, por exemplo:",
+      "detailList1": "quais cortes valorizam suas proporções,",
+      "detailList2": "quais materiais e silhuetas combinam com você,",
+      "detailList3": "como combinar peças individuais,",
+      "detailList4": "e de quais peças é melhor manter distância.",
+      "detailText4": "Você aprende a reconhecer bons materiais e acabamentos e quando investir ou economizar. Não precisa usar algo só porque está na moda. Seu estilo deve acompanhar você. O objetivo é um guarda-roupa confortável, adequado à sua vida e cheio de combinações fáceis.",
+      "moreText": ""
     },
     "individualConsultation": {
       "eyebrow": "Consultoria de estilo individual",
@@ -195,7 +229,20 @@
       "listLabel": "O foco está em:",
       "listItem1": "sua expressão, postura e bem-estar",
       "listItem2": "uma estratégia clara para o seu cotidiano e guarda-roupa",
-      "moreText": "Texto provisório: conectamos sua personalidade a silhuetas, materiais e fórmulas de looks autênticas e fáceis de usar."
+      "detailIntro": "Nossa aparência é uma importante forma de comunicação, mesmo quando não percebemos.",
+      "detailText1": "Antes de falarmos, nossa aparência transmite mensagens sobre seriedade, profissionalismo, personalidade, acessibilidade, autoridade e estilo de vida.",
+      "detailText2": "Vestir-se bem vai além de tendências e peças bonitas. A imagem transmitida pode não corresponder a quem somos, à nossa rotina ou fase da vida. O estilo precisa fazer sentido, ser prático e funcional e refletir sua identidade.",
+      "detailText3": "Desenvolver um conceito de estilo é um processo de autoconhecimento e análise: entendemos suas preferências, necessidades, objetivos e prioridades e transformamos tudo em uma imagem coerente, autêntica e estratégica.",
+      "detailText4": "O objetivo é criar clareza e autonomia, para que você saiba o que vestir e por que determinadas escolhas funcionam.",
+      "detailListLabel": "Ao longo da consultoria, você irá:",
+      "detailList1": "entender a imagem que deseja transmitir,",
+      "detailList2": "descobrir as cores que realçam sua beleza,",
+      "detailList3": "escolher cortes e caimentos adequados ao seu corpo,",
+      "detailList4": "montar um guarda-roupa coerente, versátil e funcional,",
+      "detailList5": "receber ferramentas para comprar com mais consciência e segurança.",
+      "detailText5": "A consultoria é um processo amplo e individual, que pode incluir análise de cores, análise do guarda-roupa e Personal Shopping.",
+      "detailText6": "Com base no processo, desenvolvemos um conceito exclusivo que considera sua personalidade, rotina, objetivos e preferências. A consultoria transforma também sua relação com o guarda-roupa, para que sua aparência esteja alinhada a quem você é.",
+      "moreText": ""
     }
   },
   "contact": {

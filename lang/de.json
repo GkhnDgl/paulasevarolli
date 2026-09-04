@@ -165,7 +165,20 @@
       "listLabel": "Ich begleite dich dabei bei:",
       "listItem1": "der Sortierung nach Farbe, Form und Funktion",
       "listItem2": "der Entwicklung eines praktischen, persönlichen Looks",
-      "moreText": "Dummy-Text: Wir schauen gemeinsam auf deine aktuelle Garderobe, entwickeln erste Outfit-Ideen und halten fest, was dich im Alltag wirklich unterstützt."
+      "detailIntro": "Für alle, die sich mehr Klarheit, Ordnung und Leichtigkeit im Kleiderschrank wünschen.",
+      "detailText1": "Vielleicht kennst du das Gefühl: Der Kleiderschrank ist voll, aber trotzdem hast du das Gefühl, nichts zum Anziehen zu haben. Zwischen Kleidungsstücken, die du schon lange nicht mehr trägst, Fehlkäufen und Teilen, die du vielleicht irgendwann noch brauchst, sowie alten Lieblingsstücken fehlt oft einfach der Überblick.",
+      "detailText2": "Genau hier setzen wir gemeinsam an. Wir schauen uns deinen Kleiderschrank Stück für Stück an und entscheiden ehrlich und ohne Druck, welche Kleidungsstücke bleiben dürfen, welche verändert oder neu kombiniert werden können und von welchen du dich verabschieden möchtest.",
+      "detailText3": "Dabei berücksichtigen wir nicht nur deinen Geschmack, sondern vor allem dein heutiges Leben, deinen Alltag, deinen Körper und deinen persönlichen Stil.",
+      "detailText4": "Gemeinsam schauen wir, wie dein Kleiderschrank optimiert werden könnte, um die richtigen Proportionen von Ober- und Unterteilen zu finden und eine neue Einordnung vorzunehmen, sodass alle Teile sichtbar und praktisch für den Alltag sind.",
+      "detailListLabel": "Wir stellen uns dabei Fragen wie:",
+      "detailList1": "Was trägst du wirklich gerne und regelmäßig?",
+      "detailList2": "Welche Kleidungsstücke passen zu deinem aktuellen Alltag?",
+      "detailList3": "Was steht dir und worin fühlst du dich wohl?",
+      "detailList4": "Welche Teile lassen sich miteinander kombinieren?",
+      "detailList5": "Wo fehlen dir vielleicht wichtige Basics?",
+      "detailList6": "Welche Kleidungsstücke hängen nur im Schrank, weil du dich nicht von ihnen trennen möchtest?",
+      "detailText5": "Du bekommst dabei einen ehrlichen und wertschätzenden Blick von außen. Es geht darum, bewusster zu kaufen und die Morgen vor dem Spiegel zu verkürzen. Am Ende soll dein Kleiderschrank übersichtlicher, stimmiger und vor allem alltagstauglicher sein.",
+      "moreText": ""
     },
     "colorConsultation": {
       "eyebrow": "Farbberatung",
@@ -175,7 +188,18 @@
       "listLabel": "Das Ergebnis ist:",
       "listItem1": "mehr Sicherheit beim Einkaufen und Kombinieren",
       "listItem2": "ein klarerer Blick auf deine persönliche Farbwelt",
-      "moreText": "Dummy-Text: In ruhiger Atmosphäre probieren wir Farbfamilien aus und sammeln Notizen, die dir später beim Anziehen und Einkaufen Orientierung geben."
+      "detailIntro": "Entdecke die Farben, die deine natürliche Ausstrahlung unterstreichen.",
+      "detailText1": "Farben gehören zu den Elementen, die unseren Look und unser Erscheinungsbild am stärksten beeinflussen. Wir alle werden mit unserer ganz persönlichen Farbkombination geboren: Hautton, Haarfarbe, Wimpern- und Augenbrauenfarbe, Lippenfarbe und so weiter. Und die Farben, die wir für unsere Haut, unser Make-up, unsere Accessoires und unsere Haare wählen, sollten mit diesen harmonieren.",
+      "detailText2": "Die richtigen Nuancen lassen deine Haut ebenmäßiger wirken, betonen deine Augenfarbe und verleihen dir ein ausgeruhtes und jugendliches Aussehen. Andere Farben hingegen können dich blass wirken lassen, Augenringe verstärken und dir ein müdes Aussehen verleihen.",
+      "detailText3": "Bei der persönlichen Farbanalyse konzentrieren wir uns darauf, die Eigenschaften dieser Farben in Bezug auf Temperatur (kühlere oder wärmere Töne), Kontrast (hoch, mittel oder niedrig) und Intensität (lebhafter oder matter) zu ermitteln. Mit diesen Informationen finden wir heraus, welche Farbpalette am harmonischsten zu dir passt.",
+      "detailText4": "Am Ende der Beratung erhältst du deine persönliche 12-Jahreszeiten-Farbpalette als Ausdruck. Sie dient dir als praktische Orientierung beim Einkaufen und beim Zusammenstellen deiner Garderobe.",
+      "detailListLabel": "Deine individuelle Palette enthält Empfehlungen für:",
+      "detailList1": "Kleidung",
+      "detailList2": "Make-up",
+      "detailList3": "Haarfarben",
+      "detailList4": "Accessoires",
+      "detailText5": "So hast du deine wichtigsten Farben jederzeit griffbereit und kannst beim Shoppen schnell erkennen, welche Nuancen dir besonders gut stehen. Die Farbberatung gibt dir keine starren Regeln vor. Vielmehr lernst du, deine Farben bewusst auszuwählen, sie miteinander zu kombinieren und zu erkennen, bei welchen Kleidungsstücken sie den größten Unterschied in deinem Look bewirken.",
+      "moreText": ""
     },
     "personalShopping": {
       "eyebrow": "Personal Shopper & Styling",
@@ -185,7 +209,18 @@
       "listLabel": "Meine Begleitung umfasst:",
       "listItem1": "eine gezielte Auswahl passend zu deinem Alltag",
       "listItem2": "stilvolle Tipps für Kombinationen und Einkaufssicherheit",
-      "moreText": "Dummy-Text: Vor dem Termin klären wir Anlass, Wünsche und Budget. Danach entsteht eine persönliche Auswahl, die du direkt in deinen Alltag übersetzen kannst."
+      "detailIntro": "Gezielt einkaufen, statt stundenlang zu suchen und am Ende trotzdem nichts Passendes zu finden.",
+      "detailText1": "Shopping kann Spaß machen – aber manchmal kann es auch anstrengend und frustrierend sein. Zu viele Möglichkeiten, unterschiedliche Schnitte, wechselnde Trends und die Frage: „Steht mir das wirklich?“ machen es oft schwer, die richtigen Entscheidungen zu treffen.",
+      "detailText2": "Beim Personal Shopping begleite ich dich persönlich und unterstütze dich dabei, Kleidung zu finden, die wirklich zu dir passt. Vor unserem gemeinsamen Einkauf schauen wir uns an, was du brauchst und was zu deinem Alltag passt. Wir berücksichtigen deinen persönlichen Stil, deine Figur, deine Wünsche und natürlich auch dein Budget.",
+      "detailText3": "Beim Einkaufen geht es nicht darum, möglichst viele Kleidungsstücke zu kaufen. Im Gegenteil: Es geht darum, bewusster einzukaufen und nach Schlüsselstücken zu suchen, die deine Garderobe sinnvoll ergänzen und sich gut miteinander kombinieren lassen.",
+      "detailText4": "Ich zeige dir, wie du gute Materialien und Verarbeitungen erkennst und wie du unterscheiden kannst, bei welchen Kleidungsstücken sich eine größere Investition lohnt und bei welchen wir sparen sollten.",
+      "detailListLabel": "Ich zeige dir beispielsweise:",
+      "detailList1": "welche Schnitte deine Proportionen harmonisch unterstützen,",
+      "detailList2": "welche Materialien und Silhouetten zu dir passen,",
+      "detailList3": "wie du einzelne Kleidungsstücke kombinieren kannst,",
+      "detailList4": "und bei welchen Teilen du lieber die Finger lassen solltest.",
+      "detailText5": "Du musst dich dabei nicht verstellen oder in etwas hineinzwängen, nur weil es gerade modern ist. Dein Stil soll sich nach dir richten – nicht umgekehrt. Das Ziel ist eine Garderobe, in der du dich wohlfühlst, die zu deinem Leben passt und die dir möglichst viele unkomplizierte Outfit-Möglichkeiten bietet.",
+      "moreText": ""
     },
     "individualConsultation": {
       "eyebrow": "Individuelle Stilberatung",
@@ -195,7 +230,21 @@
       "listLabel": "Im Fokus stehen:",
       "listItem1": "dein Ausdruck, deine Haltung und dein Wohlgefühl",
       "listItem2": "eine klare Strategie für deinen Alltag und deine Garderobe",
-      "moreText": "Dummy-Text: Wir verbinden deine Persönlichkeit mit konkreten Silhouetten, Materialien und Outfit-Formeln, die sich stimmig und selbstverständlich anfühlen."
+      "detailIntro": "Unser Erscheinungsbild ist – auch wenn wir das oft nicht bemerken – eine wichtige Form der Kommunikation.",
+      "detailText1": "Noch bevor wir das Wort ergreifen, vermittelt unser Aussehen Botschaften und beeinflusst die Art und Weise, wie wir wahrgenommen werden – in Bezug auf unsere Seriosität, Professionalität, Persönlichkeit, Zugänglichkeit, Autorität und sogar unseren Lebensstil.",
+      "detailText2": "Sich gut zu kleiden geht jedoch weit über das Verfolgen von Trends oder die Auswahl schöner Kleidungsstücke hinaus. Oftmals spiegelt das Bild, das wir vermitteln, nicht wider, wer wir wirklich sind, passt nicht zu unserer Persönlichkeit oder entspricht einfach nicht unserem Alltag und der Lebensphase, in der wir uns gerade befinden. Und genau hier gewinnt der Stil an Bedeutung: Er muss für dich Sinn ergeben, praktisch und funktional sein und gleichzeitig deine Identität widerspiegeln.",
+      "detailText3": "Die Entwicklung eines Stilkonzepts ist daher ein Prozess der Selbsterkenntnis und Analyse. Es geht darum, zu verstehen, wer du bist, welche Vorlieben, Bedürfnisse, Ziele und Prioritäten du hast, wie dein Alltag aussieht, und auf dieser Grundlage diese Informationen in ein stimmiges, authentisches und strategisches Erscheinungsbild umzusetzen.",
+      "detailText4": "Das Ziel der Beratung ist es, Klarheit und Selbstständigkeit zu schaffen, damit du am Ende des Prozesses nicht nur weißt, was du anziehen sollst, sondern auch, warum bestimmte Entscheidungen für dich funktionieren.",
+      "detailListLabel": "Im Laufe der Beratung wirst du:",
+      "detailList1": "ein besseres Verständnis dafür entwickeln, welches Image du vermitteln möchtest,",
+      "detailList2": "die Farben entdecken, die deine Schönheit am besten zur Geltung bringen,",
+      "detailList3": "lernen, Schnitte und Passformen auszuwählen, die zu deinem Körper passen,",
+      "detailList4": "eine stimmigere, vielseitigere und funktionalere Garderobe zusammenstellen,",
+      "detailList5": "Werkzeuge für bewussteres und selbstbewussteres Einkaufen erhalten.",
+      "detailText5": "Die Stilberatung ist ein umfassender und individueller Prozess und umfasst alle weiteren Dienstleistungen, die erforderlich sind, um dieses Konzept konsequent umzusetzen, wie beispielsweise eine persönliche Farbanalyse, eine Analyse und Bestandsaufnahme deiner Garderobe sowie Personal Shopping.",
+      "detailText6": "Auf der Grundlage all dessen, was wir im Laufe des Prozesses herausgefunden haben, entwickeln wir ein exklusiv auf dich zugeschnittenes Stilkonzept, das deine Persönlichkeit, deinen Alltag, deine Ziele und deine Vorlieben berücksichtigt. Wir legen die Schnitte, Passformen, Stoffe, Materialien, Farben, Muster, Proportionen und Verarbeitungen fest, die am besten widerspiegeln, wer du bist, und deinem Erscheinungsbild zugutekommen.",
+      "detailText7": "Die Stilberatung zielt nicht nur darauf ab, deine Garderobe zu verändern, sondern vor allem deine Beziehung zu ihr: dich bewusster, selbstbewusster und unbeschwerter zu kleiden, damit dein Erscheinungsbild wirklich mit dir übereinstimmt.",
+      "moreText": ""
     }
   },
   "contact": {
