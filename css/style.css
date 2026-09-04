@@ -927,11 +927,11 @@ footer {
     top: 0;
     right: 0;
     z-index: 220;
-    width: min(88vw, 380px);
+    width: 100vw;
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    padding: 28px 24px 24px;
+    padding: 0 24px 24px;
     overflow-y: auto;
     background: #fffdfd;
     -webkit-backdrop-filter: blur(22px);
@@ -957,20 +957,22 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 26px;
+    min-height: 44px;
+    margin: 0 -24px;
+    padding: 6px 24px;
     border-bottom: 1px solid rgba(88, 86, 87, 0.14);
   }
 
   .mobile-drawer-kicker {
     color: var(--color-primary);
     font-family: var(--font-serif);
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
   }
 
   .mobile-menu-close {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     border: 1px solid rgba(88, 86, 87, 0.2);
     border-radius: 50%;
     color: var(--color-primary);
