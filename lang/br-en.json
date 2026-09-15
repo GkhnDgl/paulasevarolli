@@ -14,110 +14,146 @@
   },
   "hero": {
     "title": "Paula Sevarolli Style Consulting",
-    "subtitle": "Style consulting for real phases of life – so you truly feel like yourself in your clothes.",
+    "subtitle": "Style consulting for real phases of life – so you truly feel at home in your clothes.",
     "contact": "Get in Touch"
   },
   "landing": {
     "eyebrow": "Fashion Design & Style Consulting",
     "title": "Paula Sevarolli",
-    "description": "Choose the right service for you and discover Style Consulting or the Atelier.",
+    "description": "Choose the right service for you and discover Style Consulting or Atelier.",
     "stilberatungTitle": "Style Consulting",
-    "stilberatungText": "Personal guidance towards clarity, self-confidence, and a style that truly fits who you are.",
+    "stilberatungText": "Personal guidance toward greater clarity, self-confidence, and a style that truly fits you.",
     "stilberatungCta": "To Style Consulting",
     "atelierTitle": "Atelier",
-    "atelierText": "Creative guidance surrounding expression, shape, color, and personal style development.",
+    "atelierText": "Creative guidance around expression, form, color, and the development of an individual style.",
     "atelierCta": "To Atelier",
     "aboutTitle": "About the Offerings",
-    "aboutText": "Style Consulting supports you through personal life transitions, while the Atelier provides a creative environment for individual design and expression."
+    "aboutText": "Style Consulting supports you through personal life transitions, while the Atelier offers a creative setting for individual design and expression."
   },
   "about": {
     "eyebrow": "About Me",
     "heading": "About Me",
-    "paragraph1": "I am Paula Sevarolli, stylist and fashion designer with a deep passion for creativity, fashion, and aesthetics. As a Brazilian with Italian roots, I have lived in Brazil, Italy, Germany, and the Czech Republic. These experiences have deeply shaped my perspective on style, culture, and individuality.",
-    "paragraph2": "I completed my Master’s degree in Fashion Design at the IED in Florence, Italy, and further specialized as a style consultant. Over the years, I gained experience across various sectors of the fashion industry. This combination of academic study, hands-on practice, and personal growth defines my work today.",
-    "paragraph3": "As a mother and woman who has navigated life changes, body transformations, and cultural transitions firsthand, I know how closely style is tied to self-image – and how challenging it can be to redefine yourself in certain moments.",
-    "paragraph4": "I work with people going through these exact transitions: after pregnancy, entering a new professional role, or adjusting to a new culture. My approach is deliberately personal and practical – free from rigid rules or short-lived trends.",
-    "paragraph5": "I view fashion as a subtle yet powerful tool for self-expression. A harmonious style is not built on perfection, but on clarity, self-knowledge, and feeling comfortable in your own skin. With a trained eye for colors, cuts, shapes, and proportions, I help you craft an authentic style tailored to your daily life.",
-    "paragraph6": "Whether it is a wardrobe reset, personal shopping, color analysis, or individual style consulting – I am here to guide you toward greater clarity, confidence, and comfort in your style.",
-    "paragraph7": "Because style truly begins when you recognize yourself."
+    "paragraph1": "I am Paula Sevarolli, stylist and fashion designer, with a deep passion for creativity, fashion, and aesthetics. As a Brazilian with Italian roots, I have lived in Brazil, Italy, Germany, and the Czech Republic. These experiences have deeply shaped my perspective on style, culture, and individuality.",
+    "paragraph2": "I completed my Master’s degree in Fashion Design at IED in Florence, Italy, and further specialized as a style consultant. Over the years, I gained experience across various areas of the fashion industry. This combination of education, practical experience, and personal growth defines my work today.",
+    "paragraph3": "As a mother and a woman who has personally experienced different phases of life, body changes, and cultural transitions, I know how closely style is tied to one's sense of well-being – and how challenging it can be to redefine oneself at certain moments.",
+    "paragraph4": "I work with people going through these exact transitions: after pregnancy, when stepping into a new professional role, or adjusting to a new culture. My approach is intentionally personal and grounded in real life – free from rigid rules or short-lived trends.",
+    "paragraph5": "I view fashion as a subtle yet powerful form of self-expression. A harmonious style doesn't stem from perfection, but from clarity, self-knowledge, and feeling comfortable in your own skin. With my trained eye for colors, cuts, shapes, and proportions, I help you develop an authentic style that truly fits your everyday life. It is not about following trends, but about knowing yourself better and projecting that expression outward.",
+    "paragraph6": "Whether it is a Wardrobe Reset, Personal Shopping, Color Analysis, or Individual Style Consulting – I accompany you on your journey toward greater clarity, confidence, and ease in your personal style.",
+    "paragraph7": "Because true style begins where you recognize yourself."
   },
   "services": {
     "heading": "Services",
     "wardrobeReset": {
       "title": "Wardrobe Reset",
-      "text": "More organization, ease, and a sense of style aligned with your everyday life."
+      "text": "More organization, lightness, and a sense of style that fits your everyday life."
     },
     "colorConsultation": {
       "title": "Color Analysis",
-      "text": "Discover your flattering personal colors and enhance your natural glow with intention."
+      "text": "Discover your unique colors and consciously enhance your natural radiance."
     },
     "personalShopping": {
-      "title": "Personal Shopping & Styling",
-      "text": "Together we find pieces that truly work for you – without regret or second thoughts."
+      "title": "Personal Shopper & Styling",
+      "text": "Together we find pieces that truly accompany you – without impulse buys or doubts."
     },
     "individualConsultation": {
       "title": "Individual Style Consulting",
-      "text": "Personalized guidance to build a style that reflects your authentic personality."
+      "text": "Personal guidance to build a style that brings out your personality."
     }
   },
   "stilberatungPage": {
     "eyebrow": "Style Consulting",
     "title": "Paula Sevarolli Style Consulting",
-    "description": "Clarity, confidence, and a sense of style that truly suits you.",
+    "description": "Clarity, self-confidence, and a sense of style that truly fits you.",
     "aboutTitle": "What is Style Consulting?",
-    "aboutText1": "I’ll help you put together a wardrobe that’s authentic and versatile and supports you through every stage of life. My approach focuses on expressing each client’s inner identity through her clothing, rather than relying on fashion rules.",
-    "aboutText2": "I’ll help you navigate life transitions—such as a new career, motherhood, or moving to a new country—by tailoring your look to who you are right now.",
-    "aboutText3": "Together, we’ll select colors, fabrics, and cuts that highlight your personal style vision, while building a wardrobe that’s practical, cohesive, and long-lasting.",
+    "aboutText1": "I guide you in curating a wardrobe that is authentic, versatile, and supportive through every stage of life. My approach focuses on expressing each client's inner identity through clothing, rather than relying on strict fashion rules.",
+    "aboutText2": "I help you navigate life transitions – such as a new career, motherhood, or moving to a new country – by aligning your appearance with who you are right now.",
+    "aboutText3": "Together we select colors, fabrics, and cuts that enhance your personal style vision while building a wardrobe that is practical, cohesive, and long-lasting.",
     "servicesTitle": "Services"
   },
   "atelier": {
     "eyebrow": "Atelier",
     "title": "Paula Sevarolli Atelier",
-    "description": "Design, consulting, and creative direction around style and self-expression.",
-    "aboutTitle": "About the Atelier",
-    "aboutText1": "The Atelier stands for creative style consulting, personalized guidance, and a keen eye for shape, color, and expression.",
-    "aboutText2": "Here we craft tailored solutions for individuals who wish to present themselves with confidence and intent.",
+    "description": "Design, consulting, and creative guidance around style and expression.",
+    "aboutTitle": "About",
+    "aboutText1": "The Atelier stands for creative style consulting, individual guidance, and a sensitive eye for shape, color, and expression.",
+    "aboutText2": "Here, custom solutions are created for individuals who wish to present themselves consciously and authentically.",
     "servicesTitle": "Services",
     "service1Title": "Individual Style Consulting",
-    "service1Text": "A path tailored to your personality for greater clarity and self-assurance.",
-    "priceListTitle": "Tailoring & Alterations Price List",
+    "service1Text": "A personalized pathway aligned with your personality for greater clarity and confidence.",
+    "priceListTitle": "Alterations Price List",
     "priceTableHeadService": "Service",
     "priceTableHeadPrice": "Price",
     "priceItems": [
-      { "name": "Hemming trousers (plain)", "price": "from R$ 90" },
-      { "name": "Hemming trousers (with cuff)", "price": "from R$ 120" },
-      { "name": "Taking in or letting out trouser waist", "price": "from R$ 110" },
-      { "name": "Shortening dress length", "price": "from R$ 150" },
-      { "name": "Taking in or letting out dress", "price": "from R$ 180" },
-      { "name": "Hemming skirt", "price": "from R$ 90" },
-      { "name": "Replacing zipper", "price": "from R$ 120" },
-      { "name": "Shortening sleeves (blazer, jacket, coat)", "price": "from R$ 135" },
-      { "name": "Tailoring suit jacket or blazer", "price": "from R$ 210" },
-      { "name": "Adjusting button or buttonhole", "price": "from R$ 50" },
-      { "name": "Custom alterations upon request", "price": "upon request" },
-      { "name": "On-site fitting & consultation", "price": "free" }
+      {
+        "name": "Trouser hem shortening (without cuff)",
+        "price": "from R$ 90"
+      },
+      {
+        "name": "Trouser hem shortening (with cuff)",
+        "price": "from R$ 120"
+      },
+      {
+        "name": "Trouser waistband adjustment (in or out)",
+        "price": "from R$ 110"
+      },
+      {
+        "name": "Dress shortening",
+        "price": "from R$ 150"
+      },
+      {
+        "name": "Dress adjustment (in or out)",
+        "price": "from R$ 180"
+      },
+      {
+        "name": "Skirt hem shortening",
+        "price": "from R$ 90"
+      },
+      {
+        "name": "Zipper replacement",
+        "price": "from R$ 120"
+      },
+      {
+        "name": "Sleeve shortening (blazer, jacket, coat)",
+        "price": "from R$ 135"
+      },
+      {
+        "name": "Jacket or blazer waist adjustment",
+        "price": "from R$ 210"
+      },
+      {
+        "name": "Button or buttonhole adjustment",
+        "price": "from R$ 50"
+      },
+      {
+        "name": "Custom alterations upon request",
+        "price": "upon request"
+      },
+      {
+        "name": "On-site fitting & consultation",
+        "price": "free"
+      }
     ],
-    "priceListNote": "All prices are estimates and may vary based on garment complexity and fabric."
+    "priceListNote": "All prices are estimates and may vary depending on effort and materials."
   },
   "shop": {
     "title": "Shop",
-    "headline": "The shop is coming soon",
-    "message": "Something special is currently taking shape – a curated place for intentional pieces, creative inspiration, and a style that grows with you."
+    "headline": "The shop is currently under creation",
+    "message": "Something special is coming soon – a place for conscious pieces, creative inspiration, and style that grows with you. For now, not everything is visible yet, but the spark is already there."
   },
   "reviewsPage": {
     "title": "Reviews",
     "headline": "Voices that speak for themselves",
-    "message": "Every consultation is unique – hear from clients about how their journey toward a more confident style felt.",
+    "message": "Every consultation is unique – here clients share how their journey toward a more cohesive, confident style felt.",
     "readMore": "Read more",
     "readMoreAria": "Read full review text",
     "reviews": [
       {
-        "text": "“When I founded my law firm, I realized my appearance could convey my value before I even spoke about my work. Paula helped me balance professional formality with my personal essence. She created a strategy based on who I am and what I wanted to communicate, rather than just following trends. I learned far more than just colors or combinations: I learned to recognize the subtle message behind every choice.”",
+        "text": "“When I started my law firm, I realized that my image could help me convey value even before I had the chance to talk about my work. The consulting firm helped me find a balance between the formality of the legal profession and my own personality, so that I could convey professionalism while still feeling comfortable in what I wore. Paula knew how to build a strategy based on who I was and the message I wanted to convey, rather than simply following trends. More than just learning about colors, pieces, or combinations, I learned to recognize the implicit messages behind each choice and to use them intentionally. It was a process that transformed not only how people perceived me, but also how I saw myself—and it’s a lesson I carry with me to this day.”",
         "author": "Deise Cordeiro",
         "service": "Individual Style Consulting"
       },
       {
-        "text": "“The style advice Paula provided to my former husband was invaluable. She helped us show him that relaxed style has its place, but at the right moments. Over time, we invested in timeless pieces that elevated his elegance.”",
+        "text": "“The advice Paula gave my then-husband was extremely important. Thanks to her, we were able to help him understand that a laid-back, casual style has its time and place. Over time, we were able to invest in timeless pieces that elevated the end client’s sense of style and elegance.”",
         "author": "Natany Gomes",
         "service": "Individual Style Consulting"
       }
@@ -130,90 +166,90 @@
     "wardrobeReset": {
       "eyebrow": "Wardrobe Reset",
       "title": "Wardrobe Reset",
-      "intro": "Together, we'll organize your closet and bring some clarity. You'll keep only what truly fits your current lifestyle, your style, and your body—everything else can go. For more ease and a clearer overview in your everyday life.",
-      "meta": "Approx. 3 hours / R$ 1,500",
-      "listLabel": "I guide you through:",
-      "listItem1": "organizing by color, fit, and function",
-      "listItem2": "developing a practical, personal wardrobe",
-      "detailIntro": "For anyone who wants more clarity, order, and ease in their wardrobe.",
-      "detailText1": "Perhaps you know the feeling: your wardrobe is full, yet you feel you have nothing to wear. Between unworn clothes, bad purchases, pieces saved for someday, and old favorites, it is hard to see the bigger picture.",
-      "detailText2": "This is where we begin. We look at your wardrobe piece by piece and decide honestly and without pressure what stays, what can be altered or newly combined, and what you want to let go of.",
-      "detailText3": "We consider your taste, but especially your current life, daily routine, body, and personal style.",
-      "detailText4": "Together, we optimize your wardrobe, find the right proportions between tops and bottoms, and reorganize everything so all pieces are visible and practical.",
-      "detailListLabel": "We ask questions such as:",
-      "detailList1": "What do you really enjoy wearing regularly?",
-      "detailList2": "Which clothes suit your current daily life?",
-      "detailList3": "What suits you and makes you feel comfortable?",
-      "detailList4": "Which pieces can be combined?",
-      "detailList5": "Which important basics might be missing?",
-      "detailList6": "Which clothes stay only because you do not want to part with them?",
-      "detailText5": "You receive an honest, appreciative outside perspective. The aim is to shop more consciously and shorten your mornings in front of the mirror. Your wardrobe should become clearer, more cohesive, and practical.",
+      "intro": "Together we organize your wardrobe and create clarity. You keep only what truly fits your current life, your style, and your body – everything else can go. For greater lightness and order in your daily routine.",
+      "meta": "Approx. 3 hours / 250€",
+      "listLabel": "I support you with:",
+      "listItem1": "sorting by color, shape, and function",
+      "listItem2": "developing a practical, personal look",
+      "detailIntro": "For anyone seeking more clarity, organization, and lightness in their wardrobe.",
+      "detailText1": "Perhaps you know the feeling: your wardrobe is full, yet you feel like you have nothing to wear. Between clothes you haven't worn in a long time, impulse buys, pieces you 'might need someday', and old favorites, it's easy to lose sight of what you actually have.",
+      "detailText2": "That is exactly where we start together. We look through your wardrobe item by item and decide honestly and without pressure which pieces stay, which can be altered or recombined, and which you wish to say goodbye to.",
+      "detailText3": "In doing so, we consider not only your taste, but above all your present life, daily routine, body, and personal style.",
+      "detailText4": "Together we explore how your wardrobe can be optimized to find the right proportions between tops and bottoms, reorganizing it so that all items are visible and practical for everyday use.",
+      "detailListLabel": "We ask ourselves questions such as:",
+      "detailList1": "What do you truly love to wear regularly?",
+      "detailList2": "Which garments fit into your current lifestyle?",
+      "detailList3": "What flatters you and makes you feel comfortable?",
+      "detailList4": "Which pieces can be combined with one another?",
+      "detailList5": "Where might essential basics be missing?",
+      "detailList6": "Which garments are hanging in the closet simply because you hesitate to let go?",
+      "detailText5": "You receive an honest, supportive external perspective. It's about purchasing more consciously and simplifying your morning routine. In the end, your wardrobe will be clearer, more cohesive, and above all, practical for daily life.",
       "moreText": ""
     },
     "colorConsultation": {
       "eyebrow": "Color Analysis",
       "title": "Color Analysis",
-      "intro": "We'll help you discover the colors that are right for you—colors that make you look fresh, vibrant, and authentic. You'll learn which shades bring out your natural radiance—giving you more confidence when shopping and putting together outfits.",
-      "meta": "Approx. 1.5 hours / R$ 900",
+      "intro": "We discover your unique colors that make you look fresh, vibrant, and authentic. You learn which shades highlight your natural features – for confidence when shopping and coordinating outfits.",
+      "meta": "Approx. 1.5 hours / 150€",
       "listLabel": "The result is:",
-      "listItem1": "more confidence when shopping and pairing outfits",
-      "listItem2": "a clearer understanding of your personal color palette",
-      "detailIntro": "Discover the colors that enhance your natural radiance.",
-      "detailText1": "Colors strongly influence our look. We are all born with a personal combination of skin, hair, eyelash, eyebrow, and lip colors. Clothing, makeup, accessories, and hair colors should harmonize with it.",
-      "detailText2": "The right shades even out your skin, highlight your eyes, and create a rested, youthful appearance. Others can make you look pale, emphasize dark circles, and make you look tired.",
-      "detailText3": "In the personal analysis, we identify temperature, contrast, and intensity and find the palette that harmonizes best with you.",
-      "detailText4": "You receive your personal 12-season color palette in print as practical guidance for shopping and building your wardrobe.",
-      "detailListLabel": "Your palette includes recommendations for:",
-      "detailList1": "clothing",
-      "detailList2": "makeup",
-      "detailList3": "hair colors",
-      "detailList4": "accessories",
-      "detailText5": "Your key colors are always at hand. You learn to choose and combine them consciously and see which garments make the biggest difference. No rigid rules, only better awareness.",
+      "listItem1": "greater confidence when shopping and combining items",
+      "listItem2": "a clearer vision of your personal color palette",
+      "detailIntro": "Discover the colors that highlight your natural radiance.",
+      "detailText1": "Color is one of the most impactful elements of our look and appearance. We are all born with a unique personal color combination: skin tone, hair color, lashes, eyebrows, lip color, and more. The colors we choose for our clothes, makeup, accessories, and hair should harmonize with these natural traits.",
+      "detailText2": "The right shades make your skin look smoother, enhance your eye color, and give you a refreshed, youthful appearance. Conversely, unsuitable colors can make you look pale, accentuate dark circles, and give a tired appearance.",
+      "detailText3": "During a personal color analysis, we determine color characteristics regarding temperature (cool or warm), contrast (high, medium, or low), and intensity (vibrant or muted). With this information, we identify the color palette that harmonizes best with you.",
+      "detailText4": "At the end of the session, you will receive your personal 12-season color palette in print. It serves as a practical guide for shopping and assembling your outfits.",
+      "detailListLabel": "Your individual palette includes recommendations for:",
+      "detailList1": "Clothing",
+      "detailList2": "Makeup",
+      "detailList3": "Hair colors",
+      "detailList4": "Accessories",
+      "detailText5": "This keeps your essential colors at hand so you can quickly identify which shades flatter you most while shopping. Color analysis doesn't set rigid rules. Instead, you learn to select your colors intentionally, combine them, and understand where they make the biggest difference in your look.",
       "moreText": ""
     },
     "personalShopping": {
-      "eyebrow": "Personal Shopping & Styling",
-      "title": "Personal Shopping & Styling",
-      "intro": "Together, we’ll find clothes that are just right for you—instead of making bad purchases and feeling frustrated. You’ll get honest, stylish guidance while shopping, tailored to your everyday life, your body type, and your personal style.",
-      "meta": "2–4 hours / R$ 1,100 + R$ 480 per additional hour",
-      "listLabel": "My service includes:",
-      "listItem1": "a curated selection tailored to your daily routine",
-      "listItem2": "styling tips for confident outfit combinations",
-      "detailIntro": "Shop with purpose instead of searching for hours and still finding nothing suitable.",
-      "detailText1": "Shopping can be fun, but also tiring and frustrating. Too many options, different cuts, trends, and the question “Does this really suit me?” make decisions difficult.",
-      "detailText2": "With Personal Shopping, I accompany you and help you find clothes that truly fit your life, style, figure, wishes, and budget.",
-      "detailText3": "The goal is not to buy many clothes, but to shop consciously and find key pieces that complement your wardrobe and combine well.",
-      "detailListLabel": "For example, I show you:",
-      "detailList1": "which cuts support your proportions,",
-      "detailList2": "which materials and silhouettes suit you,",
+      "eyebrow": "Personal Shopper & Styling",
+      "title": "Personal Shopper & Styling",
+      "intro": "Together we targetedly find clothes that truly suit you – replacing frustration and bad buys. You receive honest, stylish guidance while shopping, tailored to your lifestyle, body shape, and personal taste.",
+      "meta": "2–4 hours / 180€ + 80€ per additional hour",
+      "listLabel": "My guidance includes:",
+      "listItem1": "a targeted selection tailored to your daily life",
+      "listItem2": "stylish tips for combinations and shopping confidence",
+      "detailIntro": "Shop with intent, instead of spending hours searching only to leave empty-handed.",
+      "detailText1": "Shopping can be fun – but it can also be exhausting and frustrating. Endless choices, varying cuts, changing trends, and the question 'Does this really suit me?' often make it hard to make the right decisions.",
+      "detailText2": "During Personal Shopping, I accompany you in person to help you find clothes that genuinely fit you. Before shopping, we review what you need and what fits your daily routine, taking into account your personal style, body shape, wishes, and budget.",
+      "detailText3": "Shopping isn't about buying as much as possible. On the contrary: it's about buying mindfully and looking for key pieces that elevate your wardrobe and combine seamlessly.",
+      "detailText4": "I will show you how to identify quality fabrics and craftsmanship, and how to discern where an investment is worthwhile and where it's better to save.",
+      "detailListLabel": "I will show you, for example:",
+      "detailList1": "which cuts harmoniously balance your proportions,",
+      "detailList2": "which fabrics and silhouettes suit you best,",
       "detailList3": "how to combine individual garments,",
-      "detailList4": "which pieces you should avoid.",
-      "detailText4": "I show you how to recognize good materials and construction and when to invest. You do not need to force yourself into trends. Your style should follow you. The aim is a comfortable wardrobe that fits your life and offers easy outfit options.",
-      "detailText5": "You do not need to change who you are or force yourself into something just because it is fashionable. Your style should follow you, not the other way around. The aim is a wardrobe that feels good, fits your life, and offers many easy outfit options.",
+      "detailList4": "and which items you might want to avoid.",
+      "detailText5": "You don't need to change who you are or force yourself into trends just because they are popular. Your style should serve you – not the other way around. The goal is a wardrobe in which you feel comfortable, that fits your life, and gives you effortless outfit options.",
       "moreText": ""
     },
     "individualConsultation": {
       "eyebrow": "Individual Style Consulting",
       "title": "Individual Style Consulting",
-      "intro": "We'll help you develop your personal style based on your personality, lifestyle, and body type. You'll understand what truly defines you—and how to express that through your clothing.",
-      "meta": "Custom tailored",
+      "intro": "We develop your personal style based on your personality, lifestyle, and body shape. You gain clarity on what makes you unique – and how to make that visible through your wardrobe.",
+      "meta": "Tailored individually",
       "listLabel": "The focus is on:",
       "listItem1": "your expression, posture, and well-being",
-      "listItem2": "a clear strategy for your wardrobe and routine",
-      "detailIntro": "Our appearance is an important form of communication, even when we do not notice it.",
-      "detailText1": "Before we speak, our appearance communicates seriousness, professionalism, personality, accessibility, authority, and lifestyle.",
-      "detailText2": "Dressing well goes beyond trends and beautiful clothes. The image we convey may not reflect who we are, our personality, daily life, or current stage of life. Style must make sense, be practical and functional, and reflect your identity.",
-      "detailText3": "Developing a style concept is a process of self-awareness and analysis. We understand your preferences, needs, goals, priorities, and daily life and turn them into a coherent, authentic, strategic appearance.",
-      "detailText4": "The goal is clarity and independence, so you know not only what to wear, but why certain choices work for you.",
-      "detailListLabel": "During the consultation, you will:",
-      "detailList1": "understand the image you want to convey,",
-      "detailList2": "discover colors that highlight your beauty,",
-      "detailList3": "learn to choose cuts and fits for your body,",
-      "detailList4": "build a cohesive, versatile, functional wardrobe,",
-      "detailList5": "receive tools for conscious, confident shopping.",
-      "detailText5": "Individual style consulting is a comprehensive process including services such as personal color analysis, wardrobe analysis, and Personal Shopping.",
-      "detailText6": "We develop an exclusive style concept based on your personality, daily life, goals, and preferences. The consultation changes not only your wardrobe, but also your relationship with it, so your appearance aligns with who you are.",
-      "detailText7": "The consultation aims not only to transform your wardrobe, but above all your relationship with it: to dress more consciously, confidently, and effortlessly, so your appearance truly reflects who you are.",
+      "listItem2": "a clear strategy for your daily life and wardrobe",
+      "detailIntro": "Our personal appearance is – even when we don't realize it – an important form of communication.",
+      "detailText1": "Before we say a single word, our appearance conveys messages and influences how we are perceived – in terms of credibility, professionalism, personality, approachability, authority, and even lifestyle.",
+      "detailText2": "However, dressing well goes far beyond following trends or selecting nice clothes. Often, the image we project does not reflect who we truly are, does not align with our personality, or simply doesn't fit our current daily life and stage of life. That is where style gains meaning: it must make sense for you, be practical and functional, while simultaneously reflecting your identity.",
+      "detailText3": "Developing a style concept is therefore a journey of self-discovery and analysis. It is about understanding who you are, your preferences, needs, goals, and priorities, what your daily life looks like, and translating that into a cohesive, authentic, and strategic image.",
+      "detailText4": "The goal of the consultation is to create clarity and independence, so that by the end of the process you not only know what to wear, but also why certain choices work for you.",
+      "detailListLabel": "Throughout the consultation, you will:",
+      "detailList1": "develop a clearer understanding of the image you wish to project,",
+      "detailList2": "discover the colors that bring out your natural beauty,",
+      "detailList3": "learn to select cuts and fits suited to your body shape,",
+      "detailList4": "build a more cohesive, versatile, and functional wardrobe,",
+      "detailList5": "acquire tools for more conscious and confident shopping.",
+      "detailText5": "Individual style consulting is a comprehensive and personalized process that encompasses all necessary steps to implement this concept consistently, such as personal color analysis, wardrobe audit, and personal shopping.",
+      "detailText6": "Based on everything we uncover throughout the process, we create an exclusive style concept tailored to you, taking into account your personality, routine, goals, and preferences. We define the cuts, fits, fabrics, materials, colors, patterns, proportions, and details that best reflect who you are and elevate your image.",
+      "detailText7": "Style consulting aims not only to transform your wardrobe, but above all your relationship with it: dressing more consciously, confidently, and effortlessly so that your appearance truly aligns with who you are.",
       "moreText": ""
     }
   },
@@ -224,59 +260,59 @@
     "whatsapp": "WhatsApp"
   },
   "legal": {
-    "footerImpressum": "Legal Notice",
+    "footerImpressum": "Imprint",
     "footerDatenschutz": "Privacy Policy",
     "impressum": {
-      "eyebrow": "Legal Notice",
-      "title": "Legal Notice",
-      "section1Heading": "Legal Information",
-      "name": "Paula Sevarolli",
-      "address": "[Full Address]",
+      "eyebrow": "Imprint",
+      "title": "Imprint",
+      "section1Heading": "Information pursuant to § 5 TMG",
+      "name": "[Please insert full name or company name]",
+      "address": "[Please insert full address]",
       "contactHeading": "Contact",
-      "email": "Email: paulasevarolli@hotmail.com",
-      "phone": "[Phone Number]",
-      "vatHeading": "Tax ID",
-      "vatText": "[CPF / CNPJ]",
-      "responsibleHeading": "Responsible for Content",
-      "responsibleText": "Paula Sevarolli",
+      "email": "E-Mail: paulasevarolli@hotmail.com",
+      "phone": "[Please insert phone number – optional]",
+      "vatHeading": "VAT ID",
+      "vatText": "[Please insert VAT ID pursuant to § 27a UStG, if applicable]",
+      "responsibleHeading": "Responsible for content pursuant to § 18 (2) MStV",
+      "responsibleText": "[Please insert name of person responsible for content]",
       "disputeHeading": "Dispute Resolution",
-      "disputeText": "We are neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board."
+      "disputeText": "The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr/. We are neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board."
     },
     "datenschutz": {
       "eyebrow": "Privacy",
       "title": "Privacy Policy",
-      "section1Heading": "Data Controller",
-      "section1Text": "The entity responsible for data processing on this website is Paula Sevarolli.",
-      "section2Heading": "Hosting and Server Logs",
-      "section2Text": "This website is hosted on Netlify.",
+      "section1Heading": "Responsible Party",
+      "section1Text": "The entity responsible for data processing on this website is:",
+      "section2Heading": "Hosting and Server Log Files",
+      "section2Text": "[Please insert name and address of the hosting provider as well as details on collected server log files]",
       "section3Heading": "Local Storage (localStorage)",
-      "section3Text": "This website stores your language preference locally in your browser using localStorage. No personal data is collected or transmitted to external servers for this purpose.",
+      "section3Text": "This website stores your selected language (German or Portuguese) locally in your browser's localStorage. No personal data is collected, no cookies are set, and no data is transmitted to a server. You can delete this entry at any time via your browser settings.",
       "section4Heading": "Google Fonts",
-      "section4Text": "This website embeds fonts from Google Fonts. Loading fonts may establish a connection to Google servers.",
+      "section4Text": "This website integrates fonts from Google Fonts via fonts.googleapis.com. When loading fonts, a connection to Google LLC servers may be established, transmitting your IP address. Further information can be found in Google's privacy policy at https://policies.google.com/privacy.",
       "section5Heading": "Linked Services (Instagram, WhatsApp, Email)",
-      "section5Text": "Clicking links to Instagram, WhatsApp, or Email redirects you to third-party services subject to their respective privacy policies.",
+      "section5Text": "This website contains links to Instagram, WhatsApp, and an email address. Clicking these links leaves our website and directs you to third-party services (Meta Platforms Ireland Ltd. for Instagram/WhatsApp or your email application). Data processing by these services is governed by their respective privacy policies.",
       "section6Heading": "Your Rights",
-      "section6Text": "You have the right to request access, correction, or deletion of your personal data at any time.",
-      "section7Heading": "Changes to Policy",
-      "section7Text": "We reserve the right to update this privacy policy to reflect changing legal requirements."
+      "section6Text": "You have the right at any time to request information, rectification, erasure, and restriction of processing of your personal data, as well as the right to object to processing and data portability. For questions, please contact the responsible party listed above.",
+      "section7Heading": "Changes to this Privacy Policy",
+      "section7Text": "We reserve the right to adapt this privacy policy to reflect changes in legal requirements or updates to our offerings."
     }
   },
   "contactPage": {
     "eyebrow": "Contact Me",
-    "title": "Send a Message",
-    "intro": "Would you like to get in touch? Simply fill out the form below. I look forward to hearing from you.",
+    "title": "Write to me",
+    "intro": "Would you like to send me a message? Simply fill out the form. I look forward to hearing from you.",
     "nameLabel": "Name",
     "namePlaceholder": "Your Name",
     "emailLabel": "Email",
     "emailPlaceholder": "your@email.com",
     "subjectLabel": "Subject",
     "subjectPlaceholder": "Subject of your message",
-    "subjectPrefix": "Appointment Inquiry:",
+    "subjectPrefix": "Appointment request:",
     "messageLabel": "Message",
     "messagePlaceholder": "How can I help you?",
     "back": "Back",
     "submit": "Send Message",
-    "note": "Your message will be sent confidentially to Paula Sevarolli."
+    "note": "Your message will be confidentially transmitted to Paula Sevarolli."
   },
   "footer": "© 2026 Paula Sevarolli"
 }

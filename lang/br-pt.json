@@ -4,9 +4,9 @@
   },
   "nav": {
     "home": "Início",
-    "stilberatung": "Consultoria de estilo",
-    "atelier": "Atelier",
-    "shop": "Shop",
+    "stilberatung": "Consultoria de Estilo",
+    "atelier": "Ateliê",
+    "shop": "Loja",
     "services": "Serviços",
     "about": "Sobre mim",
     "reviews": "Depoimentos",
@@ -14,212 +14,248 @@
   },
   "hero": {
     "title": "Paula Sevarolli Consultoria de Estilo",
-    "subtitle": "Consultoria de estilo para fases reais da vida – para que você se reconheça de verdade nas suas roupas.",
+    "subtitle": "Consultoria de estilo para fases reais da vida – para que você se reconheça de verdade em suas roupas.",
     "contact": "Entrar em contato"
   },
   "landing": {
     "eyebrow": "Design de Moda & Consultoria de Estilo",
     "title": "Paula Sevarolli",
-    "description": "Escolha a opção ideal para você e descubra a consultoria de estilo ou o ateliê.",
+    "description": "Escolha o serviço ideal para você e descubra a Consultoria de Estilo ou o Ateliê.",
     "stilberatungTitle": "Consultoria de Estilo",
     "stilberatungText": "Acompanhamento pessoal para alcançar mais clareza, autoconfiança e um estilo que realmente combina com você.",
-    "stilberatungCta": "Ver Consultoria de Estilo",
+    "stilberatungCta": "Ir para Consultoria de Estilo",
     "atelierTitle": "Ateliê",
-    "atelierText": "Acompanhamento criativo envolvendo expressão, forma, cor e o desenvolvimento de um estilo individual.",
-    "atelierCta": "Ver Ateliê",
+    "atelierText": "Acompanhamento criativo focado em expressão, forma, cor e no desenvolvimento de um estilo individual.",
+    "atelierCta": "Ir para o Ateliê",
     "aboutTitle": "Sobre os Serviços",
-    "aboutText": "A consultoria de estilo te acompanha em momentos de transição pessoal, enquanto o ateliê oferece um espaço criativo para expressão e design individual."
+    "aboutText": "A Consultoria de Estilo acompanha você em transições pessoais, enquanto o Ateliê oferece um espaço criativo para expressão e criação individual."
   },
   "about": {
-    "eyebrow": "About Me",
+    "eyebrow": "Sobre Mim",
     "heading": "Sobre mim",
-    "paragraph1": "Sou Paula Sevarolli, estilista e designer de moda, apaixonada por criatividade, moda e estética. Como brasileira com raízes italianas, já morei no Brasil, Itália, Alemanha e República Tcheca. Esssas experiências moldaram profundamente minha visão sobre estilo, cultura e individualidade.",
-    "paragraph2": "Concluí meu mestrado em Design de Moda no IED em Florença, na Itália, e me especializei como consultora de estilo. Ao longo dos anos, acumulei experiência em diversas áreas da indústria da moda. Essa união entre formação acadêmica, prática e desenvolvimento pessoal define meu trabalho hoje.",
-    "paragraph3": "Como mãe e mulher que viveu diferentes fases da vida, transformações corporais e transições culturais, sei o quanto o estilo está conectado à nossa autoestima e como pode ser desafiador se redefinir em certos momentos.",
-    "paragraph4": "Trabalho com pessoas que estão passando por essas transições: após a gravidez, ao assumir um novo cargo profissional ou ao se adaptar a uma nova cultura. Minha abordagem é intencionalmente pessoal e prática – longe de regras rígidas ou tendências passageiras.",
-    "paragraph5": "Vejo a moda como uma forma discreta, porém poderosa, de expressão. Um estilo autêntico não nasce da perfeição, mas da clareza, do autoconhecimento e da sensação de estar bem consigo mesma. Com meu olhar atento para cores, cortes, formas e proporções, ajudo você a desenvolver um estilo autêntico que se encaixe perfeitamente na sua rotina.",
-    "paragraph6": "Seja para um closet detox, personal shopper, análise de coloração pessoal ou consultoria de estilo individual – estou aqui para te acompanhar nessa jornada rumo a mais clareza, autoconfiança e bem-estar com seu estilo.",
-    "paragraph7": "Afinal, o estilo começa no momento em que você se reconhece."
+    "paragraph1": "Sou Paula Sevarolli, stylist e designer de moda, apaixonada por criatividade, moda e estética. Como brasileira com raízes italianas, vivi no Brasil, Itália, Alemanha e República Tcheca. Essas experiências moldaram profundamente minha visão sobre estilo, cultura e individualidade.",
+    "paragraph2": "Concluí meu mestrado em Design de Moda no IED em Florença, Itália, e me especializei como consultora de estilo. Ao longo dos anos, acumulei experiência em diversas áreas da indústria da moda. Essa união entre formação acadêmica, prática e desenvolvimento pessoal define meu trabalho hoje.",
+    "paragraph3": "Como mãe e mulher que vivenciou diferentes fases da vida, transformações corporais e transições culturais, sei o quanto o estilo está ligado ao nosso bem-estar – e como pode ser desafiador se redefinir em certos momentos.",
+    "paragraph4": "Trabalho com pessoas que estão passando por essas transições: após a gravidez, no início de uma nova carreira profissional ou ao se adaptar a uma nova cultura. Minha abordagem é consciente, pessoal e voltada para a vida real – longe de regras rígidas ou tendências passageiras.",
+    "paragraph5": "Entendo a moda como um meio de expressão sutil, mas poderoso. Um estilo harmonioso não vem da perfeição, mas da clareza, do autoconhecimento e da boa sensação de estar bem consigo mesma. Com meu olhar atento para cores, cortes, formas e proporções, ajudo você a desenvolver um estilo autêntico que se adapte de verdade à sua rotina. Não se trata de seguir tendências, mas de se conhecer melhor e expressar essa essência para o mundo.",
+    "paragraph6": "Seja um Reset de Guarda-Roupa, Personal Shopper, Análise de Colorimetria ou Consultoria de Estilo Individual – acompanho você em sua jornada rumo a mais clareza, autoconfiança e bem-estar no seu estilo.",
+    "paragraph7": "Afinal, o estilo começa quando você reconhece a si mesma."
   },
   "services": {
     "heading": "Serviços",
     "wardrobeReset": {
-      "title": "Closet Detox",
-      "text": "Mais organização, leveza e um senso de estilo alinhado com o seu dia a dia."
+      "title": "Reset de Guarda-Roupa",
+      "text": "Mais organização, mais leveza e um estilo que se adapta ao seu dia a dia."
     },
     "colorConsultation": {
-      "title": "Coloração Pessoal",
-      "text": "Descubra suas cores ideais e valorize sua beleza natural com intenção."
+      "title": "Análise de Colorimetria",
+      "text": "Descubra suas cores individuais e realce sua beleza natural de forma consciente."
     },
     "personalShopping": {
       "title": "Personal Shopper & Styling",
-      "text": "Juntas encontramos peças que realmente funcionam para você – sem compras por impulso ou dúvidas."
+      "text": "Juntas encontramos peças que realmente acompanham você – sem compras por impulso ou dúvidas."
     },
-    "wardrobeReset": {
+    "individualConsultation": {
       "title": "Consultoria de Estilo Individual",
-      "text": "Um acompanhamento personalizado para criar um estilo que reflita sua essência."
+      "text": "Um acompanhamento personalizado para criar um estilo que torna sua personalidade visível."
     }
   },
   "stilberatungPage": {
     "eyebrow": "Consultoria de Estilo",
     "title": "Paula Sevarolli Consultoria de Estilo",
-    "description": "Clareza, autoconfiança e uma identidade de estilo que realmente combina com você.",
+    "description": "Clareza, autoconfiança e uma sensação de estilo que realmente combina com você.",
     "aboutTitle": "O que é Consultoria de Estilo?",
-    "aboutText1": "Eu te ajudo a montar um guarda-roupa que seja autêntico e versátil, e que te acompanhe em todas as fases da vida. Minha abordagem se concentra em expressar a identidade interior de cada cliente por meio de suas roupas, em vez de me basear em regras da moda.",
-    "aboutText2": "Eu te ajudo a superar as transições da vida — como uma nova profissão, a maternidade ou a mudança para um novo país —, adaptando sua aparência à pessoa que você é no momento.",
-    "aboutText3": "Juntas, escolhemos cores, tecidos e cortes que realçam sua visão pessoal de estilo e, ao mesmo tempo, montamos um guarda-roupa que seja prático, harmonioso e duradouro.",
+    "aboutText1": "Acompanho você na montagem de um guarda-roupa autêntico, versátil e que a apoie em cada fase da vida. Minha abordagem foca em expressar a identidade interior de cada cliente por meio de suas roupas, em vez de se prender a regras rígidas da moda.",
+    "aboutText2": "Ajudo você a superar transições de vida – como uma nova carreira, a maternidade ou a mudança para um novo país – alinhando sua imagem a quem você é no momento.",
+    "aboutText3": "Juntas escolhemos cores, tecidos e cortes que destacam sua visão de estilo pessoal, construindo um guarda-roupa prático, harmonioso e duradouro.",
     "servicesTitle": "Serviços"
   },
   "atelier": {
     "eyebrow": "Ateliê",
     "title": "Paula Sevarolli Ateliê",
-    "description": "Design, consultoria e acompanhamento criativo em torno de estilo e expressão.",
-    "aboutTitle": "Sobre o Ateliê",
-    "aboutText1": "O ateliê representa a consultoria de estilo criativa, o acompanhamento individual e um olhar atento para formas, cores e expressão.",
+    "description": "Criação, consultoria e acompanhamento criativo em torno de estilo e expressão.",
+    "aboutTitle": "Sobre",
+    "aboutText1": "O Ateliê representa uma consultoria de estilo criativa, acompanhamento individual e um olhar sensível para forma, cor e expressão.",
     "aboutText2": "Aqui nascem soluções personalizadas para pessoas que desejam se apresentar de forma consciente e autêntica.",
     "servicesTitle": "Serviços",
     "service1Title": "Consultoria de Estilo Individual",
-    "service1Text": "Um caminho sob medida para a sua personalidade, trazendo mais clareza e autoconfiança.",
+    "service1Text": "Um caminho alinhado à sua personalidade para obter mais clareza e autoconfiança.",
     "priceListTitle": "Tabela de Preços - Ajustes e Costura",
     "priceTableHeadService": "Serviço",
-    "priceTableHeadPrice": "Valor",
+    "priceTableHeadPrice": "Preço",
     "priceItems": [
-      { "name": "Bainha de calça (simples)", "price": "a partir de R$ 90" },
-      { "name": "Bainha de calça (com dobra)", "price": "a partir de R$ 120" },
-      { "name": "Ajuste de cós/cintura de calça", "price": "a partir de R$ 110" },
-      { "name": "Ajuste de comprimento de vestido", "price": "a partir de R$ 150" },
-      { "name": "Apertar ou folgar vestido", "price": "a partir de R$ 180" },
-      { "name": "Bainha de saia", "price": "a partir de R$ 90" },
-      { "name": "Troca de zíper", "price": "a partir de R$ 120" },
-      { "name": "Ajuste de manga (blazer, jaqueta, casaco)", "price": "a partir de R$ 135" },
-      { "name": "Acinturar paletó ou blazer", "price": "a partir de R$ 210" },
-      { "name": "Ajuste de botão ou casadoura", "price": "a partir de R$ 50" },
-      { "name": "Ajustes personalizados", "price": "sob consulta" },
-      { "name": "Prova & avaliação presencial", "price": "gratuito" }
+      {
+        "name": "Bainha de calça (sem dobra)",
+        "price": "a partir de R$ 90"
+      },
+      {
+        "name": "Bainha de calça (com dobra)",
+        "price": "a partir de R$ 120"
+      },
+      {
+        "name": "Ajustar cós de calça (apertar ou folgar)",
+        "price": "a partir de R$ 110"
+      },
+      {
+        "name": "Ajustar comprimento de vestido",
+        "price": "a partir de R$ 150"
+      },
+      {
+        "name": "Ajustar vestido (apertar ou folgar)",
+        "price": "a partir de R$ 180"
+      },
+      {
+        "name": "Ajustar comprimento de saia",
+        "price": "a partir de R$ 90"
+      },
+      {
+        "name": "Trocar zíper",
+        "price": "a partir de R$ 120"
+      },
+      {
+        "name": "Encurtar mangas (blazer, jaqueta, casaco)",
+        "price": "a partir de R$ 135"
+      },
+      {
+        "name": "Ajustar cintura de paletó ou blazer",
+        "price": "a partir de R$ 210"
+      },
+      {
+        "name": "Ajustar botão ou casinha de botão",
+        "price": "a partir de R$ 50"
+      },
+      {
+        "name": "Ajuste individual sob consulta",
+        "price": "sob consulta"
+      },
+      {
+        "name": "Provação e consultoria presencial",
+        "price": "gratuito"
+      }
     ],
-    "priceListNote": "Todos os valores são estimativas e podem variar conforme a complexidade e o tecido da peça."
+    "priceListNote": "Todos os preços são referenciais e podem variar de acordo com a complexidade e o material."
   },
   "shop": {
     "title": "Loja",
-    "headline": "A loja está em desenvolvimento",
-    "message": "Em breve teremos um espaço especial – pensado para peças intencionais, inspiração criativa e um estilo que evolui com você. Por enquanto, nem tudo está visível, mas os primeiros passos já foram dados."
+    "headline": "A loja está sendo criada",
+    "message": "Em breve teremos algo muito especial por aqui – um espaço para peças conscientes, inspiração criativa e um estilo que cresce com você. Por enquanto nem tudo está visível, mas a primeira faísca já acendeu."
   },
   "reviewsPage": {
     "title": "Depoimentos",
-    "headline": "Depoimentos de quem vivenciou a experiência",
-    "message": "Cada consultoria é única – confira como clientes vivenciaram a transformação em direção a um estilo mais alinhado e confiante.",
+    "headline": "Vozes que falam por si",
+    "message": "Cada consultoria é única – aqui minhas clientes contam como foi a jornada para alcançar um estilo mais harmonioso e confiante.",
     "readMore": "Ler mais",
     "readMoreAria": "Ler depoimento completo",
     "reviews": [
       {
-        "text": "„Quando fundei meu escritório de advocacia, percebi que minha imagem poderia transmitir meu valor antes mesmo de eu falar sobre meu trabalho. A consultoria me ajudou a encontrar o equilíbrio entre a formalidade da advocacia e a minha própria essência. A Paula soube criar uma estratégia baseada em quem eu sou e na mensagem que eu queria passar, em vez de apenas seguir tendências. Aprendi muito mais do que sobre cores ou combinações: aprendi a reconhecer as mensagens por trás de cada escolha. Foi um processo que mudou a percepção dos outros sobre mim e a minha própria autoimagem.“",
+        "text": "„Quando comecei meu escritório, percebi que a minha imagem poderia me ajudar a comunicar valor antes mesmo de eu ter a oportunidade de falar sobre o meu trabalho. A consultoria me ajudou a encontrar o equilíbrio entre a formalidade da advocacia e a minha própria personalidade, para que eu pudesse transmitir profissionalismo sem deixar de me reconhecer no que vestia. Paula soube construir uma estratégia a partir de quem eu era e da mensagem que eu queria transmitir, e não simplesmente seguindo tendências. Mais do que aprender sobre cores, peças ou combinações, aprendi a perceber as mensagens implícitas de cada escolha e a usá-las de forma intencional. Foi um processo que transformou não só a forma como as pessoas me percebiam, mas também a forma como eu me enxergava e é um aprendizado que carrego comigo até hoje.“",
         "author": "Deise Cordeiro",
         "service": "Consultoria de Estilo Individual"
       },
       {
-        "text": "„A consultoria que a Paula fez com o meu ex-marido foi de enorme importância. Graças a ela, conseguimos mostrar a ele que um estilo casual tem seu valor, mas nos momentos certos. Com o tempo, investimos em peças atemporais que elevaram o estilo e a elegância dele.“",
+        "text": "„A consultoria que a Paula prestou para meu então marido foi de extrema importância. Através dela nós conseguimos fazê-lo entender que o estilo despojado e casual tem hora e lugar. Conseguimos com o tempo investir em peças atemporais que elevaram o senso de estilo e elegância do cliente final.“",
         "author": "Natany Gomes",
         "service": "Consultoria de Estilo Individual"
       }
     ]
   },
   "servicePages": {
-    "cta": "Marcar um horário",
+    "cta": "Agendar um horário",
     "moreLabel": "Saiba mais",
-    "back": "Voltar para a consultoria de estilo",
+    "back": "Voltar para a Consultoria de Estilo",
     "wardrobeReset": {
-      "eyebrow": "Reset de guarda-roupa",
-      "title": "Reset de guarda-roupa",
-      "intro": "Vamos organizar juntos o seu guarda-roupa e trazer clareza. Você vai ficar apenas com o que realmente combina com a sua vida atual, o seu estilo e o seu corpo – todo o resto pode ir embora. Para ter mais leveza e organização no dia a dia.",
-      "meta": "Aprox. 3 horas / R$ 1.500",
-      "listLabel": "Eu te acompanho em:",
-      "listItem1": "a organização por cor, forma e função",
-      "listItem2": "o desenvolvimento de um visual prático e pessoal",
+      "eyebrow": "Reset de Guarda-Roupa",
+      "title": "Reset de Guarda-Roupa",
+      "intro": "Organizamos juntas o seu guarda-roupa e trazemos clareza. Você mantém apenas o que realmente combina com sua vida atual, seu estilo e seu corpo – o resto pode ir embora. Para mais leveza e praticidade no dia a dia.",
+      "meta": "Aprox. 3 horas / 250€",
+      "listLabel": "Acompanho você em:",
+      "listItem1": "organização por cor, forma e função",
+      "listItem2": "desenvolvimento de um visual prático e pessoal",
       "detailIntro": "Para quem deseja mais clareza, organização e leveza no guarda-roupa.",
-      "detailText1": "Talvez você conheça a sensação: o guarda-roupa está cheio, mas parece que você não tem nada para vestir. Entre peças esquecidas, compras erradas, roupas guardadas para algum dia e antigos favoritos, falta visão geral.",
-      "detailText2": "É aí que começamos juntas. Analisamos seu guarda-roupa peça por peça e decidimos, com honestidade e sem pressão, o que fica, o que pode ser transformado ou combinado de outra forma e do que você quer se despedir.",
-      "detailText3": "Consideramos seu gosto, mas principalmente sua vida atual, sua rotina, seu corpo e seu estilo pessoal.",
-      "detailText4": "Otimizamos o guarda-roupa, encontramos as proporções certas entre partes de cima e de baixo e reorganizamos tudo para que as peças fiquem visíveis e práticas.",
-      "detailListLabel": "Perguntamos, por exemplo:",
-      "detailList1": "O que você realmente gosta de usar regularmente?",
-      "detailList2": "O que combina com sua rotina atual?",
-      "detailList3": "O que valoriza você e em que se sente bem?",
-      "detailList4": "Quais peças combinam entre si?",
-      "detailList5": "Quais básicos importantes estão faltando?",
-      "detailList6": "Quais roupas ficam no armário porque você não quer se desfazer delas?",
-      "detailText5": "Você recebe um olhar externo honesto e acolhedor. A ideia é comprar com mais consciência e reduzir o tempo diante do espelho. Ao final, seu guarda-roupa estará mais claro, coerente e funcional.",
+      "detailText1": "Talvez você conheça essa sensação: o guarda-roupa está cheio, mas você sente que não tem nada para vestir. Entre roupas que não usa há muito tempo, compras por impulso, peças que 'talvez um dia precise' e antigas favoritas, muitas vezes falta clareza e visão geral.",
+      "detailText2": "É exatamente aí que trabalhamos juntas. Olhamos para o seu guarda-roupa peça por peça e decidimos, de forma honesta e sem pressão, quais roupas devem ficar, quais podem ser ajustadas ou redefinidas em novas combinações e de quais você deseja se despedir.",
+      "detailText3": "Nesse processo, consideramos não apenas o seu gosto, mas principalmente sua vida atual, sua rotina, seu corpo e seu estilo pessoal.",
+      "detailText4": "Juntas analisamos como otimizar seu guarda-roupa para encontrar as proporções ideais entre partes de cima e partes de baixo, criando uma nova organização para que todas as peças fiquem visíveis e práticas no dia a dia.",
+      "detailListLabel": "Nos fazemos perguntas como:",
+      "detailList1": "O que você realmente gosta de vestir com frequência?",
+      "detailList2": "Quais peças de roupa combinam com sua rotina atual?",
+      "detailList3": "O que valoriza você e em que se sente confortável?",
+      "detailList4": "Quais peças podem ser combinadas entre si?",
+      "detailList5": "Onde faltam itens básicos essenciais?",
+      "detailList6": "Quais peças estão no armário só porque você tem dificuldade de desapegar?",
+      "detailText5": "Você recebe um olhar externo sincero e acolhedor. O objetivo é comprar com mais consciência e otimizar as manhãs em frente ao espelho. Ao final, seu guarda-roupa será mais prático, harmonioso e funcional.",
       "moreText": ""
     },
     "colorConsultation": {
-      "eyebrow": "Consultoria de cores",
-      "title": "Consultoria de cores",
-      "intro": "Encontramos as cores que combinam com você, fazendo com que pareça revigorada, cheia de vida e autêntica. Você aprenderá quais nuances realçam seu charme natural – para ter mais confiança na hora de comprar e combinar roupas.",
-      "meta": "Aprox. 1,5 horas / R$ 900",
+      "eyebrow": "Análise de Colorimetria",
+      "title": "Análise de Colorimetria",
+      "intro": "Descobrimos suas cores individuais que fazem você parecer radiante, autêntica e confiante. Você aprende quais tonalidades realçam sua beleza natural – para mais segurança ao comprar e combinar.",
+      "meta": "Aprox. 1,5 horas / 150€",
       "listLabel": "O resultado é:",
-      "listItem1": "mais segurança ao comprar e combinar peças",
-      "listItem2": "uma visão mais clara do seu universo de cores",
-      "detailIntro": "Descubra as cores que realçam sua beleza natural.",
-      "detailText1": "As cores influenciam fortemente nosso visual. Cada pessoa nasce com uma combinação própria de tom de pele, cabelo, cílios, sobrancelhas e lábios. Roupas, maquiagem, acessórios e cabelos devem harmonizar com ela.",
-      "detailText2": "Os tons certos uniformizam a pele, destacam os olhos e dão aparência descansada e jovem. Outros podem deixar você pálida, acentuar olheiras e transmitir cansaço.",
-      "detailText3": "Na análise pessoal, identificamos temperatura, contraste e intensidade das suas cores e descobrimos qual paleta combina melhor com você.",
-      "detailText4": "Ao final, você recebe sua paleta pessoal de 12 estações impressa, como orientação para compras e para montar sua coleção.",
-      "detailListLabel": "Sua paleta traz recomendações para:",
-      "detailList1": "roupas",
-      "detailList2": "maquiagem",
-      "detailList3": "cores de cabelo",
-      "detailList4": "acessórios",
-      "detailText5": "Suas cores ficam sempre à mão. Você aprende a escolhê-las e combiná-las e percebe em quais peças elas fazem a maior diferença. Não há regras rígidas, apenas escolhas conscientes.",
+      "listItem1": "mais segurança na hora de comprar e combinar",
+      "listItem2": "uma visão clara sobre sua cartela de cores pessoal",
+      "detailIntro": "Descubra as cores que valorizam e realçam sua beleza natural.",
+      "detailText1": "As cores são um dos elementos que mais influenciam nossa imagem e aparência. Todos nós nascemos com uma combinação de cores única: tom de pele, cor dos cabelos, cílios, sobrancelhas, tom dos lábios e assim por diante. E as cores que escolhemos para nossas roupas, maquiagem, acessórios e cabelos devem harmonizar com essas características.",
+      "detailText2": "As tonalidades certas deixam a pele mais uniforme, destacam a cor dos olhos e proporcionam uma aparência descansada e jovem. Por outro lado, cores inadequadas podem deixar o rosto pálido, acentuar olheiras e transmitir um aspecto cansado.",
+      "detailText3": "Na análise de colorimetria pessoal, identificamos as características das cores em relação à temperatura (tons quentes ou frios), contraste (alto, médio ou baixo) e intensidade (vibrante ou suave). Com essas informações, descobrimos qual cartela de cores é a mais harmoniosa para você.",
+      "detailText4": "Ao final da consultoria, você recebe sua cartela de cores pessoal (método sazonal expandido de 12 estações) impressa. Ela serve como um guia prático para compras e combinações do dia a dia.",
+      "detailListLabel": "Sua cartela individual inclui recomendações para:",
+      "detailList1": "Roupas",
+      "detailList2": "Maquiagem",
+      "detailList3": "Cores de cabelo",
+      "detailList4": "Acessórios",
+      "detailText5": "Assim você tem suas cores principais sempre à mão e consegue identificar rapidamente nas compras quais tons realmente favorecem você. A análise de cores não impõe regras rígidas. Em vez disso, você aprende a escolher suas cores com intenção, combinando-as e entendendo onde elas geram o maior impacto no seu visual.",
       "moreText": ""
     },
     "personalShopping": {
-      "eyebrow": "Personal shopper & styling",
-      "title": "Personal shopper & styling",
-      "intro": "Juntos, vamos encontrar roupas que combinem perfeitamente com você – em vez de compras erradas e frustrações. Você terá um acompanhamento sincero e cheio de estilo durante as compras, adaptado ao seu dia a dia, ao seu corpo e ao seu estilo.",
-      "meta": "2–4 horas / R$ 1.100 + R$ 480 por hora adicional",
+      "eyebrow": "Personal Shopper & Styling",
+      "title": "Personal Shopper & Styling",
+      "intro": "Juntas encontramos roupas direcionadas que realmente combinam com você – em vez de compras por impulso e frustração. Você recebe um acompanhamento honesto e elegante nas compras, adaptado à sua rotina, corpo e estilo.",
+      "meta": "2–4 horas / 180€ + 80€ por hora adicional",
       "listLabel": "Meu acompanhamento inclui:",
-      "listItem1": "uma seleção objetiva, adequada ao seu cotidiano",
-      "listItem2": "sugestões de combinações com mais segurança",
-      "detailIntro": "Compre de forma objetiva, em vez de procurar por horas e ainda não encontrar nada adequado.",
-      "detailText1": "Fazer compras pode ser divertido, mas também cansativo e frustrante. Muitas opções, cortes, tendências e a dúvida “Será que isso fica bem em mim?” dificultam as decisões.",
-      "detailText2": "No Personal Shopping, acompanho você e ajudo a encontrar roupas que combinam com você. Antes da compra, consideramos sua rotina, estilo, corpo, desejos e orçamento.",
-      "detailText3": "Não se trata de comprar muitas peças, mas de comprar com consciência e procurar peças-chave que complementem seu guarda-roupa e combinem entre si.",
+      "listItem1": "uma seleção direcionada e alinhada ao seu dia a dia",
+      "listItem2": "dicas de estilo para combinações e segurança nas compras",
+      "detailIntro": "Comprar com intenção e direcionamento, sem perder horas procurando para no final não encontrar nada.",
+      "detailText1": "Fazer compras pode ser divertido – mas às vezes pode ser cansativo e frustrante. Muitas opções, cortes variados, tendências em mudança e a dúvida 'Será que isso realmente fica bem em mim?' dificultam tomar boas decisões.",
+      "detailText2": "No Personal Shopping, acompanho você pessoalmente para encontrar roupas que realmente combinem com quem você é. Antes das compras, analisamos o que você precisa e o que se encaixa no seu estilo de vida, considerando seu tipo físico, preferências e orçamento.",
+      "detailText3": "Comprar não significa levar uma quantidade enorme de roupas. Pelo contrário: trata-se de comprar com consciência, buscando peças-chave que complementem seu guarda-roupa e se combinem facilmente.",
+      "detailText4": "Ensino você a reconhecer bons tecidos e acabamentos, e a identificar em quais peças vale a pena investir mais e onde podemos economizar.",
       "detailListLabel": "Eu mostro, por exemplo:",
-      "detailList1": "quais cortes valorizam suas proporções,",
-      "detailList2": "quais materiais e silhuetas combinam com você,",
-      "detailList3": "como combinar peças individuais,",
+      "detailList1": "quais cortes favorecem e equilibram suas proporções,",
+      "detailList2": "quais tecidos e silhuetas combinam com você,",
+      "detailList3": "como combinar peças individuais entre si,",
       "detailList4": "e de quais peças é melhor manter distância.",
-      "detailText4": "Você aprende a reconhecer bons materiais e acabamentos e quando investir ou economizar. Não precisa usar algo só porque está na moda. Seu estilo deve acompanhar você. O objetivo é um guarda-roupa confortável, adequado à sua vida e cheio de combinações fáceis.",
-      "detailText5": "Você não precisa mudar quem é nem se forçar a usar algo só porque está na moda. Seu estilo deve acompanhar você, e não o contrário. O objetivo é um guarda-roupa no qual você se sinta bem, adequado à sua vida e com muitas possibilidades de looks simples.",
+      "detailText5": "Você não precisa se transformar ou se encaixar em algo apenas por estar na moda. Seu estilo deve servir a você – não o contrário. O objetivo é um guarda-roupa confortável, que combine com sua vida e ofereça inúmeras opções práticas de looks.",
       "moreText": ""
     },
     "individualConsultation": {
-      "eyebrow": "Consultoria de estilo individual",
-      "title": "Consultoria de estilo individual",
-      "intro": "Desenvolvemos seu estilo pessoal com base na sua personalidade, no seu estilo de vida e no seu tipo físico. Você vai entender o que realmente define quem você é – e como expressar isso por meio das roupas.",
+      "eyebrow": "Consultoria de Estilo Individual",
+      "title": "Consultoria de Estilo Individual",
+      "intro": "Desenvolvemos seu estilo pessoal com base na sua personalidade, estilo de vida e tipo físico. Você compreende sua essência – e aprende a torná-la visível através das roupas.",
       "meta": "Personalizado",
       "listLabel": "O foco está em:",
       "listItem1": "sua expressão, postura e bem-estar",
-      "listItem2": "uma estratégia clara para o seu cotidiano e guarda-roupa",
-      "detailIntro": "Nossa aparência é uma importante forma de comunicação, mesmo quando não percebemos.",
-      "detailText1": "Antes de falarmos, nossa aparência transmite mensagens sobre seriedade, profissionalismo, personalidade, acessibilidade, autoridade e estilo de vida.",
-      "detailText2": "Vestir-se bem vai além de tendências e peças bonitas. A imagem transmitida pode não corresponder a quem somos, à nossa rotina ou fase da vida. O estilo precisa fazer sentido, ser prático e funcional e refletir sua identidade.",
-      "detailText3": "Desenvolver um conceito de estilo é um processo de autoconhecimento e análise: entendemos suas preferências, necessidades, objetivos e prioridades e transformamos tudo em uma imagem coerente, autêntica e estratégica.",
-      "detailText4": "O objetivo é criar clareza e autonomia, para que você saiba o que vestir e por que determinadas escolhas funcionam.",
-      "detailListLabel": "Ao longo da consultoria, você irá:",
-      "detailList1": "entender a imagem que deseja transmitir,",
-      "detailList2": "descobrir as cores que realçam sua beleza,",
-      "detailList3": "escolher cortes e caimentos adequados ao seu corpo,",
-      "detailList4": "montar um guarda-roupa coerente, versátil e funcional,",
-      "detailList5": "receber ferramentas para comprar com mais consciência e segurança.",
-      "detailText5": "A consultoria é um processo amplo e individual, que pode incluir análise de cores, análise do guarda-roupa e Personal Shopping.",
-      "detailText6": "Com base no processo, desenvolvemos um conceito exclusivo que considera sua personalidade, rotina, objetivos e preferências. A consultoria transforma também sua relação com o guarda-roupa, para que sua aparência esteja alinhada a quem você é.",
-      "detailText7": "A consultoria não busca apenas transformar seu guarda-roupa, mas principalmente sua relação com ele: vestir-se de forma mais consciente, confiante e leve, para que sua aparência esteja alinhada a quem você é.",
+      "listItem2": "uma estratégia clara para sua rotina e guarda-roupa",
+      "detailIntro": "Nossa imagem pessoal é – mesmo que muitas vezes não percebamos – uma forma fundamental de comunicação.",
+      "detailText1": "Antes mesmo de falarmos qualquer palavra, nossa aparência transmite mensagens e influencia como somos percebidas – em relação à nossa credibilidade, profissionalismo, personalidade, acessibilidade, autoridade e até estilo de vida.",
+      "detailText2": "No entanto, vestir-se bem vai muito além de seguir tendências ou escolher roupas bonitas. Muitas vezes a imagem que transmitimos não reflete quem realmente somos, não combina com nossa personalidade ou simplesmente não condiz com nossa rotina e fase atual de vida. É aí que o estilo ganha significado: ele precisa fazer sentido para você, ser prático e funcional, e ao mesmo tempo expressar sua identidade.",
+      "detailText3": "O desenvolvimento de um conceito de estilo é um processo de autoconhecimento e análise. Trata-se de compreender quem você é, suas preferências, necessidades, objetivos e prioridades, como é o seu dia a dia e, a partir disso, traduzir essas informações em uma imagem harmoniosa, autêntica e estratégica.",
+      "detailText4": "O objetivo da consultoria é gerar clareza e autonomia, para que ao final do processo você não apenas saiba o que vestir, mas entenda o porquê de cada escolha funcionar para você.",
+      "detailListLabel": "Ao longo da consultoria você vai:",
+      "detailList1": "desenvolver uma compreensão clara da imagem que deseja transmitir,",
+      "detailList2": "descobrir as cores que mais valorizam sua beleza natural,",
+      "detailList3": "aprender a escolher cortes e caimentos adequados ao seu corpo,",
+      "detailList4": "construir um guarda-roupa mais versátil, funcional e harmonioso,",
+      "detailList5": "obter ferramentas para comprar com mais consciência e segurança.",
+      "detailText5": "A consultoria de estilo é um processo completo e individualizado, que inclui todas as etapas necessárias para aplicar esse conceito na prática, como a análise de colorimetria pessoal, a análise e revitalização do guarda-roupa e o personal shopping.",
+      "detailText6": "Com base em tudo o que descobrimos ao longo do processo, desenvolvemos um conceito de estilo exclusivo para você, alinhado à sua personalidade, rotina, objetivos e preferências. Definimos cortes, caimentos, tecidos, materiais, cores, estampas e proporções que melhor representam quem você é e valorizam sua imagem.",
+      "detailText7": "A consultoria de estilo não visa apenas transformar seu guarda-roupa, mas principalmente sua relação com ele: vestir-se de forma mais consciente, confiante e leve, para que sua imagem esteja verdadeiramente em sintonia com você.",
       "moreText": ""
     }
   },
   "contact": {
     "heading": "Contato",
-    "email": "Escrever e-mail",
+    "email": "Enviar e-mail",
     "instagram": "Instagram",
     "whatsapp": "WhatsApp"
   },
@@ -229,54 +265,54 @@
     "impressum": {
       "eyebrow": "Aviso Legal",
       "title": "Aviso Legal",
-      "section1Heading": "Informações legais",
-      "name": "Paula Sevarolli",
-      "address": "[Endereço completo]",
+      "section1Heading": "Informações de acordo com o § 5 TMG",
+      "name": "[Por favor, insira o nome completo ou razão social]",
+      "address": "[Por favor, insira o endereço completo]",
       "contactHeading": "Contato",
       "email": "E-mail: paulasevarolli@hotmail.com",
-      "phone": "[Telefone de contato]",
-      "vatHeading": "Identificação Fiscal",
-      "vatText": "[CPF / CNPJ]",
-      "responsibleHeading": "Responsável pelo conteúdo",
-      "responsibleText": "Paula Sevarolli",
-      "disputeHeading": "Resolução de Litígios",
-      "disputeText": "Não somos obrigados nem nos dispomos a participar de procedimentos de resolução de litígios perante órgãos de arbitragem de consumidores."
+      "phone": "[Por favor, insira o número de telefone – opcional]",
+      "vatHeading": "ID de Imposto sobre Vendas",
+      "vatText": "[Por favor, insira o número de identificação fiscal (USt-IdNr.) de acordo com o § 27a UStG, se aplicável]",
+      "responsibleHeading": "Responsável pelo conteúdo de acordo com o § 18 Abs. 2 MStV",
+      "responsibleText": "[Por favor, insira o nome da pessoa responsável pelo conteúdo]",
+      "disputeHeading": "Resolução de Conflitos",
+      "disputeText": "A Comissão Europeia disponibiliza uma plataforma para resolução de litígios online (OS): https://ec.europa.eu/consumers/odr/. Não somos obrigados nem estamos dispostos a participar em procedimentos de resolução de litígios perante uma comissão de arbitragem de consumidores."
     },
     "datenschutz": {
       "eyebrow": "Privacidade",
       "title": "Política de Privacidade",
-      "section1Heading": "Responsável pelo Tratamento de Dados",
-      "section1Text": "A responsável pelo tratamento dos dados neste site é Paula Sevarolli.",
-      "section2Heading": "Hospedagem e Arquivos de Log",
-      "section2Text": "Este site é hospedado na plataforma Netlify.",
+      "section1Heading": "Entidade Responsável",
+      "section1Text": "A entidade responsável pelo tratamento de dados neste site é:",
+      "section2Heading": "Hospedagem e Arquivos de Log do Servidor",
+      "section2Text": "[Por favor, insira o nome e endereço do provedor de hospedagem, bem como informações sobre os arquivos de log do servidor coletados]",
       "section3Heading": "Armazenamento Local (localStorage)",
-      "section3Text": "Este site armazena sua preferência de idioma localmente no seu navegador através do localStorage. Nenhum dado pessoal é coletado ou transmitido a servidores externos para essa finalidade.",
+      "section3Text": "Este site armazena o idioma selecionado por você (alemão ou português) localmente no localStorage do seu navegador. Nenhum dado pessoal é coletado, nenhum cookie é configurado e nenhum dado é transmitido a um servidor. Você pode excluir essa configuração a qualquer momento nas configurações do seu navegador.",
       "section4Heading": "Google Fonts",
-      "section4Text": "Este site utiliza fontes do Google Fonts. Ao carregar a página, uma conexão com os servidores do Google pode ser estabelecida.",
-      "section5Heading": "Links Externos (Instagram, WhatsApp, E-mail)",
-      "section5Text": "Ao clicar nos links para Instagram, WhatsApp ou E-mail, você será redirecionado para serviços de terceiros sob as políticas de privacidade de seus respectivos provedores.",
+      "section4Text": "Este site integra fontes do Google Fonts através do servidor fonts.googleapis.com. Ao carregar as fontes, uma conexão com os servidores da Google LLC pode ser estabelecida, transmitindo seu endereço IP. Mais informações podem ser encontradas na política de privacidade do Google em https://policies.google.com/privacy.",
+      "section5Heading": "Serviços Vinculados (Instagram, WhatsApp, E-mail)",
+      "section5Text": "Este site contém links para o Instagram, WhatsApp e um endereço de e-mail. Ao clicar nesses links, você sai do nosso site e acessa ofertas de terceiros (Meta Platforms Ireland Ltd. para Instagram e WhatsApp ou seu próprio aplicativo de e-mail). O processamento de dados desses serviços é de responsabilidade de seus respectivos provedores e aplicam-se suas políticas de privacidade.",
       "section6Heading": "Seus Direitos",
-      "section6Text": "Você tem o direito de solicitar informações, retificação ou exclusão dos seus dados pessoais a qualquer momento.",
-      "section7Heading": "Alterações nesta Política",
-      "section7Text": "Reservamo-nos o direito de atualizar esta política de privacidade para refletir mudanças legais ou de serviços."
+      "section6Text": "Você tem o direito de solicitar informações, retificação, exclusão e limitação do processamento de seus dados pessoais a qualquer momento, bem como o direito de se opor ao processamento e o direito à portabilidade dos dados. Em caso de dúvidas, entre em contato com a entidade responsável mencionada acima.",
+      "section7Heading": "Alterações a esta Política de Privacidade",
+      "section7Text": "Reservamo-nos o direito de adaptar esta política de privacidade para alinhá-la a alterações legislativas ou a mudanças em nossos serviços."
     }
   },
   "contactPage": {
-    "eyebrow": "Fale Conosco",
-    "title": "Entre em contato",
-    "intro": "Deseja enviar uma mensagem? Preencha o formulário abaixo. Será um prazer te atender.",
+    "eyebrow": "Fale Comigo",
+    "title": "Escreva para mim",
+    "intro": "Deseja me enviar uma mensagem? Basta preencher o formulário. Ficarei feliz em receber seu contato.",
     "nameLabel": "Nome",
     "namePlaceholder": "Seu nome",
     "emailLabel": "E-mail",
     "emailPlaceholder": "seu@email.com",
     "subjectLabel": "Assunto",
-    "subjectPlaceholder": "Assunto da mensagem",
+    "subjectPlaceholder": "Assunto da sua mensagem",
     "subjectPrefix": "Solicitação de agendamento:",
     "messageLabel": "Mensagem",
     "messagePlaceholder": "Como posso te ajudar?",
     "back": "Voltar",
     "submit": "Enviar mensagem",
-    "note": "Sua mensagem será enviada de forma confidencial para Paula Sevarolli."
+    "note": "Sua mensagem será enviada confidencialmente para Paula Sevarolli."
   },
   "footer": "© 2026 Paula Sevarolli"
 }
