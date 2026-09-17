@@ -26,6 +26,14 @@
 
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Brittany Signature';
+  src: url('../fonts/BrittanySignature.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ==========================================================================
    1. DESIGN TOKENS / CSS VARIABLEN
    Zentrale Pflege von Farben, Schriften und Schatten.
@@ -49,9 +57,10 @@
      ========================================================================= */
 
   /* Schriftfamilien */
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-script: 'Alex Brush', cursive;
+  --font-sans: 'Inter', sans-serif;                 /* Sans-serif font for body text and general content */
+  --font-serif: 'Playfair Display', Georgia, serif; /* Serif font for headings and elegant text */
+  --font-script: 'Alex Brush', cursive;             /* Script font for decorative text - not used */
+  --font-brittany: 'Brittany Signature', cursive;   /* Custom script font for decorative text */
 
   /* Schriftgewichte */
   --weight-normal: 400;
@@ -84,6 +93,7 @@
   --border-pink: 1px solid rgba(180, 170, 175, 0.4);
   --shadow-btn: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 8px 20px rgba(0, 0, 0, 0.06);
   --shadow-btn-hover: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 24px rgba(0, 0, 0, 0.1);
+  --border-radius-btn: 15px;
 
   /* Zusätzliche Töne für Service-Detailseiten (Kapitel-Layout) */
   --bg-content-white: #ffffff;
@@ -267,6 +277,10 @@ footer {
   color: var(--color-primary);
 }
 
+.nav-left{
+  text-transform: uppercase;
+}
+
 .nav-left,
 .nav-right {
   display: flex;
@@ -282,7 +296,7 @@ footer {
   font-size: 14px;
   letter-spacing: var(--tracking-small);
   padding: 8px 14px;
-  border-radius: 999px;
+  border-radius: var(--border-radius-btn);
   transition: all 0.3s ease;
 }
 
@@ -370,7 +384,7 @@ footer {
   gap: 6px;
   padding: 4px;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 999px;
+  border-radius: var(--border-radius-btn);
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
 }
@@ -411,12 +425,17 @@ footer {
   border: var(--border-pink);
   color: var(--color-primary);
   text-decoration: none;
-  border-radius: 999px;
+  border-radius: var(--border-radius-btn);
   transition: all 0.3s ease;
-  letter-spacing: var(--tracking-small);
-  font-weight: var(--weight-semibold);
   background: var(--bg-btn-gradient);
   box-shadow: var(--shadow-btn);
+
+  /* Schriftstile von .chapter-eyebrow */
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -429,7 +448,7 @@ footer {
   display: inline-block;
   padding: 8px 14px;
   border: var(--border-pink);
-  border-radius: 999px;
+  border-radius: var(--border-radius-btn);
   color: var(--color-primary);
   font-weight: var(--weight-semibold);
   background: var(--bg-btn-gradient);
@@ -646,10 +665,10 @@ footer {
 }
 
 .landing-logo h1 {
-  margin: 0;
-  font-family: var(--font-serif);
+  margin: 30px;
+  font-family: var(--font-brittany);
   font-size: clamp(40px, 6vw, 110px);
-  font-weight: var(--weight-normal);
+  font-weight: var(--weight-medium);
   color: #ffffff;
   text-shadow:
     0 3px 12px rgba(0, 0, 0, 0.45),
@@ -675,7 +694,7 @@ footer {
 }
 
 .logo-divider span {
-  width: clamp(40px, 8vw, 90px);
+  width: clamp(140px, 8vw, 90px);
   height: 1px;
   background: rgba(255, 255, 255, 0.75);
 }
@@ -727,11 +746,11 @@ footer {
 }
 
 .landing-half.stilberatung {
-  background-image: url('../images/stilberatung01.jpg');
+  background-image: url('../images/index_stilberatung.jpg');
 }
 
 .landing-half.atelier {
-  background-image: url('../images/atelier.jpg');
+  background-image: url('../images/index_atelier.jpg');
 }
 
 .landing-half:hover {
@@ -1931,7 +1950,7 @@ html:has(body.fixed-image-layout) {
 .contact-submit {
   margin: 0;
   border: var(--border-pink);
-  border-radius: 999px;
+  border-radius: var(--border-radius-btn);
   padding: 12px 24px;
   background: var(--bg-btn-gradient);
   color: var(--color-primary);
@@ -2057,7 +2076,7 @@ html:has(body.fixed-image-layout) {
 
 /* Playfair nur für Überschriften und emotionale Akzente */
 .page-hero h1,
-.landing-logo h1,
+/* .landing-logo h1, */
 .landing-half h2,
 .chapter-title,
 .contact-title,
