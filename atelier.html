@@ -26,7 +26,10 @@
 
   <section class="chapter">
     <div class="chapter-image-container">
-      <img src="images/atelier.jpg" alt="Atelier" class="chapter-image">
+      <picture>
+        <source srcset="images/atelier.webp" type="image/webp">
+        <img src="images/atelier.jpg" alt="Atelier" class="chapter-image" loading="eager" decoding="async">
+      </picture>
     </div>
     <div class="chapter-content">
       <p class="chapter-eyebrow" data-i18n="atelier.eyebrow"></p>
