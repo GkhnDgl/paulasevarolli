@@ -746,11 +746,11 @@ footer {
 }
 
 .landing-half.stilberatung {
-  background-image: url('../images/index_stilberatung.jpg');
+  background-image: url('../images/index_stilberatung.webp');
 }
 
 .landing-half.atelier {
-  background-image: url('../images/index_atelier.jpg');
+  background-image: url('../images/index_atelier.webp');
 }
 
 .landing-half:hover {
