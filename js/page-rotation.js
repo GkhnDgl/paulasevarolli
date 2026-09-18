@@ -15,56 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     imageDir: 'images/',
     imagePrefix: 'stilberatung',
     intervalMs: 5000,
-    transitionMs: 2000,
-    maxProbe: 20
+    transitionMs: 2000
   };
 
-  /**
-   * Helper function to test if an image URL is valid and reachable.
-   */
-  function checkImageExists(url) {
-    return new Promise((resolve) => {
-      const img = new Image();
-      img.onload = () => resolve(true);
-      img.onerror = () => resolve(false);
-      img.src = url;
-    });
-  }
-
-  /**
-   * Discovers available image pairs (WebP preferred, JPG fallback).
-   */
-  async function discoverImages() {
-    const validUrls = [];
-
-    // 1. Test main image (stilberatung.webp -> stilberatung.jpg)
-    const mainWebP = `${CONFIG.imageDir}${CONFIG.imagePrefix}.webp`;
-    const mainJpg = `${CONFIG.imageDir}${CONFIG.imagePrefix}.jpg`;
-
-    if (await checkImageExists(mainWebP)) {
-      validUrls.push(mainWebP);
-    } else if (await checkImageExists(mainJpg)) {
-      validUrls.push(mainJpg);
-    }
-
-    // 2. Test numbered images (stilberatung01, stilberatung02, ...)
-    for (let i = 1; i <= CONFIG.maxProbe; i++) {
-      const numStr = String(i).padStart(2, '0');
-      const webpUrl = `${CONFIG.imageDir}${CONFIG.imagePrefix}${numStr}.webp`;
-      const jpgUrl = `${CONFIG.imageDir}${CONFIG.imagePrefix}${numStr}.jpg`;
-
-      if (await checkImageExists(webpUrl)) {
-        validUrls.push(webpUrl);
-      } else if (await checkImageExists(jpgUrl)) {
-        validUrls.push(jpgUrl);
-      } else {
-        // Stop probe sequence on first gap
-        break;
-      }
-    }
-
-    return validUrls;
-  }
+  const imageUrls = [
+    `${CONFIG.imageDir}${CONFIG.imagePrefix}.webp`,
+    `${CONFIG.imageDir}${CONFIG.imagePrefix}01.webp`,
+    `${CONFIG.imageDir}${CONFIG.imagePrefix}02.webp`,
+    `${CONFIG.imageDir}${CONFIG.imagePrefix}03.webp`
+  ];
 
   /**
    * Preloads the first image so the carousel shows immediately.
@@ -82,12 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Initializes image rotation logic.
    */
   async function initRotation() {
-    const images = await discoverImages();
-
-    if (images.length === 0) {
-      console.warn('Page-Rotation: No valid images found.');
-      return;
-    }
+    const images = imageUrls;
 
     // Preload the first image so the carousel shows immediately
     await preloadImage(images[0]);
@@ -98,12 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(track);
 
     images.forEach((src, index) => {
-      const img = document.createElement('img');
+        const img = document.createElement('img');
       img.src = src;
       img.alt = `Stilberatung ${index + 1}`;
       img.className = 'chapter-image';
       img.loading = index === 0 ? 'eager' : 'lazy';
       img.decoding = 'async';
+      img.onerror = () => {
+        img.onerror = null;
+        img.src = src.replace('.webp', '.jpg');
+      };
       track.appendChild(img);
     });
 
